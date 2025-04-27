@@ -1,0 +1,192 @@
+"use client"
+
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Sparkles, Calendar, MapPin, ArrowRight, X } from "lucide-react"
+import ScrollAnimation from "@/components/scroll-animation"
+import Link from "next/link"
+
+// Only export the first 2 projects for the home page
+import { homePageProjects } from "@/data/projects-data"
+
+const ProjectsSection = () => {
+  const [selectedProject, setSelectedProject] = useState<number | null>(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false)
+
+  const openProjectDetails = (projectId: number) => {
+    setSelectedProject(projectId)
+    setCurrentImageIndex(0)
+  }
+
+  const closeProjectDetails = () => {
+    setSelectedProject(null)
+  }
+
+  const getProjectById = (id: number) => {
+    return homePageProjects.find((project) => project.id === id)
+  }
+
+  const nextImage = () => {
+    if (selectedProject) {
+      const project = getProjectById(selectedProject)
+      if (project) {
+        setCurrentImageIndex((prev) => (prev === project.images.length - 1 ? 0 : prev + 1))
+      }
+    }
+  }
+
+  const prevImage = () => {
+    if (selectedProject) {
+      const project = getProjectById(selectedProject)
+      if (project) {
+        setCurrentImageIndex((prev) => (prev === 0 ? project.images.length - 1 : prev - 1))
+      }
+    }
+  }
+
+  return (
+    <section className="py-20 bg-white mt-8" id="projects">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ScrollAnimation>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center mb-4">
+              <Sparkles className="h-6 w-6 text-gold-500 mr-2" />
+              <span className="text-lg text-gray-600 uppercase tracking-wider font-medium">Our Projects</span>
+              <Sparkles className="h-6 w-6 text-gold-500 ml-2" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-4">Featured Projects in Bangalore</h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Explore our showcase of completed projects across Bangalore
+            </p>
+          </div>
+        </ScrollAnimation>
+
+        {/* Featured Projects Grid View - Only 2 projects */}
+        <div className="flex flex-col md:flex-row gap-10 mb-16">
+          {/* Project Card */}
+          <div className="md:w-1/2 w-full flex items-center justify-center">
+            {homePageProjects.filter(project => project.id === 1).map((project, index) => (
+              <ScrollAnimation key={project.id}>
+                <motion.div
+                  className="group"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Card className="overflow-hidden shadow-lg transition-transform duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
+                    <div className="relative h-64 w-full">
+                      <img
+                        src={project.mainImage}
+                        alt={project.title}
+                        className="object-cover w-full h-full rounded-t-lg"
+                      />
+                      {project.video && (
+                        <div className="mt-3">
+                          <video
+                            src={project.video}
+                            controls
+                            poster={project.mainImage}
+                            className="w-full rounded-lg border border-gray-200 shadow-lg bg-black"
+                            style={{ maxHeight: '200px', objectFit: 'cover' }}
+                          >
+                            Sorry, your browser does not support embedded videos.
+                          </video>
+                        </div>
+                      )}
+                    </div>
+                    <CardContent className="p-6 bg-white">
+                      <span className="inline-block bg-gold-100 text-gold-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">
+                        {project.category}
+                      </span>
+                      <h3 className="text-2xl font-bold text-navy-900 mb-1">
+                        {project.title}
+                      </h3>
+                      <div className="flex items-center text-gold-600 mb-2">
+                        <MapPin className="h-5 w-5 mr-1" />
+                        <span>{project.location}</span>
+                      </div>
+                      <p className="text-gray-600 mb-4 line-clamp-2">
+                        {project.description}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="flex items-center text-gray-400 text-sm">
+                          <Calendar className="h-4 w-4 mr-1" />
+                          {project.date}
+                        </span>
+                        <Button
+                          variant="link"
+                          className="text-gold-600 font-medium flex items-center justify-center group text-sm"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            openProjectDetails(project.id)
+                          }}
+                        >
+                          View Details <ArrowRight className="ml-1 h-4 w-4" />
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </ScrollAnimation>
+            ))}
+          </div>
+          {/* Enhanced Clients Section */}
+          <div className="md:w-1/2 w-full flex items-center justify-center">
+            <div className="w-full bg-gradient-to-br from-gold-50 to-white border border-gold-100 rounded-xl shadow-md p-8 text-center md:text-left">
+              <h4 className="text-2xl font-bold text-navy-900 mb-3 flex items-center justify-center md:justify-start">
+                <Sparkles className="mr-2 text-gold-500" />Our Esteemed Clients
+              </h4>
+              <p className="text-gray-700 mb-4">
+                Annapoornaa Interio has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
+              </p>
+              <div className="mb-4">
+                <h5 className="font-semibold text-navy-800 mb-2">Notable Clients:</h5>
+                <ul className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                    <span className="mr-2">🏢</span> Asmara Apparels
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                    <span className="mr-2">🏦</span> Emudra Limited
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                    <span className="mr-2">🏗️</span> Surbana Jurong - SMEC
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                    <span className="mr-2">🔬</span> Corporate Startups
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                    <span className="mr-2">🏫</span> Educational Institutions
+                  </li>
+                </ul>
+              </div>
+              <div className="mb-4">
+                <h5 className="font-semibold text-navy-800 mb-2">Our Approach:</h5>
+                <p className="text-gray-600">
+                  We believe in a collaborative process, working closely with our clients from concept to completion. Our team ensures every project is delivered on time, within budget, and with the highest standards of quality and innovation.
+                </p>
+              </div>
+              <Link href="/contact-us">
+                <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-6 py-2 rounded shadow-lg mt-2">
+                  Get in Touch
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-12 text-center">
+        <Link href="/featured-projects">
+          <Button className="bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+            View All Projects
+          </Button>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+export default ProjectsSection;

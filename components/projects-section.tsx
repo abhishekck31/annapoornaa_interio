@@ -111,14 +111,14 @@ const ProjectsSection = () => {
                       <p className="text-gray-600 mb-4 line-clamp-2">
                         {project.description}
                       </p>
-                      <div className="flex items-center justify-between">
+                      <div className="flex flex-col md:flex-row items-center md:justify-between gap-2 md:gap-0">
                         <span className="flex items-center text-gray-400 text-sm">
                           <Calendar className="h-4 w-4 mr-1" />
                           {project.date}
                         </span>
                         <Button
                           variant="link"
-                          className="text-gold-600 font-medium flex items-center justify-center group text-sm"
+                          className="w-full md:w-auto text-gold-600 font-medium flex items-center justify-center group text-sm"
                           onClick={(e) => {
                             e.stopPropagation()
                             openProjectDetails(project.id)
@@ -178,13 +178,13 @@ const ProjectsSection = () => {
         </div>
       </div>
 
-      <div className="mt-12 text-center">
-        <Link href="/featured-projects">
-          <Button className="bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
-            View All Projects
-          </Button>
-        </Link>
-      </div>
+      <div className="mt-12 flex flex-col gap-2 items-center sm:flex-row sm:gap-4 sm:justify-center">
+  <Link href="/featured-projects" className="w-full sm:w-auto">
+    <Button className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+      View All Projects
+    </Button>
+  </Link>
+</div>
     </section>
   );
 }

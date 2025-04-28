@@ -5,11 +5,14 @@ import { useState, useEffect } from 'react'
 import { Button } from './ui/button'
 import Image from 'next/image'
 import ScrollAnimation from './scroll-animation'
+import { Dialog, DialogContent } from './ui/dialog'
+import { X } from 'lucide-react'
 
 const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState('Home Interior')
   const [images, setImages] = useState<string[]>([])
   const [videos, setVideos] = useState<string[]>([])
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
 
   // Define video paths for Home Interior
   const homeVideos = [
@@ -256,13 +259,23 @@ const GallerySection = () => {
               <h3 className="text-2xl font-semibold text-navy-900 mb-4 text-center">Featured Videos</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {videos.map((video, idx) => (
-                  <div key={`video-${idx}`} className="rounded-lg overflow-hidden shadow-md">
+                  <div 
+                    key={`video-${idx}`} 
+                    className="rounded-lg overflow-hidden shadow-md cursor-pointer relative group"
+                    onClick={() => setSelectedVideo(video)}
+                  >
                     <video 
                       src={video} 
-                      controls 
                       className="w-full aspect-video object-cover"
                       preload="metadata"
                     />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="bg-white rounded-full p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-navy-900">
+                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -291,6 +304,38 @@ const GallerySection = () => {
             ))}
           </div>
         </ScrollAnimation>
+
+        {/* Video Modal */}
+        <Dialog open={!!selectedVideo} onOpenChange={(open) => {
+          if (!open) {
+            console.log('Dialog onOpenChange: closing modal');
+            setSelectedVideo(null);
+          }
+        }}>
+          <DialogContent className="sm:max-w-3xl p-0 overflow-hidden bg-black">
+            <button
+              className="absolute right-3 top-3 z-50 rounded-full bg-white p-2 opacity-80 hover:opacity-100 focus:outline-none"
+              onClick={() => {
+                console.log('Close clicked');
+                setSelectedVideo(null);
+              }}
+              aria-label="Close video"
+              type="button"
+            >
+              <X className="h-5 w-5 text-navy-900" />
+            </button>
+            {selectedVideo && (
+              <div className="relative w-full">
+                <video 
+                  src={selectedVideo} 
+                  controls 
+                  autoPlay
+                  className="w-full aspect-video"
+                />
+              </div>
+            )}
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
   )

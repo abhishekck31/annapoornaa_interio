@@ -393,9 +393,9 @@ export default function ServicesPage() {
   <div className="mb-10">
     <h3 className="text-xl font-semibold text-navy-900 mb-4">Home Interior Services</h3>
     <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Pooja room</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Fabrication works</span></li>
       <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Concepts, Designs & Drawings</span></li>
+      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Fabrication works</span></li>
+      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Pooja room</span></li>
       <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Painting and wall finishes</span></li>
       <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Modular kitchens</span></li>
       <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Railings</span></li>

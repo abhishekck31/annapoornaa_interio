@@ -152,22 +152,19 @@ export default function FeaturedProjectsPage() {
                       </div>
 
                       <div className="lg:col-span-7">
-                        <div className="flex items-center justify-between mb-2">
-                          <h4 className="text-xl font-semibold text-navy-900">Project Gallery</h4>
-                          <div className="flex space-x-2">
-                            <Button
-                              className="bg-navy-900 hover:bg-navy-800 text-white text-sm px-4 py-2"
-                              onClick={() => openGallery(project.id)}
-                            >
-                              View Full Gallery
-                            </Button>
-                            <Button
-                              className="bg-navy-900 hover:bg-navy-800 text-white text-sm px-4 py-2"
-                              onClick={() => openVideo(project.id)}
-                            >
-                              View Walkthrough Video
-                            </Button>
-                          </div>
+                        <div className="flex flex-col gap-2 w-full sm:flex-row sm:gap-4 mb-4">
+                          <Button
+                            className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white text-sm px-4 py-2"
+                            onClick={() => openGallery(project.id)}
+                          >
+                            View Full Gallery
+                          </Button>
+                          <Button
+                            className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white text-sm px-4 py-2"
+                            onClick={() => openVideo(project.id)}
+                          >
+                            View Walkthrough Video
+                          </Button>
                         </div>
                         <div className="grid grid-cols-2 gap-2">
                           {project.images.slice(0, 2).map((image, index) => (

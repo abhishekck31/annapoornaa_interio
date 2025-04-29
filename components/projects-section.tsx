@@ -112,20 +112,10 @@ const ProjectsSection = () => {
                         {project.description}
                       </p>
                       <div className="flex flex-col md:flex-row items-center md:justify-between gap-2 md:gap-0">
-                        <span className="flex items-center text-gray-400 text-sm">
-                          <Calendar className="h-4 w-4 mr-1" />
-                          {project.date}
-                        </span>
-                        <Button
-                          variant="link"
-                          className="w-full md:w-auto text-gold-600 font-medium flex items-center justify-center group text-sm"
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            openProjectDetails(project.id)
-                          }}
-                        >
+                        {/* Removed project year/date display */}
+                        <Link href="/featured-projects" scroll={true} className="w-full md:w-auto text-gold-600 font-medium flex items-center justify-center group text-sm">
                           View Details <ArrowRight className="ml-1 h-4 w-4" />
-                        </Button>
+                        </Link>
                       </div>
                     </CardContent>
                   </Card>
@@ -149,16 +139,10 @@ const ProjectsSection = () => {
                     <span className="mr-2">🏢</span> Asmara Apparels
                   </li>
                   <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    <span className="mr-2">🏦</span> Emudra Limited
+                    <span className="mr-2">🏦</span> Emudhra Limited
                   </li>
                   <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
                     <span className="mr-2">🏗️</span> Surbana Jurong - SMEC
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    <span className="mr-2">🔬</span> Corporate Startups
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    <span className="mr-2">🏫</span> Educational Institutions
                   </li>
                 </ul>
               </div>

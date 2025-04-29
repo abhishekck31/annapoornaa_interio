@@ -19,7 +19,13 @@ const GallerySection = () => {
     '/homevideo/WhatsApp Video 2025-04-26 at 22.50.56_ecda6edf.mp4',
     '/homevideo/WhatsApp Video 2025-04-26 at 22.51.11_dffac08d.mp4',
     '/homevideo/WhatsApp Video 2025-04-26 at 22.52.59_62fbe1c9.mp4',
-    '/homevideo/WhatsApp Video 2025-04-26 at 22.52.59_667591d4.mp4',
+  ]
+
+  // Poster images for each video
+  const homeVideoPosters = [
+    '/homeint/home7.jpg',
+    '/homeint/home12.jpg',
+    '/interiors/Interiors15.jpg',
   ]
 
   // Define image paths for each category
@@ -55,45 +61,7 @@ const GallerySection = () => {
       '/homeint/home29.jpg',
       '/homeint/home30.jpg',
       '/homeint/WhatsApp Image 2025-04-26 at 22.54.16_ba3b7183.jpg',
-      '/homeint/WhatsApp Image 2025-04-26 at 22.59.12_3afd857f.jpg',
-      // Add Century Club images to Home Interior
-      '/centuryclub/maincc.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_1a3e44b6.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_34eae5d8.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_b0f69972.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_ed5f0151.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.42_314aa1ed.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.42_fae175a0.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_007ac680.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_6a6bc2d1.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_cde4e3fe.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_d3c04670.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.44_eee5e684.jpg',
-      '/centuryclub/WhatsApp Image 2025-04-26 at 19.14.46_6ba3da84.jpg',
-      // Add Ooty Resort images to Home Interior
-      '/ootyresort/mainres.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_a5aafb40.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_88d7e6cc.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_204b4ff1.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_51174ea5.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.04_8e8560e2.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_0727373b.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_d1e8a5ff.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_af4fbc07.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_cf2def52.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.03_8d2e6557.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_4886f41c.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.02_8ce73f45.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_f565569d.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_eafed8c9.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_981fd2b4.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_69053e02.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.55_2fd900c1.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_d57a702b.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_8c5ced3d.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_237fa813.jpg',
-      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.52_513edfbd.jpg',
+      
     ],
     'Office Interior': [
       // Asmara Apparels
@@ -110,7 +78,7 @@ const GallerySection = () => {
       '/asmaranew/new5.jpg',
       '/asmaranew/new6.jpg',
       '/asmaranew/new7.jpg',
-      '/asmaranew/new8.jpg',
+      
       // Black BX
       '/Blackbx-project/Blackbox1.jpg',
       '/Blackbx-project/Blackbox2.jpg',
@@ -118,7 +86,7 @@ const GallerySection = () => {
       '/Blackbx-project/Blackbox4.jpg',
       '/Blackbx-project/Blackbox5.jpg',
       '/Blackbx-project/Blackbox6.jpg',
-      // Emudra
+      // Emudhra
       '/images/emudra/emudra1.jpg',
       '/images/emudra/emudra2.jpg',
       '/images/emudra/emudra3.jpg',
@@ -161,6 +129,30 @@ const GallerySection = () => {
       '/gelatofactory/WhatsApp Image 2025-04-26 at 21.50.46_8bf93c8a.jpg',
       '/gelatofactory/WhatsApp Image 2025-04-26 at 21.50.46_bd79eae1.jpg',
       '/gelatofactory/WhatsApp Image 2025-04-26 at 21.50.47_7d80d18d.jpg',
+      //ooty resort
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.52_513edfbd.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_237fa813.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_8c5ced3d.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_d57a702b.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.55_2fd900c1.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_981fd2b4.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_eafed8c9.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_f565569d.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_88d7e6cc.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_af4fbc07.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_d1e8a5ff.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_0727373b.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_69053e02.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_a5aafb40.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_cf2def52.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_204b4ff1.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_4886f41c.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_51174ea5.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.02_8ce73f45.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.03_8d2e6557.jpg',
+'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.04_8e8560e2.jpg',
+'/ootyresort/mainres.jpg',
     ],
     'Construction': [
       '/Construction/construction1.jpg',
@@ -177,6 +169,13 @@ const GallerySection = () => {
       '/Construction/WhatsApp Image 2025-04-26 at 23.32.10_123996c2.jpg',
       '/Construction/WhatsApp Image 2025-04-26 at 23.32.11_15dfc4fc.jpg',
       '/Construction/WhatsApp Image 2025-04-26 at 23.32.12_18ec1c63.jpg',
+      '/const2/WhatsApp Image 2025-04-28 at 18.55.20_13b351bf.jpg',
+      '/const2/WhatsApp Image 2025-04-28 at 18.55.20_6bf9f829.jpg',
+      '/const2/WhatsApp Image 2025-04-28 at 18.55.21_bb602ebb.jpg',
+      '/const2/WhatsApp Image 2025-04-28 at 18.55.22_9e1f57ed.jpg',
+      '/const2/WhatsApp Image 2025-04-28 at 18.55.22_df42e85c.jpg',
+      '/const2/WhatsApp Image 2025-04-28 at 18.55.24_6258f4a2.jpg',
+
     ],
     'Products': [
       '/Products/WhatsApp Image 2025-04-26 at 23.02.11_4a347870.jpg',
@@ -203,13 +202,6 @@ const GallerySection = () => {
       '/Alumilium Doors and Windows/Alumilium-Slidingdoor.jpg',
       '/Alumilium Doors and Windows/Alumilium-Slidingwindow.jpg',
       '/Alumilium Doors and Windows/Alumilium-Tiltandturn.jpg',
-      '/Chairs/Chairs - Main.jpg',
-      '/Chairs/Chairs - Conference.jpg',
-      '/Chairs/Chairs - Designer.jpg',
-      '/Chairs/Chairs - Executive.jpg',
-      '/Chairs/Chairs - Mesh.jpg',
-      '/Chairs/Chairs - Task.jpg',
-      '/Chairs/Chairs - Visitor.jpg',
       '/Fire Doors/Fire-Acoustic.jpg',
       '/Fire Doors/Fire-Double.jpg',
       '/Fire Doors/Fire-Steel.jpg',
@@ -219,7 +211,11 @@ const GallerySection = () => {
   // Update images and videos when category changes
   useEffect(() => {
     setImages(categoryImages[selectedCategory as keyof typeof categoryImages] || [])
-    setVideos(selectedCategory === 'Home Interior' ? homeVideos : [])
+    setVideos(
+      selectedCategory === 'Home Interior'
+        ? homeVideos.slice(0, 3)
+        : []
+    )
   }, [selectedCategory])
 
   return (
@@ -257,25 +253,37 @@ const GallerySection = () => {
           {videos.length > 0 && (
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-navy-900 mb-4 text-center">Featured Videos</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center mx-auto" style={{maxWidth: '900px'}}>
                 {videos.map((video, idx) => (
-                  <div 
-                    key={`video-${idx}`} 
-                    className="rounded-lg overflow-hidden shadow-md cursor-pointer relative group"
+                  <div
+                    key={`video-${idx}`}
+                    className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform duration-200 hover:scale-105"
                     onClick={() => setSelectedVideo(video)}
                   >
-                    <video 
-                      src={video} 
+                    <video
+                      src={video}
                       className="w-full aspect-video object-cover"
                       preload="metadata"
+                      poster={selectedCategory === 'Home Interior' ? homeVideoPosters[idx] : undefined}
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <div className="bg-white rounded-full p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-navy-900">
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                      </div>
+                    {/* Play Icon Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-50 transition">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="56"
+                        height="56"
+                        viewBox="0 0 24 24"
+                        fill="white"
+                        className="opacity-90 drop-shadow-lg"
+                      >
+                        <circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.4)" />
+                        <polygon points="10,8 16,12 10,16" fill="white" />
+                      </svg>
                     </div>
+                    {/* Video Label */}
+                    <span className="absolute top-2 left-2 bg-navy-900 text-white text-xs px-2 py-1 rounded shadow">
+                      Video
+                    </span>
                   </div>
                 ))}
               </div>

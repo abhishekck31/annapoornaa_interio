@@ -100,15 +100,12 @@ const ServicesSection = () => {
         <ScrollAnimation>
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
-              <Sparkles className="h-6 w-6 text-gold-500 mr-2" />
-              <span className="text-lg text-gray-600 uppercase tracking-wider font-medium">
-                OUR SERVICES
+              <Sparkles className="h-7 w-7 text-gold-500 mr-2" />
+              <span className="text-3xl md:text-5xl font-bold text-navy-900 mb-4">
+                Our Services
               </span>
-              <Sparkles className="h-6 w-6 text-gold-500 ml-2" />
+              <Sparkles className="h-7 w-7 text-gold-500 ml-2" />
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-4">
-              Comprehensive Design & Construction Solutions
-            </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gold-600 max-w-3xl mx-auto">
               We offer a complete range of interior design and construction

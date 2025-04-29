@@ -3,7 +3,6 @@ export const projects = [
     id: 1,
     title: "Asmara Apparels India Pvt. Ltd.",
     location: "Ulsoor, Bangalore",
-    date: "2024",
     category: "Office Interior",
     description:
       "A sophisticated office interior design project showcasing modern aesthetics and functional spaces. The project emphasizes clean lines and contemporary design elements.",
@@ -12,6 +11,7 @@ export const projects = [
       "Annapoornaa Interio delivered exactly what we envisioned. The attention to detail and modern design elements exceeded way beyond our expectations.",
     clientRating: 5,
     images: [
+      "/asmaranew/asmaragod.jpg",
       "/Asmara-project/Asmara1.jpg",
       "/Asmara-project/Asmara2.jpg",
       "/Asmara-project/Asmara3.jpg",
@@ -25,7 +25,7 @@ export const projects = [
       "/asmaranew/new5.jpg",
       "/asmaranew/new6.jpg",
       "/asmaranew/new7.jpg",
-      "/asmaranew/new8.jpg"
+      "/asmaranew/new8.jpg",
     ],
     mainImage: "/Asmara-project/Asmara1.jpg",
     video: "/asmaranew/WhatsApp Video 2025-04-16 at 17.01.20_c52476c6.mp4",
@@ -55,13 +55,13 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Emudra Limited",
+    title: "Emudhra Limited",
     location: "Devanhalli, Aerospace Park, Bangalore",
     date: "2023",
     category: "Office Interior",
     description:
       "A comprehensive Office Interior design that combines functionality with modern architectural elements. The project showcases innovative space utilization and contemporary design.",
-    clientName: "Emudra",
+    clientName: "Emudhra",
     clientReview:
       "Annapoornaa Interio has created a remarkable commercial space that perfectly balances functionality and design. Their attention to detail and innovative solutions have made this project a success.",
     clientRating: 5,
@@ -104,7 +104,6 @@ export const projects = [
     id: 5,
     title: "Century Club",
     location: "Bangalore",
-    date: "2024",
     category: "Interior Design",
     description:
       "A prestigious interior design project for the historic Century Club, showcasing a perfect blend of traditional elegance and modern functionality. The design preserves the club's heritage while incorporating contemporary elements.",
@@ -134,7 +133,6 @@ export const projects = [
     id: 6,
     title: "Gelato Factory",
     location: "Bangalore",
-    date: "2024",
     category: "Retail Interior",
     description:
       "A vibrant and inviting interior design for an ice cream shop that creates a delightful customer experience. The design combines functional layout with playful aesthetics to enhance the ice cream enjoyment.",
@@ -156,9 +154,8 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Golden Harness",
+    title: "Golden Harness",  
     location: "Bangalore",
-    date: "2024",
     category: "Office Interior",
     description:
       "A sophisticated office interior design project for Golden Harness that balances professionalism with comfort. The design features modern workspaces, collaborative areas, and thoughtful details that enhance productivity and employee well-being.",
@@ -191,7 +188,6 @@ export const projects = [
     id: 8,
     title: "Ooty Resort",
     location: "Ooty, Tamil Nadu",
-    date: "2024",
     category: "Resort Interior",
     description:
       "A luxurious resort interior design project nestled in the scenic hills of Ooty. The design harmoniously blends with the natural surroundings while providing modern comforts and amenities to create a memorable stay experience for guests.",

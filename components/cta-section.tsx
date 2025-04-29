@@ -35,7 +35,7 @@ const CTASection = () => {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link href="/contact" scroll={false}>
                   <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-8 py-6 rounded-md text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
-                    Contact Us Now <ArrowRight className="ml-2 h-5 w-5" />
+                    Contact us Now <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
               </motion.div>

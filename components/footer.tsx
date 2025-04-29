@@ -146,7 +146,9 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-semibold mb-6">Contact us</h3>
+            <h3 className="text-xl font-semibold mb-6">
+              <Link href="/contact">Contact us</Link>
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-start group">
                 <div className="bg-gold-500/20 p-1 rounded-full mr-3 mt-0.5 group-hover:bg-gold-500/40 transition-colors duration-300">

@@ -2,13 +2,13 @@
 
 import { useState, useEffect, ReactNode } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Clock, Users, Home, Sparkles, Phone, Pencil, CreditCard } from "lucide-react"
+import { Clock, Users, Home, Sparkles, Phone, Pencil, CreditCard, Link } from "lucide-react"
 import ScrollAnimation from "@/components/scroll-animation"
 
 interface ProcessStep {
   number: number
   title: string
-  description: string
+  description: ReactNode
   icon: ReactNode
 }
 
@@ -16,7 +16,14 @@ const processSteps: ProcessStep[] = [
   {
     number: 1,
     title: "Raise a Request",
-    description: "Contact us with your requirements and project details to get started.",
+    description: (
+      <span>
+        Contact us with your requirements and project details to get started.{" "}
+        <Link href="/contact" className="text-gold-600 underline">
+          Contact us
+        </Link>
+      </span>
+    ),
     icon: <Phone className="h-8 w-8 text-gold-500" />,
   },
   {

@@ -147,11 +147,7 @@ const UPVCWindowsDoorsPage = () => {
           </div>
 
           <div className="text-center">
-            <Link href="/contact">
-              <Button className="bg-primary hover:bg-primary/90 text-white">
-                Contact us for more information
-              </Button>
-            </Link>
+            <Link href="/contact" className="text-gold-600 underline">Contact us</Link> for more information
           </div>
         </div>
       </section>

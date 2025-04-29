@@ -210,78 +210,352 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: 26,
-    title: "Emudra Office",
+    title: "Emudhra Office",
     category: "Office Interior",
     image: "/emudra-project/emudra1.jpg"
   },
   {
     id: 27,
-    title: "Emudra Workspace",
+    title: "Emudhra Workspace",
     category: "Office Interior",
     image: "/emudra-project/emudra2.jpg"
   },
   {
     id: 28,
-    title: "Emudra Modern Design",
+    title: "Emudhra Modern Design",
     category: "Office Interior",
     image: "/emudra-project/emudra3.jpg"
   },
   {
     id: 29,
-    title: "Emudra Interior",
+    title: "Emudhra Interior",
     category: "Office Interior",
     image: "/emudra-project/emudra4.jpg"
   },
-
-  // Construction Projects
   {
-    id: 30,
-    title: "Modern Building Construction",
-    category: "Construction",
-    image: "/Construction/construction1.jpg"
+    id: 2101,
+    title: "Century Club 1",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_1a3e44b6.jpg"
   },
   {
-    id: 31,
-    title: "Commercial Complex",
-    category: "Construction",
-    image: "/Construction/construction2.jpg"
+    id: 2102,
+    title: "Century Club 2",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_34eae5d8.jpg"
   },
   {
-    id: 32,
-    title: "Residential Development",
-    category: "Construction",
-    image: "/Construction/construction3.jpg"
+    id: 2103,
+    title: "Century Club 3",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_b0f69972.jpg"
   },
   {
-    id: 33,
-    title: "Infrastructure Project",
-    category: "Construction",
-    image: "/Construction/construction4.jpg"
+    id: 2104,
+    title: "Century Club 4",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_ed5f0151.jpg"
   },
   {
-    id: 34,
-    title: "Urban Development",
-    category: "Construction",
-    image: "/Construction/construction5.jpg"
+    id: 2105,
+    title: "Century Club 5",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.42_314aa1ed.jpg"
   },
   {
-    id: 35,
-    title: "Commercial Building",
-    category: "Construction",
-    image: "/Construction/construction6.jpg"
+    id: 2106,
+    title: "Century Club 6",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.42_fae175a0.jpg"
   },
   {
-    id: 36,
-    title: "Mixed-Use Development",
-    category: "Construction",
-    image: "/Construction/construction7.jpg"
+    id: 2107,
+    title: "Century Club 7",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_007ac680.jpg"
+  },
+  {
+    id: 2108,
+    title: "Century Club 8",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_6a6bc2d1.jpg"
+  },
+  {
+    id: 2109,
+    title: "Century Club 9",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_cde4e3fe.jpg"
+  },
+  {
+    id: 2110,
+    title: "Century Club 10",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_d3c04670.jpg"
+  },
+  {
+    id: 2111,
+    title: "Century Club 11",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.44_eee5e684.jpg"
+  },
+  {
+    id: 2112,
+    title: "Century Club 12",
+    category: "Office Interior",
+    image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.46_6ba3da84.jpg"
   },
   {
     id: 36,
     title: "Mixed-Use Development",
     category: "Construction",
     image: "/UP-Const1.jpg"
-  }
+  },
+  {
+    id: 2001,
+    title: "Construction Site 1",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.20_13b351bf.jpg"
+  },
+  {
+    id: 2002,
+    title: "Construction Site 2",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.20_6bf9f829.jpg"
+  },
+  {
+    id: 2003,
+    title: "Construction Site 3",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.21_bb602ebb.jpg"
+  },
+  {
+    id: 2004,
+    title: "Construction Site 4",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.22_9e1f57ed.jpg"
+  },
+  {
+    id: 2005,
+    title: "Construction Site 5",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.22_df42e85c.jpg"
+  },
+  {
+    id: 2006,
+    title: "Construction Site 6",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.24_6258f4a2.jpg"
+  },
+  {
+    id: 2007,
+    title: "Construction Site 7",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.25_1c7d4a4c.jpg"
+  },
+  {
+    id: 2008,
+    title: "Construction Site 8",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.25_2a5d4b6d.jpg"
+  },
+  {
+    id: 2009,
+    title: "Construction Site 9",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.26_3a5d4b6e.jpg"
+  },
+  {
+    id: 2010,
+    title: "Construction Site 10",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.26_4a5d4b6f.jpg"
+  },
+  {
+    id: 2011,
+    title: "Construction Site 11",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.27_5a5d4b70.jpg"
+  },
+  {
+    id: 2012,
+    title: "Construction Site 12",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.27_6a5d4b71.jpg"
+  },
+  {
+    id: 2013,
+    title: "Construction Site 13",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.20_13b351bf.jpg"
+  },
+  {
+    id: 2014,
+    title: "Construction Site 14",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.20_6bf9f829.jpg"
+  },
+  {
+    id: 2015,
+    title: "Construction Site 15",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.21_bb602ebb.jpg"
+  },
+  {
+    id: 2016,
+    title: "Construction Site 16",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.22_9e1f57ed.jpg"
+  },
+  {
+    id: 2017,
+    title: "Construction Site 17",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.22_df42e85c.jpg"
+  },
+  {
+    id: 2018,
+    title: "Construction Site 18",
+    category: "Construction",
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.24_6258f4a2.jpg"
+  },
+  {
+    id: 3001,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.52_513edfbd.jpg"
+  },
+  {
+    id: 3002,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_237fa813.jpg"
+  },
+  {
+    id: 3003,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_8c5ced3d.jpg"
+  },
+  {
+    id: 3004,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_d57a702b.jpg"
+  },
+  {
+    id: 3005,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.55_2fd900c1.jpg"
+  },
+  {
+    id: 3006,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_981fd2b4.jpg"
+  },
+  {
+    id: 3007,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_eafed8c9.jpg"
+  },
+  {
+    id: 3008,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_f565569d.jpg"
+  },
+  {
+    id: 3009,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_88d7e6cc.jpg"
+  },
+  {
+    id: 3010,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_af4fbc07.jpg"
+  },
+  {
+    id: 3011,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg"
+  },
+  {
+    id: 3012,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_d1e8a5ff.jpg"
+  },
+  {
+    id: 3013,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_0727373b.jpg"
+  },
+  {
+    id: 3014,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_69053e02.jpg"
+  },
+  {
+    id: 3015,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_a5aafb40.jpg"
+  },
+  {
+    id: 3016,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_cf2def52.jpg"
+  },
+  {
+    id: 3017,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_204b4ff1.jpg"
+  },
+  {
+    id: 3018,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_4886f41c.jpg"
+  },
+  {
+    id: 3019,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_51174ea5.jpg"
+  },
+  {
+    id: 3020,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.02_8ce73f45.jpg"
+  },
+  {
+    id: 3021,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.03_8d2e6557.jpg"
+  },
+  {
+    id: 3022,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/WhatsApp Image 2025-04-26 at 21.48.04_8e8560e2.jpg"
+  },
+  {
+    id: 3023,
+    title: "Ooty Resort",
+    category: "Office Interior",
+    image: "/ootyresort/mainres.jpg"
+  },
 ];
 
 export const categories = ["All", "Home Interior", "Office Interior", "Construction"];

@@ -380,7 +380,7 @@ const BangaloreYelahankaPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Space in Bangalore?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free consultation and quote. Our Bangalore team is ready to bring your vision to
+            <Link href="/contact" className="text-gold-600 underline">Contact us</Link> today for a free consultation and quote. Our Bangalore team is ready to bring your vision to
             life.
           </p>
           <Link href="/#contact">

@@ -16,6 +16,7 @@ import StatsSection from "@/components/stats-section"
 import FAQSection from "@/components/faq-section"
 import ClientLogosSection from "@/components/client-logos-section"
 import { Shield, Clock, Users, MapPin } from "lucide-react"
+import Link from "next/link"
 
 export default function Home() {
   // Initialize scroll animations
@@ -76,7 +77,9 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
               <Shield className="h-6 w-6 text-gold-500 mr-2" />
-              <span className="text-lg text-gray-600 uppercase tracking-wider font-medium">Contact us</span>
+              <span className="text-lg text-gray-600 uppercase tracking-wider font-medium">
+                <Link href="/contact">Contact us</Link>
+              </span>
               <Shield className="h-6 w-6 text-gold-500 ml-2" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">Get In Touch</h1>

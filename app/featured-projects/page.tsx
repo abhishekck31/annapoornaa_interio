@@ -113,11 +113,9 @@ export default function FeaturedProjectsPage() {
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-2">{project.title}</h3>
                       <div className="flex items-center text-gold-300 text-sm mb-4">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span className="mr-4">{project.location}</span>
-                        <Calendar className="h-4 w-4 mr-1 ml-2" />
-                        <span>{project.date}</span>
-                      </div>
+  <MapPin className="h-4 w-4 mr-1" />
+  <span>{project.location}</span>
+</div>
                     </div>
                   </div>
 

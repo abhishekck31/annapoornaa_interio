@@ -18,7 +18,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Annapoornaa Interio | Premium Interior & Construction Services in Bangalore",
+  title: "Annapoornaa Interio | Premium Interiors & Construction Services in Bangalore",
   description:
     "Top-rated interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, construction, renovation, and premium products.",
   keywords:

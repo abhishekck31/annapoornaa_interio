@@ -34,7 +34,7 @@ const WorkstationsPage = () => {
     {
       name: "Executive Workstation",
       description: "Premium executive workstations with sophisticated design.",
-      image: "/UP-ExecutiveCHAIR.png",
+      image: "/UP-Executivechair.png",
     },
     {
       name: "Linear Workstation",

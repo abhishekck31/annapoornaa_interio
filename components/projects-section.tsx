@@ -136,13 +136,28 @@ const ProjectsSection = () => {
                 <h5 className="font-semibold text-navy-800 mb-2">Notable Clients:</h5>
                 <ul className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    <span className="mr-2">🏢</span> Asmara Apparels
+                    Asmara Apparels
                   </li>
                   <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    <span className="mr-2">🏦</span> Emudhra Limited
+                    Emudhra Limited
                   </li>
                   <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    <span className="mr-2">🏗️</span> Surbana Jurong - SMEC
+                    Surbana Jurong - SMEC
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                  Gokaldas Chambers
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                  TSS India Private Limited
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                  Hengst Filtration
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                  Aron Universal Limited
+                  </li>
+                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
+                  Ingex Lab Private Limited
                   </li>
                 </ul>
               </div>

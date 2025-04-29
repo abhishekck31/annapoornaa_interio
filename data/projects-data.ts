@@ -8,7 +8,7 @@ export const projects = [
       "A sophisticated office interior design project showcasing modern aesthetics and functional spaces. The project emphasizes clean lines and contemporary design elements.",
     clientName: "Asmara Apparels India Pvt. Ltd.",
     clientReview:
-      "Annapoornaa Interio delivered exactly what we envisioned. The attention to detail and modern design elements exceeded way beyond our expectations.",
+      "Raghu and team delivered exactly what we envisioned. The attention to detail and modern design elements exceeded way beyond our expectations.",
     clientRating: 5,
     images: [
       "/asmaranew/asmaragod.jpg",
@@ -87,9 +87,9 @@ export const projects = [
     category: "Office Interior",
     description:
       "An innovative project that showcases modern architecture and sustainable design principles. The project emphasizes community living and environmental consciousness.",
-    clientName: "Surbana Developers",
+    clientName: "Mr.Satish,Manager - SMEC",
     clientReview:
-      "Working with Annapoornaa Interio has been an exceptional experience. They've created a space that perfectly embodies our vision of sustainable urban living.",
+      "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged Annapoornaa Interio for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
     clientRating: 5,
     images: [
       "/images/surbana/surbana1.jpg",
@@ -104,12 +104,12 @@ export const projects = [
     id: 5,
     title: "Century Club",
     location: "Bangalore",
-    category: "Interior Design",
+    category: "Renovation Project",
     description:
-      "A prestigious interior design project for the historic Century Club, showcasing a perfect blend of traditional elegance and modern functionality. The design preserves the club's heritage while incorporating contemporary elements.",
+      "A prestigious renovation project for the historic Century Club, showcasing a perfect blend of traditional elegance and modern functionality. The design preserves the club's heritage while incorporating contemporary elements.",
     clientName: "Century Club",
     clientReview:
-      "Annapoornaa Interio has brilliantly transformed our space while respecting its historical significance. The design work by Vishveswaya is exceptional and has exceeded our expectations.",
+      "Raghu and team has brilliantly transformed our space while respecting its historical significance. The design work is exceptional and has exceeded our expectations.",
     clientRating: 5,
     images: [
       "/centuryclub/maincc.jpg",
@@ -138,7 +138,7 @@ export const projects = [
       "A vibrant and inviting interior design for an ice cream shop that creates a delightful customer experience. The design combines functional layout with playful aesthetics to enhance the ice cream enjoyment.",
     clientName: "Gelato Factory",
     clientReview:
-      "Annapoornaa Interio has created a perfect space for our ice cream shop. The design is both functional and visually appealing, creating an atmosphere that our customers love.",
+      "Raghu and team has created a perfect space for our ice cream shop. The design is both functional and visually appealing, creating an atmosphere that our customers love.",
     clientRating: 5,
     images: [
       "/gelatofactory/WhatsApp Image 2025-04-26 at 21.50.47_2d8dbe98.jpg",
@@ -161,7 +161,7 @@ export const projects = [
       "A sophisticated office interior design project for Golden Harness that balances professionalism with comfort. The design features modern workspaces, collaborative areas, and thoughtful details that enhance productivity and employee well-being.",
     clientName: "Golden Harness",
     clientReview:
-      "Annapoornaa Interio transformed our office space beyond our expectations. The design perfectly reflects our company culture while providing functional and comfortable spaces for our team. The attention to detail and quality of execution is impressive.",
+      "Raghu & team has done wonderful work in setting up our Chinese mill  liaison office.They took complete ownership from conceptualisation to installation. Thanks to complete team for their hard-work & dedication.",
     clientRating: 5,
     images: [
       "/Goldenharness/WhatsApp Image 2025-04-26 at 20.10.04_63d69a7e.jpg",
@@ -213,7 +213,7 @@ export const projects = [
       "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_eafed8c9.jpg",
       "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_981fd2b4.jpg",
       "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_69053e02.jpg",
-      "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg",
+      // "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg",
       "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.55_2fd900c1.jpg",
       "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_d57a702b.jpg",
       "/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_8c5ced3d.jpg",

@@ -75,7 +75,7 @@ const AluminumDoorsWindowsPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="/alumainnew.jpg"
+                src="/alumainup.jpeg"
                 alt="Aluminum Doors and Windows"
                 fill
                 className="rounded-lg shadow-xl object-cover"

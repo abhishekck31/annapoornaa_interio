@@ -556,6 +556,12 @@ export const galleryImages: GalleryImage[] = [
     category: "Office Interior",
     image: "/ootyresort/mainres.jpg"
   },
+  {
+    id: 3024,
+    title: "Aron Universal",
+    category: "Construction",
+    image: "/Construction/aronuni.jpg"
+  },
 ];
 
 export const categories = ["All", "Home Interior", "Office Interior", "Construction"];

@@ -31,37 +31,143 @@ const GallerySection = () => {
   // Define image paths for each category
   const categoryImages = {
     'Home Interior': [
-      '/homeint/home.jpg',
-      '/homeint/home1.jpg',
-      '/homeint/home2.jpg',
-      '/homeint/home3.jpg',
-      '/homeint/home4.jpg',
-      '/homeint/home5.jpg',
-      '/homeint/home6.jpg',
-      '/homeint/home7.jpg',
-      '/homeint/home8.jpg',
-      '/homeint/home9.jpg',
-      '/homeint/home10.jpg',
-      '/homeint/home11.jpg',
-      '/homeint/home12.jpg',
-      '/homeint/home13.jpg',
-      '/homeint/home14.jpg',
-      '/homeint/home16.jpg',
-      '/homeint/home18.jpg',
-      '/homeint/home19.jpg',
-      '/homeint/home20.jpg',
-      '/homeint/home21.jpg',
-      '/homeint/home22.jpg',
-      '/homeint/home23.jpg',
-      '/homeint/home24.jpg',
-      '/homeint/home25.jpg',
-      '/homeint/home26.jpg',
-      '/homeint/home27.jpg',
-      '/homeint/home28.jpg',
-      '/homeint/home29.jpg',
-      '/homeint/home30.jpg',
-      '/homeint/WhatsApp Image 2025-04-26 at 22.54.16_ba3b7183.jpg',
-      
+      '/homeinteriorsimages/homeinterior1.jpg',
+      '/homeinteriorsimages/homeinterior2.jpg',
+      '/homeinteriorsimages/homeinterior3.jpg',
+      '/homeinteriorsimages/homeinterior4.jpg',
+      '/homeinteriorsimages/homeinterior5.jpg',
+      '/homeinteriorsimages/homeinterior6.jpg',
+      '/homeinteriorsimages/homeinterior7.jpg',
+      '/homeinteriorsimages/homeinterior8.jpg',
+      '/homeinteriorsimages/homeinterior9.jpg',
+      '/homeinteriorsimages/homeinterior10.jpg',
+      '/homeinteriorsimages/homeinterior11.jpg',
+      '/homeinteriorsimages/homeinterior12.jpg',
+      '/homeinteriorsimages/homeinterior13.jpg',
+      '/homeinteriorsimages/homeinterior14.jpg',
+      '/homeinteriorsimages/homeinterior15.jpg',
+      '/homeinteriorsimages/homeinterior16.jpg',
+      '/homeinteriorsimages/homeinterior17.jpg',
+      '/homeinteriorsimages/homeinterior18.jpg',
+      '/homeinteriorsimages/homeinterior19.jpg',
+      '/homeinteriorsimages/homeinterior20.jpg',
+      '/homeinteriorsimages/homeinterior21.jpg',
+      '/homeinteriorsimages/homeinterior22.jpg',
+      '/homeinteriorsimages/homeinterior23.jpg',
+      '/homeinteriorsimages/homeinterior24.jpg',
+      '/homeinteriorsimages/homeinterior25.jpg',
+      '/homeinteriorsimages/homeinterior26.jpg',
+      '/homeinteriorsimages/homeinterior27.jpg',
+      '/homeinteriorsimages/homeinterior28.jpg',
+      '/homeinteriorsimages/homeinterior29.jpg',
+      '/homeinteriorsimages/homeinterior30.jpg',
+      '/homeinteriorsimages/homeinterior31.jpg',
+      '/homeinteriorsimages/homeinterior32.jpg',
+      '/homeinteriorsimages/homeinterior33.jpg',
+      '/homeinteriorsimages/homeinterior34.jpg',
+      '/homeinteriorsimages/homeinterior35.jpg',
+      '/homeinteriorsimages/homeinterior36.jpg',
+      '/homeinteriorsimages/homeinterior37.jpg',
+      '/homeinteriorsimages/homeinterior38.jpg',
+      '/homeinteriorsimages/homeinterior39.jpg',
+      '/homeinteriorsimages/homeinterior40.jpg',
+      '/homeinteriorsimages/homeinterior41.jpg',
+      '/homeinteriorsimages/homeinterior42.jpg',
+      '/homeinteriorsimages/homeinterior43.jpg',
+      '/homeinteriorsimages/homeinterior44.jpg',
+      '/homeinteriorsimages/homeinterior45.jpg',
+      '/homeinteriorsimages/homeinterior46.jpg',
+      '/homeinteriorsimages/homeinterior47.jpg',
+      '/homeinteriorsimages/homeinterior48.jpg',
+      '/homeinteriorsimages/homeinterior49.jpg',
+      '/homeinteriorsimages/homeinterior50.jpg',
+      '/homeinteriorsimages/homeinterior51.jpg',
+      '/homeinteriorsimages/homeinterior52.jpg',
+      '/homeinteriorsimages/homeinterior53.jpg',
+      '/homeinteriorsimages/homeinterior54.jpg',
+      '/homeinteriorsimages/homeinterior55.jpg',
+      '/homeinteriorsimages/homeinterior56.jpg',
+      '/homeinteriorsimages/homeinterior57.jpg',
+      '/homeinteriorsimages/homeinterior58.jpg',
+      '/homeinteriorsimages/homeinterior59.jpg',
+      '/homeinteriorsimages/homeinterior60.jpg',
+      '/homeinteriorsimages/homeinterior61.jpg',
+      '/homeinteriorsimages/homeinterior62.jpg',
+      '/homeinteriorsimages/homeinterior63.jpg',
+      '/homeinteriorsimages/homeinterior64.jpg',
+      '/homeinteriorsimages/homeinterior65.jpg',
+      '/homeinteriorsimages/homeinterior66.jpg',
+      '/homeinteriorsimages/homeinterior67.jpg',
+      '/homeinteriorsimages/homeinterior68.jpg',
+      '/homeinteriorsimages/homeinterior69.jpg',
+      '/homeinteriorsimages/homeinterior70.jpg',
+      '/homeinteriorsimages/homeinterior71.jpg',
+      '/homeinteriorsimages/homeinterior72.jpg',
+      '/homeinteriorsimages/homeinterior73.jpg',
+      '/homeinteriorsimages/homeinterior74.jpg',
+      '/homeinteriorsimages/homeinterior75.jpg',
+      '/homeinteriorsimages/homeinterior76.jpg',
+      '/homeinteriorsimages/homeinterior77.jpg',
+      '/homeinteriorsimages/homeinterior78.jpg',
+      '/homeinteriorsimages/homeinterior79.jpg',
+      '/homeinteriorsimages/homeinterior80.jpg',
+      '/homeinteriorsimages/homeinterior81.jpg',
+      '/homeinteriorsimages/homeinterior82.jpg',
+      '/homeinteriorsimages/homeinterior83.jpg',
+      '/homeinteriorsimages/homeinterior84.jpg',
+      '/homeinteriorsimages/homeinterior85.jpg',
+      '/homeinteriorsimages/homeinterior86.jpg',
+      '/homeinteriorsimages/homeinterior87.jpg',
+      '/homeinteriorsimages/homeinterior88.jpg',
+      '/homeinteriorsimages/homeinterior89.jpg',
+      '/homeinteriorsimages/homeinterior90.jpg',
+      '/homeinteriorsimages/homeinterior91.jpg',
+      '/homeinteriorsimages/homeinterior92.jpg',
+      '/homeinteriorsimages/homeinterior93.jpg',
+      '/homeinteriorsimages/homeinterior94.jpg',
+      '/homeinteriorsimages/homeinterior95.jpg',
+      '/homeinteriorsimages/homeinterior96.jpg',
+      '/homeinteriorsimages/homeinterior97.jpg',
+      '/homeinteriorsimages/homeinterior98.jpg',
+      '/homeinteriorsimages/homeinterior99.jpg',
+      '/homeinteriorsimages/homeinterior100.jpg',
+      '/homeinteriorsimages/homeinterior101.jpg',
+      '/homeinteriorsimages/homeinterior102.jpg',
+      '/homeinteriorsimages/homeinterior103.jpg',
+      '/homeinteriorsimages/homeinterior104.jpg',
+      '/homeinteriorsimages/homeinterior105.jpg',
+      '/homeinteriorsimages/homeinterior106.jpg',
+      '/homeinteriorsimages/homeinterior107.jpg',
+      '/homeinteriorsimages/homeinterior108.jpg',
+      '/homeinteriorsimages/homeinterior109.jpg',
+      '/homeinteriorsimages/homeinterior110.jpg',
+      '/homeinteriorsimages/homeinterior111.jpg',
+      '/homeinteriorsimages/homeinterior112.jpg',
+      '/homeinteriorsimages/homeinterior113.jpg',
+      '/homeinteriorsimages/homeinterior114.jpg',
+      '/homeinteriorsimages/homeinterior115.jpg',
+      '/homeinteriorsimages/homeinterior116.jpg',
+      '/homeinteriorsimages/homeinterior117.jpg',
+      '/homeinteriorsimages/homeinterior118.jpg',
+      '/homeinteriorsimages/homeinterior119.jpg',
+      '/homeinteriorsimages/homeinterior120.jpg',
+      '/homeinteriorsimages/homeinterior121.jpg',
+      '/homeinteriorsimages/homeinterior122.jpg',
+      '/homeinteriorsimages/homeinterior123.jpg',
+      '/homeinteriorsimages/homeinterior124.jpg',
+      '/homeinteriorsimages/homeinterior125.jpg',
+      '/homeinteriorsimages/homeinterior126.jpg',
+      '/homeinteriorsimages/homeinterior127.jpg',
+      '/homeinteriorsimages/homeinterior128.jpg',
+      '/homeinteriorsimages/homeinterior129.jpg',
+      '/homeinteriorsimages/homeinterior130.jpg',
+      '/homeinteriorsimages/homeinterior131.jpg',
+      '/homeinteriorsimages/homeinterior132.jpg',
+      '/homeinteriorsimages/homeinterior133.jpg',
+      '/homeinteriorsimages/homeinterior134.jpg',
+      '/homeinteriorsimages/homeinterior135.jpg'
+
+
     ],
     'Office Interior': [
       // Asmara Apparels
@@ -78,7 +184,7 @@ const GallerySection = () => {
       '/asmaranew/new5.jpg',
       '/asmaranew/new6.jpg',
       '/asmaranew/new7.jpg',
-      
+
       // Black BX
       '/Blackbx-project/Blackbox1.jpg',
       '/Blackbx-project/Blackbox2.jpg',
@@ -131,30 +237,31 @@ const GallerySection = () => {
       '/gelatofactory/WhatsApp Image 2025-04-26 at 21.50.47_7d80d18d.jpg',
       //ooty resort
       '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.52_513edfbd.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_237fa813.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_8c5ced3d.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_d57a702b.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.55_2fd900c1.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_981fd2b4.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_eafed8c9.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_f565569d.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_88d7e6cc.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_af4fbc07.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_d1e8a5ff.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_0727373b.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_69053e02.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_a5aafb40.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_cf2def52.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_204b4ff1.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_4886f41c.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_51174ea5.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.02_8ce73f45.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.03_8d2e6557.jpg',
-'/ootyresort/WhatsApp Image 2025-04-26 at 21.48.04_8e8560e2.jpg',
-'/ootyresort/mainres.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_237fa813.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_8c5ced3d.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_d57a702b.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.55_2fd900c1.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_981fd2b4.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_eafed8c9.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.56_f565569d.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_88d7e6cc.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.57_af4fbc07.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_79fea3aa.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.58_d1e8a5ff.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_0727373b.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.47.59_69053e02.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_a5aafb40.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_cf2def52.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_204b4ff1.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_4886f41c.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.01_51174ea5.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.02_8ce73f45.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.03_8d2e6557.jpg',
+      '/ootyresort/WhatsApp Image 2025-04-26 at 21.48.04_8e8560e2.jpg',
+      '/ootyresort/mainres.jpg',
     ],
     'Construction': [
+      '/Construction/aronuni.jpg',
       '/Construction/construction1.jpg',
       '/Construction/construction2.jpg',
       '/Construction/construction3.jpg',
@@ -236,11 +343,10 @@ const GallerySection = () => {
               <Button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`${
-                  selectedCategory === category
-                    ? 'bg-navy-900 text-white'
-                    : 'bg-white text-navy-900 hover:bg-navy-100'
-                } border border-navy-200`}
+                className={`${selectedCategory === category
+                  ? 'bg-navy-900 text-white'
+                  : 'bg-white text-navy-900 hover:bg-navy-100'
+                  } border border-navy-200`}
               >
                 {category}
               </Button>
@@ -253,7 +359,7 @@ const GallerySection = () => {
           {videos.length > 0 && (
             <div className="mb-8">
               <h3 className="text-2xl font-semibold text-navy-900 mb-4 text-center">Featured Videos</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center mx-auto" style={{maxWidth: '900px'}}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center mx-auto" style={{ maxWidth: '900px' }}>
                 {videos.map((video, idx) => (
                   <div
                     key={`video-${idx}`}
@@ -334,9 +440,9 @@ const GallerySection = () => {
             </button>
             {selectedVideo && (
               <div className="relative w-full">
-                <video 
-                  src={selectedVideo} 
-                  controls 
+                <video
+                  src={selectedVideo}
+                  controls
                   autoPlay
                   className="w-full aspect-video"
                 />

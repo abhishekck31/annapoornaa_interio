@@ -27,19 +27,19 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: "Home Interior",
+    title: "Home Interiors",
     description:
-      "Transform your living spaces with our comprehensive interior design solutions, from concept to completion.",
+      "Transform your living spaces with our comprehensive Interiors design solutions, from concept to completion.",
     icon: "brush",
-    link: "/services#home-interior",
+    link: "/services#home-interiors",
     image: "/updated-homein.jpg",
   },
   {
     title: "Office/Corporate Interiors",
     description:
-      "Create productive and stylish workspaces with our expert corporate interior design and implementation services.",
+      "Create productive and stylish workspaces with our expert corporate Interiors design and implementation services.",
     icon: "briefcase",
-    link: "/services#office-interior",
+    link: "/services#office-interiors",
     image: "/Updated-officein.jpg",
   },
   {
@@ -108,7 +108,7 @@ const ServicesSection = () => {
             </div>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gold-600 max-w-3xl mx-auto">
-              We offer a complete range of interior design and construction
+              We offer a complete range of Interiors design and construction
               services tailored to your specific needs
             </p>
           </div>

@@ -38,7 +38,7 @@ interface Service {
 const services: Service[] = [
   {
     id: "home-interior",
-    title: "Home Interior",
+    title: "Home Interiors",
     icon: <Home className="h-12 w-12 text-primary" />,
     description:
       "Transform your living spaces with our expert home interior design services. We create beautiful, functional, and personalized interiors that reflect your style and meet your needs.",
@@ -52,7 +52,7 @@ const services: Service[] = [
     ],
     designSections: [
       {
-        title: "Home Interior Services",
+        title: "Home Interiors Services",
         emoji: "🏠",
         items: [
           "Concepts, Designs & Drawings",
@@ -75,10 +75,10 @@ const services: Service[] = [
   },
   {
     id: "office-interior",
-    title: "Office Interior/Corporate Interior",
+    title: "Office Interiors/Corporate Interiors",
     icon: <Briefcase className="h-12 w-12 text-primary" />,
     description:
-      "Create productive and inspiring workspaces with our office interior solutions. We design offices that enhance productivity, reflect your brand identity, and impress your clients.",
+      "Create productive and inspiring workspaces with our office interiors solutions. We design offices that enhance productivity, reflect your brand identity, and impress your clients.",
     features: [
       "Workspace planning and layout",
       "Ergonomic furniture selection",

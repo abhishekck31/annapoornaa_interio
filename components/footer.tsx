@@ -102,7 +102,7 @@ const Footer = () => {
                   className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
                 >
                   <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
-                  Home Interior
+                  Home Interiors
                 </Link>
               </li>
               <li>

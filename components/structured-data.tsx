@@ -20,7 +20,7 @@ const StructuredData = () => {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Design Street, Creative Avenue",
+      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross,2nd stage, 'B' sector",
       addressLocality: "Yelahanka",
       addressRegion: "Bangalore",
       postalCode: "560064",
@@ -31,20 +31,20 @@ const StructuredData = () => {
       latitude: 13.1005,
       longitude: 77.5945,
     },
-    telephone: "+919876543210",
+    telephone: "+91 99000 94942",
     email: "info@annapoornainterio.com",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
-        closes: "18:00",
+        closes: "19:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Saturday",
         opens: "10:00",
-        closes: "16:00",
+        closes: "19:00",
       },
     ],
     priceRange: "₹₹-₹₹₹₹",
@@ -82,13 +82,13 @@ const StructuredData = () => {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
-        closes: "18:00",
+        closes: "19:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Saturday",
         opens: "10:00",
-        closes: "16:00",
+        closes: "19:00",
       },
     ],
     sameAs: [

@@ -68,6 +68,35 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
+export function JsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "InteriorDesignBusiness",
+          "name": "Annapoornaa Interio",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "KA",
+            "postalCode": "560064",
+            "streetAddress": "Your Street Address"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "13.1007",
+            "longitude": "77.5963"
+          },
+          "telephone": "+91 YOUR_PHONE",
+          "openingHours": "Mo-Sa 09:00-18:00"
+        })
+      }}
+    />
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -87,6 +116,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <JsonLd />
       </head>
       <body className="font-poppins">
         <StructuredData />

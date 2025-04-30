@@ -48,6 +48,15 @@ const OptimizedVideo = ({
   const handleError = () => {
     setError('Video could not be loaded. Please try again later.');
     console.error(`Error loading video: ${src}`);
+    // Try to reload the video with a different approach
+    if (videoRef.current) {
+      // Force reload with a different technique
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.load();
+        }
+      }, 1000);
+    }
   };
 
   return (

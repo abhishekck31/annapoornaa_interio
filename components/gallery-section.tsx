@@ -15,7 +15,14 @@ const GallerySection = () => {
   const [videos, setVideos] = useState<string[]>([])
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
 
-  // Define video paths for Home Interior
+  // Define video paths for Home Interior with absolute URLs
+  const getVideoUrl = (path: string) => {
+    // In production, use the absolute URL with the domain
+    // In development, use the relative path
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
+    return `${baseUrl}${path}`;
+  };
+  
   const homeVideos = [
     '/homevideo/WhatsApp Video 2025-04-26 at 22.50.56_ecda6edf.mp4',
     '/homevideo/WhatsApp Video 2025-04-26 at 22.51.11_dffac08d.mp4',
@@ -321,7 +328,7 @@ const GallerySection = () => {
     setImages(categoryImages[selectedCategory as keyof typeof categoryImages] || [])
     setVideos(
       selectedCategory === 'Home Interior'
-        ? homeVideos.slice(0, 3)
+        ? homeVideos.map(video => getVideoUrl(video)).slice(0, 3)
         : []
     )
   }, [selectedCategory])
@@ -448,6 +455,8 @@ const GallerySection = () => {
                   autoPlay
                   className="w-full aspect-video"
                   playsInline
+                  muted={false}
+                  loop={false}
                 />
 
               </div>

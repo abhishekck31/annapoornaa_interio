@@ -32,10 +32,7 @@ const VimeoPlayer = ({ videoId, className = '', title = 'Video' }: VimeoPlayerPr
       
       <iframe
         className={`w-full aspect-video ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-        src={videoId.includes('/') 
-          ? `https://player.vimeo.com/video/${videoId}?autoplay=0&loop=0&title=0&byline=0&portrait=0` 
-          : `https://player.vimeo.com/video/${videoId}?autoplay=0&loop=0&title=0&byline=0&portrait=0`
-        }
+        src={`https://player.vimeo.com/video/${videoId.split('/')[0]}?h=${videoId.split('/')[1]}&autoplay=0&loop=0&title=0&byline=0&portrait=0`}
         title={title}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

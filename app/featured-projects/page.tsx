@@ -318,17 +318,10 @@ export default function FeaturedProjectsPage() {
             >
               {getProjectById(selectedProject) && (
                 <div className="relative h-[70vh] flex items-center justify-center">
-                  {getProjectById(selectedProject)?.vimeoVideoId ? (
-                    <VimeoPlayer
-                      videoId={getProjectById(selectedProject)?.vimeoVideoId || ""}
-                      className="w-full max-w-4xl"
-                      title={`${getProjectById(selectedProject)?.title} Walkthrough`}
-                    />
-                  ) : getProjectById(selectedProject)?.youtubeVideoId ? (
-                    <VideoPlayer
-                      videoId={getProjectById(selectedProject)?.youtubeVideoId || ""}
-                      className="w-full max-w-4xl"
-                      title={`${getProjectById(selectedProject)?.title} Walkthrough`}
+                  {getProjectById(selectedProject)?.embedCode ? (
+                    <div
+                      className="w-full max-w-4xl h-full flex items-center justify-center"
+                      dangerouslySetInnerHTML={{ __html: getProjectById(selectedProject)?.embedCode || "" }}
                     />
                   ) : (
                     <video

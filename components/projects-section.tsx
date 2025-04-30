@@ -86,12 +86,11 @@ const ProjectsSection = () => {
                         alt={project.title}
                         className="object-cover w-full h-full rounded-t-lg"
                       />
-                      {project.vimeoVideoId ? (
+                      {project.embedCode ? (
                         <div className="mt-3">
-                          <VimeoPlayer 
-                            videoId={project.vimeoVideoId} 
-                            className="w-full rounded-lg border border-gray-200 shadow-lg max-h-[200px] overflow-hidden" 
-                            title={`${project.title} Walkthrough`}
+                          <div
+                            className="w-full rounded-lg border border-gray-200 shadow-lg max-h-[200px] overflow-hidden"
+                            dangerouslySetInnerHTML={{ __html: project.embedCode }}
                           />
                         </div>
                       ) : project.youtubeVideoId ? (

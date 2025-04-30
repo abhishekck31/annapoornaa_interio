@@ -15,4 +15,5 @@ export interface Project {
   vimeoVideoId?: string;
   videoUnavailable?: boolean;
   useLocalVideo?: boolean;
+  embedCode?: string;
 }

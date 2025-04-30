@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Annapoornaa Interio | Premium Interior & Construction Services in Bangalore",
     description:
-      "Top-rated interior design and construction services in Bangalore and Yelahanka. Transform your space with our expert team.",
+      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
     url: "https://annapoornaainterio.com",
     siteName: "Annapoornaa Interio",
     locale: "en_IN",

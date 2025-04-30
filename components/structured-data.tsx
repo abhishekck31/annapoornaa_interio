@@ -53,7 +53,7 @@ const StructuredData = () => {
       name: "Bangalore",
     },
     description:
-      "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products.",
+      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services that transform your space.",
   }
 
   // Local business schema

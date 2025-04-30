@@ -12,4 +12,7 @@ export interface Project {
   mainImage: string;
   video?: string;
   youtubeVideoId?: string;
+  vimeoVideoId?: string;
+  videoUnavailable?: boolean;
+  useLocalVideo?: boolean;
 }

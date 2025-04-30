@@ -8,6 +8,7 @@ import { Sparkles, Calendar, MapPin, ArrowRight, X } from "lucide-react"
 import ScrollAnimation from "@/components/scroll-animation"
 import Link from "next/link"
 import VideoPlayer from "./video-player" // Import the VideoPlayer component
+import VimeoPlayer from "./vimeo-player" // Import the VimeoPlayer component
 
 // Only export the first 2 projects for the home page
 import { homePageProjects } from "@/data/projects-data"
@@ -85,7 +86,15 @@ const ProjectsSection = () => {
                         alt={project.title}
                         className="object-cover w-full h-full rounded-t-lg"
                       />
-                      {project.youtubeVideoId ? (
+                      {project.vimeoVideoId ? (
+                        <div className="mt-3">
+                          <VimeoPlayer 
+                            videoId={project.vimeoVideoId} 
+                            className="w-full rounded-lg border border-gray-200 shadow-lg max-h-[200px] overflow-hidden" 
+                            title={`${project.title} Walkthrough`}
+                          />
+                        </div>
+                      ) : project.youtubeVideoId ? (
                         <div className="mt-3">
                           <VideoPlayer 
                             videoId={project.youtubeVideoId} 

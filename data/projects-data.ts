@@ -31,7 +31,9 @@ export const projects: Project[] = [
     ],
     mainImage: "/Asmara-project/Asmara1.jpg",
     video: "/asmaranew/WhatsApp Video 2025-04-16 at 17.01.20_c52476c6.mp4",
-    youtubeVideoId: "MMlhWXIzzyo", // YouTube Shorts video ID for reliable playback on Vercel
+    // Using Vimeo instead of YouTube due to copyright issues
+    youtubeVideoId: "",
+    vimeoVideoId: "1080087250/4ca93b7197"
   },
   {
     id: 2,

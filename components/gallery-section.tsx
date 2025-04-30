@@ -7,6 +7,7 @@ import Image from 'next/image'
 import ScrollAnimation from './scroll-animation'
 import { Dialog, DialogContent } from './ui/dialog'
 import { X } from 'lucide-react'
+import OptimizedVideo from './optimized-video'
 
 const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState('Home Interior')
@@ -366,11 +367,12 @@ const GallerySection = () => {
                     className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform duration-200 hover:scale-105"
                     onClick={() => setSelectedVideo(video)}
                   >
-                    <video
+                    <OptimizedVideo
                       src={video}
                       className="w-full aspect-video object-cover"
-                      preload="metadata"
                       poster={selectedCategory === 'Home Interior' ? homeVideoPosters[idx] : undefined}
+                      playsInline
+                      muted
                     />
                     {/* Play Icon Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-50 transition">
@@ -440,12 +442,14 @@ const GallerySection = () => {
             </button>
             {selectedVideo && (
               <div className="relative w-full">
-                <video
+                <OptimizedVideo
                   src={selectedVideo}
                   controls
                   autoPlay
                   className="w-full aspect-video"
+                  playsInline
                 />
+
               </div>
             )}
           </DialogContent>

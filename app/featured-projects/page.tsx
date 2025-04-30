@@ -10,6 +10,7 @@ import ScrollAnimation from "@/components/scroll-animation"
 import Link from "next/link"
 import { projects } from "@/data/projects-data"
 import { motion, AnimatePresence } from "framer-motion"
+import VideoPlayer from "@/components/video-player" // Import the VideoPlayer component
 
 export default function FeaturedProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
@@ -315,13 +316,21 @@ export default function FeaturedProjectsPage() {
               onClick={(e) => e.stopPropagation()}
             >
               {getProjectById(selectedProject) && (
-                <div className="relative h-[70vh]">
-                  <video
-                    src={getProjectById(selectedProject)?.video || "/placeholder.mp4"}
-                    aria-label={`${getProjectById(selectedProject)?.title} video`}
-                    className="w-full h-full object-contain"
-                    controls
-                  />
+                <div className="relative h-[70vh] flex items-center justify-center">
+                  {getProjectById(selectedProject)?.youtubeVideoId ? (
+                    <VideoPlayer
+                      videoId={getProjectById(selectedProject)?.youtubeVideoId || ""}
+                      className="w-full max-w-4xl"
+                      title={`${getProjectById(selectedProject)?.title} Walkthrough`}
+                    />
+                  ) : (
+                    <video
+                      src={getProjectById(selectedProject)?.video || "/placeholder.mp4"}
+                      aria-label={`${getProjectById(selectedProject)?.title} video`}
+                      className="w-full h-full object-contain"
+                      controls
+                    />
+                  )}
                 </div>
               )}
             </motion.div>

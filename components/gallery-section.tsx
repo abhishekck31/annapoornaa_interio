@@ -3,30 +3,34 @@
 import { useState, useEffect } from 'react'
 
 import { Button } from './ui/button'
-import Image from 'next/image'
 import ScrollAnimation from './scroll-animation'
 import { Dialog, DialogContent } from './ui/dialog'
 import { X } from 'lucide-react'
-import OptimizedVideo from './optimized-video'
+import Image from 'next/image'
+import VideoPlayer from './video-player'
 
 const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState('Home Interior')
   const [images, setImages] = useState<string[]>([])
   const [videos, setVideos] = useState<string[]>([])
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
+  const [loadingProgress, setLoadingProgress] = useState(0)
 
-  // Define video paths for Home Interior with absolute URLs
-  const getVideoUrl = (path: string) => {
-    // In production, use the absolute URL with the domain
-    // In development, use the relative path
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || '';
-    return `${baseUrl}${path}`;
-  };
+  // Using interior design images as video thumbnails for better reliability
+  // This approach will work consistently on Vercel
+  const homeVideoThumbnails = [
+    '/homeinteriorsimages/homeinterior25.jpg',  // Random interior design image as thumbnail
+    '/homeinteriorsimages/homeinterior42.jpg',  // Random interior design image as thumbnail
+    '/homeinteriorsimages/homeinterior78.jpg',  // Random interior design image as thumbnail
+  ]
   
-  const homeVideos = [
-    '/homevideo/WhatsApp Video 2025-04-26 at 22.50.56_ecda6edf.mp4',
-    '/homevideo/WhatsApp Video 2025-04-26 at 22.51.11_dffac08d.mp4',
-    '/homevideo/WhatsApp Video 2025-04-26 at 22.52.59_62fbe1c9.mp4',
+  // YouTube video IDs for the gallery
+  const youtubeVideoIds = [
+    'MuV2mLAdAC4',  // Video 1
+    'difnpjSqYjs',  // Video 2
+    'KUKbHUb3gUw',  // Video 3
   ]
 
   // Poster images for each video
@@ -325,12 +329,56 @@ const GallerySection = () => {
 
   // Update images and videos when category changes
   useEffect(() => {
-    setImages(categoryImages[selectedCategory as keyof typeof categoryImages] || [])
+    // Reset loading state when category changes
+    setIsLoading(true)
+    setLoadingProgress(0)
+    setLoadedImages({})
+    
+    // Get images for the selected category
+    const newImages = categoryImages[selectedCategory as keyof typeof categoryImages] || []
+    setImages(newImages)
+    
+    // For videos, we'll use the YouTube IDs instead of local MP4 files
     setVideos(
       selectedCategory === 'Home Interior'
-        ? homeVideos.map(video => getVideoUrl(video)).slice(0, 3)
+        ? youtubeVideoIds.slice(0, 3)
         : []
     )
+    
+    // Preload first 8 images for faster display
+    const preloadImages = async () => {
+      // Only preload first 8 images for better performance
+      const imagesToPreload = newImages.slice(0, 8)
+      
+      // Create an array of image loading promises
+      const imagePromises = imagesToPreload.map((src) => {
+        return new Promise<void>((resolve) => {
+          // Create a new HTMLImageElement for preloading
+          const img = document.createElement('img')
+          img.src = src as string
+          img.onload = () => {
+            setLoadedImages(prev => ({...prev, [src]: true}))
+            setLoadingProgress(prev => prev + (100 / imagesToPreload.length))
+            resolve()
+          }
+          img.onerror = () => {
+            // Even if error, mark as loaded to avoid blocking
+            setLoadedImages(prev => ({...prev, [src]: true}))
+            setLoadingProgress(prev => prev + (100 / imagesToPreload.length))
+            resolve()
+          }
+        })
+      })
+      
+      // Wait for all images to load or 3 second timeout, whichever comes first
+      const timeout = new Promise<void>(resolve => setTimeout(resolve, 3000))
+      await Promise.race([Promise.all(imagePromises), timeout])
+      
+      // Mark loading as complete
+      setIsLoading(false)
+    }
+    
+    preloadImages()
   }, [selectedCategory])
 
   return (
@@ -374,27 +422,30 @@ const GallerySection = () => {
                     className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group transition-transform duration-200 hover:scale-105"
                     onClick={() => setSelectedVideo(video)}
                   >
-                    <OptimizedVideo
-                      src={video}
-                      className="w-full aspect-video object-cover"
-                      poster={selectedCategory === 'Home Interior' ? homeVideoPosters[idx] : undefined}
-                      playsInline
-                      muted
-                    />
-                    {/* Play Icon Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 group-hover:bg-opacity-50 transition">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="56"
-                        height="56"
-                        viewBox="0 0 24 24"
-                        fill="white"
-                        className="opacity-90 drop-shadow-lg"
-                      >
-                        <circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.4)" />
-                        <polygon points="10,8 16,12 10,16" fill="white" />
-                      </svg>
+                    <div className="w-full aspect-video relative">
+                      <Image
+                        src={homeVideoThumbnails[idx] || '/homevideo/default-thumbnail.jpg'}
+                        alt={`Video thumbnail ${idx + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                      {/* Play button overlay */}
+                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="56"
+                          height="56"
+                          viewBox="0 0 24 24"
+                          fill="white"
+                          className="opacity-90 drop-shadow-lg"
+                        >
+                          <circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.4)" />
+                          <polygon points="10,8 16,12 10,16" fill="white" />
+                        </svg>
+                      </div>
                     </div>
+                    {/* Hover effect for the play button */}
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                     {/* Video Label */}
                     <span className="absolute top-2 left-2 bg-navy-900 text-white text-xs px-2 py-1 rounded shadow">
                       Video
@@ -405,14 +456,39 @@ const GallerySection = () => {
             </div>
           )}
 
+          {/* Loading Indicator */}
+          {isLoading && (
+            <div className="flex flex-col items-center justify-center py-12">
+              <div className="relative w-64 h-4 bg-gray-200 rounded-full overflow-hidden mb-3">
+                <div 
+                  className="absolute top-0 left-0 h-full bg-gradient-to-r from-navy-600 to-gold-500 transition-all duration-300"
+                  style={{ width: `${Math.min(loadingProgress, 100)}%` }}
+                />
+              </div>
+              <p className="text-navy-900 font-medium">
+                {loadingProgress < 100 ? 'Loading gallery images...' : 'Preparing your gallery...'}
+              </p>
+              <p className="text-gray-500 text-sm mt-1">
+                {Math.min(Math.round(loadingProgress), 100)}% complete
+              </p>
+            </div>
+          )}
+          
           {/* Images Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ${isLoading ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 transition-opacity duration-500'}`}>
             {images.map((img, idx) => (
               <div
                 key={`${img}-${idx}`}
                 className="group relative"
               >
                 <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                  {/* Loading placeholder */}
+                  {!loadedImages[img] && idx >= 8 && (
+                    <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
+                      <div className="w-8 h-8 border-4 border-navy-600 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  )}
+                  
                   <Image
                     src={img}
                     alt={`${selectedCategory} image ${idx + 1}`}
@@ -421,6 +497,11 @@ const GallerySection = () => {
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                     priority={idx < 8}
                     loading={idx < 8 ? "eager" : "lazy"}
+                    onLoad={() => {
+                      if (idx >= 8) {
+                        setLoadedImages(prev => ({...prev, [img]: true}))
+                      }
+                    }}
                   />
                 </div>
               </div>
@@ -449,16 +530,11 @@ const GallerySection = () => {
             </button>
             {selectedVideo && (
               <div className="relative w-full">
-                <OptimizedVideo
-                  src={selectedVideo}
-                  controls
-                  autoPlay
+                <VideoPlayer
+                  videoId={selectedVideo}
                   className="w-full aspect-video"
-                  playsInline
-                  muted={false}
-                  loop={false}
+                  title="Gallery Video"
                 />
-
               </div>
             )}
           </DialogContent>

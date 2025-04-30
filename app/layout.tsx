@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Top-rated interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, construction, renovation, and premium products.",
   keywords:
-    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, PVC false ceilings, workstations Bangalore, interior designers near me",
+    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",

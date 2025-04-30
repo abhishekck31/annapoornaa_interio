@@ -56,7 +56,7 @@ const PVCFalseCeilingsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/newsoffit/WhatsApp Image 2025-04-26 at 21.27.44_c90fd73c.jpg"
-                alt="PVC Soffit False Ceilings"
+                alt="Soffit False Ceilings"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -71,11 +71,11 @@ const PVCFalseCeilingsPage = () => {
                 False ceilings offer a wide variety of design and material options,
                 allowing for both aesthetic enhancement and practical benefits like hiding 
                 wiring and improving insulation.Common materials include gypsum, POP(Plaster of Paris),
-                PVC, Metal and wood.The choice of materials depends on factors like budget, desired design, and the room's specific needs.            .
+                metal and wood. The choice of materials depends on factors like budget, desired design, and the room's specific needs.
               </p>
               <p className="text-lg text-gray-700 mb-8">
                 Whether you're looking for simple elegant panels or decorative
-                designs, our range of PVC soffit false ceilings can transform any space
+                designs, our range of soffit false ceilings can transform any space
                 while ensuring long-lasting durability and easy maintenance.
               </p>
 
@@ -95,7 +95,7 @@ const PVCFalseCeilingsPage = () => {
 
           <div className="mt-20">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              PVC Soffit Ceiling Designs
+              Soffit Ceiling Designs
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               {ceilingImages.map((imageSrc, index) => (
@@ -103,7 +103,7 @@ const PVCFalseCeilingsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={imageSrc}
-                      alt={`PVC Soffit Ceiling Design ${index + 1}`}
+                      alt={`Soffit Ceiling Design ${index + 1}`}
                       fill
                       className="object-cover"
                     />

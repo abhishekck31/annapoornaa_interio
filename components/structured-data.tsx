@@ -193,7 +193,26 @@ const StructuredData = () => {
   } else if (pathname === "/services") {
     currentSchema = serviceSchema
   } else if (pathname.includes("/products/")) {
-    currentSchema = productSchema
+    // Handle specific product pages
+    if (pathname === "/products/upvc-windows-doors") {
+      currentSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "UPVC Windows & Doors",
+        "description": "Energy-efficient UPVC windows and doors installation in Bangalore",
+        "brand": {
+          "@type": "Brand",
+          "name": "Annapoornaa Interio"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    } else {
+      currentSchema = productSchema
+    }
   } else if (pathname === "/faq" || pathname === "/#faq") {
     currentSchema = faqSchema
   }

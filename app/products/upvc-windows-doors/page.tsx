@@ -157,24 +157,6 @@ const UPVCWindowsDoorsPage = () => {
   );
 };
 
-export function ProductSchema() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "UPVC Windows & Doors",
-          "description": "Energy-efficient UPVC windows and doors installation in Bangalore",
-          "brand": {
-            "@type": "Brand",
-            "name": "Annapoornaa Interio"
-          }
-        })
-      }}
-    />
-  );
-}
+
 
 export default UPVCWindowsDoorsPage;

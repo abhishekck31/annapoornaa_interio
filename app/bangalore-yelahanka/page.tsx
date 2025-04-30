@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products like UPVC windows, fire doors, and more.",
   keywords:
-    "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, PVC false ceilings Bangalore, workstations Yelahanka",
+    "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, false ceilings Bangalore, workstations Yelahanka",
   alternates: {
     canonical: "/bangalore-yelahanka",
   },
@@ -63,9 +63,9 @@ const BangaloreYelahankaPage = () => {
       link: "/products/fire-doors",
     },
     {
-      title: "PVC False Ceilings in Yelahanka",
+      title: "False Ceilings in Yelahanka",
       description:
-        "Lightweight, water-resistant PVC false ceiling solutions perfect for Bangalore's climate and modern interiors.",
+        "Lightweight, water-resistant false ceiling solutions perfect for Bangalore's climate and modern interiors.",
       link: "/products/pvc-false-ceilings",
     },
     {

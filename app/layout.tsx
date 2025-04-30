@@ -20,7 +20,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Annapoornaa Interio | Premium Interiors & Construction Services in Bangalore",
   description:
-    "Top-rated interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, construction, renovation, and premium products.",
+    "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services with high-quality products that transform your space.",
   keywords:
     "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
   authors: [{ name: "Annapoornaa Interio" }],
@@ -105,6 +105,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
+        <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
         <Script
           id="scroll-to-top"
           strategy="afterInteractive"

@@ -162,7 +162,7 @@ const StructuredData = () => {
         name: "What services does Annapoornaa Interio offer in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, PVC Soffit False Ceilings, workstations, and chairs.",
+          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, Soffit False Ceilings, workstations, and chairs.",
         },
       },
       {

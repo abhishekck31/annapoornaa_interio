@@ -1,8 +1,8 @@
 export const projects = [
   {
     id: 1,
-    title: "Asmara Apparels India Pvt. Ltd.",
-    location: "Ulsoor, Bangalore",
+    title: "Asmara Apparels",
+    location: "Ulsoor",
     category: "Office Interior",
     description:
       "A sophisticated office interior design project showcasing modern aesthetics and functional spaces. The project emphasizes clean lines and contemporary design elements.",
@@ -161,7 +161,7 @@ export const projects = [
       "A sophisticated office interior design project for Golden Harness that balances professionalism with comfort. The design features modern workspaces, collaborative areas, and thoughtful details that enhance productivity and employee well-being.",
     clientName: "Golden Harness",
     clientReview:
-      "Raghu & team has done wonderful work in setting up our Chinese mill  liaison office.They took complete ownership from conceptualisation to installation. Thanks to complete team for their hard-work & dedication.",
+      "Raghu & team has done wonderful work in setting up our Chinese mill  liaison office.They took complete ownership from conceptualisation to installation. Thanks to complete team for their hard-work & dedication.",
     clientRating: 5,
     images: [
       "/Goldenharness/WhatsApp Image 2025-04-26 at 20.10.04_63d69a7e.jpg",

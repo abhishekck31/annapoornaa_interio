@@ -77,7 +77,7 @@ const ProjectsSection = () => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <Card className="overflow-hidden shadow-lg transition-transform duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
-                    <div className="relative h-64 w-full">
+                    <div className="relative h-40 sm:h-64 w-full">
                       <img
                         src={project.mainImage}
                         alt={project.title}
@@ -97,24 +97,29 @@ const ProjectsSection = () => {
                         </div>
                       )}
                     </div>
-                    <CardContent className="p-6 bg-white">
-                      <span className="inline-block bg-gold-100 text-gold-800 text-xs px-3 py-1 rounded-full font-semibold mb-3">
-                        {project.category}
-                      </span>
-                      <h3 className="text-2xl font-bold text-navy-900 mb-1">
-                        {project.title}
-                      </h3>
-                      <div className="flex items-center text-gold-600 mb-2">
-                        <MapPin className="h-5 w-5 mr-1" />
-                        <span>{project.location}</span>
-                      </div>
-                      <p className="text-gray-600 mb-4 line-clamp-2">
-                        {project.description}
-                      </p>
-                      <div className="flex flex-col md:flex-row items-center md:justify-between gap-2 md:gap-0">
-                        {/* Removed project year/date display */}
-                        <Link href="/featured-projects" scroll={true} className="w-full md:w-auto text-gold-600 font-medium flex items-center justify-center group text-sm">
-                          View Details <ArrowRight className="ml-1 h-4 w-4" />
+                    <CardContent className="p-3 sm:p-6 bg-white">
+                      <div className="flex flex-col space-y-1">
+                        <div className="flex items-center justify-between">
+                          <span className="inline-block bg-gold-100 text-gold-800 text-xs px-2 py-1 rounded-full font-semibold">
+                            {project.category}
+                          </span>
+                        </div>
+                        <h3 className="text-base sm:text-2xl font-bold text-navy-900 line-clamp-1">
+                          {project.title}
+                        </h3>
+                        <div className="flex items-center text-gold-600 text-xs sm:text-base">
+                          <MapPin className="h-3 w-3 sm:h-5 sm:w-5 mr-1 flex-shrink-0" />
+                          <span className="line-clamp-1">{project.location}</span>
+                        </div>
+                        <p className="text-gray-600 text-xs sm:text-base line-clamp-2 sm:line-clamp-3">
+                          {project.description}
+                        </p>
+                        <Link 
+                          href="/featured-projects" 
+                          scroll={true} 
+                          className="text-gold-600 font-medium flex items-center text-xs sm:text-sm mt-1"
+                        >
+                          View Details <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
                         </Link>
                       </div>
                     </CardContent>

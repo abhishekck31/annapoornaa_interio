@@ -29,9 +29,12 @@ export function CollapsibleSection({ title, emoji, items }: CollapsibleSectionPr
         )}
       </button>
       <div className={`px-4 ${isOpen ? 'py-3' : 'py-0'} bg-gray-50 rounded-b-lg overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0'}`}>
-        <ul className="list-disc list-inside space-y-2 text-gray-600">
+        <ul className="grid grid-cols-1 gap-2 text-gray-600">
           {items.map((item, index) => (
-            <li key={index} className="text-sm">{item}</li>
+            <li key={index} className="flex items-center gap-2">
+              <span className="text-gold-500 flex-shrink-0">•</span>
+              <span className="text-sm">{item}</span>
+            </li>
           ))}
         </ul>
       </div>

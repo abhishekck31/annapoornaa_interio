@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",
@@ -38,6 +39,7 @@
     "@radix-ui/react-toggle": "^1.1.1",
     "@radix-ui/react-toggle-group": "^1.1.1",
     "@radix-ui/react-tooltip": "^1.1.6",
+    "@vercel/analytics": "^1.5.0",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -45,6 +47,7 @@
     "date-fns": "^3.6.0",
     "embla-carousel-react": "8.5.1",
     "framer-motion": "^11.2.5",
+    "globby": "^14.1.0",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",
     "next": "^15.3.1",
@@ -66,6 +69,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "file-loader": "^6.2.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"

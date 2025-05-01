@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "What services do you offer?",
     answer:
-      "We offer a comprehensive range of interior and construction services including home interior, office/corporate interiors, residential & commercial construction, renovation, and various products like UPVC windows, doors, fire doors, system railings, PVC false ceilings, and workstations.",
+      "We offer a comprehensive range of interior and construction services including home interior, office/corporate interiors, residential & commercial construction, renovation, and various products like UPVC windows, doors, fire doors, system railings, false ceilings, and workstations.",
   },
   {
     question: "How long does a typical project take?",

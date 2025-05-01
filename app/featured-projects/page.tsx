@@ -10,6 +10,8 @@ import ScrollAnimation from "@/components/scroll-animation"
 import Link from "next/link"
 import { projects } from "@/data/projects-data"
 import { motion, AnimatePresence } from "framer-motion"
+import VideoPlayer from "@/components/video-player" // Import the VideoPlayer component
+import VimeoPlayer from "@/components/vimeo-player" // Import the VimeoPlayer component
 
 export default function FeaturedProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
@@ -315,13 +317,21 @@ export default function FeaturedProjectsPage() {
               onClick={(e) => e.stopPropagation()}
             >
               {getProjectById(selectedProject) && (
-                <div className="relative h-[70vh]">
-                  <video
-                    src={getProjectById(selectedProject)?.video || "/placeholder.mp4"}
-                    aria-label={`${getProjectById(selectedProject)?.title} video`}
-                    className="w-full h-full object-contain"
-                    controls
-                  />
+                <div className="relative h-[70vh] flex items-center justify-center">
+                  {getProjectById(selectedProject)?.embedCode ? (
+                    <div
+                      className="w-full max-w-4xl h-full flex items-center justify-center"
+                      dangerouslySetInnerHTML={{ __html: getProjectById(selectedProject)?.embedCode || "" }}
+                    />
+                  ) : (
+                    <video
+                      src={getProjectById(selectedProject)?.video || "/placeholder.mp4"}
+                      aria-label={`${getProjectById(selectedProject)?.title} video`}
+                      className="w-full h-full object-contain"
+                      controls
+                      poster={getProjectById(selectedProject)?.mainImage}
+                    />
+                  )}
                 </div>
               )}
             </motion.div>

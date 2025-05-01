@@ -1,4 +1,6 @@
-export const projects = [
+import { Project } from '@/types/project'
+
+export const projects: Project[] = [
   {
     id: 1,
     title: "Asmara Apparels",
@@ -29,6 +31,9 @@ export const projects = [
     ],
     mainImage: "/Asmara-project/Asmara1.jpg",
     video: "/asmaranew/WhatsApp Video 2025-04-16 at 17.01.20_c52476c6.mp4",
+    // Using direct embed code for reliable playback on Vercel
+    youtubeVideoId: "",
+    embedCode: "<iframe src=\"https://player.vimeo.com/video/1080087250?h=4ca93b7197\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     id: 2,

@@ -43,11 +43,11 @@ const PVCFalseCeilingsPage = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mt-24 mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              PVC Soffit False Ceilings
+              Soffit False Ceilings
             </h1>
             <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Modern, lightweight, and water-resistant PVC false ceiling
+              Modern, lightweight, and water-resistant false ceiling
               solutions for enhanced interior aesthetics
             </p>
           </div>
@@ -56,7 +56,7 @@ const PVCFalseCeilingsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/newsoffit/WhatsApp Image 2025-04-26 at 21.27.44_c90fd73c.jpg"
-                alt="PVC Soffit False Ceilings"
+                alt="Soffit False Ceilings"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -65,18 +65,17 @@ const PVCFalseCeilingsPage = () => {
 
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-              PVC Soffit Ceiling etc..
+               Wide range of false ceilings
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Our PVC soffit false ceilings combine modern aesthetics with practical
-                benefits, offering a perfect solution for both residential and
-                commercial spaces. These lightweight yet durable ceilings are
-                designed to enhance your interior while providing excellent
-                insulation and maintenance-free performance.
+                False ceilings offer a wide variety of design and material options,
+                allowing for both aesthetic enhancement and practical benefits like hiding 
+                wiring and improving insulation.Common materials include gypsum, POP(Plaster of Paris),
+                metal and wood. The choice of materials depends on factors like budget, desired design, and the room's specific needs.
               </p>
               <p className="text-lg text-gray-700 mb-8">
                 Whether you're looking for simple elegant panels or decorative
-                designs, our range of PVC soffit false ceilings can transform any space
+                designs, our range of soffit false ceilings can transform any space
                 while ensuring long-lasting durability and easy maintenance.
               </p>
 
@@ -96,7 +95,7 @@ const PVCFalseCeilingsPage = () => {
 
           <div className="mt-20">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              PVC Soffit Ceiling Designs
+              Soffit Ceiling Designs
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               {ceilingImages.map((imageSrc, index) => (
@@ -104,7 +103,7 @@ const PVCFalseCeilingsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={imageSrc}
-                      alt={`PVC Soffit Ceiling Design ${index + 1}`}
+                      alt={`Soffit Ceiling Design ${index + 1}`}
                       fill
                       className="object-cover"
                     />

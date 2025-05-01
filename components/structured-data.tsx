@@ -20,7 +20,7 @@ const StructuredData = () => {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Design Street, Creative Avenue",
+      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross,2nd stage, 'B' sector",
       addressLocality: "Yelahanka",
       addressRegion: "Bangalore",
       postalCode: "560064",
@@ -31,20 +31,20 @@ const StructuredData = () => {
       latitude: 13.1005,
       longitude: 77.5945,
     },
-    telephone: "+919876543210",
+    telephone: "+91 99000 94942",
     email: "info@annapoornainterio.com",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
-        closes: "18:00",
+        closes: "19:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Saturday",
         opens: "10:00",
-        closes: "16:00",
+        closes: "19:00",
       },
     ],
     priceRange: "₹₹-₹₹₹₹",
@@ -53,7 +53,7 @@ const StructuredData = () => {
       name: "Bangalore",
     },
     description:
-      "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products.",
+      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services that transform your space.",
   }
 
   // Local business schema
@@ -82,13 +82,13 @@ const StructuredData = () => {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
-        closes: "18:00",
+        closes: "19:00",
       },
       {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: "Saturday",
         opens: "10:00",
-        closes: "16:00",
+        closes: "19:00",
       },
     ],
     sameAs: [
@@ -162,7 +162,7 @@ const StructuredData = () => {
         name: "What services does Annapoornaa Interio offer in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, PVC Soffit False Ceilings, workstations, and chairs.",
+          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, Soffit False Ceilings, workstations, and chairs.",
         },
       },
       {
@@ -193,7 +193,26 @@ const StructuredData = () => {
   } else if (pathname === "/services") {
     currentSchema = serviceSchema
   } else if (pathname.includes("/products/")) {
-    currentSchema = productSchema
+    // Handle specific product pages
+    if (pathname === "/products/upvc-windows-doors") {
+      currentSchema = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "UPVC Windows & Doors",
+        "description": "Energy-efficient UPVC windows and doors installation in Bangalore",
+        "brand": {
+          "@type": "Brand",
+          "name": "Annapoornaa Interio"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    } else {
+      currentSchema = productSchema
+    }
   } else if (pathname === "/faq" || pathname === "/#faq") {
     currentSchema = faqSchema
   }

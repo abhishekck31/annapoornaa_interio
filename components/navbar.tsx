@@ -193,7 +193,7 @@ const Navbar = () => {
                       scrollToTop();
                     }}
                   >
-                    PVC Soffit False Ceilings
+                    Soffit False Ceilings
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -377,7 +377,7 @@ const Navbar = () => {
                     scrollToTop();
                   }}
                 >
-                  PVC Soffit False Ceilings
+                   Soffit False Ceilings
                 </Link>
                 <Link
                   href="/products/workstations"
@@ -388,16 +388,6 @@ const Navbar = () => {
                   }}
                 >
                   Workstations
-                </Link>
-                <Link
-                  href="/products/chairs"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                  Chairs
                 </Link>
               </div>
             </div>

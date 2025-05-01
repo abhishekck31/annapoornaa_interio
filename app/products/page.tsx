@@ -39,9 +39,9 @@ const products = [
   },
   {
     id: "pvc-false-&-ceilings",
-    title: "PVC Soffit False Ceilings",
+    title: "Soffit False Ceilings",
     description:
-      "Lightweight, water-resistant, and easy-to-install PVC false ceiling solutions for various spaces.",
+      "Lightweight, water-resistant, and easy-to-install false ceiling solutions for various spaces.",
     image: "/PVC False and Ceilings/PVCFalse-Main.webp",
     link: "/products/pvc-false-ceilings",
   },

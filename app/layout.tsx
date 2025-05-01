@@ -20,9 +20,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Annapoornaa Interio | Premium Interiors & Construction Services in Bangalore",
   description:
-    "Top-rated interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, construction, renovation, and premium products.",
+    "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services with high-quality products that transform your space.",
   keywords:
-    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, PVC false ceilings, workstations Bangalore, interior designers near me",
+    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Annapoornaa Interio | Premium Interior & Construction Services in Bangalore",
     description:
-      "Top-rated interior design and construction services in Bangalore and Yelahanka. Transform your space with our expert team.",
+      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
     url: "https://annapoornaainterio.com",
     siteName: "Annapoornaa Interio",
     locale: "en_IN",
@@ -68,6 +68,35 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
+export function JsonLd() {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "InteriorDesignBusiness",
+          "name": "Annapoornaa Interio",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "KA",
+            "postalCode": "560064",
+            "streetAddress": "Your Street Address"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "13.1007",
+            "longitude": "77.5963"
+          },
+          "telephone": "+91 YOUR_PHONE",
+          "openingHours": "Mo-Sa 09:00-18:00"
+        })
+      }}
+    />
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -76,6 +105,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
+        <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
         <Script
           id="scroll-to-top"
           strategy="afterInteractive"
@@ -87,6 +119,7 @@ export default function RootLayout({
             `,
           }}
         />
+        <JsonLd />
       </head>
       <body className="font-poppins">
         <StructuredData />

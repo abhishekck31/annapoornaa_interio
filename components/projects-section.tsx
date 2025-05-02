@@ -69,75 +69,47 @@ const ProjectsSection = () => {
         </ScrollAnimation>
 
         {/* Featured Projects Grid View - Only 2 projects */}
-        <div className="flex flex-col md:flex-row gap-10 mb-16">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-16 w-full overflow-x-hidden">
           {/* Project Card */}
-          <div className="md:w-1/2 w-full flex items-center justify-center">
+          <div className="md:w-1/2 w-full flex items-stretch justify-center">
             {homePageProjects.filter(project => project.id === 1).map((project, index) => (
               <ScrollAnimation key={project.id}>
                 <motion.div
-                  className="group"
+                  className="group w-full max-w-md md:max-w-none"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Card className="overflow-hidden shadow-lg transition-transform duration-300 group-hover:shadow-2xl group-hover:-translate-y-1">
-                    <div className="relative h-40 sm:h-64 w-full">
+                  <Card className="shadow-lg transition-transform duration-300 group-hover:shadow-2xl group-hover:-translate-y-1 w-full mb-16 md:mb-0">
+                    <div className="relative w-full h-auto">
                       <img
                         src={project.mainImage}
                         alt={project.title}
-                        className="object-cover w-full h-full rounded-t-lg"
+                        className="object-cover w-full h-auto rounded-t-lg"
                       />
-                      {project.embedCode ? (
-                        <div className="mt-3">
-                          <div
-                            className="w-full rounded-lg border border-gray-200 shadow-lg max-h-[200px] overflow-hidden"
-                            dangerouslySetInnerHTML={{ __html: project.embedCode }}
-                          />
-                        </div>
-                      ) : project.youtubeVideoId ? (
-                        <div className="mt-3">
-                          <VideoPlayer 
-                            videoId={project.youtubeVideoId} 
-                            className="w-full rounded-lg border border-gray-200 shadow-lg max-h-[200px] overflow-hidden" 
-                            title={`${project.title} Walkthrough`}
-                          />
-                        </div>
-                      ) : project.video && (
-                        <div className="mt-3">
-                          <video
-                            src={project.video}
-                            controls
-                            poster={project.mainImage}
-                            className="w-full rounded-lg border border-gray-200 shadow-lg bg-black"
-                            style={{ maxHeight: '200px', objectFit: 'cover' }}
-                          >
-                            Sorry, your browser does not support embedded videos.
-                          </video>
-                        </div>
-                      )}
                     </div>
-                    <CardContent className="p-3 sm:p-6 bg-white">
-                      <div className="flex flex-col space-y-1">
-                        <div className="flex items-center justify-between">
+                    <CardContent className="p-4 sm:p-6 bg-white pb-28 sm:pb-6">
+                      <div className="flex flex-col space-y-2 text-left mb-6">
+                        <div className="flex items-center justify-start">
                           <span className="inline-block bg-gold-100 text-gold-800 text-xs px-2 py-1 rounded-full font-semibold">
                             {project.category}
                           </span>
                         </div>
-                        <h3 className="text-base sm:text-2xl font-bold text-navy-900 line-clamp-1">
+                        <h3 className="text-lg sm:text-2xl font-bold text-navy-900 break-words whitespace-normal mt-1">
                           {project.title}
                         </h3>
-                        <div className="flex items-center text-gold-600 text-xs sm:text-base">
-                          <MapPin className="h-3 w-3 sm:h-5 sm:w-5 mr-1 flex-shrink-0" />
-                          <span className="line-clamp-1">{project.location}</span>
+                        <div className="flex items-center text-gold-600 text-sm sm:text-base mt-1">
+                          <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mr-1 flex-shrink-0" />
+                          <span className="break-words whitespace-normal">{project.location}</span>
                         </div>
-                        <p className="text-gray-600 text-xs sm:text-base line-clamp-2 sm:line-clamp-3">
+                        <p className="text-gray-600 text-sm sm:text-base break-words whitespace-normal mt-1">
                           {project.description}
                         </p>
                         <Link 
                           href="/featured-projects" 
                           scroll={true} 
-                          className="text-gold-600 font-medium flex items-center text-xs sm:text-sm mt-1"
+                          className="text-gold-600 font-medium flex items-center text-sm sm:text-base mt-2"
                         >
-                          View Details <ArrowRight className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                          View Details <ArrowRight className="ml-1 h-4 w-4 sm:h-4 sm:w-4" />
                         </Link>
                       </div>
                     </CardContent>
@@ -147,51 +119,35 @@ const ProjectsSection = () => {
             ))}
           </div>
           {/* Enhanced Clients Section */}
-          <div className="md:w-1/2 w-full flex items-center justify-center">
-            <div className="w-full bg-gradient-to-br from-gold-50 to-white border border-gold-100 rounded-xl shadow-md p-8 text-center md:text-left">
-              <h4 className="text-2xl font-bold text-navy-900 mb-3 flex items-center justify-center md:justify-start">
+          <div className="md:w-1/2 w-full flex items-stretch justify-center mt-6 md:mt-0">
+            <div className="w-full max-w-md md:max-w-none bg-gradient-to-br from-gold-50 to-white border border-gold-100 rounded-xl shadow-md p-4 sm:p-8 text-center md:text-left">
+              <h4 className="text-xl sm:text-2xl font-bold text-navy-900 mb-3 flex items-center justify-center md:justify-start">
                 <Sparkles className="mr-2 text-gold-500" />Our Esteemed Clients
               </h4>
-              <p className="text-gray-700 mb-4">
+              <p className="text-gray-700 mb-4 text-sm sm:text-base">
                 Annapoornaa Interio has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
               </p>
               <div className="mb-4">
-                <h5 className="font-semibold text-navy-800 mb-2">Notable Clients:</h5>
-                <ul className="flex flex-wrap gap-3 justify-center md:justify-start">
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    Asmara Apparels
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    Emudhra Limited
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                    Surbana Jurong - SMEC
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                  Gokaldas Chambers
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                  TSS India Private Limited
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                  Hengst Filtration
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                  Aron Universal Limited
-                  </li>
-                  <li className="flex items-center bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
-                  Ingex Lab Private Limited
-                  </li>
+                <h5 className="font-semibold text-navy-800 mb-2 text-base">Notable Clients:</h5>
+                <ul className="list-disc pl-5 columns-1 sm:columns-2 gap-x-8">
+                  <li>Asmara Apparels</li>
+                  <li>Emudhra Limited</li>
+                  <li>Surbana Jurong - SMEC</li>
+                  <li>Gokaldas Chambers</li>
+                  <li>TSS India Private Limited</li>
+                  <li>Hengst Filtration</li>
+                  <li>Aron Universal Limited</li>
+                  <li>Ingex Lab Private Limited</li>
                 </ul>
               </div>
               <div className="mb-4">
-                <h5 className="font-semibold text-navy-800 mb-2">Our Approach:</h5>
-                <p className="text-gray-600">
+                <h5 className="font-semibold text-navy-800 mb-2 text-base">Our Approach:</h5>
+                <p className="text-gray-600 text-sm sm:text-base">
                   We believe in a collaborative process, working closely with our clients from concept to completion. Our team ensures every project is delivered on time, within budget, and with the highest standards of quality and innovation.
                 </p>
               </div>
               <Link href="/contact-us">
-                <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-6 py-2 rounded shadow-lg mt-2">
+                <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-4 py-2 sm:px-6 sm:py-2 rounded shadow-lg mt-2 text-sm sm:text-base">
                   Get in Touch
                 </Button>
               </Link>

@@ -308,6 +308,10 @@
         .service-description {
             font-size: 0.9rem;
             color: var(--text-light);
+            line-height: 1.5;
+            margin-top: 0.5rem;
+            text-align: justify;
+            padding: 0 0.5rem;
         }
 
         .feature-list {
@@ -636,45 +640,57 @@
             opacity: 1;
         }
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
         .product-item {
             position: relative;
-            overflow: hidden;
+            overflow: visible;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            aspect-ratio: 4/3;
-        }
-
-        .product-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            background: white;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            min-height: 400px;
         }
 
         .product-item img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 1rem;
         }
 
         .product-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-            color: white;
-            padding: 1.5rem 1rem;
-            font-size: 1.1rem;
-            font-weight: 500;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
             text-align: center;
+            padding: 0.5rem;
+            background: var(--background-alt);
+            border-radius: 4px;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-top: 1rem;
+            text-align: left;
+            padding: 1rem;
+            background: var(--background-alt);
+            border-radius: 4px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            padding: 2rem;
+            margin-top: 2rem;
         }
 
         @media print {
@@ -766,94 +782,27 @@
         <div class="grid" style="margin-top: 2rem;">
             <div class="service-card">
                 <h3 class="service-title">Home Interiors</h3>
-                <p class="service-description">Transform your living spaces with our expert home interior design services.</p>
-                <ul class="feature-list">
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Modular Kitchens</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Wardrobes & TV Units</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">False Ceilings & Floorings</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Painting & Electrical Works</span>
-                    </li>
-                </ul>
+                <p class="service-description">Transform your living spaces with our comprehensive Interiors design solutions, from concept to completion.</p>
             </div>
-
             <div class="service-card">
-                <h3 class="service-title">Office Interiors</h3>
-                <p class="service-description">Create productive and inspiring workspaces with our office interiors solutions.</p>
-                <ul class="feature-list">
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Workstations & Chairs</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Glass & Dry Wall Partitions</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">HVAC & Electrical Works</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Storage Units & Fabrication</span>
-                    </li>
-                </ul>
+                <h3 class="service-title">Office/Corporate Interiors</h3>
+                <p class="service-description">Create productive and stylish workspaces with our expert corporate Interiors design and implementation services.</p>
             </div>
-
             <div class="service-card">
-                <h3 class="service-title">Construction</h3>
-                <p class="service-description">Build your dream property with our professional construction services.</p>
-                <ul class="feature-list">
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Architectural Planning & Design</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Structural Engineering</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Project Management</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Quality Material Sourcing</span>
-                    </li>
-                </ul>
+                <h3 class="service-title">Residential & Commercial Construction</h3>
+                <p class="service-description">End-to-end construction services with expert architectural planning, structural engineering, and project management.</p>
             </div>
-
             <div class="service-card">
                 <h3 class="service-title">Renovation</h3>
                 <p class="service-description">Revitalize your existing spaces with our comprehensive renovation services.</p>
-                <ul class="feature-list">
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Space Redesign & Optimization</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Structural Modifications</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Fixture & Fitting Upgrades</span>
-                    </li>
-                    <li class="feature-item">
-                        <span class="feature-icon">✓</span>
-                        <span class="feature-text">Aesthetic Enhancements</span>
-                    </li>
-                </ul>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">PMC – Project Management & Consultancy</h3>
+                <p class="service-description">Expert project management and consultancy services to ensure your construction projects are delivered on time and within budget.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">Design & Drawings</h3>
+                <p class="service-description">Detailed architectural drawings and design documentation with precision engineering and creative excellence.</p>
             </div>
         </div>
     </div>
@@ -868,60 +817,35 @@
         </div>
         <div class="section">
             <h2 class="section-title">Our Products</h2>
-            <div class="product-grid">
-                <!-- Aluminum Windows -->
-                <div class="product-item">
-                    <img src="Alumilium Doors and Windows/Alumilium-Slidingwindow.jpg" alt="Aluminum Windows">
-                    <div class="product-caption">Aluminum Windows</div>
-                </div>
+            <div class="section-content">
+                <p>At Annapoorneshwari Constructions Interiors, we offer a wide range of high-quality products designed to enhance the functionality and aesthetics of your spaces. Each product is carefully selected and engineered to meet the highest standards of quality and performance.</p>
+            </div>
+        </div>
 
-                <!-- Aluminum Doors -->
-                <div class="product-item">
-                    <img src="Alumilium Doors and Windows/Alumilium-Slidingdoor.jpg" alt="Aluminum Doors">
-                    <div class="product-caption">Aluminum Doors</div>
-                </div>
-
-                <!-- UPVC Windows -->
-                <div class="product-item">
-                    <img src="UP-Slidingwindow.png" alt="UPVC Windows">
-                    <div class="product-caption">UPVC Windows</div>
-                </div>
-
-                <!-- UPVC Doors and Windows -->
-                <div class="product-item">
-                    <img src="UPVC-main.jpg" alt="UPVC Doors and Windows">
-                    <div class="product-caption">UPVC Doors and Windows</div>
-                </div>
-
-                <!-- UPVC Doors -->
-                <div class="product-item">
-                    <img src="UP-BDH.jpg" alt="UPVC Doors">
-                    <div class="product-caption">UPVC Doors</div>
-                </div>
-
-                <!-- Fire Doors -->
-                <div class="product-item">
-                    <img src="Fire Doors/Fire-Double.jpg" alt="Fire Doors">
-                    <div class="product-caption">Fire Doors</div>
-                </div>
-
-                <!-- PVC False Ceilings -->
-                <div class="product-item">
-                    <img src="PVC-Panels.jpg" alt="PVC False Ceilings">
-                    <div class="product-caption">PVC False Ceilings</div>
-                </div>
-
-                <!-- Workstations -->
-                <div class="product-item">
-                    <img src="Workstations/Workstation-Main.webp" alt="Modern Workstations">
-                    <div class="product-caption">Workstations</div>
-                </div>
-
-                <!-- Tilt & Turn Windows -->
-                <div class="product-item">
-                    <img src="upvc-doors-and-windows/UPVC-Frenchdoors.jpg" alt="UPVC French Doors">
-                    <div class="product-caption">UPVC French Doors</div>
-                </div>
+        <div class="grid" style="margin-top: 2rem;">
+            <div class="service-card">
+                <h3 class="service-title">UPVC Windows & Doors</h3>
+                <p class="service-description">Energy-efficient windows and doors with excellent thermal insulation, sound reduction, and weather resistance properties.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">Aluminum Doors & Windows</h3>
+                <p class="service-description">Sleek, modern designs with exceptional strength and durability, perfect for contemporary architectural styles.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">System Railings</h3>
+                <p class="service-description">Customizable railing solutions in glass, steel, and aluminum options for staircases, balconies, and terraces.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">Soffit False Ceilings</h3>
+                <p class="service-description">Lightweight, water-resistant ceiling solutions that improve aesthetics, thermal insulation, and acoustics.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">Workstations</h3>
+                <p class="service-description">Ergonomic and modular workstation designs that enhance productivity and comfort in modern office environments.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-title">Fire Doors</h3>
+                <p class="service-description">Safety-focused doors designed to prevent the spread of fire and smoke, meeting all relevant safety standards.</p>
             </div>
         </div>
     </div>
@@ -942,80 +866,88 @@
         </div>
         
         <div class="gallery-grid">
-            <!-- Row 1 -->
+            <!-- Row 1 - Home Interiors -->
             <div class="gallery-item">
                 <img src="homeinteriorsimages/homeinterior1.jpg" alt="Luxury Home Interior">
                 <div class="gallery-caption">Luxury Home Interior</div>
             </div>
             <div class="gallery-item">
-                <img src="workstation.jpg" alt="Modern Workstations">
-                <div class="gallery-caption">Workstations</div>
-            </div>
-            <div class="gallery-item">
-                <img src="UPVC-main.jpg" alt="UPVC Doors and Windows">
-                <div class="gallery-caption">UPVC Doors and Windows</div>
-            </div>
-            
-            <!-- Row 2 -->
-            <div class="gallery-item">
-                <img src="homeinteriorsimages/homeinterior5.jpg" alt="Modern Home Design">
-                <div class="gallery-caption">Modern Home Design</div>
+                <img src="homeinteriorsimages/homeinterior15.jpg" alt="Modern Living Room">
+                <div class="gallery-caption">Modern Living Room</div>
             </div>
             <div class="gallery-item">
                 <img src="homeinteriorsimages/homeinterior46.jpg" alt="Elegant Living Space">
                 <div class="gallery-caption">Elegant Living Space</div>
             </div>
+            
+            <!-- Row 2 - More Home Interiors -->
             <div class="gallery-item">
-                <img src="interiors/Interiors8.jpg" alt="Premium Residential Design">
-                <div class="gallery-caption">Premium Residential Design</div>
+                <img src="homeinteriorsimages/homeinterior5.jpg" alt="Contemporary Bedroom">
+                <div class="gallery-caption">Contemporary Bedroom</div>
+            </div>
+            <div class="gallery-item">
+                <img src="homeinteriorsimages/homeinterior20.jpg" alt="Stylish Kitchen Design">
+                <div class="gallery-caption">Stylish Kitchen Design</div>
+            </div>
+            <div class="gallery-item">
+                <img src="homeinteriorsimages/homeinterior95.jpg" alt="Modern Bathroom">
+                <div class="gallery-caption">Modern Bathroom</div>
             </div>
             
-            <!-- Row 3 -->
+            <!-- Row 3 - Century Club Project -->
             <div class="gallery-item">
-                <img src="centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_cde4e3fe.jpg" alt="Premium Commercial Space">
-                <div class="gallery-caption">Premium Commercial Space</div>
+                <img src="centuryclub/WhatsApp Image 2025-04-26 at 19.14.43_cde4e3fe.jpg" alt="Century Club Lounge">
+                <div class="gallery-caption">Century Club Lounge</div>
             </div>
             <div class="gallery-item">
-                <img src="centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_b0f69972.jpg" alt="Century Club Project">
-                <div class="gallery-caption">Century Club Project</div>
+                <img src="centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_b0f69972.jpg" alt="Century Club Dining">
+                <div class="gallery-caption">Century Club Dining</div>
             </div>
             <div class="gallery-item">
-                <img src="homeinteriorsimages/homeinterior95.jpg" alt="Contemporary Home Interior">
-                <div class="gallery-caption">Contemporary Home Interior</div>
-            </div>
-            
-            <!-- Row 4 -->
-            <div class="gallery-item">
-                <img src="Asmara-project/Asmara5.jpg" alt="Executive Office Space">
-                <div class="gallery-caption">Executive Office Space</div>
-            </div>
-            <div class="gallery-item">
-                <img src="Asmara-project/Asmara2.jpg" alt="Corporate Office Design">
-                <div class="gallery-caption">Corporate Office Design</div>
-            </div>
-            <div class="gallery-item">
-                <img src="asmaranew/new2.jpg" alt="Modern Workspace">
-                <div class="gallery-caption">Modern Workspace</div>
+                <img src="centuryclub/maincc.jpg" alt="Century Club Main Hall">
+                <div class="gallery-caption">Century Club Main Hall</div>
             </div>
             
-            <!-- Row 5 -->
+            <!-- Row 4 - Asmara Project -->
             <div class="gallery-item">
-                <img src="Construction/construction3.jpg" alt="Construction Project">
-                <div class="gallery-caption">Construction Project</div>
+                <img src="Asmara-project/Asmara5.jpg" alt="Asmara Office Space">
+                <div class="gallery-caption">Asmara Office Space</div>
             </div>
             <div class="gallery-item">
-                <img src="Construction/aronuni.jpg" alt="Aron University Project">
-                <div class="gallery-caption">Aron University Project</div>
+                <img src="Asmara-project/Asmara2.jpg" alt="Asmara Meeting Room">
+                <div class="gallery-caption">Asmara Meeting Room</div>
             </div>
             <div class="gallery-item">
-                <img src="Black box-project/Blackbox2.jpg" alt="Modern Office Design">
-                <div class="gallery-caption">Modern Office Design</div>
+                <img src="Asmara-project/Asmara6.jpg" alt="Asmara Reception">
+                <div class="gallery-caption">Asmara Reception</div>
             </div>
             
-            <!-- Row 6 -->
+            <!-- Row 5 - BlackBX Project -->
             <div class="gallery-item">
-                <img src="Asmara-project/Asmara6.jpg" alt="Asmara Office Interior">
-                <div class="gallery-caption">Asmara Office Interior</div>
+                <img src="Blackbx-project/Blackbox1.jpg" alt="BlackBX Office Interior">
+                <div class="gallery-caption">BlackBX Office Interior</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Blackbx-project/Blackbox3.jpg" alt="BlackBX Workspace">
+                <div class="gallery-caption">BlackBX Workspace</div>
+            </div>
+            <div class="gallery-item">
+                <img src="Blackbx-project/Blackbox5.jpg" alt="BlackBX Conference Room">
+                <div class="gallery-caption">BlackBX Conference Room</div>
+            </div>
+            
+            <!-- Row 6 - Ooty Resort -->
+            <div class="gallery-item">
+                <img src="ootyresort/mainres.jpg" alt="Ooty Resort Exterior">
+                <div class="gallery-caption">Ooty Resort Exterior</div>
+            </div>
+            <div class="gallery-item">
+                <img src="ootyresort/WhatsApp Image 2025-04-26 at 21.47.54_237fa813.jpg" alt="Resort Interior">
+                <div class="gallery-caption">Resort Interior</div>
+            </div>
+            <div class="gallery-item">
+                <img src="ootyresort/WhatsApp Image 2025-04-26 at 21.48.00_a5aafb40.jpg" alt="Resort Amenities">
+                <div class="gallery-caption">Resort Amenities</div>
             </div>
         </div>
     </div>

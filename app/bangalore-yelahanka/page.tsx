@@ -87,7 +87,7 @@ const BangaloreYelahankaPage = () => {
       name: "Darhini B S",
       location: "Bangalore",
       testimonial:
-        "I would like to extend my sincere appreciation for the outstanding interior work done by Annapoornaa Interio. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch.The craftsmanship, choice of materials, and attention to detail truly reflect a high standard of excellence. The space has been transformed beautifully, balancing aesthetics with functionality. The team’s dedication, timely delivery, and willingness to accommodate our preferences made the entire experience seamless and enjoyable.Thank you for your hard work and commitment to quality. I highly recommend Annapoornaa Interio to anyone looking for superior interior design and execution.",
+        "I would like to extend my sincere appreciation for the outstanding interior work done by Annapoornaa Interio. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch.The craftsmanship, choice of materials, and attention to detail truly reflect a high standard of excellence. The space has been transformed beautifully, balancing aesthetics with functionality. The team's dedication, timely delivery, and willingness to accommodate our preferences made the entire experience seamless and enjoyable.Thank you for your hard work and commitment to quality. I highly recommend Annapoornaa Interio to anyone looking for superior interior design and execution.",
       rating: 5,
     },
     {
@@ -123,9 +123,10 @@ const BangaloreYelahankaPage = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
+      <div className="h-20"></div>
 
       {/* Hero Section */}
-      <section className="pt-96 pb-16 bg-gradient-to-r from-navy-900 to-navy-800 text-white">
+      <section className="pt-56 pb-36 bg-gradient-to-r from-navy-900 to-navy-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
@@ -157,15 +158,7 @@ const BangaloreYelahankaPage = () => {
               </div>
             </div>
             <div className="lg:w-1/2">
-              <div className="relative">
-                <div className="absolute -top-4 -left-4 w-24 h-24 bg-gold-500/30 rounded-tl-3xl z-0"></div>
-                <img
-                  src="/placeholder.svg?height=600&width=800"
-                  alt="Interior Design Projects in Bangalore and Yelahanka"
-                  className="rounded-lg shadow-2xl relative z-10 w-full h-auto"
-                />
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold-500/30 rounded-br-3xl z-0"></div>
-              </div>
+              {/* Removed image section */}
             </div>
           </div>
         </div>
@@ -280,13 +273,6 @@ const BangaloreYelahankaPage = () => {
             {products.map((product, index) => (
               <Link href={product.link} key={index}>
                 <Card className="h-full hover:shadow-xl transition-all duration-300 hover:border-gold-300 overflow-hidden cursor-pointer">
-                  <div className="h-48 bg-gray-100 flex items-center justify-center">
-                    <img
-                      src="/placeholder.svg?height=200&width=300"
-                      alt={product.title}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold text-navy-900 mb-2">{product.title}</h3>
                     <p className="text-gray-600 mb-4">{product.description}</p>

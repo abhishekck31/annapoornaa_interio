@@ -28,6 +28,11 @@ export const projects: Project[] = [
       "/asmaranew/new6.jpg",
       "/asmaranew/new7.jpg",
       "/asmaranew/new8.jpg",
+      "/asmaranew/asmaraoffice1.jpg",
+      "/asmaranew/asmaraoffice2.jpg",
+      "/asmaranew/asmaraoffice3.jpg",
+      "/asmaranew/asmaraoffice4.jpg",
+      
     ],
     mainImage: "/Asmara-project/Asmara1.jpg",
     video: "/asmaranew/WhatsApp Video 2025-04-16 at 17.01.20_c52476c6.mp4",

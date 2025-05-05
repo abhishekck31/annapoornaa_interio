@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="print-color-adjust" content="exact">
     <title>Annapoorneshwari Constructions Interiors - Company Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #001a57; /* Navy blue from logo */
-            --secondary: #ff6b00; /* Orange from logo */
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --background: #ffffff;
-            --background-alt: #f8fafc;
+            --primary: #001a57; /* Navy Blue for headers & footer */
+            --secondary: #d6a01d; /* Golden Ochre for subheadings & buttons/icons */
+            --text-dark: #333333; /* Dark Gray for text */
+            --text-light: #001a57; /* Navy Blue as alternative text color */
+            --background: #ffffff; /* White for body background */
+            --background-alt: #F5F0E6; /* Soft Beige for accent sections */
             --border: #e2e8f0;
+            /* A4 dimensions with adjusted padding for better content fit */
+            --a4-width: 210mm;
+            --a4-height: 297mm;
+            --a4-padding: 8mm; /* Further reduced padding for more content space */
         }
 
         * {
@@ -27,17 +33,26 @@
             color: var(--text-dark);
             background-color: var(--background);
             line-height: 1.6;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
 
         .page {
-            width: 210mm;
-            min-height: 297mm;
-            padding: 15mm;
-            margin: 0 auto;
+            width: var(--a4-width);
+            min-height: var(--a4-height);
+            padding: var(--a4-padding);
+            margin: 0 auto 10mm auto;
             background-color: white;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             position: relative;
-            overflow: hidden;
+            overflow: auto; /* Changed from visible to auto to prevent content overflow */
+            box-sizing: border-box;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+            break-inside: avoid;
         }
 
         .page::before {
@@ -47,7 +62,7 @@
             right: 0;
             width: 300px;
             height: 300px;
-            background-color: rgba(0, 26, 87, 0.2);
+            background-color: rgba(0, 26, 87, 0.15); /* Navy Blue with transparency */
             clip-path: polygon(100% 0, 0 0, 100% 100%);
             z-index: 0;
         }
@@ -59,7 +74,7 @@
             left: 0;
             width: 300px;
             height: 300px;
-            background-color: rgba(255, 107, 0, 0.2);
+            background-color: rgba(214, 160, 29, 0.15); /* Golden Ochre with transparency */
             clip-path: polygon(0 100%, 0 0, 100% 100%);
             z-index: 0;
         }
@@ -71,7 +86,7 @@
             justify-content: space-between;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(255, 107, 0, 0.3);
+            border-bottom: 1px solid rgba(214, 160, 29, 0.3); /* Golden Ochre border */
             z-index: 10;
         }
         
@@ -97,7 +112,7 @@
             position: relative;
             z-index: 1;
             padding: 3rem;
-            background: linear-gradient(135deg, rgba(0, 26, 87, 0.1) 0%, rgba(255, 107, 0, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(0, 26, 87, 0.1) 0%, rgba(214, 160, 29, 0.1) 100%); /* Navy Blue to Golden Ochre gradient */
             overflow: hidden;
         }
 
@@ -234,29 +249,6 @@
             height: 100%;
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23001a57" stroke-width="1.5" stroke-opacity="0.15"/></svg>');
             opacity: 0.2;
-            z-index: -1;
-            border-radius: 8px;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(to right, #001a57, #ff6b00);
-            border-radius: 3px;
-            box-shadow: 0 2px 4px rgba(255, 107, 0, 0.2);
         }
 
         .section-content {
@@ -271,13 +263,13 @@
         }
 
         .service-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 240, 230, 0.9)); /* White to Soft Beige gradient */
             border-radius: 8px;
             padding: 1.5rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
-            border-left: 3px solid var(--secondary);
+            border-left: 3px solid #d6a01d; /* Golden Ochre border */
             box-shadow: 0 4px 6px rgba(0, 26, 87, 0.1);
         }
 
@@ -301,13 +293,13 @@
         .service-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--primary);
+            color: var(--primary); /* Navy Blue for headings */
             margin-bottom: 0.5rem;
         }
 
         .service-description {
             font-size: 0.9rem;
-            color: var(--text-light);
+            color: var(--text-dark); /* Dark Gray for text */
             line-height: 1.5;
             margin-top: 0.5rem;
             text-align: justify;
@@ -363,12 +355,12 @@
 
         .member-position {
             font-size: 0.9rem;
-            color: var(--secondary);
+            color: var(--secondary); /* Golden Ochre for subheadings */
             font-weight: 500;
         }
 
         .contact-info {
-            background: linear-gradient(135deg, #001a57, #002a80);
+            background: linear-gradient(135deg, #001a57, #001a57); /* Solid Navy Blue background */
             color: white;
             padding: 2rem;
             border-radius: 8px;
@@ -418,7 +410,7 @@
 
         .contact-icon {
             margin-right: 0.75rem;
-            color: var(--secondary);
+            color: #d6a01d; /* Golden Ochre for icons */
         }
 
         .contact-text {
@@ -461,15 +453,16 @@
         .gallery-large {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 200px;
-            gap: 1rem;
+            grid-auto-rows: 180px; /* Slightly reduced height */
+            gap: 0.75rem; /* Reduced gap */
             margin: 0;
-            padding: 1rem;
+            padding: 0.75rem;
             width: 100%;
             border: none;
             outline: none;
             background: white;
             position: relative;
+            box-sizing: border-box;
         }
         
         .gallery-item {
@@ -542,10 +535,10 @@
         }
 
         .expertise-item {
-            background-color: var(--background-alt);
+            background-color: var(--background-alt); /* Soft Beige background */
             border-radius: 8px;
             padding: 1.5rem;
-            border-bottom: 3px solid var(--secondary);
+            border-bottom: 3px solid #d6a01d; /* Golden Ochre border */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -583,11 +576,12 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 120px;
-            gap: 1rem;
+            grid-auto-rows: 90px; /* Slightly reduced height to fit better on A4 */
+            gap: 0.75rem;
             padding: 0.5rem;
             margin: 0;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .gallery-item {
@@ -596,8 +590,9 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
-            height: 120px;
+            height: 90px; /* Adjusted to match grid row height */
             background: #ffffff;
+            box-sizing: border-box;
         }
         
         .gallery-item:hover {
@@ -647,11 +642,12 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             background: white;
-            padding: 1.5rem;
+            padding: 1.25rem; /* Slightly reduced padding */
             display: flex;
             flex-direction: column;
             height: auto;
-            min-height: 400px;
+            min-height: 380px; /* Slightly reduced height */
+            box-sizing: border-box;
         }
 
         .product-item img {
@@ -682,23 +678,53 @@
             padding: 1rem;
             background: var(--background-alt);
             border-radius: 4px;
-            border-left: 3px solid var(--secondary);
+            border-left: 3px solid #d6a01d; /* Golden Ochre border */
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            padding: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         @media print {
-            .page {
-                width: 210mm;
-                height: 297mm;
+            @page {
+                size: A4 portrait;
                 margin: 0;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: var(--a4-width);
+                height: auto;
+            }
+            .page {
+                width: var(--a4-width);
+                min-height: var(--a4-height);
+                height: auto;
+                margin: 0;
+                padding: var(--a4-padding);
                 box-shadow: none;
+                page-break-after: always;
+                box-sizing: border-box;
+                overflow: hidden; /* Prevent content from overflowing */
+                position: relative;
+            }
+            .page-break {
+                display: block;
+                page-break-before: always;
+                page-break-after: auto;
+            }
+            /* Ensure no elements overflow the page boundaries */
+            img, .gallery-item, .service-card, .section {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            /* Hide background decorations that might cause printing issues */
+            .page::before, .page::after {
+                display: none;
             }
         }
     </style>
@@ -818,7 +844,7 @@
         <div class="section">
             <h2 class="section-title">Our Products</h2>
             <div class="section-content">
-                <p>At Annapoorneshwari Constructions Interiors, we offer a wide range of high-quality products designed to enhance the functionality and aesthetics of your spaces. Each product is carefully selected and engineered to meet the highest standards of quality and performance.</p>
+                <p>We offer a comprehensive range of high-quality products designed to enhance the functionality and aesthetics of your spaces. Each product is carefully selected and engineered to meet the highest standards of quality and performance.</p>
             </div>
         </div>
 
@@ -1063,11 +1089,11 @@
         </div>
         <div style="flex: 1;">
             <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Asmara Apparels India Pvt. Ltd.</h3>
-            <p style="color: var(--secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Ulsoor, Bangalore | Office Interior</p>
+            <p style="color: #d6a01d; /* Golden Ochre */ font-size: 0.9rem; margin-bottom: 0.5rem;">Ulsoor, Bangalore | Office Interior</p>
             <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.5rem;">A sophisticated office interior design project showcasing modern aesthetics and functional spaces. The project emphasizes clean lines and contemporary design elements.</p>
-            <div style="background-color: rgba(255,255,255,0.5); padding: 0.75rem; border-radius: 8px; border-left: 3px solid var(--secondary);">
+            <div style="background-color: rgba(255,255,255,0.5); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #d6a01d; /* Golden Ochre border */">
                 <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                    <span style="color: var(--secondary); margin-right: 0.5rem;">★★★★★</span>
+                    <span style="color: #d6a01d; /* Golden Ochre */ margin-right: 0.5rem;">★★★★★</span>
                     <span style="font-weight: 600;">Client Testimonial</span>
                 </div>
                 <p style="font-style: italic; color: var(--text-dark); font-size: 0.85rem;">"Raghu and team delivered exactly what we envisioned. The attention to detail and modern design elements exceeded way beyond our expectations."</p>
@@ -1082,11 +1108,11 @@
         </div>
         <div style="flex: 1;">
             <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Black BX Office Interio</h3>
-            <p style="color: var(--secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Bangalore | Office Interior</p>
+            <p style="color: #d6a01d; /* Golden Ochre */ font-size: 0.9rem; margin-bottom: 0.5rem;">Bangalore | Office Interior</p>
             <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.5rem;">A state-of-the-art commercial interior project that combines modern aesthetics with professional functionality. The design focuses on creating an impressive and productive workspace.</p>
-            <div style="background-color: rgba(255,255,255,0.5); padding: 0.75rem; border-radius: 8px; border-left: 3px solid var(--secondary);">
+            <div style="background-color: rgba(255,255,255,0.5); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #d6a01d; /* Golden Ochre border */">
                 <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                    <span style="color: var(--secondary); margin-right: 0.5rem;">★★★★★</span>
+                    <span style="color: #d6a01d; /* Golden Ochre */ margin-right: 0.5rem;">★★★★★</span>
                     <span style="font-weight: 600;">Client Testimonial</span>
                 </div>
                 <p style="font-style: italic; color: var(--text-dark); font-size: 0.85rem;">"The team at Annapoornaa Interio understood our vision perfectly and delivered a space that exceeds our expectations. The modern design elements and attention to detail are outstanding."</p>
@@ -1101,11 +1127,11 @@
         </div>
         <div style="flex: 1;">
             <h3 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 0.25rem;">Emudhra Limited</h3>
-            <p style="color: var(--secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Devanhalli, Aerospace Park, Bangalore | Office Interior</p>
+            <p style="color: #d6a01d; /* Golden Ochre */ font-size: 0.9rem; margin-bottom: 0.5rem;">Devanhalli, Aerospace Park, Bangalore | Office Interior</p>
             <p style="color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.5rem;">A comprehensive Office Interior design that combines functionality with modern architectural elements. The project showcases innovative space utilization and contemporary design.</p>
-            <div style="background-color: rgba(255,255,255,0.5); padding: 0.75rem; border-radius: 8px; border-left: 3px solid var(--secondary);">
+            <div style="background-color: rgba(255,255,255,0.5); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #d6a01d; /* Golden Ochre border */">
                 <div style="display: flex; align-items: center; margin-bottom: 0.5rem;">
-                    <span style="color: var(--secondary); margin-right: 0.5rem;">★★★★★</span>
+                    <span style="color: #d6a01d; /* Golden Ochre */ margin-right: 0.5rem;">★★★★★</span>
                     <span style="font-weight: 600;">Client Testimonial</span>
                 </div>
                 <p style="font-style: italic; color: var(--text-dark); font-size: 0.85rem;">"Annapoornaa Interio has created a remarkable commercial space that perfectly balances functionality and design. Their attention to detail and innovative solutions have made this project a success."</p>

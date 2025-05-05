@@ -562,6 +562,105 @@ export const galleryImages: GalleryImage[] = [
     category: "Construction",
     image: "/Construction/aronuni.jpg"
   },
+  // DSR Apartment Interiors
+  {
+    id: 5001,
+    title: "DSR Apartment 1",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.22.41_6539de36.jpg"
+  },
+  {
+    id: 5002,
+    title: "DSR Apartment 2",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.22.41_4d4528e9.jpg"
+  },
+  {
+    id: 5003,
+    title: "DSR Apartment 3",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.22.41_225ed9e7.jpg"
+  },
+  {
+    id: 5004,
+    title: "DSR Apartment 4",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_eca9bfa9.jpg"
+  },
+  {
+    id: 5005,
+    title: "DSR Apartment 5",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.47_2d23fe98.jpg"
+  },
+  {
+    id: 5006,
+    title: "DSR Apartment 6",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.47_748c0f11.jpg"
+  },
+  {
+    id: 5007,
+    title: "DSR Apartment 7",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_960f6f9d.jpg"
+  },
+  {
+    id: 5008,
+    title: "DSR Apartment 8",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_0b9c1f57.jpg"
+  },
+  {
+    id: 5009,
+    title: "DSR Apartment 9",
+    category: "Home Interior",
+    image: "/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_f49a41e8.jpg"
+  },
+
+  // Sattva Interior Projects
+  {
+    id: 6001,
+    title: "Sattva Interior 1",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.45_1321bd95.jpg"
+  },
+  {
+    id: 6002,
+    title: "Sattva Interior 2",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.46_a726de0a.jpg"
+  },
+  {
+    id: 6003,
+    title: "Sattva Interior 3",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.44_32ee0247.jpg"
+  },
+  {
+    id: 6004,
+    title: "Sattva Interior 4",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.44_15f3e6fc.jpg"
+  },
+  {
+    id: 6005,
+    title: "Sattva Interior 5",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.45_2df47ad4.jpg"
+  },
+  {
+    id: 6006,
+    title: "Sattva Interior 6",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.46_f5cac241.jpg"
+  },
+  {
+    id: 6007,
+    title: "Sattva Interior 7",
+    category: "Home Interior",
+    image: "/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.46_3a6c9f6b.jpg"
+  },
 ];
 
 export const categories = ["All", "Home Interior", "Office Interior", "Construction"];

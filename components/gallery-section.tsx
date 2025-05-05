@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-
 import { Button } from './ui/button'
 import ScrollAnimation from './scroll-animation'
 import { Dialog, DialogContent } from './ui/dialog'
@@ -25,7 +24,7 @@ const GallerySection = () => {
     '/homeinteriorsimages/homeinterior42.jpg',  // Random interior design image as thumbnail
     '/homeinteriorsimages/homeinterior78.jpg',  // Random interior design image as thumbnail
   ]
-  
+
   // YouTube video IDs for the gallery
   const youtubeVideoIds = [
     'MuV2mLAdAC4',  // Video 1
@@ -177,9 +176,23 @@ const GallerySection = () => {
       '/homeinteriorsimages/homeinterior132.jpg',
       '/homeinteriorsimages/homeinterior133.jpg',
       '/homeinteriorsimages/homeinterior134.jpg',
-      '/homeinteriorsimages/homeinterior135.jpg'
-
-
+      '/homeinteriorsimages/homeinterior135.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.22.41_6539de36.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.22.41_4d4528e9.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.22.41_225ed9e7.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_eca9bfa9.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.47_2d23fe98.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.47_748c0f11.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_960f6f9d.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_0b9c1f57.jpg',
+      '/dsrapartment/WhatsApp Image 2025-05-04 at 21.23.48_f49a41e8.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.45_1321bd95.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.46_a726de0a.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.44_32ee0247.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.44_15f3e6fc.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.45_2df47ad4.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.46_f5cac241.jpg',
+      '/sattvainterior/WhatsApp Image 2025-05-04 at 21.21.46_3a6c9f6b.jpg',
     ],
     'Office Interior': [
       // Asmara Apparels
@@ -196,6 +209,11 @@ const GallerySection = () => {
       '/asmaranew/new5.jpg',
       '/asmaranew/new6.jpg',
       '/asmaranew/new7.jpg',
+      '/asmaranew/asmaraoffice1.jpg',
+      '/asmaranew/asmaraoffice2.jpg',
+      '/asmaranew/asmaraoffice3.jpg',
+      '/asmaranew/asmaraoffice4.jpg',
+      
 
       // Black BX
       '/Blackbx-project/Blackbox1.jpg',
@@ -294,7 +312,6 @@ const GallerySection = () => {
       '/const2/WhatsApp Image 2025-04-28 at 18.55.22_9e1f57ed.jpg',
       '/const2/WhatsApp Image 2025-04-28 at 18.55.22_df42e85c.jpg',
       '/const2/WhatsApp Image 2025-04-28 at 18.55.24_6258f4a2.jpg',
-
     ],
     'Products': [
       '/Products/WhatsApp Image 2025-04-26 at 23.02.11_4a347870.jpg',
@@ -455,7 +472,7 @@ const GallerySection = () => {
               </div>
             </div>
           )}
-
+          
           {/* Loading Indicator */}
           {isLoading && (
             <div className="flex flex-col items-center justify-center py-12">
@@ -508,38 +525,38 @@ const GallerySection = () => {
             ))}
           </div>
         </ScrollAnimation>
-
-        {/* Video Modal */}
-        <Dialog open={!!selectedVideo} onOpenChange={(open) => {
-          if (!open) {
-            console.log('Dialog onOpenChange: closing modal');
-            setSelectedVideo(null);
-          }
-        }}>
-          <DialogContent className="sm:max-w-3xl p-0 overflow-hidden bg-black">
-            <button
-              className="absolute right-3 top-3 z-50 rounded-full bg-white p-2 opacity-80 hover:opacity-100 focus:outline-none"
-              onClick={() => {
-                console.log('Close clicked');
-                setSelectedVideo(null);
-              }}
-              aria-label="Close video"
-              type="button"
-            >
-              <X className="h-5 w-5 text-navy-900" />
-            </button>
-            {selectedVideo && (
-              <div className="relative w-full">
-                <VideoPlayer
-                  videoId={selectedVideo}
-                  className="w-full aspect-video"
-                  title="Gallery Video"
-                />
-              </div>
-            )}
-          </DialogContent>
-        </Dialog>
       </div>
+
+      {/* Video Modal */}
+      <Dialog open={!!selectedVideo} onOpenChange={(open) => {
+        if (!open) {
+          console.log('Dialog onOpenChange: closing modal');
+          setSelectedVideo(null);
+        }
+      }}>
+        <DialogContent className="sm:max-w-3xl p-0 overflow-hidden bg-black">
+          <button
+            className="absolute right-3 top-3 z-50 rounded-full bg-white p-2 opacity-80 hover:opacity-100 focus:outline-none"
+            onClick={() => {
+              console.log('Close clicked');
+              setSelectedVideo(null);
+            }}
+            aria-label="Close video"
+            type="button"
+          >
+            <X className="h-5 w-5 text-navy-900" />
+          </button>
+          {selectedVideo && (
+            <div className="relative w-full">
+              <VideoPlayer
+                videoId={selectedVideo}
+                className="w-full aspect-video"
+                title="Gallery Video"
+              />
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }

@@ -1,4 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      
-    </urlset>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/
+
+<url>
+  <loc>https://www.annapoornaainterio.com/</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/about</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/services</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/gallery</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/featured-projects</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/contact</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products/upvc-windows-doors</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products/aluminum-doors-windows</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products/fire-doors</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products/system-railings</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products/pvc-false-ceilings</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://www.annapoornaainterio.com/products/workstations</loc>
+  <lastmod>2025-05-18T07:08:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

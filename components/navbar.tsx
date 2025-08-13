@@ -239,6 +239,19 @@ const Navbar = () => {
               Featured Projects
             </Link>
 
+            <Link
+              href="/interio"
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
+                activeLink === "/interio" ? "text-gold-600 font-semibold" : ""
+              }`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToTop();
+              }}
+            >
+              Interio
+            </Link>
+
             <Link href="/contact">
               <Button className="bg-navy-900 hover:bg-navy-800 text-white px-4 py-2 rounded-md font-medium ml-2 shadow-md hover:shadow-lg transition-all duration-300 border border-navy-700">
                 Contact us
@@ -427,6 +440,16 @@ const Navbar = () => {
               }}
             >
               Contact us
+            </Link>
+            <Link
+              href="/interio"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToTop();
+              }}
+            >
+              Interio
             </Link>
           </div>
         </motion.div>

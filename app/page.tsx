@@ -1,131 +1,119 @@
-"use client"
+import { Metadata } from 'next'
+import Navbar from '@/components/navbar'
+import HeroSection from '@/components/hero-section'
+import ServicesSection from '@/components/services-section'
+import AboutSection from '@/components/about-section'
+import ProcessTimeline from '@/components/process-timeline'
+import DifferenceSection from '@/components/difference-section'
+import TestimonialsSection from '@/components/testimonials-section'
+import ProjectsSection from '@/components/projects-section'
+import Footer from '@/components/footer'
+import CTASection from '@/components/cta-section'
+import StatsSection from '@/components/stats-section'
+import FAQSection from '@/components/faq-section'
+import ClientLogosSection from '@/components/client-logos-section'
 
-import { useEffect } from "react"
-import Navbar from "@/components/navbar"
-import HeroSection from "@/components/hero-section"
-import ServicesSection from "@/components/services-section"
-import AboutSection from "@/components/about-section"
-import ProcessTimeline from "@/components/process-timeline"
-import DifferenceSection from "@/components/difference-section"
-import TestimonialsSection from "@/components/testimonials-section"
-import ProjectsSection from "@/components/projects-section"
-import Footer from "@/components/footer"
-import ContactForm from "@/components/contact-form"
-import CTASection from "@/components/cta-section"
-import StatsSection from "@/components/stats-section"
-import FAQSection from "@/components/faq-section"
-import ClientLogosSection from "@/components/client-logos-section"
-import { Shield, Clock, Users, MapPin } from "lucide-react"
-import Link from "next/link"
+// SEO: Added comprehensive metadata for the homepage.
+export const metadata: Metadata = {
+  title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
+  description: 'Annapoorna Interio offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
+  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'Annapoorna Interio', 'best interior designers', 'modular kitchen Bangalore'],
+  metadataBase: new URL('https://www.annapoornaainterio.com'), 
+  openGraph: {
+    title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
+    description: 'Bespoke interior design services for residential and commercial spaces in Bangalore.',
+    url: 'https://www.annapoornaainterio.com', 
+    siteName: 'Annapoorna Interio',
+    images: [
+      {
+        url: '/og-image.jpg', 
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+}
+
+
+// BEST PRACTICE: Define contact info once to avoid repetition and errors.
+const contactDetails = {
+  email: "info@annapoornainterio.com",
+  phone1: "+91 99000 94942",
+  phone2: "+91 80731 41413",
+  address: {
+    streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector",
+    addressLocality: "Yelahanka New Town",
+    addressRegion: "Bangalore",
+    postalCode: "560064",
+    addressCountry: "IN"
+  }
+}
 
 export default function Home() {
-  // Initialize scroll animations
-  useEffect(() => {
-    const handleScroll = () => {
-      const animatedElements = document.querySelectorAll(".animate-on-scroll")
-      const textGlowElements = document.querySelectorAll(".text-glow-scroll, .heading-glow-scroll")
 
-      animatedElements.forEach((element) => {
-        const elementPosition = element.getBoundingClientRect().top
-        const windowHeight = window.innerHeight
+  // SEO: JSON-LD Structured Data for Local Business. This is crucial for local search visibility.
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    'name': 'Annapoornaa Interio',
+    'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
+    '@id': '',
+    'url': 'https://www.annapoornainterio.com', // Replace with your actual domain
+    'telephone': contactDetails.phone1,
+    'email': contactDetails.email,
+    'address': {
+      '@type': 'PostalAddress',
+      ...contactDetails.address
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 13.1006, // Approx. Latitude for Yelahanka New Town
+      'longitude': 77.5963 // Approx. Longitude for Yelahanka New Town
+    },
+    'openingHoursSpecification': {
+      '@type': 'OpeningHoursSpecification',
+      'dayOfWeek': [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+      ],
+      'opens': '09:00',
+      'closes': '20:00'
+    },
+  };
 
-        if (elementPosition < windowHeight * 0.85) {
-          element.classList.add("animate-active")
-        }
-      })
-
-      textGlowElements.forEach((element) => {
-        const elementPosition = element.getBoundingClientRect().top
-        const windowHeight = window.innerHeight
-
-        if (elementPosition < windowHeight * 0.85 && elementPosition > 0) {
-          element.classList.add("glow-active")
-        } else {
-          element.classList.remove("glow-active")
-        }
-      })
-    }
-
-    // Initial check
-    handleScroll()
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll)
-
-    // Clean up
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
 
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <HeroSection />
-      <StatsSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <AboutSection />
-      <ClientLogosSection />
-      <ProcessTimeline />
-      <DifferenceSection />
-      <TestimonialsSection />
-      <FAQSection />
-      <CTASection />
-      <section className="mt-32 pt-16 pb-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center mb-4">
-              <Shield className="h-6 w-6 text-gold-500 mr-2" />
-              <span className="text-lg text-gray-600 uppercase tracking-wider font-medium">
-                <Link href="/contact">Contact us</Link>
-              </span>
-              <Shield className="h-6 w-6 text-gold-500 ml-2" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">Get In Touch</h1>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have a question or ready to start your project? Reach out to us and we'll get back to you as soon as possible.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* FORM CARD */}
-            <div className="bg-white p-8 rounded-xl shadow-xl flex flex-col justify-center">
-              <h3 className="text-2xl font-bold text-navy-900 mb-6">Get in Touch</h3>
-              <ContactForm />
-            </div>
-            {/* CONTACT INFO CARD */}
-            <div className="bg-navy-900 text-white p-8 rounded-xl shadow-xl flex flex-col justify-center">
-              <h3 className="text-2xl font-bold mb-6 text-gold-400">Contact Information</h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <Clock className="h-6 w-6 text-gold-400 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gold-300 mb-1">Email Us</h4>
-                    <p className="text-gray-300">info@annapoornainterio.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <Users className="h-6 w-6 text-gold-400 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gold-300 mb-1">Call Us</h4>
-                    <p className="text-gray-300">+91 99000 94942</p>
-                    <p className="text-gray-300">+91 80731 41413</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-gold-400 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gold-300 mb-1">Our Location</h4>
-                    <p className="text-gray-300">1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector, Yelahanka New Town, Bangalore - 560064.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </main>
+    <>
+      {/* PERFORMANCE: ScrollAnimator removed due to missing module */}
+      {/* <ScrollAnimator /> */}
+
+      {/* SEO: Adding structured data to the head */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      
+      <main className="min-h-screen">
+        <Navbar />
+        <HeroSection />
+        <StatsSection />
+        <ServicesSection />
+        <ProjectsSection />
+        <AboutSection />
+        <ClientLogosSection />
+        <ProcessTimeline />
+        <DifferenceSection />
+        <TestimonialsSection />
+        <FAQSection />
+        <CTASection />
+        <Footer />
+      </main>
+    </>
   )
 }

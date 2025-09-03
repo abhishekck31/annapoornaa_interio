@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Annapoornaa Interio - Construction and Interior",
   description: "Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
   keywords:
-    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
+    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me, commercial interiors Bangalore, turnkey projects Bangalore, modular kitchen Bangalore, luxury interiors Bangalore, renovation contractors Bangalore, residential interior designers Bangalore, architecture firms Bangalore, space planning Bangalore, interior decorators Yelahanka, building contractors Bangalore, best interior designers Bangalore, interior and construction services Yelahanka Bangalore",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",
@@ -81,14 +81,14 @@ export function JsonLd() {
             "addressLocality": "Bangalore",
             "addressRegion": "KA",
             "postalCode": "560064",
-            "streetAddress": "Your Street Address"
+            "streetAddress": "Yelahanka"
           },
           "geo": {
             "@type": "GeoCoordinates",
             "latitude": "13.1007",
             "longitude": "77.5963"
           },
-          "telephone": "+91 YOUR_PHONE",
+          "telephone": "+91 99000 94942",
           "openingHours": "Mo-Sa 09:00-18:00"
         })
       }}
@@ -119,8 +119,18 @@ export default function RootLayout({
           }}
         />
         <JsonLd />
-        <meta name="description" content="Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
-      </head>
+  <meta name="description" content="Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
+  {/* Event snippet for Page view conversion page */}
+  <Script id="gtag-conversion" strategy="afterInteractive" dangerouslySetInnerHTML={{
+    __html: `
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17467517901/PvM_CLzVo5AbEM3XlIlB',
+          'value': 1.0,
+          'currency': 'INR'
+      });
+    `
+  }} />
+</head>
       <body className="font-poppins">
         <StructuredData />
         <GridBackground />

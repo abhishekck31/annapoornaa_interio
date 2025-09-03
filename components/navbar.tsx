@@ -73,7 +73,7 @@ const Navbar = () => {
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="Annapoornaa Interio Logo"
+                alt="Interior and Construction services in Yelahanka, Bangalore"
                 width={220}
                 height={60}
                 className="h-14 w-auto"
@@ -239,18 +239,7 @@ const Navbar = () => {
               Featured Projects
             </Link>
 
-            <Link
-              href="/interio"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/interio" ? "text-gold-600 font-semibold" : ""
-              }`}
-              onClick={() => {
-                setIsMenuOpen(false);
-                scrollToTop();
-              }}
-            >
-              Interio
-            </Link>
+            
 
             <Link href="/contact">
               <Button className="bg-navy-900 hover:bg-navy-800 text-white px-4 py-2 rounded-md font-medium ml-2 shadow-md hover:shadow-lg transition-all duration-300 border border-navy-700">

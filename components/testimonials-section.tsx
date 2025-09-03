@@ -104,9 +104,9 @@ const TestimonialsSection = () => {
                   </h4>
                   {testimonials[currentIndex].isGoogleReview && (
                     <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
-                      <img 
-                        src="/google-icon.svg" 
-                        alt="Google" 
+                        <img 
+                          src="/google-icon.svg" 
+                          alt="Google icon representing verified review" 
                         className="h-4 w-4" 
                       />
                       <span className="text-sm text-gray-600">Verified Review</span>

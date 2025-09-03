@@ -104,7 +104,7 @@ export default function FeaturedProjectsPage() {
                   <div className="relative h-96">
                     <img
                       src={project.mainImage || "/Asmara-project/Asmara1.jpg"}
-                      alt={project.title}
+                      alt="Interior and Construction services in Yelahanka, Bangalore"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 to-transparent flex flex-col justify-end p-8">
@@ -229,7 +229,7 @@ export default function FeaturedProjectsPage() {
                   <div className="relative h-[70vh]">
                     <img
                       src={getProjectById(selectedProject)?.images[currentImageIndex] || "/placeholder.svg"}
-                      alt={`${getProjectById(selectedProject)?.title} image ${currentImageIndex + 1}`}
+                      alt="Interior and Construction services in Yelahanka, Bangalore"
                       className="w-full h-full object-contain"
                     />
 

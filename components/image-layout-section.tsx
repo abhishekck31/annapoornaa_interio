@@ -72,7 +72,7 @@ const ImageLayoutSection = () => {
                   <div className="relative h-80 overflow-hidden group">
                     <img
                       src={feature.image || "/placeholder.svg"}
-                      alt={feature.title}
+                      alt="Interior and Construction services in Yelahanka, Bangalore"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/40 flex items-center justify-center">

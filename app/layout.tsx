@@ -18,10 +18,10 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Annapoornaa Interio - Construction and Interior",
-  description: "Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
+  title: "Best Interior Company in Bangalore | Annapoornaa Interio",
+  description: "Annapoornaa Interio is recognized as the best interior company in Bangalore. We offer award-winning home & office interiors, construction, modular kitchens, and renovation services across Bangalore. Free consultation!",
   keywords:
-    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me, commercial interiors Bangalore, turnkey projects Bangalore, modular kitchen Bangalore, luxury interiors Bangalore, renovation contractors Bangalore, residential interior designers Bangalore, architecture firms Bangalore, space planning Bangalore, interior decorators Yelahanka, building contractors Bangalore, best interior designers Bangalore, interior and construction services Yelahanka Bangalore",
+    "best interior company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, award-winning interiors Bangalore, Annapoornaa Interio Bangalore, interior services Bangalore, Bangalore interior experts",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",
@@ -119,24 +119,17 @@ export default function RootLayout({
           }}
         />
         <JsonLd />
-  <meta name="description" content="Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
-  {/* Event snippet for Page view conversion page */}
-  <Script id="gtag-conversion" strategy="afterInteractive" dangerouslySetInnerHTML={{
-    __html: `
-      gtag('event', 'conversion', {
-          'send_to': 'AW-17467517901/PvM_CLzVo5AbEM3XlIlB',
-          'value': 1.0,
-          'currency': 'INR'
-      });
-    `
-  }} />
-</head>
+        <meta name="description" content="Annapoornaa Interio is recognized as the best interior company in Bangalore. We offer award-winning home & office interiors, construction, modular kitchens, and renovation services across Bangalore. Free consultation!" />
+      </head>
       <body className="font-poppins">
+        <header>
+          <h1 style={{display:'none'}}>Best Interior Company in Bangalore | Annapoornaa Interio</h1>
+        </header>
         <StructuredData />
         <GridBackground />
         <GridOverlay />
         <ClientRootLayout>{children}</ClientRootLayout>
       </body>
     </html>
-  )
-}
+    )
+  }

@@ -96,9 +96,10 @@ const DifferenceSection = () => {
               >
                 <img
                   src="/Villain.png"
-                  alt="Luxury Living Room"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Luxury Living Room</h4>
@@ -112,9 +113,10 @@ const DifferenceSection = () => {
               >
                 <img
                   src="/Executive.png"
-                  alt="Executive Office"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Executive Office</h4>
@@ -128,9 +130,10 @@ const DifferenceSection = () => {
               >
                 <img
                   src="/modernvilla.png"
-                  alt="Modern Villa"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Modern Villa</h4>
@@ -144,9 +147,10 @@ const DifferenceSection = () => {
               >
                 <img
                   src="/Homein1.png"
-                  alt="Designer Kitchen"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Designer Kitchen</h4>

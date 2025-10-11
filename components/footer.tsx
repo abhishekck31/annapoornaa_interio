@@ -197,8 +197,25 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-navy-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Annapoornaa Interio. All rights reserved.</p>
+        <div className="border-t border-navy-800 mt-12 pt-8">
+          {/* External Authority Links */}
+          <div className="flex justify-center gap-6 mb-6 text-sm">
+            <a href="https://www.rera.karnataka.gov.in/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-400 transition-colors">
+              RERA Karnataka
+            </a>
+            <a href="https://www.iia.org.in/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-400 transition-colors">
+              Indian Institute of Architects
+            </a>
+            <a href="https://www.cpwd.gov.in/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-400 transition-colors">
+              CPWD Guidelines
+            </a>
+            <a href="https://www.bis.gov.in/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-400 transition-colors">
+              Bureau of Indian Standards
+            </a>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-400">&copy; {new Date().getFullYear()} Annapoornaa Interio. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -17,9 +17,10 @@ const AboutSection = () => {
   <div className="flex flex-col items-center mb-8">
     <img
       src="/ammanavaru.png"
-      alt="ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು"
+      alt="Interior and Construction services in Yelahanka, Bangalore"
       className="w-[350px] rounded-xl shadow-lg"
       style={{ background: "#fff" }}
+      loading="lazy"
     />
     <div className="mt-3 text-xl font-bold text-gold-700 text-center">
       ಶ್ರೀ ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು
@@ -36,8 +37,9 @@ const AboutSection = () => {
     <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
       <img
         src="/CEOimage.jpg"
-        alt="About Annapoornaa Interior & Construction Company"
+        alt="Interior and Construction services in Yelahanka, Bangalore"
         className="w-full h-[400px] object-cover"
+        loading="lazy"
       />
       {/* CEO Information Overlay */}
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">

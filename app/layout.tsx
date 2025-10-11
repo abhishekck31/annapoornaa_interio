@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Best Interior Company in Bangalore | Annapoornaa Interio",
-  description: "Annapoornaa Interio is recognized as the best interior company in Bangalore. We offer award-winning home & office interiors, construction, modular kitchens, and renovation services across Bangalore. Free consultation!",
+  description: "Best interior company in Bangalore. Award-winning home & office interiors, construction, modular kitchens. Free consultation!",
   keywords:
     "best interior company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, award-winning interiors Bangalore, Annapoornaa Interio Bangalore, interior services Bangalore, Bangalore interior experts",
   authors: [{ name: "Annapoornaa Interio" }],
@@ -107,6 +107,8 @@ export default function RootLayout({
         <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="preload" href="/UP-Hero3.png" as="image" />
+        <link rel="preload" href="/images/logo.png" as="image" />
         <Script
           id="scroll-to-top"
           strategy="afterInteractive"
@@ -119,12 +121,8 @@ export default function RootLayout({
           }}
         />
         <JsonLd />
-        <meta name="description" content="Annapoornaa Interio is recognized as the best interior company in Bangalore. We offer award-winning home & office interiors, construction, modular kitchens, and renovation services across Bangalore. Free consultation!" />
       </head>
       <body className="font-poppins">
-        <header>
-          <h1 style={{display:'none'}}>Best Interior Company in Bangalore | Annapoornaa Interio</h1>
-        </header>
         <StructuredData />
         <GridBackground />
         <GridOverlay />

@@ -35,13 +35,27 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Annapoornaa Interio | Premium Interior & Construction Services in Bangalore",
-    description:
-      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
+    title: "Best Interior Company in Bangalore | Annapoornaa Interio",
+    description: "Best interior company in Bangalore. Award-winning home & office interiors, construction, modular kitchens. Free consultation!",
     url: "https://annapoornaainterio.com",
     siteName: "Annapoornaa Interio",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://annapoornaainterio.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Annapoornaa Interio - Best Interior Company in Bangalore",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Interior Company in Bangalore | Annapoornaa Interio",
+    description: "Best interior company in Bangalore. Award-winning home & office interiors, construction, modular kitchens. Free consultation!",
+    images: ["https://annapoornaainterio.com/og-image.jpg"],
+    creator: "@annapoornaainterio",
   },
   robots: {
     index: true,

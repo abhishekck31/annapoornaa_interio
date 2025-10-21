@@ -3,6 +3,30 @@ import type { MetadataRoute } from "next"
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://annapoornaainterio.com"
 
+  // Bangalore location pages
+  const bangaloreLocations = [
+    'indiranagar',
+    'whitefield',
+    'koramangala',
+    'jayanagar',
+    'malleshwaram',
+    'hsr-layout',
+    'rajajinagar',
+    'banashankari',
+    'marathahalli',
+    'hebbal',
+    'electronic-city',
+    'jp-nagar',
+    'btm-layout'
+  ]
+
+  const locationPages = bangaloreLocations.map(location => ({
+    url: `${baseUrl}/bangalore/${location}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   return [
     {
       url: baseUrl,
@@ -29,10 +53,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/featured-projects`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/interio`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/products`,
@@ -71,12 +107,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/products/chairs`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
       url: `${baseUrl}/products/aluminum-doors-windows`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -100,5 +130,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...locationPages,
   ]
 }

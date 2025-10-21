@@ -181,6 +181,22 @@ const StructuredData = () => {
           text: "Project timelines vary depending on the scope and complexity. A simple interior design project in Bangalore might take 4-6 weeks, while a full construction project could take several months. During our initial consultation, we'll provide you with a detailed timeline specific to your project.",
         },
       },
+      {
+        "@type": "Question",
+        name: "What is the cost of interior design services in Bangalore?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Interior design costs in Bangalore vary based on project scope, materials, and square footage. We offer customized solutions to fit different budgets. Contact us for a free consultation and detailed quote for your specific project.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Why choose Annapoornaa Interio for interior design in Bangalore?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We are recognized as one of the best interior companies in Bangalore with award-winning designs, experienced professionals, quality materials, on-time delivery, and competitive pricing. We serve all areas including Yelahanka, Whitefield, Koramangala, HSR Layout, and more.",
+        },
+      },
     ],
   }
 

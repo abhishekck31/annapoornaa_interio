@@ -1,8 +1,14 @@
+import { Metadata } from 'next'
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: 'Our Products | UPVC Windows, Aluminum Doors, Fire Doors - Annapoornaa Interio',
+  description: 'Quality products: UPVC windows, aluminum doors, fire doors, railings, false ceilings, workstations. Premium materials, expert installation.',
+}
 
 const products = [
   {

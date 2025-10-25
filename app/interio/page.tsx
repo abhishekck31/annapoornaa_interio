@@ -5,7 +5,7 @@ export default function InterioPage() {
     <>
       <SEO
         title="Annapoorna Interio | Interior Design Services in Bangalore"
-        description="Discover Annapoorna Interio's bespoke interior design and construction services in Bangalore. Residential, commercial, and turnkey solutions for every space. Contact us for a free consultation!"
+        description="Bespoke interior design & construction services in Bangalore. Residential, commercial, turnkey solutions. Free consultation!"
         url="https://www.annapoornaainterio.com/interio"
         image="/og-image.jpg"
       />

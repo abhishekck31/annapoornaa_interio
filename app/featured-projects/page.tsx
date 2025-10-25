@@ -1,5 +1,6 @@
 "use client"
 
+import { Metadata } from 'next'
 import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -12,6 +13,11 @@ import { projects } from "@/data/projects-data"
 import { motion, AnimatePresence } from "framer-motion"
 import VideoPlayer from "@/components/video-player" // Import the VideoPlayer component
 import VimeoPlayer from "@/components/vimeo-player" // Import the VimeoPlayer component
+
+export const metadata: Metadata = {
+  title: 'Featured Projects | Interior Design Portfolio - Annapoornaa Interio',
+  description: 'Explore our featured interior design projects in Bangalore. Residential, commercial, construction work with client testimonials.',
+}
 
 export default function FeaturedProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)

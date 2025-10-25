@@ -1,8 +1,14 @@
 "use client"
 
+import { Metadata } from 'next'
 import React from "react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+
+export const metadata: Metadata = {
+  title: 'Contact Us | Annapoornaa Interio - Interior Designers Bangalore',
+  description: 'Contact Annapoornaa Interio for interior design services in Bangalore. Free consultation, expert team, quality workmanship.',
+}
 import { Mail, MapPin, Phone, Sparkles } from "lucide-react"
 import FormspreeForm from "./FormspreeForm"
 

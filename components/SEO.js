@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { Analytics } from '@vercel/analytics/react';
 
 export default function SEO({ title, description, url, image }) {
   return (
@@ -21,7 +20,6 @@ export default function SEO({ title, description, url, image }) {
         <meta name="twitter:description" content={description} />
         {image && <meta name="twitter:image" content={image} />}
       </Head>
-      <Analytics />
     </>
   );
 }

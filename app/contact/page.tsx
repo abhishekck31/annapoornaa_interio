@@ -1,31 +1,15 @@
-"use client"
-
 import { Metadata } from 'next'
-import React from "react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import { Mail, MapPin, Phone, Sparkles } from "lucide-react"
+import FormspreeForm from "./FormspreeForm"
 
 export const metadata: Metadata = {
   title: 'Contact Us | Annapoornaa Interio - Interior Designers Bangalore',
   description: 'Contact Annapoornaa Interio for interior design services in Bangalore. Free consultation, expert team, quality workmanship.',
 }
-import { Mail, MapPin, Phone, Sparkles } from "lucide-react"
-import FormspreeForm from "./FormspreeForm"
 
 export default function ContactPage() {
-  const [form, setForm] = React.useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
-  const [submitting, setSubmitting] = React.useState(false);
-  const [success, setSuccess] = React.useState<string | null>(null);
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
 
   return (
     <main className="min-h-screen">

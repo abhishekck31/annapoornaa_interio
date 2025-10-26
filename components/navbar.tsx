@@ -5,12 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { motion } from "framer-motion";
 
 // Import the navigation helper
@@ -123,94 +117,80 @@ const Navbar = () => {
               Services
             </Link>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 bg-transparent hover:bg-transparent focus:bg-transparent ${
-                    activeLink.includes("/products")
-                      ? "text-gold-600 font-semibold"
-                      : ""
-                  }`}
+            <div className="relative group">
+              <Button
+                variant="ghost"
+                className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 bg-transparent hover:bg-transparent focus:bg-transparent ${
+                  activeLink.includes("/products")
+                    ? "text-gold-600 font-semibold"
+                    : ""
+                }`}
+              >
+                Products <ChevronDown className="ml-1 h-4 w-4" />
+              </Button>
+              <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-lg rounded-md overflow-hidden w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <Link
+                  href="/products/upvc-windows-doors"
+                  className="block w-full px-4 py-2 text-gray-700 hover:text-gold-600 hover:bg-gray-50"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    scrollToTop();
+                  }}
                 >
-                  Products <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-md overflow-hidden w-56">
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/products/upvc-windows-doors"
-                    className="w-full text-gray-700 hover:text-gold-600"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    UPVC Windows & Doors
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/products/aluminum-doors-windows"
-                    className="w-full text-gray-700 hover:text-gold-600"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    Aluminum Doors & Windows
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/products/fire-doors"
-                    className="w-full text-gray-700 hover:text-gold-600"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    Fire Doors
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/products/system-railings"
-                    className="w-full text-gray-700 hover:text-gold-600"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    System Railings
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/products/pvc-false-ceilings"
-                    className="w-full text-gray-700 hover:text-gold-600"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    Soffit False Ceilings
-                  </Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link
-                    href="/products/workstations"
-                    className="w-full text-gray-700 hover:text-gold-600"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      scrollToTop();
-                    }}
-                  >
-                    Workstations
-                  </Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  UPVC Windows & Doors
+                </Link>
+                <Link
+                  href="/products/aluminum-doors-windows"
+                  className="block w-full px-4 py-2 text-gray-700 hover:text-gold-600 hover:bg-gray-50"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  Aluminum Doors & Windows
+                </Link>
+                <Link
+                  href="/products/fire-doors"
+                  className="block w-full px-4 py-2 text-gray-700 hover:text-gold-600 hover:bg-gray-50"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  Fire Doors
+                </Link>
+                <Link
+                  href="/products/system-railings"
+                  className="block w-full px-4 py-2 text-gray-700 hover:text-gold-600 hover:bg-gray-50"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  System Railings
+                </Link>
+                <Link
+                  href="/products/pvc-false-ceilings"
+                  className="block w-full px-4 py-2 text-gray-700 hover:text-gold-600 hover:bg-gray-50"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  Soffit False Ceilings
+                </Link>
+                <Link
+                  href="/products/workstations"
+                  className="block w-full px-4 py-2 text-gray-700 hover:text-gold-600 hover:bg-gray-50"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    scrollToTop();
+                  }}
+                >
+                  Workstations
+                </Link>
+              </div>
+            </div>
 
             <Link
               href="/gallery"

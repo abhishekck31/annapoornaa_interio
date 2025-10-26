@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import ScrollAnimation from "@/components/scroll-animation";
 import { Award, CheckCircle, TrendingUp, Users, Sparkles } from "lucide-react";
 import Link from "next/link";
+import OptimizedImage from "./optimized-image";
 
 const AboutSection = () => {
   return (
@@ -15,12 +16,14 @@ const AboutSection = () => {
         <ScrollAnimation className="relative">
   {/* Ammanavaru image and text */}
   <div className="flex flex-col items-center mb-8">
-    <img
+    <OptimizedImage
       src="/ammanavaru.png"
-      alt="Interior and Construction services in Yelahanka, Bangalore"
-      className="w-[350px] rounded-xl shadow-lg"
+      alt="Sri Annapoorneshwari Ammanavaru - Interior Design Bangalore"
+      width={350}
+      height={350}
+      className="rounded-xl shadow-lg"
       style={{ background: "#fff" }}
-      loading="lazy"
+      priority={true}
     />
     <div className="mt-3 text-xl font-bold text-gold-700 text-center">
       ಶ್ರೀ ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು

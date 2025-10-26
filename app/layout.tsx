@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
-export function JsonLd() {
+function JsonLd() {
   return (
     <script
       type="application/ld+json"

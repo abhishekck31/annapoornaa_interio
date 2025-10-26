@@ -500,7 +500,7 @@ const GallerySection = () => {
               >
                 <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                   {/* Loading placeholder */}
-                  {!loadedImages[img] && idx >= 8 && (
+                  {!loadedImages[img] && idx >= 4 && (
                     <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
                       <div className="w-8 h-8 border-4 border-navy-600 border-t-transparent rounded-full animate-spin"></div>
                     </div>
@@ -508,14 +508,17 @@ const GallerySection = () => {
                   
                   <Image
                     src={img}
-                    alt="Interior and Construction services in Yelahanka, Bangalore"
+                    alt={`Interior design project ${idx + 1} - ${selectedCategory} design Bangalore`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    priority={idx < 8}
-                    loading={idx < 8 ? "eager" : "lazy"}
+                    priority={idx < 4}
+                    loading={idx < 4 ? "eager" : "lazy"}
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     onLoad={() => {
-                      if (idx >= 8) {
+                      if (idx >= 4) {
                         setLoadedImages(prev => ({...prev, [img]: true}))
                       }
                     }}

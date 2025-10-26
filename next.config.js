@@ -1,11 +1,22 @@
 /** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const nextConfig = {
+  // Performance optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
   images: {
     domains: [],
     unoptimized: false,
     formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 1080, 1600],
-    imageSizes: [16, 32, 48]
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000, // 1 year cache
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // Ensure video files are properly handled
   webpack(config) {
@@ -31,6 +42,36 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' }
         ],
       },
+      // Critical Performance: Cache static assets for 1 year
+      {
+        source: '/images/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
+        ],
+      },
+      {
+        source: '/_next/static/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
+        ],
+      },
+      {
+        source: '/favicon_io/(.*)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
+        ],
+      },
+      // Cache other static assets
+      {
+        source: '/:path*\\.(jpg|jpeg|png|gif|webp|avif|svg|ico|css|js|woff|woff2|ttf|eot)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
+        ],
+      },
       // Add headers for video files
       {
         source: '/homevideo/(.*)',
@@ -48,4 +89,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)

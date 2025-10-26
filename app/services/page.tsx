@@ -515,11 +515,15 @@ export default function ServicesPage() {
                     <CardContent className="p-0 relative h-[400px]">
                       <Image
                         src={service.image || "/placeholder.svg"}
-                        alt={service.title}
+                        alt={`${service.title} - Interior Design Services Bangalore`}
                         fill
-                        priority
+                        priority={index < 2}
+                        loading={index < 2 ? "eager" : "lazy"}
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
+                        quality={85}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                       />
                     </CardContent>
                   </Card>

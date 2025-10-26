@@ -2,8 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Clock, MapPin, Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react"
-import { FaWhatsapp } from "react-icons/fa"
+import { Clock, MapPin, Mail, Phone, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
 
 const Footer = () => {
@@ -187,7 +186,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center group">
                 <div className="bg-green-500/20 p-1.5 rounded-full mr-3 group-hover:bg-green-500/40 transition-colors duration-300">
-                  <FaWhatsapp size={20} color="rgb(74 222 128)" />
+                  <MessageCircle size={20} color="rgb(74 222 128)" />
                 </div>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors">
                   WhatsApp Us

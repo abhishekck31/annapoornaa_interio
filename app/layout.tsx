@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Best Interior Company in Bangalore | Annapoornaa Interio",
   description: "Best interior company in Bangalore. Award-winning home & office interiors, construction, modular kitchens. Free consultation!",
   keywords:
-    "best interior company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, award-winning interiors Bangalore, Annapoornaa Interio Bangalore, interior services Bangalore, Bangalore interior experts",
+    "house contractors Bangalore, home construction Bangalore, house construction Bangalore, interior decorators Bangalore, interior designers Bangalore, construction company Bangalore, renovation company Bangalore, best interior company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, interior services Bangalore",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",

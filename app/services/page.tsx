@@ -3,8 +3,8 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: 'Our Services | Interior Design & Construction - Annapoornaa Interio',
-  description: 'Comprehensive interior design services in Bangalore. Home interiors, office spaces, construction, renovation, PMC. Expert solutions.',
+  title: 'Interior Designers, House Contractors, Home Construction in Bangalore',
+  description: 'Interior decorators and designers, house contractors, home & house construction, renovation company and construction company in Bangalore (Yelahanka). Turnkey services.',
 }
 import { Card, CardContent } from "@/components/ui/card";
 import {

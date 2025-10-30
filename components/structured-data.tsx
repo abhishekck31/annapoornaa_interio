@@ -102,7 +102,16 @@ const StructuredData = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Interior Design and Construction Services",
+    serviceType: [
+      "House Contractors",
+      "Home Construction",
+      "House Construction",
+      "Interior Decorators",
+      "Interior Designers",
+      "Construction Company",
+      "Renovation Company",
+      "Interior Design and Construction Services"
+    ],
     provider: {
       "@type": "LocalBusiness",
       name: "Annapoornaa Interio",
@@ -117,7 +126,7 @@ const StructuredData = () => {
       name: "Bangalore",
     },
     description:
-      "Premium interior design and construction services in Bangalore and Yelahanka, including home and office interiors, renovation, and high-quality products.",
+      "House contractors, home construction, house construction, interior decorators, interior designers, construction company, and renovation company in Bangalore and Yelahanka.",
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",

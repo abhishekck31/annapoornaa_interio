@@ -16,8 +16,20 @@ import ClientLogosSection from '@/components/client-logos-section'
 // SEO: Added comprehensive metadata for the homepage.
 export const metadata: Metadata = {
   title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
-  description: 'Top interior designers in Bangalore. Bespoke home & office interiors, construction, modular kitchens. Free consultation!',
-  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'Annapoorna Interio', 'best interior designers', 'modular kitchen Bangalore'],
+  description: 'Top interior designers in Bangalore. House contractors, home construction, renovation, and turnkey interiors in Bangalore. Free consultation!',
+  keywords: [
+    'house contractors Bangalore',
+    'home construction Bangalore',
+    'house construction Bangalore',
+    'interior decorators Bangalore',
+    'interior designers Bangalore',
+    'construction company Bangalore',
+    'renovation company Bangalore',
+    'home interiors Yelahanka',
+    'commercial interior design',
+    'Annapoorna Interio',
+    'modular kitchen Bangalore'
+  ],
   metadataBase: new URL('https://www.annapoornaainterio.com'), 
   openGraph: {
     title: 'Annapoorna Interio | Top Interior Designers in Bangalore',

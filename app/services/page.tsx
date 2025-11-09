@@ -3,8 +3,65 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: 'Interior Designers, House Contractors, Home Construction in Bangalore',
-  description: 'Interior decorators and designers, house contractors, home & house construction, renovation company and construction company in Bangalore (Yelahanka). Turnkey services.',
+  title: 'Interior Design Services in Bangalore | Home & Office Interiors | Construction & Renovation',
+  description: 'Complete interior design services in Bangalore: Home interiors, office interiors, house construction, renovation, PMC, and design & drawings. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and all areas of Bangalore. Free consultation!',
+  keywords: [
+    'interior design services Bangalore',
+    'home interior services Bangalore',
+    'office interior services Bangalore',
+    'house construction services Bangalore',
+    'renovation services Bangalore',
+    'PMC services Bangalore',
+    'design and drawings Bangalore',
+    'interior designers Yelahanka',
+    'interior designers Whitefield',
+    'interior designers Koramangala',
+    'interior designers HSR Layout',
+    'interior designers Indiranagar',
+    'modular kitchen Bangalore',
+    'false ceiling Bangalore',
+    'wardrobe design Bangalore',
+    'office workstations Bangalore',
+    'construction company Bangalore',
+    'renovation company Bangalore',
+    'interior decorators Bangalore',
+    'house contractors Bangalore',
+    'home construction Bangalore',
+    'office construction Bangalore',
+    'commercial interior design Bangalore',
+    'residential interior design Bangalore',
+    'Annapoornaa Interio services'
+  ],
+  metadataBase: new URL('https://annapoornaainterio.com'),
+  alternates: {
+    canonical: 'https://annapoornaainterio.com/services',
+  },
+  openGraph: {
+    title: 'Interior Design Services in Bangalore | Home & Office Interiors | Annapoornaa Interio',
+    description: 'Complete interior design services in Bangalore: Home interiors, office interiors, house construction, renovation, PMC, and design & drawings. Serving all areas of Bangalore.',
+    url: 'https://annapoornaainterio.com/services',
+    siteName: 'Annapoornaa Interio',
+    images: [
+      {
+        url: 'https://annapoornaainterio.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Interior Design Services in Bangalore - Annapoornaa Interio',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Interior Design Services in Bangalore | Annapoornaa Interio',
+    description: 'Complete interior design services in Bangalore: Home interiors, office interiors, construction, renovation, and more.',
+    images: ['https://annapoornaainterio.com/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 import { Card, CardContent } from "@/components/ui/card";
 import {

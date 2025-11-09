@@ -138,6 +138,9 @@ const ServicesSection = () => {
                         alt={service.title}
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
+                        loading="lazy"
+                        quality={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
 

@@ -1,50 +1,113 @@
 import { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import Navbar from '@/components/navbar'
 import HeroSection from '@/components/hero-section'
 import ServicesSection from '@/components/services-section'
 import AboutSection from '@/components/about-section'
-import ProcessTimeline from '@/components/process-timeline'
-import DifferenceSection from '@/components/difference-section'
-import TestimonialsSection from '@/components/testimonials-section'
-import ProjectsSection from '@/components/projects-section'
 import Footer from '@/components/footer'
 import CTASection from '@/components/cta-section'
 import StatsSection from '@/components/stats-section'
-import FAQSection from '@/components/faq-section'
-import ClientLogosSection from '@/components/client-logos-section'
 
-// SEO: Added comprehensive metadata for the homepage.
+// Dynamically import heavy components to reduce initial bundle size
+const ProcessTimeline = dynamic(() => import('@/components/process-timeline'), {
+  loading: () => <div className="py-16 bg-white" />
+})
+const DifferenceSection = dynamic(() => import('@/components/difference-section'), {
+  loading: () => <div className="py-16 bg-white" />
+})
+const TestimonialsSection = dynamic(() => import('@/components/testimonials-section'), {
+  loading: () => <div className="py-16 bg-white" />
+})
+const ProjectsSection = dynamic(() => import('@/components/projects-section'), {
+  loading: () => <div className="py-16 bg-white" />
+})
+const FAQSection = dynamic(() => import('@/components/faq-section'), {
+  loading: () => <div className="py-16 bg-white" />
+})
+const ClientLogosSection = dynamic(() => import('@/components/client-logos-section'), {
+  loading: () => <div className="py-16 bg-white" />
+})
+
+// SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
 export const metadata: Metadata = {
-  title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
-  description: 'Top interior designers in Bangalore. House contractors, home construction, renovation, and turnkey interiors in Bangalore. Free consultation!',
+  title: 'Best Interior Designers in Bangalore | Home & Office Interiors | Annapoornaa Interio',
+  description: 'Best interior designers in Bangalore. House contractors, home construction, office interiors, renovation services in Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar. Award-winning designs with 3D visualization. Free consultation! Call +91 99000 94942',
   keywords: [
+    'interior designers Bangalore',
+    'best interior company Bangalore',
+    'home interior design Bangalore',
+    'office interior design Bangalore',
     'house contractors Bangalore',
     'home construction Bangalore',
     'house construction Bangalore',
     'interior decorators Bangalore',
-    'interior designers Bangalore',
     'construction company Bangalore',
     'renovation company Bangalore',
-    'home interiors Yelahanka',
-    'commercial interior design',
-    'Annapoorna Interio',
-    'modular kitchen Bangalore'
+    'interior designers Yelahanka',
+    'interior designers Whitefield',
+    'interior designers Koramangala',
+    'interior designers HSR Layout',
+    'interior designers Indiranagar',
+    'interior designers Jayanagar',
+    'interior designers Malleshwaram',
+    'interior designers Rajajinagar',
+    'interior designers Banashankari',
+    'interior designers Marathahalli',
+    'interior designers Hebbal',
+    'interior designers Electronic City',
+    'interior designers JP Nagar',
+    'interior designers BTM Layout',
+    'home interiors Bangalore',
+    'office interiors Bangalore',
+    'modular kitchen Bangalore',
+    'renovation Bangalore',
+    'construction Bangalore',
+    'PMC services Bangalore',
+    'design and drawings Bangalore',
+    'top interior designers Bangalore',
+    'interior design company Bangalore',
+    'Annapoornaa Interio',
+    'Annapoorna Interio'
   ],
-  metadataBase: new URL('https://www.annapoornaainterio.com'), 
+  metadataBase: new URL('https://annapoornaainterio.com'), 
+  alternates: {
+    canonical: 'https://annapoornaainterio.com',
+  },
   openGraph: {
-    title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
-    description: 'Bespoke interior design services for residential and commercial spaces in Bangalore.',
-    url: 'https://www.annapoornaainterio.com', 
-    siteName: 'Annapoorna Interio',
+    title: 'Best Interior Designers in Bangalore | Home & Office Interiors | Annapoornaa Interio',
+    description: 'Best interior designers in Bangalore. House contractors, home construction, office interiors, renovation services in Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar. Award-winning designs with 3D visualization. Free consultation!',
+    url: 'https://annapoornaainterio.com', 
+    siteName: 'Annapoornaa Interio',
     images: [
       {
-        url: '/og-image.jpg', 
+        url: 'https://annapoornaainterio.com/og-image.jpg', 
         width: 1200,
         height: 630,
+        alt: 'Annapoornaa Interio - Best Interior Designers in Bangalore',
       },
     ],
     locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
+    description: 'Best interior designers in Bangalore. House contractors, home construction, office interiors, renovation services. Award-winning designs with 3D visualization.',
+    images: ['https://annapoornaainterio.com/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code', // Replace with actual Google Search Console verification code
   },
 }
 

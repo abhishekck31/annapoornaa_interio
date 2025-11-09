@@ -86,6 +86,8 @@ const ProjectsSection = () => {
                         alt="Interior and Construction services in Yelahanka, Bangalore"
                         className="object-cover w-full h-auto rounded-t-lg"
                         loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
                       />
                     </div>
                     <CardContent className="p-4 sm:p-6 bg-white pb-28 sm:pb-6">

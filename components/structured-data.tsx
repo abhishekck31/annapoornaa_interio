@@ -6,13 +6,21 @@ import Script from "next/script"
 const StructuredData = () => {
   const pathname = usePathname()
 
-  // Organization schema
+  // Organization schema with enhanced SEO
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "Annapoorna Interio",
+    "@id": "https://annapoornaainterio.com/#organization",
+    name: "Annapoornaa Interio",
+    alternateName: ["Annapoorna Interio", "Annapoornaa Interior Designers", "Best Interior Company Bangalore"],
     url: "https://annapoornaainterio.com",
-    logo: "https://annapoornaainterio.com/images/logo.png",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://annapoornaainterio.com/images/logo.png",
+      width: 200,
+      height: 60
+    },
+    image: "https://annapoornaainterio.com/images/logo.png",
     sameAs: [
       "https://www.facebook.com/annapoornaainterio",
       "https://www.instagram.com/annapoornaainterio",
@@ -20,18 +28,19 @@ const StructuredData = () => {
     ],
     address: {
       "@type": "PostalAddress",
-      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross,2nd stage, 'B' sector",
-      addressLocality: "Yelahanka",
-      addressRegion: "Bangalore",
+      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector",
+      addressLocality: "Yelahanka New Town",
+      addressRegion: "Karnataka",
+      addressRegionAbbreviation: "KA",
       postalCode: "560064",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 13.1005,
-      longitude: 77.5945,
+      latitude: 13.1006,
+      longitude: 77.5963,
     },
-    telephone: "+91 99000 94942",
+    telephone: ["+91 99000 94942", "+91 80731 41413"],
     email: "info@annapoornainterio.com",
     openingHoursSpecification: [
       {
@@ -48,12 +57,140 @@ const StructuredData = () => {
       },
     ],
     priceRange: "₹₹-₹₹₹₹",
-    areaServed: {
-      "@type": "City",
-      name: "Bangalore",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Bangalore",
+        sameAs: "https://en.wikipedia.org/wiki/Bangalore"
+      },
+      {
+        "@type": "City",
+        name: "Yelahanka",
+      },
+      {
+        "@type": "City",
+        name: "Whitefield",
+      },
+      {
+        "@type": "City",
+        name: "Koramangala",
+      },
+      {
+        "@type": "City",
+        name: "HSR Layout",
+      },
+      {
+        "@type": "City",
+        name: "Indiranagar",
+      },
+      {
+        "@type": "City",
+        name: "Jayanagar",
+      },
+      {
+        "@type": "City",
+        name: "Malleshwaram",
+      },
+      {
+        "@type": "City",
+        name: "Rajajinagar",
+      },
+      {
+        "@type": "City",
+        name: "Banashankari",
+      },
+      {
+        "@type": "City",
+        name: "Marathahalli",
+      },
+      {
+        "@type": "City",
+        name: "Hebbal",
+      },
+      {
+        "@type": "City",
+        name: "Electronic City",
+      },
+      {
+        "@type": "City",
+        name: "JP Nagar",
+      },
+      {
+        "@type": "City",
+        name: "BTM Layout",
+      }
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Interior Design and Construction Services",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "Home Interiors",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Home Interior Design Bangalore",
+                description: "Complete home interior design services including modular kitchens, wardrobes, false ceilings, and more"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Office Interiors",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Office Interior Design Bangalore",
+                description: "Professional office and corporate interior design services"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Construction",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "House Construction Bangalore",
+                description: "Residential and commercial construction services"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Renovation",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Home Renovation Bangalore",
+                description: "Complete renovation services for homes and offices"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "150",
+      bestRating: "5",
+      worstRating: "1"
     },
     description:
-      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services that transform your space.",
+      "Annapoornaa Interio is the leading interior design and construction company in Bangalore, Karnataka. We provide premium home interior design, office interior design, house construction, renovation, and PMC services in Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and all areas of Bangalore. Award-winning designs with 3D visualization and walkthrough videos.",
   }
 
   // Local business schema
@@ -161,7 +298,7 @@ const StructuredData = () => {
     },
   }
 
-  // FAQ schema
+  // Enhanced FAQ schema with more questions
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -171,7 +308,7 @@ const StructuredData = () => {
         name: "What services does Annapoornaa Interio offer in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, Soffit False Ceilings, workstations, and chairs.",
+          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, house construction, renovation, PMC (Project Management & Consultancy), design & drawings, and various products like UPVC windows, doors, fire doors, system railings, PVC false ceilings, workstations, and chairs. We serve all areas of Bangalore including Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, Jayanagar, and more.",
         },
       },
       {
@@ -179,7 +316,7 @@ const StructuredData = () => {
         name: "Does Annapoornaa Interio serve the Yelahanka area in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, we provide all our services in Yelahanka and throughout Bangalore. Our team has extensive experience working in Yelahanka and understands the local preferences and requirements.",
+          text: "Yes, we provide all our services in Yelahanka and throughout Bangalore. Our office is located in Yelahanka New Town, and our team has extensive experience working in Yelahanka and understands the local preferences and requirements. We offer home interiors, office interiors, construction, and renovation services in Yelahanka.",
         },
       },
       {
@@ -187,7 +324,7 @@ const StructuredData = () => {
         name: "How long does a typical interior design project take in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Project timelines vary depending on the scope and complexity. A simple interior design project in Bangalore might take 4-6 weeks, while a full construction project could take several months. During our initial consultation, we'll provide you with a detailed timeline specific to your project.",
+          text: "Project timelines vary depending on the scope and complexity. A simple home interior design project in Bangalore might take 4-6 weeks, while a full office interior project could take 8-12 weeks. A complete house construction project could take several months. During our initial consultation, we'll provide you with a detailed timeline specific to your project.",
         },
       },
       {
@@ -195,7 +332,7 @@ const StructuredData = () => {
         name: "What is the cost of interior design services in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Interior design costs in Bangalore vary based on project scope, materials, and square footage. We offer customized solutions to fit different budgets. Contact us for a free consultation and detailed quote for your specific project.",
+          text: "Interior design costs in Bangalore vary based on project scope, materials, and square footage. Home interior design typically ranges from ₹800-₹2000 per sq ft, while office interiors may range from ₹1000-₹3000 per sq ft. We offer customized solutions to fit different budgets. Contact us for a free consultation and detailed quote for your specific project.",
         },
       },
       {
@@ -203,24 +340,199 @@ const StructuredData = () => {
         name: "Why choose Annapoornaa Interio for interior design in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We are recognized as one of the best interior companies in Bangalore with award-winning designs, experienced professionals, quality materials, on-time delivery, and competitive pricing. We serve all areas including Yelahanka, Whitefield, Koramangala, HSR Layout, and more.",
+          text: "We are recognized as one of the best interior companies in Bangalore with award-winning designs, experienced professionals, quality materials, on-time delivery, and competitive pricing. We provide 3D visualizations and walkthrough videos, serve all areas including Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and more, and have completed 500+ successful projects.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide house construction services in Bangalore?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we provide complete house construction services in Bangalore including residential and commercial construction. Our services include architectural planning, structural engineering, project management, quality material sourcing, and regulatory compliance. We handle everything from foundation to finishing.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What areas of Bangalore do you serve?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We serve all areas of Bangalore including Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, Jayanagar, Malleshwaram, Rajajinagar, Banashankari, Marathahalli, Hebbal, Electronic City, JP Nagar, BTM Layout, and surrounding areas. We provide home interiors, office interiors, construction, and renovation services across Bangalore.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you offer renovation services in Bangalore?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we offer comprehensive renovation services in Bangalore including kitchen renovation, bathroom renovation, complete home renovation, office renovation, space planning, electrical and plumbing works, flooring, painting, false ceiling, and more. We serve all areas of Bangalore.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is included in home interior design services?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our home interior design services include modular kitchens, wardrobes, TV units, false ceilings, flooring solutions, fabrication works, painting and wall finishes, railings, electrical and lighting works, plumbing works, wall decoration, curtains & blinds, pooja room design, and complete space planning with 3D visualizations.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Do you provide office interior design in Bangalore?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, we provide complete office interior design services in Bangalore including workstations, chairs, storage units, glass partitions, false ceilings, flooring, fabrication works, painting, railings, electrical works, plumbing, HVAC systems, signages, curtains & blinds, and complete space planning. We serve corporate offices across Bangalore.",
         },
       },
     ],
   }
 
-  let currentSchema: Record<string, any> = organizationSchema;
+  // Determine which schemas to show
+  let schemasToRender: Record<string, any>[] = [];
 
   if (pathname === "/") {
-    currentSchema = organizationSchema
-  } else if (pathname === "/bangalore-yelahanka") {
-    currentSchema = localBusinessSchema
+    // Homepage: Show organization schema and FAQ schema
+    schemasToRender = [organizationSchema, faqSchema]
+  } else if (pathname === "/bangalore-yelahanka" || pathname.startsWith("/bangalore/")) {
+    // Location-specific local business schema
+    const locationName = pathname === "/bangalore-yelahanka" 
+      ? "Yelahanka" 
+      : pathname.split("/").pop()?.replace(/-/g, " ") || "Bangalore"
+    
+    const locationSchema = {
+      ...localBusinessSchema,
+      name: `Annapoornaa Interio - Interior Designers in ${locationName}, Bangalore`,
+      description: `Best interior designers in ${locationName}, Bangalore. Home interiors, office interiors, construction, and renovation services in ${locationName}. Free consultation!`,
+      areaServed: {
+        "@type": "City",
+        name: locationName,
+      },
+    }
+    schemasToRender = [locationSchema]
   } else if (pathname === "/services") {
-    currentSchema = serviceSchema
+    // Enhanced service schema for services page
+    const servicePageSchema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: [
+        "Home Interior Design",
+        "Office Interior Design",
+        "House Construction",
+        "Home Renovation",
+        "Project Management & Consultancy",
+        "Design and Drawings",
+        "Interior Decorators",
+        "Construction Company",
+        "Renovation Company"
+      ],
+      provider: {
+        "@type": "LocalBusiness",
+        "@id": "https://annapoornaainterio.com/#organization",
+        name: "Annapoornaa Interio",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Yelahanka New Town",
+          addressRegion: "Bangalore",
+          addressRegionAbbreviation: "KA",
+          postalCode: "560064",
+          addressCountry: "IN",
+        },
+      },
+      areaServed: [
+        {
+          "@type": "City",
+          name: "Bangalore",
+        },
+        {
+          "@type": "City",
+          name: "Yelahanka",
+        },
+        {
+          "@type": "City",
+          name: "Whitefield",
+        },
+        {
+          "@type": "City",
+          name: "Koramangala",
+        },
+        {
+          "@type": "City",
+          name: "HSR Layout",
+        },
+        {
+          "@type": "City",
+          name: "Indiranagar",
+        },
+      ],
+      description:
+        "Complete interior design and construction services in Bangalore including home interior design, office interior design, house construction, renovation, PMC (Project Management & Consultancy), and design & drawings. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and all areas of Bangalore.",
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "INR",
+        },
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Interior Design Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Home Interior Design Bangalore",
+              description: "Complete home interior design including modular kitchens, wardrobes, false ceilings, flooring, and more"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Office Interior Design Bangalore",
+              description: "Professional office and corporate interior design with workstations, chairs, and complete space planning"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "House Construction Bangalore",
+              description: "Residential and commercial construction services from foundation to finishing"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Home Renovation Bangalore",
+              description: "Complete renovation services for homes and offices including kitchen, bathroom, and full home renovation"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "PMC Services Bangalore",
+              description: "Project Management & Consultancy services for construction projects"
+            }
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Design and Drawings Bangalore",
+              description: "Architectural, structural, and MEP design and drafting services"
+            }
+          }
+        ]
+      }
+    }
+    schemasToRender = [servicePageSchema]
   } else if (pathname.includes("/products/")) {
     // Handle specific product pages
     if (pathname === "/products/upvc-windows-doors") {
-      currentSchema = {
+      const productSchema = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "UPVC Windows & Doors",
@@ -235,17 +547,25 @@ const StructuredData = () => {
           "availability": "https://schema.org/InStock"
         }
       }
+      schemasToRender = [productSchema]
     } else {
-      currentSchema = productSchema
+      schemasToRender = [productSchema]
     }
   } else if (pathname === "/faq" || pathname === "/#faq") {
-    currentSchema = faqSchema
+    schemasToRender = [faqSchema]
+  } else {
+    // Default: show organization schema
+    schemasToRender = [organizationSchema]
   }
 
   return (
-    <Script id="structured-data" type="application/ld+json">
-      {JSON.stringify(currentSchema)}
-    </Script>
+    <>
+      {schemasToRender.map((schema, index) => (
+        <Script key={`structured-data-${index}`} id={`structured-data-${index}`} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </Script>
+      ))}
+    </>
   )
 }
 

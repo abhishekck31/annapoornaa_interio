@@ -19,9 +19,9 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Best Interior Company in Bangalore | Annapoornaa Interio",
-  description: "Best interior company in Bangalore. Award-winning home & office interiors, construction, modular kitchens. Free consultation!",
+  description: "Best interior company in Bangalore. Award-winning home & office interiors, construction, modular kitchens. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and all areas of Bangalore. Free consultation!",
   keywords:
-    "house contractors Bangalore, home construction Bangalore, house construction Bangalore, interior decorators Bangalore, interior designers Bangalore, construction company Bangalore, renovation company Bangalore, best interior company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, interior services Bangalore",
+    "interior designers Bangalore, best interior company Bangalore, home interior design Bangalore, office interior design Bangalore, house contractors Bangalore, home construction Bangalore, house construction Bangalore, interior decorators Bangalore, construction company Bangalore, renovation company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, interior services Bangalore, interior designers Yelahanka, interior designers Whitefield, interior designers Koramangala, interior designers HSR Layout, interior designers Indiranagar",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",
@@ -118,9 +118,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
+        {/* Resource hints for performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Favicons */}
         <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
+        
+        {/* Critical resource preloading */}
         <link rel="preload" href="/UP-Hero3.png" as="image" />
         <link rel="preload" href="/images/logo.png" as="image" />
         <Script

@@ -8,17 +8,17 @@ import Link from "next/link";
 
 const slides = [
   {
-    image: "/UP-Hero3.png?height=800&width=1600",
+    image: "/UP-Hero3.png",
     title: "Transform Your Space",
     description: "Professional interior design solutions for homes and offices",
   },
   {
-    image: "/UP-Hero2.png?height=800&width=1600",
+    image: "/UP-Hero2.png",
     title: "Build Your Dream Home",
     description: "Expert construction services with attention to detail",
   },
   {
-    image: "/UP-Hero1.png?height=800&width=1600",
+    image: "/UP-Hero1.png",
     title: "Renovate With Confidence",
     description: "Breathe new life into your existing spaces",
   },
@@ -64,6 +64,13 @@ const HeroSection = () => {
       }
     };
   }, []);
+
+  // Preload next slide image
+  useEffect(() => {
+    const nextSlideIndex = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+    const nextImage = new Image();
+    nextImage.src = slides[nextSlideIndex].image;
+  }, [currentSlide]);
 
   const handleSlideChange = (index: number) => {
     if (slideInterval.current) {

@@ -30,8 +30,8 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 
 // SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
 export const metadata: Metadata = {
-  title: 'Best Interior Designers in Bangalore | Home & Office Interiors | Annapoornaa Interio',
-  description: 'Best interior designers in Bangalore. House contractors, home construction, office interiors, renovation services in Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar. Award-winning designs with 3D visualization. Free consultation! Call +91 99000 94942',
+  title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
+  description: 'Interior designers in Bangalore for home & office interiors, construction and renovation. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar.',
   keywords: [
     'interior designers Bangalore',
     'best interior company Bangalore',
@@ -74,8 +74,8 @@ export const metadata: Metadata = {
     canonical: 'https://annapoornaainterio.com',
   },
   openGraph: {
-    title: 'Best Interior Designers in Bangalore | Home & Office Interiors | Annapoornaa Interio',
-    description: 'Best interior designers in Bangalore. House contractors, home construction, office interiors, renovation services in Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar. Award-winning designs with 3D visualization. Free consultation!',
+    title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
+    description: 'Interior designers in Bangalore for home & office interiors, construction and renovation. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar.',
     url: 'https://annapoornaainterio.com', 
     siteName: 'Annapoornaa Interio',
     images: [
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
-    description: 'Best interior designers in Bangalore. House contractors, home construction, office interiors, renovation services. Award-winning designs with 3D visualization.',
+    description: 'Interior designers in Bangalore for home & office interiors, construction and renovation. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar.',
     images: ['https://annapoornaainterio.com/og-image.jpg'],
   },
   robots: {

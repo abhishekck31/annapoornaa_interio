@@ -30,8 +30,8 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 
 // SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
 export const metadata: Metadata = {
-  title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
-  description: 'Interior designers in Bangalore for home & office interiors, construction and renovation. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar.',
+  title: 'Best Interior Designers in Bangalore | Luxury & Affordable | Turnkey Construction',
+  description: 'Award-winning Interior Designers in Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction at Affordable Prices. Get a Free Quote!',
   keywords: [
     'interior designers Bangalore',
     'best interior company Bangalore',
@@ -67,20 +67,27 @@ export const metadata: Metadata = {
     'top interior designers Bangalore',
     'interior design company Bangalore',
     'Annapoornaa Interio',
-    'Annapoorna Interio'
+    'Annapoorna Interio',
+    'luxury interior design Bangalore',
+    'affordable interior designers Bangalore',
+    'low cost interior designers Bangalore',
+    '3bhk interior cost Bangalore',
+    '2bhk interior cost Bangalore',
+    'villa interior design Bangalore',
+    'turnkey construction cost Bangalore'
   ],
-  metadataBase: new URL('https://annapoornaainterio.com'), 
+  metadataBase: new URL('https://annapoornaainterio.com'),
   alternates: {
     canonical: 'https://annapoornaainterio.com',
   },
   openGraph: {
-    title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
-    description: 'Interior designers in Bangalore for home & office interiors, construction and renovation. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar.',
-    url: 'https://annapoornaainterio.com', 
+    title: 'Best Interior Designers in Bangalore | Luxury & Affordable | Turnkey Construction',
+    description: 'Award-winning Interior Designers in Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction at Affordable Prices. Get a Free Quote!',
+    url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [
       {
-        url: 'https://annapoornaainterio.com/og-image.jpg', 
+        url: 'https://annapoornaainterio.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Annapoornaa Interio - Best Interior Designers in Bangalore',
@@ -91,8 +98,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Interior Designers in Bangalore | Annapoornaa Interio',
-    description: 'Interior designers in Bangalore for home & office interiors, construction and renovation. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar.',
+    title: 'Best Interior Designers in Bangalore | Luxury & Affordable | Turnkey Construction',
+    description: 'Award-winning Interior Designers in Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction at Affordable Prices. Get a Free Quote!',
     images: ['https://annapoornaainterio.com/og-image.jpg'],
   },
   robots: {
@@ -173,7 +180,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <main className="min-h-screen">
         <Navbar />
         <HeroSection />

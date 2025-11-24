@@ -30,9 +30,23 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 
 // SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
 export const metadata: Metadata = {
-  title: 'Best Interior Designers in Bangalore | Luxury & Affordable | Turnkey Construction',
-  description: 'Award-winning Interior Designers in Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction at Affordable Prices. Get a Free Quote!',
+  title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
+  description: 'Top-rated Interior Designers in Yelahanka, Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction. Visit our Yelahanka New Town studio!',
   keywords: [
+    // High Priority - Yelahanka Specific
+    'Interior Designers in Yelahanka',
+    'Interior Designers Near Me Yelahanka',
+    'Best Interior Designers Yelahanka New Town',
+    'Home Interiors Yelahanka',
+    'Turnkey Interiors Yelahanka',
+    'Office Interiors Yelahanka',
+    'Budget Interior Designers Yelahanka',
+    'Luxury Interior Designers Yelahanka',
+    'Interior Decorators Yelahanka',
+    'Residential Interior Designers Yelahanka',
+    'Interior Designers Near Me', // General "Near Me" for local capture
+
+    // Broader Bangalore Terms
     'interior designers Bangalore',
     'best interior company Bangalore',
     'home interior design Bangalore',
@@ -43,12 +57,10 @@ export const metadata: Metadata = {
     'interior decorators Bangalore',
     'construction company Bangalore',
     'renovation company Bangalore',
-    'interior designers Yelahanka',
     'interior designers Whitefield',
     'interior designers Koramangala',
     'interior designers HSR Layout',
     'interior designers Indiranagar',
-    'interior designers Jayanagar',
     'interior designers Malleshwaram',
     'interior designers Rajajinagar',
     'interior designers Banashankari',
@@ -81,8 +93,8 @@ export const metadata: Metadata = {
     canonical: 'https://annapoornaainterio.com',
   },
   openGraph: {
-    title: 'Best Interior Designers in Bangalore | Luxury & Affordable | Turnkey Construction',
-    description: 'Award-winning Interior Designers in Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction at Affordable Prices. Get a Free Quote!',
+    title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
+    description: 'Top-rated Interior Designers in Yelahanka, Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction. Visit our Yelahanka New Town studio!',
     url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [
@@ -90,7 +102,7 @@ export const metadata: Metadata = {
         url: 'https://annapoornaainterio.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Annapoornaa Interio - Best Interior Designers in Bangalore',
+        alt: 'Annapoornaa Interio - Best Interior Designers in Yelahanka, Bangalore',
       },
     ],
     locale: 'en_IN',
@@ -98,8 +110,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Interior Designers in Bangalore | Luxury & Affordable | Turnkey Construction',
-    description: 'Award-winning Interior Designers in Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction at Affordable Prices. Get a Free Quote!',
+    title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
+    description: 'Top-rated Interior Designers in Yelahanka, Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction. Visit our Yelahanka New Town studio!',
     images: ['https://annapoornaainterio.com/og-image.jpg'],
   },
   robots: {
@@ -138,13 +150,14 @@ export default function Home() {
   // SEO: JSON-LD Structured Data for Local Business. This is crucial for local search visibility.
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'InteriorDesignBusiness', // More specific than LocalBusiness
     'name': 'Annapoornaa Interio',
     'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
-    '@id': '',
-    'url': 'https://www.annapoornainterio.com', // Replace with your actual domain
+    '@id': 'https://annapoornaainterio.com',
+    'url': 'https://annapoornaainterio.com',
     'telephone': contactDetails.phone1,
     'email': contactDetails.email,
+    'priceRange': '₹₹',
     'address': {
       '@type': 'PostalAddress',
       ...contactDetails.address
@@ -154,6 +167,16 @@ export default function Home() {
       'latitude': 13.1006, // Approx. Latitude for Yelahanka New Town
       'longitude': 77.5963 // Approx. Longitude for Yelahanka New Town
     },
+    'areaServed': [
+      {
+        '@type': 'City',
+        'name': 'Yelahanka'
+      },
+      {
+        '@type': 'City',
+        'name': 'Bangalore'
+      }
+    ],
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
       'dayOfWeek': [

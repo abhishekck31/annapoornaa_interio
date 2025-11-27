@@ -83,6 +83,50 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/index.php',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/interior.php',
+        destination: '/expertise/interior',
+        permanent: true,
+      },
+      {
+        source: '/construction.php',
+        destination: '/expertise/construction',
+        permanent: true,
+      },
+      {
+        source: '/gallery.php',
+        destination: '/gallery',
+        permanent: true,
+      },
+      {
+        source: '/renovation.php',
+        destination: '/services',
+        permanent: true,
+      },
+      {
+        source: '/railingsservices.php',
+        destination: '/products/system-railings',
+        permanent: true,
+      },
+      {
+        source: '/commercialbuildingsconstruction.php',
+        destination: '/expertise/construction',
+        permanent: true,
+      },
+      {
+        source: '/w-chairs.php',
+        destination: '/products/workstations',
+        permanent: true,
+      },
+    ]
+  },
   // Make environment variables available to the browser
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'

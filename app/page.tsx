@@ -31,7 +31,7 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 // SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
 export const metadata: Metadata = {
   title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
-  description: 'Top-rated Interior Designers in Yelahanka, Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction. Visit our Yelahanka New Town studio!',
+  description: 'Top Interior Designers in Yelahanka, Bangalore. Luxury Home Interiors, Modular Kitchens & Turnkey Construction. Visit our Yelahanka studio!',
   keywords: [
     // High Priority - Yelahanka Specific
     'Interior Designers in Yelahanka',
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
-    description: 'Top-rated Interior Designers in Yelahanka, Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction. Visit our Yelahanka New Town studio!',
+    description: 'Top Interior Designers in Yelahanka, Bangalore. Luxury Home Interiors, Modular Kitchens & Turnkey Construction. Visit our Yelahanka studio!',
     url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
-    description: 'Top-rated Interior Designers in Yelahanka, Bangalore. We offer Luxury Home Interiors, Modular Kitchens, and Turnkey Construction. Visit our Yelahanka New Town studio!',
+    description: 'Top Interior Designers in Yelahanka, Bangalore. Luxury Home Interiors, Modular Kitchens & Turnkey Construction. Visit our Yelahanka studio!',
     images: ['https://annapoornaainterio.com/og-image.jpg'],
   },
   robots: {

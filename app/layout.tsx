@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Best Interior Designers & Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
-  description: "Top-rated interior design and construction company in Yelahanka, Bangalore. We offer turnkey interiors, home construction, modular kitchens, and renovation services. Expert designers & contractors. Free consultation!",
+  description: "Top interior designers in Yelahanka, Bangalore. Turnkey interiors, home construction, modular kitchens & renovation. Expert designers. Free consultation!",
   keywords:
     "Interior Designers in Yelahanka, Interior Designers Near Me Yelahanka, Best Interior Designers Yelahanka New Town, Home Interiors Yelahanka, Turnkey Interiors Yelahanka, Construction Company Yelahanka, Civil Contractors Bangalore, Turnkey Construction, Villa Construction Yelahanka, interior designers Bangalore, best interior company Bangalore, home interior design Bangalore, office interior design Bangalore, house contractors Bangalore, home construction Bangalore, house construction Bangalore, interior decorators Bangalore, construction company Bangalore, renovation company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, interior services Bangalore, interior designers Whitefield, interior designers Koramangala, interior designers HSR Layout, interior designers Indiranagar",
   authors: [{ name: "Annapoornaa Interio" }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Best Interior Designers & Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
-    description: "Top-rated interior design and construction company in Yelahanka, Bangalore. We offer turnkey interiors, home construction, modular kitchens, and renovation services. Free consultation!",
+    description: "Top interior designers in Yelahanka, Bangalore. Turnkey interiors, home construction, modular kitchens & renovation. Expert designers. Free consultation!",
     url: "https://annapoornaainterio.com",
     siteName: "Annapoornaa Interio",
     locale: "en_IN",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Best Interior Designers & Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
-    description: "Top-rated interior design and construction company in Yelahanka, Bangalore. We offer turnkey interiors, home construction, modular kitchens, and renovation services. Free consultation!",
+    description: "Top interior designers in Yelahanka, Bangalore. Turnkey interiors, home construction, modular kitchens & renovation. Expert designers. Free consultation!",
     images: ["https://annapoornaainterio.com/og-image.jpg"],
     creator: "@annapoornaainterio",
   },

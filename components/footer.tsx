@@ -11,25 +11,25 @@ const Footer = () => {
 
   return (
     <footer className="bg-navy-900 text-white pt-16 pb-8 rounded-t-xl" id="contact">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
-          <div>
+          <div className="text-center sm:text-left">
             <div className="mb-6">
               <div className="bg-white p-1 rounded-md inline-block">
-  <Image
-    src="/images/logo.png"
-    alt="Annapoornaa Interio Logo"
-    width={220}
-    height={62}
-    className="h-16 w-auto"
-  />
-</div>
+                <Image
+                  src="/images/logo.png"
+                  alt="Annapoornaa Interio Logo"
+                  width={220}
+                  height={62}
+                  className="h-16 w-auto"
+                />
+              </div>
             </div>
             <p className="text-gray-300 mb-6">
               Smart Designs. Seamless Execution
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 justify-center sm:justify-start">
               <motion.a
                 href="#"
                 whileHover={{ y: -5, scale: 1.1 }}
@@ -60,45 +60,45 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Open Hours */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6 flex items-center">
-              <Clock className="h-5 w-5 text-gold-400 mr-2" />
-              Open Hours
-            </h3>
+          {/* Quick Links */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold mb-6 text-white border-b-2 border-gold-500 pb-2 inline-block">Quick Links</h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
-                <div className="bg-gold-500/20 p-1 rounded-full mr-3 mt-0.5">
-                  <Clock className="h-4 w-4 text-gold-400" />
-                </div>
-                <div>
-                  <p className="font-medium">Monday - Saturday</p>
-                  <p className="text-gray-300">10:00 AM - 7:00 PM</p>
-                </div>
+              <li>
+                <Link href="/" className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group">
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  Home
+                </Link>
               </li>
-              <li className="flex items-start">
-
+              <li>
+                <Link href="/about" className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group">
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  About Us
+                </Link>
               </li>
-              <li className="flex items-start">
-                <div className="bg-gold-500/20 p-1 rounded-full mr-3 mt-0.5">
-                  <Clock className="h-4 w-4 text-gold-400" />
-                </div>
-                <div>
-                  <p className="font-medium">Sunday</p>
-                  <p className="text-gray-300">Closed</p>
-                </div>
+              <li>
+                <Link href="/gallery" className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group">
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group">
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">Services</h3>
-            <ul className="space-y-2">
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold mb-6 text-white border-b-2 border-gold-500 pb-2 inline-block">Services</h3>
+            <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services#home-interior"
-                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                  href="/services/home-interiors"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group"
                 >
                   <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
                   Home Interiors
@@ -106,8 +106,8 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services#office-interior"
-                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                  href="/services/office-corporate-interiors"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group"
                 >
                   <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
                   Office/Corporate Interiors
@@ -115,17 +115,17 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services#construction"
-                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                  href="/services/residential-commercial-construction"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group"
                 >
                   <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
-                  Residential & Commercial Construction
+                  Construction
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#renovation"
-                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                  href="/services/renovation-services"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group"
                 >
                   <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
                   Renovation
@@ -134,7 +134,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/products"
-                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center justify-center sm:justify-start group"
                 >
                   <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
                   Products
@@ -143,60 +143,42 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6">
-              <Link href="/contact">Contact us</Link>
-            </h3>
+          {/* Contact Info */}
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl font-bold mb-6 text-white border-b-2 border-gold-500 pb-2 inline-block">Contact Us</h3>
             <ul className="space-y-4">
-              <li className="flex items-start group">
-                <div className="bg-gold-500/20 p-1 rounded-full mr-3 mt-0.5 group-hover:bg-gold-500/40 transition-colors duration-300">
-                  <MapPin className="h-4 w-4 text-gold-400" />
-                </div>
-                <p className="text-gray-300 group-hover:text-white transition-colors duration-300 mb-0">
-                1st floor,  #395,  8th 'B' Main,  14th 'B' cross, 2nd stage,  'B' sector,  Yelahanka New Town,  Bangalore - 560064.
-                </p>
+              <li className="flex items-start justify-center sm:justify-start group">
+                <MapPin className="h-6 w-6 text-gold-500 mr-3 flex-shrink-0 group-hover:animate-bounce" />
+                <span className="text-gray-300">
+                  1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector, Yelahanka New Town, Bangalore
+                  - 560064
+                </span>
               </li>
-              <li className="flex items-center group">
-                <div className="bg-gold-500/20 p-1.5 rounded-full mr-3 group-hover:bg-gold-500/40 transition-colors duration-300">
-                  <Mail className="h-5 w-5 text-gold-400" />
+              <li className="flex items-center justify-center sm:justify-start group">
+                <Phone className="h-5 w-5 text-gold-500 mr-3 flex-shrink-0 group-hover:rotate-12 transition-transform" />
+                <div className="flex flex-col">
+                  <a href="tel:+919900094942" className="text-gray-300 hover:text-gold-400 transition-colors">
+                    +91 99000 94942
+                  </a>
+                  <a href="tel:+918073141413" className="text-gray-300 hover:text-gold-400 transition-colors">
+                    +91 80731 41413
+                  </a>
                 </div>
+              </li>
+              <li className="flex items-center justify-center sm:justify-start group">
+                <Mail className="h-5 w-5 text-gold-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:info@annapoornainterio.com"
                   className="text-gray-300 hover:text-gold-400 transition-colors"
                 >
-                  info@annapoornainterio.com
-                </a>
-              </li>
-              <li className="flex items-center group">
-                <div className="bg-gold-500/20 p-1.5 rounded-full mr-3 group-hover:bg-gold-500/40 transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-gold-400" />
-                </div>
-                <a href="tel:+919900094942" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  +91 99000 94942
-                </a>
-              </li>
-              <li className="flex items-center group">
-                <div className="bg-gold-500/20 p-1.5 rounded-full mr-3 group-hover:bg-gold-500/40 transition-colors duration-300">
-                  <Phone className="h-5 w-5 text-gold-400" />
-                </div>
-                <a href="tel:+918073141413" className="text-gray-300 hover:text-gold-400 transition-colors">
-                  +91 80731 41413
-                </a>
-              </li>
-              <li className="flex items-center group">
-                <div className="bg-green-500/20 p-1.5 rounded-full mr-3 group-hover:bg-green-500/40 transition-colors duration-300">
-                  <MessageCircle size={20} color="rgb(74 222 128)" />
-                </div>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-400 transition-colors">
-                  WhatsApp Us
+                  info@annapoopoornainterio.com
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-navy-800 mt-12 pt-8">
+        <div className="mt-12 md:mt-16 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           {/* External Authority Links */}
           <div className="flex justify-center gap-6 mb-6 text-sm">
             <a href="https://www.rera.karnataka.gov.in/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-400 transition-colors">

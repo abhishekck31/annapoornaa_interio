@@ -9,11 +9,14 @@ import { motion } from "framer-motion";
 
 // Import the navigation helper
 import { scrollToTop } from "@/utils/navigation-helper";
+import { services } from "@/data/services-data";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,11 +58,10 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-md py-1"
-          : "bg-white py-2"
-      }`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-white/95 backdrop-blur-sm shadow-md py-1"
+        : "bg-white py-2"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -80,9 +82,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-2">
             <Link
               href="/"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -93,9 +94,8 @@ const Navbar = () => {
 
             <Link
               href="/about"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/about" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/about" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -104,27 +104,43 @@ const Navbar = () => {
               About Us
             </Link>
 
-            <Link
-              href="/services"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/services" ? "text-gold-600 font-semibold" : ""
-              }`}
-              onClick={() => {
-                setIsMenuOpen(false);
-                scrollToTop();
-              }}
-            >
-              Services
-            </Link>
+            <div className="relative group">
+              <Link
+                href="/services"
+                className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/services" ? "text-gold-600 font-semibold" : ""
+                  }`}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  scrollToTop();
+                }}
+              >
+                Services <ChevronDown className="ml-1 h-4 w-4" />
+              </Link>
+              <div className="absolute top-full left-0 bg-white border border-gray-200 shadow-lg rounded-md overflow-hidden w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                {services.map((service) => (
+                  <Link
+                    key={service.slug}
+                    href={`/services/${service.slug}`}
+                    className="block w-full px-4 py-2 text-sm text-gray-700 hover:text-gold-600 hover:bg-gray-50 flex items-center justify-between group/item"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    <span>{service.title}</span>
+                    <span className="opacity-0 group-hover/item:opacity-100 transition-opacity">→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             <div className="relative group">
               <Button
                 variant="ghost"
-                className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 bg-transparent hover:bg-transparent focus:bg-transparent ${
-                  activeLink.includes("/products")
-                    ? "text-gold-600 font-semibold"
-                    : ""
-                }`}
+                className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 bg-transparent hover:bg-transparent focus:bg-transparent ${activeLink.includes("/products")
+                  ? "text-gold-600 font-semibold"
+                  : ""
+                  }`}
               >
                 Products <ChevronDown className="ml-1 h-4 w-4" />
               </Button>
@@ -194,9 +210,8 @@ const Navbar = () => {
 
             <Link
               href="/gallery"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/gallery" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/gallery" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -207,11 +222,10 @@ const Navbar = () => {
 
             <Link
               href="/featured-projects"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/featured-projects"
-                  ? "text-gold-600 font-semibold"
-                  : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/featured-projects"
+                ? "text-gold-600 font-semibold"
+                : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -220,7 +234,7 @@ const Navbar = () => {
               Featured Projects
             </Link>
 
-            
+
 
             <Link href="/contact">
               <Button className="bg-navy-900 hover:bg-navy-800 text-white px-4 py-2 rounded-md font-medium ml-2 shadow-md hover:shadow-lg transition-all duration-300 border border-navy-700">
@@ -258,11 +272,10 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/"
-                  ? "text-gold-600 font-semibold"
-                  : "text-gray-700"
-              }`}
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/"
+                ? "text-gold-600 font-semibold"
+                : "text-gray-700"
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -273,11 +286,10 @@ const Navbar = () => {
 
             <Link
               href="/about"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/about"
-                  ? "text-gold-600 font-semibold"
-                  : "text-gray-700"
-              }`}
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/about"
+                ? "text-gold-600 font-semibold"
+                : "text-gray-700"
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -286,102 +298,129 @@ const Navbar = () => {
               About Us
             </Link>
 
-            <Link
-              href="/services"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/services"
+            <div className="relative">
+              <button
+                className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${activeLink === "/services"
                   ? "text-gold-600 font-semibold"
                   : "text-gray-700"
-              }`}
-              onClick={() => {
-                setIsMenuOpen(false);
-                scrollToTop();
-              }}
-            >
-              Services
-            </Link>
+                  }`}
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              >
+                <span>Services</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileServicesOpen && (
+                <div className="pl-6 space-y-1">
+                  <Link
+                    href="/services"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-gold-600 font-medium"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    All Services
+                  </Link>
+                  {services.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/services/${service.slug}`}
+                      className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        scrollToTop();
+                      }}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <div className="relative">
               <button
-                className={`w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                  activeLink.includes("/products")
-                    ? "text-gold-600 font-semibold"
-                    : "text-gray-700"
-                }`}
+                className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${activeLink.includes("/products")
+                  ? "text-gold-600 font-semibold"
+                  : "text-gray-700"
+                  }`}
+                onClick={() => setMobileProductsOpen(!mobileProductsOpen)}
               >
-                Products
+                <span>Products</span>
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileProductsOpen ? 'rotate-180' : ''}`} />
               </button>
-              <div className="pl-6 space-y-1">
-                <Link
-                  href="/products/upvc-windows-doors"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                  UPVC Windows & Doors
-                </Link>
-                <Link
-                  href="/products/aluminum-doors-windows"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                  Aluminum Doors & Windows
-                </Link>
-                <Link
-                  href="/products/fire-doors"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                  Fire Doors
-                </Link>
-                <Link
-                  href="/products/system-railings"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                  System Railings
-                </Link>
-                <Link
-                  href="/products/pvc-false-ceilings"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                   Soffit False Ceilings
-                </Link>
-                <Link
-                  href="/products/workstations"
-                  className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    scrollToTop();
-                  }}
-                >
-                  Workstations
-                </Link>
-              </div>
+              {mobileProductsOpen && (
+                <div className="pl-6 space-y-1">
+                  <Link
+                    href="/products/upvc-windows-doors"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    UPVC Windows & Doors
+                  </Link>
+                  <Link
+                    href="/products/aluminum-doors-windows"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    Aluminum Doors & Windows
+                  </Link>
+                  <Link
+                    href="/products/fire-doors"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    Fire Doors
+                  </Link>
+                  <Link
+                    href="/products/system-railings"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    System Railings
+                  </Link>
+                  <Link
+                    href="/products/pvc-false-ceilings"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    Soffit False Ceilings
+                  </Link>
+                  <Link
+                    href="/products/workstations"
+                    className="block px-3 py-2 rounded-md text-sm text-gray-500 hover:text-gold-600"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
+                  >
+                    Workstations
+                  </Link>
+                </div>
+              )}
             </div>
 
             <Link
               href="/gallery"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/gallery"
-                  ? "text-gold-600 font-semibold"
-                  : "text-gray-700"
-              }`}
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/gallery"
+                ? "text-gold-600 font-semibold"
+                : "text-gray-700"
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();

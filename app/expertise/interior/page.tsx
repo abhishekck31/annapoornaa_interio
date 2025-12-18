@@ -66,7 +66,7 @@ export default function InteriorExpertisePage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Interior Design Expertise</h1>
@@ -125,9 +125,8 @@ export default function InteriorExpertisePage() {
             {interiorExpertise.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">{item.title}</h2>

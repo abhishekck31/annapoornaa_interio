@@ -16,7 +16,7 @@ const AboutPage = () => {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 mt-32 pb-16 bg-white">
+      <section className="pt-32 pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-4">
             <span className="text-lg text-secondary uppercase tracking-wider font-medium">ABOUT US</span>

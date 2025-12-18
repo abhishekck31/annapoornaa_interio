@@ -1,80 +1,102 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import Navbar from "@/components/navbar"
+import Footer from "@/components/footer"
+import { blogPosts } from "@/data/blog-data"
+import { Calendar, ArrowRight, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: 'Interior Design Blog | Tips & Trends - Annapoornaa Interio',
-  description: 'Explore expert interior design tips, construction advice, and latest trends in home and office interiors from Annapoornaa Interio Bangalore.',
-  keywords: 'interior design blog, home decor tips, construction advice Bangalore, interior trends, modular kitchen ideas',
+  title: 'Interior Design Blog Bangalore | Tips & Trends - Annapoornaa Interio',
+  description: 'Expert interior design tips, trends, and home improvement advice from the top interior designers in Bangalore. Read our blog for fresh inspiration.',
+  keywords: 'interior design blog, home decor tips Bangalore, construction trends, modular kitchen ideas, office design blog',
+  alternates: {
+    canonical: 'https://annapoornaainterio.com/blog',
+  },
 }
 
-const blogPosts = [
-  {
-    slug: 'top-10-interior-design-trends-bangalore-2025',
-    title: 'Top 10 Interior Design Trends in Bangalore for 2025',
-    excerpt: 'Discover the latest interior design trends taking Bangalore by storm. From sustainable materials to smart home integration.',
-    date: '2025-01-15',
-    category: 'Trends',
-  },
-  {
-    slug: 'modular-kitchen-design-guide-bangalore',
-    title: 'Complete Guide to Modular Kitchen Design in Bangalore',
-    excerpt: 'Everything you need to know about designing the perfect modular kitchen for your Bangalore home.',
-    date: '2025-02-01',
-    category: 'Kitchen Design',
-  },
-  {
-    slug: 'office-interior-design-productivity',
-    title: 'How Office Interior Design Impacts Productivity',
-    excerpt: 'Learn how thoughtful office interior design can boost employee productivity and create a positive work environment.',
-    date: '2025-02-15',
-    category: 'Commercial',
-  },
-]
-
-export default function BlogPage() {
+export default function BlogListingPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-bold text-navy-900 mb-4">
-          Interior Design Blog
-        </h1>
-        <p className="text-xl text-gray-600 mb-12">
-          Expert tips, trends, and insights from Annapoornaa Interio
-        </p>
+    <main className="min-h-screen bg-gray-50">
+      <Navbar />
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
-            <article
-              key={post.slug}
-              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <div className="p-6">
-                <div className="text-sm text-gold-600 font-semibold mb-2">
-                  {post.category}
-                </div>
-                <h2 className="text-2xl font-bold text-navy-900 mb-3">
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="hover:text-gold-600 transition-colors"
-                  >
-                    {post.title}
-                  </Link>
-                </h2>
-                <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                <div className="flex items-center justify-between">
-                  <time className="text-sm text-gray-500">{post.date}</time>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-gold-600 hover:text-gold-700 font-semibold"
-                  >
-                    Read More →
-                  </Link>
-                </div>
-              </div>
-            </article>
-          ))}
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-navy-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-navy-900"></div>
+          <img src="/Serviceimages/home interiors.jpg" alt="Blog background" className="w-full h-full object-cover" />
         </div>
-      </div>
-    </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <span className="text-gold-500 font-bold uppercase tracking-widest text-sm mb-4 block">OUR KNOWLEDGE BASE</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            Interior Design <span className="text-gold-500">Blog</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Expert insights, latest trends, and comprehensive guides curated by Bangalore's finest designers.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+            {blogPosts.map((post, idx) => (
+              <article
+                key={post.slug}
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full border border-gray-100"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-gold-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                      {post.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="flex items-center gap-4 text-xs text-gray-500 mb-4 font-medium">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-3 w-3 text-gold-600" />
+                      {post.date}
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-3 w-3 text-gold-600" />
+                      5 min read
+                    </div>
+                  </div>
+
+                  <h2 className="text-2xl font-bold text-navy-900 mb-4 leading-tight group-hover:text-gold-600 transition-colors">
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h2>
+
+                  <p className="text-gray-600 mb-8 line-clamp-3 text-sm leading-relaxed">
+                    {post.excerpt}
+                  </p>
+
+                  <div className="mt-auto pt-6 border-t border-gray-100">
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center text-navy-900 font-bold hover:text-gold-600 transition-colors group/link"
+                    >
+                      Read Article
+                      <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover/link:translate-x-2" />
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
   )
 }

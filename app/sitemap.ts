@@ -41,6 +41,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  const blogSlugs = [
+    'top-10-interior-design-trends-bangalore-2025',
+    'modular-kitchen-design-guide-bangalore',
+    'office-interior-design-productivity'
+  ]
+
+  const blogPages = blogSlugs.map(slug => ({
+    url: `${baseUrl}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
   return [
     {
       url: baseUrl,
@@ -151,12 +164,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    {
-      url: `${baseUrl}/blog/top-10-interior-design-trends-bangalore-2025`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
+    ...blogPages,
     ...locationPages,
   ]
 }

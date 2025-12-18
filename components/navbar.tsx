@@ -234,6 +234,20 @@ const Navbar = () => {
               Featured Projects
             </Link>
 
+            <Link
+              href="/blog"
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/blog"
+                ? "text-gold-600 font-semibold"
+                : ""
+                }`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToTop();
+              }}
+            >
+              Blog
+            </Link>
+
 
 
             <Link href="/contact">
@@ -438,6 +452,20 @@ const Navbar = () => {
               }}
             >
               Featured Projects
+            </Link>
+
+            <Link
+              href="/blog"
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/blog"
+                ? "text-gold-600 font-semibold"
+                : "text-gray-700"
+                }`}
+              onClick={() => {
+                setIsMenuOpen(false);
+                scrollToTop();
+              }}
+            >
+              Blog
             </Link>
 
             <Link

@@ -81,7 +81,7 @@ export default function FeaturedProjectsClient() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 mt-32 pb-20 bg-white">
+      <section className="pt-32 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-4">
@@ -115,9 +115,9 @@ export default function FeaturedProjectsClient() {
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-2">{project.title}</h3>
                       <div className="flex items-center text-gold-300 text-sm mb-4">
-  <MapPin className="h-4 w-4 mr-1" />
-  <span>{project.location}</span>
-</div>
+                        <MapPin className="h-4 w-4 mr-1" />
+                        <span>{project.location}</span>
+                      </div>
                     </div>
                   </div>
 
@@ -264,9 +264,8 @@ export default function FeaturedProjectsClient() {
                       {getProjectById(selectedProject)?.images.map((image, idx) => (
                         <div
                           key={idx}
-                          className={`cursor-pointer rounded-md overflow-hidden border-2 ${
-                            idx === currentImageIndex ? "border-gold-500" : "border-transparent"
-                          }`}
+                          className={`cursor-pointer rounded-md overflow-hidden border-2 ${idx === currentImageIndex ? "border-gold-500" : "border-transparent"
+                            }`}
                           onClick={(e) => {
                             e.stopPropagation()
                             setCurrentImageIndex(idx)

@@ -30,8 +30,8 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 
 // SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
 export const metadata: Metadata = {
-  title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
-  description: 'Top Interior Designers in Yelahanka, Bangalore. Luxury Home Interiors, Modular Kitchens & Turnkey Construction. Visit our Yelahanka studio!',
+  title: 'Top Interior Designers in Yelahanka, Bangalore | Annapoornaa Interio',
+  description: 'Searching for the best interior designers in Yelahanka, Bangalore? Annapoornaa Interio offers premium home interiors, modular kitchens & turnkey construction. Book a free consultation!',
   keywords: [
     // High Priority - Yelahanka Specific
     'Interior Designers in Yelahanka',

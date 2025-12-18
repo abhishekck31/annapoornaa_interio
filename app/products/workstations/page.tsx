@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: 'Ergonomic Office Workstations Bangalore | Modular Office Furniture',
+  description: 'Modern and ergonomic office workstations in Bangalore. Customizable modular designs for productive workspaces. Cubicles, open plans, and executive tables.',
+  keywords: ['office workstations Bangalore', 'modular office furniture', 'ergonomic desks', 'cubicle workstations', 'office interior solutions Bangalore'],
+}
 
 const WorkstationsPage = () => {
   const features = [

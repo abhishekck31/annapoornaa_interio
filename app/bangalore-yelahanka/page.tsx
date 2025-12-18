@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import Head from 'next/head'
+
 
 export const metadata: Metadata = {
   title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | Annapoornaa Interio",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords:
     "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, false ceilings Bangalore, workstations Yelahanka",
   alternates: {
-    canonical: "/bangalore-yelahanka",
+    canonical: `https://www.annapoornaainterio.com/bangalore-yelahanka`,
   },
   icons: {
     icon: '/favicon.ico',
@@ -126,9 +126,6 @@ const BangaloreYelahankaPage = () => {
 
   return (
     <main className="min-h-screen">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Navbar />
       <div className="h-20"></div>
 

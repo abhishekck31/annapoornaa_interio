@@ -68,9 +68,9 @@ export const services: Service[] = [
                 ],
             },
         ],
-        seoTitle: "Best Home Interior Designers in Bangalore | Annapoornaa Interio",
-        seoDescription: "Searching for the best home interior designers in Bangalore? Annapoornaa Interio offers personalized modern and traditional home designs in Yelahanka, Whitefield & Koramangala.",
-        keywords: ["home interior designers Bangalore", "residential interiors Bangalore", "modular kitchen Bangalore", "wardrobe design Bangalore", "home decoration Bangalore"],
+        seoTitle: "Best Home Interior Designers in Yelahanka, Bangalore | Annapoornaa Interio",
+        seoDescription: "Transform your home with the top interior designers in Yelahanka & Bangalore. Custom modular kitchens, wardrobes & luxury living spaces. Free consultation!",
+        keywords: ["home interior designers Bangalore", "interior designers Yelahanka", "modular kitchen Bangalore", "wardrobe design Bangalore", "residential interiors Bangalore"],
     },
     {
         id: "office-interior",
@@ -117,9 +117,9 @@ export const services: Service[] = [
                 ],
             },
         ],
-        seoTitle: "Corporate Office Interior Designers Bangalore | Workspace Solutions",
-        seoDescription: "Professional office and corporate interior design services in Bangalore. We create productive workspaces with ergonomic designs, HVAC, and networking solutions.",
-        keywords: ["office interior Bangalore", "corporate office design", "workstation designers Bangalore", "commercial interiors Bangalore"],
+        seoTitle: "Office & Corporate Interior Designers Bangalore | Workspace Solutions",
+        seoDescription: "Lead your business with inspiring office interiors in Bangalore. Ergonomic workstations, HVAC solutions & modern corporate designs for productivity.",
+        keywords: ["office interior Bangalore", "corporate office design Bangalore", "commercial interiors Yelahanka", "workstation designers Bangalore"],
     },
     {
         id: "construction",
@@ -153,9 +153,9 @@ export const services: Service[] = [
                 ]
             }
         ],
-        seoTitle: "Top Construction Company Bangalore | Building Dream Homes",
-        seoDescription: "Annapoornaa Interio is a leading construction company in Bangalore offering end-to-end residential and commercial building services with structural engineering expertise.",
-        keywords: ["construction company Bangalore", "building contractors Bangalore", "residential construction", "commercial building Bangalore"],
+        seoTitle: "Top Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
+        seoDescription: "Leading building contractors in Yelahanka, Bangalore. Quality residential and commercial construction with architectural planning & structural engineering.",
+        keywords: ["construction company Yelahanka", "building contractors Bangalore", "house construction Bangalore", "civil engineering Bangalore"],
     },
     {
         id: "renovation",
@@ -194,9 +194,9 @@ export const services: Service[] = [
                 ]
             }
         ],
-        seoTitle: "Home & Flat Renovation Services Bangalore | Modern Makeovers",
-        seoDescription: "Transform your old space with our expert renovation services in Bangalore. We specialize in kitchen remodeling, bathroom updates, and complete home structural modifications.",
-        keywords: ["home renovation Bangalore", "flat renovation Bangalore", "kitchen remodeling Bangalore", "bathroom renovation"],
+        seoTitle: "Home & Apartment Renovation Services Bangalore | Modern Makeovers",
+        seoDescription: "Professional home renovation in Bangalore. We specialize in kitchen remodeling, bathroom updates, and complete structural renovations for old apartments.",
+        keywords: ["home renovation Bangalore", "apartment renovation Bangalore", "kitchen remodeling Bangalore", "bathroom remodeling Bangalore"],
     },
     {
         id: "pre-engineered-building",

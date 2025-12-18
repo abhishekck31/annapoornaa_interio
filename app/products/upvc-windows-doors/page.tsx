@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: 'High-Quality UPVC Windows & Doors in Bangalore | Annapoornaa Interio',
+  description: 'Premium energy-efficient UPVC windows and doors in Bangalore. Durable, weather-resistant, and secure solutions for homes and offices. Get a free quote!',
+  keywords: ['UPVC windows Bangalore', 'UPVC doors Bangalore', 'energy efficient windows', 'UPVC window manufacturers Bangalore', 'sliding windows UPVC'],
+}
 
 const UPVCWindowsDoorsPage = () => {
   const features = [

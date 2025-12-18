@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -5,6 +6,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: 'Modern Aluminum Doors & Windows Bangalore | Annapoornaa Interio',
+  description: 'Durable and sleek aluminum windows and doors in Bangalore. Modern designs for residential and commercial buildings. Corrosion-resistant and stylish.',
+  keywords: ['aluminum windows Bangalore', 'aluminum doors Bangalore', 'sliding aluminum doors', 'modern window designs', 'commercial aluminum windows'],
+}
 
 const AluminumDoorsWindowsPage = () => {
   const features = [

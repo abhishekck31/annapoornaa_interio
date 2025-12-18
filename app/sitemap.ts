@@ -27,6 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const serviceSlugs = [
+    'home-interior',
+    'office-interior',
+    'construction',
+    'renovation'
+  ]
+
+  const servicePages = serviceSlugs.map(slug => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
   return [
     {
       url: baseUrl,
@@ -46,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    ...servicePages,
     {
       url: `${baseUrl}/gallery`,
       lastModified: new Date(),

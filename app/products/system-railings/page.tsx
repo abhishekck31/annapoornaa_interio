@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -5,6 +6,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: 'Modern System Railings Bangalore | Glass, Steel & Aluminum Railings',
+  description: 'Premium railing systems for staircases and balconies in Bangalore. Modern glass, steel, and aluminum railings with professional installation. Secure and stylish.',
+  keywords: ['system railings Bangalore', 'glass railings', 'steel railings Bangalore', 'balcony railings', 'staircase railings'],
+}
 
 const SystemRailingsPage = () => {
   const features = [

@@ -2,10 +2,11 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush } from "lucide-react"
+import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush, Quote } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-
+import Image from "next/image"
+import TrustSignals from "@/components/trust-signals"
 
 export const metadata: Metadata = {
   title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | Annapoornaa Interio",
@@ -130,43 +131,50 @@ const BangaloreYelahankaPage = () => {
       <div className="h-20"></div>
 
       {/* Hero Section */}
-      <section className="pt-56 pb-36 bg-gradient-to-r from-navy-900 to-navy-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-56 pb-36 bg-navy-900 text-white relative overflow-hidden">
+        {/* Subtle background pattern could go here */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <div className="flex items-center mb-4">
-                <MapPin className="h-6 w-6 text-gold-400 mr-2" />
-                <span className="text-gold-300 uppercase tracking-wider font-medium">Bangalore & Yelahanka</span>
+              <div className="flex items-center mb-4 text-gold-500 font-medium">
+                <MapPin className="h-6 w-6 mr-2" />
+                <span className="uppercase tracking-wider">Flagship Services in Bangalore & Yelahanka</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Premium Interior & Construction Services in Bangalore
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 italic leading-tight">
+                Premium <span className="text-gold-500">Interior & Construction</span> in Bangalore
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Transforming spaces across Bangalore and Yelahanka with innovative design solutions and quality
-                craftsmanship since 2010.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                Transforming spaces across Bangalore and Yelahanka with innovative design solutions and world-class craftsmanship since 2010. Our office in Yelahanka New Town serves as a hub for excellence.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/#contact">
-                  <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+                <Link href="/contact">
+                  <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold px-8 py-4 rounded-xl shadow-lg transition-all h-auto">
                     Get a Free Consultation
                   </Button>
                 </Link>
                 <Link href="/gallery">
                   <Button
                     variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="border-2 border-white text-white hover:bg-white/10 font-bold px-8 py-4 rounded-xl shadow-lg transition-all h-auto"
                   >
-                    View Our Bangalore Projects
+                    View Bangalore Projects
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              {/* Removed image section */}
+            <div className="lg:w-1/2 relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-navy-800">
+              <Image
+                src="/updated-homein.jpg"
+                alt="Premium Interior Design in Bangalore & Yelahanka"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
+
+      <TrustSignals />
 
       {/* Why Choose Us in Bangalore */}
       <section className="py-16 bg-white">

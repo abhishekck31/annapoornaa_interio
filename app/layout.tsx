@@ -18,10 +18,10 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Best Interior Designers & Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
-  description: "Top interior designers in Yelahanka, Bangalore. Turnkey interiors, home construction, modular kitchens & renovation. Expert designers. Free consultation!",
+  title: "Best Interior Designers & Construction Company in Bangalore | Annapoornaa Interio",
+  description: "Annapoornaa Interio is the leading interior design and construction company in Bangalore. Custom home interiors, modular kitchens, and turnkey construction with 10+ years of expertise.",
   keywords:
-    "Interior Designers in Yelahanka, Interior Designers Near Me Yelahanka, Best Interior Designers Yelahanka New Town, Home Interiors Yelahanka, Turnkey Interiors Yelahanka, Construction Company Yelahanka, Civil Contractors Bangalore, Turnkey Construction, Villa Construction Yelahanka, interior designers Bangalore, best interior company Bangalore, home interior design Bangalore, office interior design Bangalore, house contractors Bangalore, home construction Bangalore, house construction Bangalore, interior decorators Bangalore, construction company Bangalore, renovation company Bangalore, top interior designers Bangalore, interior design Bangalore, home interiors Bangalore, office interiors Bangalore, modular kitchen Bangalore, renovation Bangalore, interior services Bangalore, interior designers Whitefield, interior designers Koramangala, interior designers HSR Layout, interior designers Indiranagar",
+    "Interior Designers in Bangalore, Best Interior Designers Bangalore, Home Interiors Bangalore, Turnkey Interiors Bangalore, Construction Company Bangalore, Civil Contractors Bangalore, Modular Kitchen Bangalore, Office Interior Design Bangalore",
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Best Interior Designers & Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
-    description: "Top interior designers in Yelahanka, Bangalore. Turnkey interiors, home construction, modular kitchens & renovation. Expert designers. Free consultation!",
+    title: "Best Interior Designers & Construction Company in Bangalore | Annapoornaa Interio",
+    description: "Premium interior design and construction services in Bangalore. Award-winning designs, modular kitchens, and turnkey project management.",
     url: "https://annapoornaainterio.com",
     siteName: "Annapoornaa Interio",
     locale: "en_IN",
@@ -52,8 +52,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Interior Designers & Construction Company in Yelahanka, Bangalore | Annapoornaa Interio",
-    description: "Top interior designers in Yelahanka, Bangalore. Turnkey interiors, home construction, modular kitchens & renovation. Expert designers. Free consultation!",
+    title: "Best Interior Designers & Construction Company in Bangalore | Annapoornaa Interio",
+    description: "Expert interior designers and building contractors in Bangalore. Transforming spaces with quality and precision.",
     images: ["https://annapoornaainterio.com/og-image.jpg"],
     creator: "@annapoornaainterio",
   },

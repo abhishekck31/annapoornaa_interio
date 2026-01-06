@@ -7,6 +7,7 @@ import AboutSection from '@/components/about-section'
 import Footer from '@/components/footer'
 import CTASection from '@/components/cta-section'
 import StatsSection from '@/components/stats-section'
+import TrustSignals from '@/components/trust-signals'
 
 // Dynamically import heavy components to reduce initial bundle size
 const ProcessTimeline = dynamic(() => import('@/components/process-timeline'), {
@@ -28,73 +29,28 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
   loading: () => <div className="py-16 bg-white" />
 })
 
-// SEO: Enhanced comprehensive metadata for the homepage with location-specific keywords
+// SEO: Enhanced comprehensive metadata for the homepage with high-intent keywords
 export const metadata: Metadata = {
-  title: 'Top Interior Designers in Yelahanka, Bangalore | Annapoornaa Interio',
-  description: 'Searching for the best interior designers in Yelahanka, Bangalore? Annapoornaa Interio offers premium home interiors, modular kitchens & turnkey construction. Book a free consultation!',
+  title: 'Top Interior Designers in Bangalore | Best Interior & Construction Company',
+  description: 'Searching for the best interior designers in Bangalore? Annapoornaa Interio offers premium home interiors, modular kitchens & turnkey construction. Book a free consultation!',
   keywords: [
-    // High Priority - Yelahanka Specific
+    'Interior Designers in Bangalore',
+    'Best Interior Designers Bangalore',
+    'Residential Interior Designers Bangalore',
+    'Commercial Interior Designers Bangalore',
+    'Construction Company Bangalore',
+    'Turnkey Interior Solutions Bangalore',
     'Interior Designers in Yelahanka',
-    'Interior Designers Near Me Yelahanka',
-    'Best Interior Designers Yelahanka New Town',
-    'Home Interiors Yelahanka',
-    'Turnkey Interiors Yelahanka',
-    'Office Interiors Yelahanka',
-    'Budget Interior Designers Yelahanka',
-    'Luxury Interior Designers Yelahanka',
-    'Interior Decorators Yelahanka',
-    'Residential Interior Designers Yelahanka',
-    'Interior Designers Near Me', // General "Near Me" for local capture
-
-    // Broader Bangalore Terms
-    'interior designers Bangalore',
-    'best interior company Bangalore',
-    'home interior design Bangalore',
-    'office interior design Bangalore',
-    'house contractors Bangalore',
-    'home construction Bangalore',
-    'house construction Bangalore',
-    'interior decorators Bangalore',
-    'construction company Bangalore',
-    'renovation company Bangalore',
-    'interior designers Whitefield',
-    'interior designers Koramangala',
-    'interior designers HSR Layout',
-    'interior designers Indiranagar',
-    'interior designers Malleshwaram',
-    'interior designers Rajajinagar',
-    'interior designers Banashankari',
-    'interior designers Marathahalli',
-    'interior designers Hebbal',
-    'interior designers Electronic City',
-    'interior designers JP Nagar',
-    'interior designers BTM Layout',
-    'home interiors Bangalore',
-    'office interiors Bangalore',
-    'modular kitchen Bangalore',
-    'renovation Bangalore',
-    'construction Bangalore',
-    'PMC services Bangalore',
-    'design and drawings Bangalore',
-    'top interior designers Bangalore',
-    'interior design company Bangalore',
-    'Annapoornaa Interio',
-    'Annapoorna Interio',
-    'luxury interior design Bangalore',
-    'affordable interior designers Bangalore',
-    'low cost interior designers Bangalore',
-    '3bhk interior cost Bangalore',
-    '2bhk interior cost Bangalore',
-    'villa interior design Bangalore',
-    'turnkey construction cost Bangalore'
+    'Modular Kitchen designers Bangalore',
+    'Annapoornaa Interio'
   ],
   metadataBase: new URL('https://annapoornaainterio.com'),
   alternates: {
     canonical: 'https://annapoornaainterio.com',
   },
   openGraph: {
-    title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
-    description: 'Top Interior Designers in Yelahanka, Bangalore. Luxury Home Interiors, Modular Kitchens & Turnkey Construction. Visit our Yelahanka studio!',
+    title: 'Top Interior Designers in Bangalore | Premium Home & Office Interiors',
+    description: 'Leading interior design and construction company in Bangalore. Custom home interiors, office spaces, and turnkey construction solutions.',
     url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [
@@ -102,7 +58,7 @@ export const metadata: Metadata = {
         url: 'https://annapoornaainterio.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Annapoornaa Interio - Best Interior Designers in Yelahanka, Bangalore',
+        alt: 'Annapoornaa Interio - Best Interior Designers in Bangalore',
       },
     ],
     locale: 'en_IN',
@@ -110,8 +66,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Interior Designers in Yelahanka, Bangalore | Luxury & Affordable',
-    description: 'Top Interior Designers in Yelahanka, Bangalore. Luxury Home Interiors, Modular Kitchens & Turnkey Construction. Visit our Yelahanka studio!',
+    title: 'Top Interior Designers in Bangalore | Annapoornaa Interio',
+    description: 'Expert interior design and construction services in Bangalore. Transforming homes and offices with 10+ years of experience.',
     images: ['https://annapoornaainterio.com/og-image.jpg'],
   },
   robots: {
@@ -126,7 +82,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with actual Google Search Console verification code
+    google: 'your-google-verification-code',
   },
 }
 
@@ -207,6 +163,7 @@ export default function Home() {
       <main className="min-h-screen">
         <Navbar />
         <HeroSection />
+        <TrustSignals />
         <StatsSection />
         <ServicesSection />
         <ProjectsSection />

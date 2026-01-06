@@ -6,13 +6,13 @@ import Script from "next/script"
 const StructuredData = () => {
   const pathname = usePathname()
 
-  // Organization schema with enhanced SEO
+  // Organization schema with enhanced SEO and E-E-A-T
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "@id": "https://annapoornaainterio.com/#organization",
     name: "Annapoornaa Interio",
-    alternateName: ["Annapoorna Interio", "Annapoornaa Interior Designers", "Best Interior Company Bangalore"],
+    alternateName: ["Annapoorna Interio", "Annapoornaa Interior Designers Bangalore"],
     url: "https://annapoornaainterio.com",
     logo: {
       "@type": "ImageObject",
@@ -58,161 +58,54 @@ const StructuredData = () => {
     ],
     priceRange: "₹₹-₹₹₹₹",
     areaServed: [
-      {
-        "@type": "City",
-        name: "Bangalore",
-        sameAs: "https://en.wikipedia.org/wiki/Bangalore"
-      },
-      {
-        "@type": "City",
-        name: "Yelahanka",
-      },
-      {
-        "@type": "City",
-        name: "Whitefield",
-      },
-      {
-        "@type": "City",
-        name: "Koramangala",
-      },
-      {
-        "@type": "City",
-        name: "HSR Layout",
-      },
-      {
-        "@type": "City",
-        name: "Indiranagar",
-      },
-      {
-        "@type": "City",
-        name: "Jayanagar",
-      },
-      {
-        "@type": "City",
-        name: "Malleshwaram",
-      },
-      {
-        "@type": "City",
-        name: "Rajajinagar",
-      },
-      {
-        "@type": "City",
-        name: "Banashankari",
-      },
-      {
-        "@type": "City",
-        name: "Marathahalli",
-      },
-      {
-        "@type": "City",
-        name: "Hebbal",
-      },
-      {
-        "@type": "City",
-        name: "Electronic City",
-      },
-      {
-        "@type": "City",
-        name: "JP Nagar",
-      },
-      {
-        "@type": "City",
-        name: "BTM Layout",
-      }
+      { "@type": "City", name: "Bangalore", sameAs: "https://en.wikipedia.org/wiki/Bangalore" },
+      { "@type": "City", name: "Yelahanka" },
+      { "@type": "City", name: "Whitefield" },
+      { "@type": "City", name: "Koramangala" },
+      { "@type": "City", name: "HSR Layout" },
+      { "@type": "City", name: "Indiranagar" },
+      { "@type": "City", name: "Jayanagar" },
+      { "@type": "City", name: "JP Nagar" },
+      { "@type": "City", name: "Electronic City" },
+      { "@type": "City", name: "Malleshwaram" },
+      { "@type": "City", name: "Marathahalli" },
+      { "@type": "City", name: "Banashankari" },
+      { "@type": "City", name: "Rajajinagar" },
+      { "@type": "City", name: "BTM Layout" },
+      { "@type": "City", name: "Hebbal" }
     ],
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Interior Design and Construction Services",
-      itemListElement: [
-        {
-          "@type": "OfferCatalog",
-          name: "Home Interiors",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Home Interior Design Bangalore",
-                description: "Complete home interior design services including modular kitchens, wardrobes, false ceilings, and more"
-              }
-            }
-          ]
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Office Interiors",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Office Interior Design Bangalore",
-                description: "Professional office and corporate interior design services"
-              }
-            }
-          ]
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Construction",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "House Construction Bangalore",
-                description: "Residential and commercial construction services"
-              }
-            }
-          ]
-        },
-        {
-          "@type": "OfferCatalog",
-          name: "Renovation",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Home Renovation Bangalore",
-                description: "Complete renovation services for homes and offices"
-              }
-            }
-          ]
-        }
-      ]
-    },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "150",
+      ratingValue: "4.9",
+      reviewCount: "215",
       bestRating: "5",
       worstRating: "1"
     },
     description:
-      "Annapoornaa Interio is the leading interior design and construction company in Bangalore, Karnataka. We provide premium home interior design, office interior design, house construction, renovation, and PMC services in Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and all areas of Bangalore. Award-winning designs with 3D visualization and walkthrough videos.",
+      "Annapoornaa Interio is the leading interior design and construction company in Bangalore. We provide premium home interior design, office interiors, and turnkey construction services across Bangalore.",
   }
 
-  // Local business schema
+  // Local business schema for the main office
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Annapoornaa Interio - Bangalore & Yelahanka",
+    "@type": "InteriorDesignBusiness",
+    name: "Annapoornaa Interio",
     image: "https://annapoornaainterio.com/images/logo.png",
     url: "https://annapoornaainterio.com",
-    telephone: "+9199000 94942",
+    telephone: "+91 99000 94942",
+    priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross,2nd stage, 'B' sector",
-      addressLocality: "Yelahanka",
+      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector",
+      addressLocality: "Yelahanka New Town",
       addressRegion: "Bangalore",
       postalCode: "560064",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 13.1005,
-      longitude: 77.5945,
+      latitude: 13.1006,
+      longitude: 77.5963,
     },
     openingHoursSpecification: [
       {
@@ -229,10 +122,33 @@ const StructuredData = () => {
       },
     ],
     sameAs: [
-      "https://www.facebook.com/ainterio",
+      "https://www.facebook.com/annapoornaainterio",
       "https://www.instagram.com/annapoornaainterio",
       "https://www.linkedin.com/company/annapoornaainterio",
     ],
+    review: [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Satish Kumar" },
+        "datePublished": "2024-03-15",
+        "reviewBody": "Admin Manager at SMEC India. Delivered high-quality office interior work within timeline. Professional and responsive.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Darhini B S" },
+        "datePublished": "2024-02-20",
+        "reviewBody": "Outstanding interior work. Personal inspection by proprietor, high standard of excellence and craftsmanship.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Satish Krishnan" },
+        "datePublished": "2024-01-10",
+        "reviewBody": "Fabulous job in understanding issues and executing renovation seamlessly. Professional approach and constant communication.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+      }
+    ]
   }
 
   // Service schema
@@ -394,10 +310,10 @@ const StructuredData = () => {
     schemasToRender = [organizationSchema, faqSchema]
   } else if (pathname === "/bangalore-yelahanka" || pathname.startsWith("/bangalore/")) {
     // Location-specific local business schema
-    const locationName = pathname === "/bangalore-yelahanka" 
-      ? "Yelahanka" 
+    const locationName = pathname === "/bangalore-yelahanka"
+      ? "Yelahanka"
       : pathname.split("/").pop()?.replace(/-/g, " ") || "Bangalore"
-    
+
     const locationSchema = {
       ...localBusinessSchema,
       name: `Annapoornaa Interio - Interior Designers in ${locationName}, Bangalore`,
@@ -438,30 +354,21 @@ const StructuredData = () => {
         },
       },
       areaServed: [
-        {
-          "@type": "City",
-          name: "Bangalore",
-        },
-        {
-          "@type": "City",
-          name: "Yelahanka",
-        },
-        {
-          "@type": "City",
-          name: "Whitefield",
-        },
-        {
-          "@type": "City",
-          name: "Koramangala",
-        },
-        {
-          "@type": "City",
-          name: "HSR Layout",
-        },
-        {
-          "@type": "City",
-          name: "Indiranagar",
-        },
+        { "@type": "City", name: "Bangalore" },
+        { "@type": "City", name: "Yelahanka" },
+        { "@type": "City", name: "Whitefield" },
+        { "@type": "City", name: "Koramangala" },
+        { "@type": "City", name: "HSR Layout" },
+        { "@type": "City", name: "Indiranagar" },
+        { "@type": "City", name: "Jayanagar" },
+        { "@type": "City", name: "JP Nagar" },
+        { "@type": "City", name: "Electronic City" },
+        { "@type": "City", name: "Malleshwaram" },
+        { "@type": "City", name: "Marathahalli" },
+        { "@type": "City", name: "Banashankari" },
+        { "@type": "City", name: "Rajajinagar" },
+        { "@type": "City", name: "BTM Layout" },
+        { "@type": "City", name: "Hebbal" }
       ],
       description:
         "Complete interior design and construction services in Bangalore including home interior design, office interior design, house construction, renovation, PMC (Project Management & Consultancy), and design & drawings. Serving Yelahanka, Whitefield, Koramangala, HSR Layout, Indiranagar, and all areas of Bangalore.",

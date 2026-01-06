@@ -20,10 +20,11 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    qualities: [60, 75, 85, 90],
     minimumCacheTTL: 31536000, // 1 year cache
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Note: 'qualities' is not a standard Next.js image config property.
+    // Optimization is handled automatically or via the quality prop on the Image component.
   },
   experimental: {
     // Keep internal features standard to avoid resolution issues
@@ -48,34 +49,24 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' }
         ],
       },
-      // Critical Performance: Cache static assets for 1 year
-      {
-        source: '/images/(.*)',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
-        ],
-      },
+      // Critical Performance: Cache static assets
       {
         source: '/_next/static/(.*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
         ],
       },
       {
         source: '/favicon_io/(.*)',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
         ],
       },
-      // Cache other static assets
+      // Cache images and other static assets from public folder
       {
-        source: '/:path*\\.(jpg|jpeg|png|gif|webp|avif|svg|ico|css|js|woff|woff2|ttf|eot)',
+        source: '/:path*((?:jpg|jpeg|png|gif|webp|avif|svg|ico|css|js|woff|woff2|ttf|eot))',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-          { key: 'Expires', value: new Date(Date.now() + 31536000 * 1000).toUTCString() }
         ],
       },
       // Add headers for video files
@@ -84,7 +75,6 @@ const nextConfig = {
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
           { key: 'Accept-Ranges', value: 'bytes' },
-          { key: 'Content-Type', value: 'video/mp4' }
         ],
       },
     ]
@@ -135,7 +125,7 @@ const nextConfig = {
   },
   // Make environment variables available to the browser
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
+    NEXT_PUBLIC_SITE_URL: process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://www.annapoornaainterio.com'
   }
 };
 

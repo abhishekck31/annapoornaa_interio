@@ -6,7 +6,6 @@ import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paint
 import Link from "next/link"
 import type { Metadata } from "next"
 import Image from "next/image"
-import TrustSignals from "@/components/trust-signals"
 
 export const metadata: Metadata = {
   title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | Annapoornaa Interio",
@@ -173,8 +172,6 @@ const BangaloreYelahankaPage = () => {
           </div>
         </div>
       </section>
-
-      <TrustSignals />
 
       {/* Why Choose Us in Bangalore */}
       <section className="py-16 bg-white">

@@ -7,7 +7,6 @@ import AboutSection from '@/components/about-section'
 import Footer from '@/components/footer'
 import CTASection from '@/components/cta-section'
 import StatsSection from '@/components/stats-section'
-import TrustSignals from '@/components/trust-signals'
 
 // Dynamically import heavy components to reduce initial bundle size
 const ProcessTimeline = dynamic(() => import('@/components/process-timeline'), {
@@ -163,7 +162,6 @@ export default function Home() {
       <main className="min-h-screen">
         <Navbar />
         <HeroSection />
-        <TrustSignals />
         <StatsSection />
         <ServicesSection />
         <ProjectsSection />

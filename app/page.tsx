@@ -30,26 +30,29 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 
 // SEO: Enhanced comprehensive metadata for the homepage with high-intent keywords
 export const metadata: Metadata = {
-  title: 'Top Interior Designers in Bangalore | Best Interior & Construction Company',
-  description: 'Searching for the best interior designers in Bangalore? Annapoornaa Interio offers premium home interiors, modular kitchens & turnkey construction. Book a free consultation!',
+  title: 'Interior Designers in Bangalore | Construction & Interiors Yelahanka | Annapoornaa Interio',
+  description: 'Looking for the best interior designers in Bangalore? Annapoornaa Interio provides premium home interiors, turnkey construction, and office renovation in Yelahanka & Bangalore. 10+ Years Exp.',
   keywords: [
     'Interior Designers in Bangalore',
-    'Best Interior Designers Bangalore',
-    'Residential Interior Designers Bangalore',
-    'Commercial Interior Designers Bangalore',
-    'Construction Company Bangalore',
-    'Turnkey Interior Solutions Bangalore',
     'Interior Designers in Yelahanka',
-    'Modular Kitchen designers Bangalore',
-    'Annapoornaa Interio'
+    'Best Interior Designers Bangalore',
+    'Construction Company Bangalore',
+    'House Construction in Bangalore',
+    'Turnkey Interior Solutions',
+    'Modular Kitchen Bangalore',
+    'Home Renovation Services Bangalore',
+    'Office Interior Designers Bangalore',
+    'Civil Contractors Bangalore',
+    'Annapoornaa Interio',
+    'Annapoorneshwari Constructions'
   ],
   metadataBase: new URL('https://annapoornaainterio.com'),
   alternates: {
     canonical: 'https://annapoornaainterio.com',
   },
   openGraph: {
-    title: 'Top Interior Designers in Bangalore | Premium Home & Office Interiors',
-    description: 'Leading interior design and construction company in Bangalore. Custom home interiors, office spaces, and turnkey construction solutions.',
+    title: 'Best Interior Designers & Construction Company Bangalore | Annapoornaa Interio',
+    description: 'Transform your space with Bangalore\'s most trusted interior design and construction experts. Specializing in home interiors, villas, and turnkey projects in Yelahanka & Bangalore.',
     url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [
@@ -57,7 +60,7 @@ export const metadata: Metadata = {
         url: 'https://annapoornaainterio.com/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Annapoornaa Interio - Best Interior Designers in Bangalore',
+        alt: 'Annapoornaa Interio - Premium Interior Design & Construction',
       },
     ],
     locale: 'en_IN',
@@ -102,49 +105,75 @@ const contactDetails = {
 
 export default function Home() {
 
-  // SEO: JSON-LD Structured Data for Local Business. This is crucial for local search visibility.
+  // SEO: Comprehensive JSON-LD Structured Data for Local Dominance & Entity Building
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'InteriorDesignBusiness', // More specific than LocalBusiness
+    '@type': 'HomeAndConstructionBusiness',
     'name': 'Annapoornaa Interio',
-    'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
+    'alternateName': ['Annapoorneshwari Constructions Interiors Pvt Ltd', 'Annapoornaa Interiors'],
+    'image': 'https://www.annapoornaainterio.com/images/logo.png',
     '@id': 'https://annapoornaainterio.com',
     'url': 'https://annapoornaainterio.com',
     'telephone': contactDetails.phone1,
     'email': contactDetails.email,
-    'priceRange': '₹₹',
+    'priceRange': '₹₹-₹₹₹',
     'address': {
       '@type': 'PostalAddress',
       ...contactDetails.address
     },
     'geo': {
       '@type': 'GeoCoordinates',
-      'latitude': 13.1006, // Approx. Latitude for Yelahanka New Town
-      'longitude': 77.5963 // Approx. Longitude for Yelahanka New Town
+      'latitude': 13.1006,
+      'longitude': 77.5963
     },
     'areaServed': [
-      {
-        '@type': 'City',
-        'name': 'Yelahanka'
-      },
-      {
-        '@type': 'City',
-        'name': 'Bangalore'
-      }
+      { '@type': 'City', 'name': 'Yelahanka' },
+      { '@type': 'City', 'name': 'Bangalore' },
+      { '@type': 'City', 'name': 'North Bangalore' },
+      { '@type': 'City', 'name': 'Whitefield' },
+      { '@type': 'City', 'name': 'Hebbal' }
     ],
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
-      'dayOfWeek': [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
-      ],
+      'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
       'opens': '09:00',
       'closes': '20:00'
     },
+    'sameAs': [
+      "https://www.facebook.com/annapoornaainterio",
+      "https://www.instagram.com/annapoornaainterio",
+      "https://www.linkedin.com/company/annapoornaainterio"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Design and Construction Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Home Interior Design",
+            "description": "Premium home interiors, wardrobes, and modular kitchens in Bangalore."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Turnkey Construction",
+            "description": "Complete residential and commercial construction services from foundation to finish."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Office Renovation",
+            "description": "Corporate office interior design and renovation services."
+          }
+        }
+      ]
+    }
   };
 
 

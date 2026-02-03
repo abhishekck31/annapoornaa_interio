@@ -10,17 +10,17 @@ const slides = [
   {
     image: "/UP-Hero3.png",
     title: "Transform Your Space",
-    description: "Professional interior design solutions for homes and offices",
+    description: "Award-Winning Interior Designers in Bangalore for premium homes and offices",
   },
   {
     image: "/UP-Hero2.png",
     title: "Build Your Dream Home",
-    description: "Expert construction services with attention to detail",
+    description: "Turnkey House Construction services & Civil Contractors in Bangalore",
   },
   {
     image: "/UP-Hero1.png",
     title: "Renovate With Confidence",
-    description: "Breathe new life into your existing spaces",
+    description: "Expert Home Renovation & Modular Kitchen Designers in Yelahanka",
   },
 ];
 
@@ -150,9 +150,8 @@ const HeroSection = () => {
           <button
             key={index}
             onClick={() => handleSlideChange(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? "bg-gold-500 w-8" : "bg-white/50"
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? "bg-gold-500 w-8" : "bg-white/50"
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Best Interior Company Near Me | Yelahanka Interior Design',
-    description: 'Top-rated interior design & construction company near you in Yelahanka, Bangalore. Award-winning designs, modular kitchens & turnkey construction.','
+    description: 'Top-rated interior design & construction company near you in Yelahanka, Bangalore. Award-winning designs, modular kitchens & turnkey construction.',
     url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [

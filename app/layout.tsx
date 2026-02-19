@@ -81,34 +81,7 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
-function JsonLd() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "InteriorDesignBusiness",
-          "name": "Annapoornaa Interio",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bangalore",
-            "addressRegion": "KA",
-            "postalCode": "560064",
-            "streetAddress": "Yelahanka"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "13.1007",
-            "longitude": "77.5963"
-          },
-          "telephone": "+91 99000 94942",
-          "openingHours": "Mo-Sa 09:00-18:00"
-        })
-      }}
-    />
-  );
-}
+
 
 export default function RootLayout({
   children,
@@ -130,7 +103,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
 
         {/* Critical resource preloading */}
-        <link rel="preload" href="/UP-Hero3.png" as="image" />
+
         <link rel="preload" href="/images/logo.png" as="image" />
         <Script
           id="scroll-to-top"
@@ -143,7 +116,7 @@ export default function RootLayout({
             `,
           }}
         />
-        <JsonLd />
+
       </head>
       <body className="font-poppins">
         <StructuredData />

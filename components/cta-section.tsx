@@ -27,8 +27,7 @@ const CTASection = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Space?</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-              Let's create something extraordinary together. Our team of experts is ready to bring your vision to life
-              with innovative design and quality craftsmanship.
+              Looking for the best interior company near you? Let's create something extraordinary together. As Yelahanka's premier interior design and construction company, we serve all Bangalore neighborhoods with innovative designs and quality craftsmanship.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

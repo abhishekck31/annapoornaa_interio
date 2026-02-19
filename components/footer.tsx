@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="bg-white p-1 rounded-md inline-block">
                 <Image
                   src="/images/logo.png"
-                  alt="Annapoornaa Interio Logo"
+                  alt="Best Interior Company Near Me Yelahanka - Annapoornaa Interio Logo"
                   width={220}
                   height={62}
                   className="h-16 w-auto"
@@ -27,7 +27,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6">
-              Smart Designs. Seamless Execution
+              Yelahanka's Best Interior Company & Construction Experts. Serving all Bangalore.
             </p>
             <div className="flex space-x-4 justify-center sm:justify-start">
               <motion.a

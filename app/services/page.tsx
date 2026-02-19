@@ -20,16 +20,16 @@ import Link from "next/link";
 import { CollapsibleSection } from "@/components/collapsible-section";
 
 export const metadata: Metadata = {
-  title: 'Top Interior Design & Construction Services Bangalore | Renovation Experts',
-  description: 'Full-service Home & Office Interiors, House Renovation, and Construction in Bangalore. Expert Architects & Designers. Check our Packages!',
+  title: 'Interior Design & Construction Services Near Me | Yelahanka',
+  description: 'Best interior design & construction services near you in Yelahanka, Bangalore. Home interiors, modular kitchens, office design & building construction. Free quote!',
   keywords: [
-    'interior design services Bangalore',
-    'home interior services Bangalore',
+    'interior design services near me',
+    'construction services near me',
+    'home interior services Yelahanka',
     'office interior services Bangalore',
-    'house construction services Bangalore',
+    'construction services Yelahanka',
     'renovation services Bangalore',
-    'PMC services Bangalore',
-    'design and drawings Bangalore',
+    'best interior company near me',
     'Annapoornaa Interio services'
   ],
   metadataBase: new URL('https://annapoornaainterio.com'),
@@ -60,13 +60,12 @@ export default function ServicesPage() {
           <div className="text-center pt-16 mb-20">
             <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6 flex items-center justify-center gap-3">
               <Sparkles className="h-8 w-8 text-gold-500" />
-              Our Excellence in Services
+              Best Interior & Construction Services Near You
               <Sparkles className="h-8 w-8 text-gold-500" />
             </h1>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive interior design and construction solutions tailored
-              to your specific needs with 3D images and Walkthrough videos
+              Comprehensive interior design and construction solutions in Yelahanka, Whitefield, HSR Layout & all Bangalore with 3D designs and walkthroughs
             </p>
           </div>
 
@@ -133,7 +132,7 @@ export default function ServicesPage() {
                     <CardContent className="p-0 relative aspect-[4/3] group">
                       <Image
                         src={service.image}
-                        alt={`${service.title} - Annapoornaa Interio`}
+                        alt={`${service.title} - Best interior company near me Yelahanka Bangalore`}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                         sizes="(max-width: 768px) 100vw, 50vw"

@@ -9,18 +9,18 @@ import Link from "next/link";
 const slides = [
   {
     image: "/UP-Hero3.png",
-    title: "Transform Your Space",
-    description: "Professional interior design solutions for homes and offices",
+    title: "Best Interior Company Near Me in Yelahanka",
+    description: "Premium interior design solutions for homes and offices across Bangalore",
   },
   {
     image: "/UP-Hero2.png",
-    title: "Build Your Dream Home",
-    description: "Expert construction services with attention to detail",
+    title: "Trusted Construction Company Near You",
+    description: "Expert A-class construction services in Yelahanka, Whitefield & all Bangalore",
   },
   {
     image: "/UP-Hero1.png",
-    title: "Renovate With Confidence",
-    description: "Breathe new life into your existing spaces",
+    title: "Interior Design Near Me - Yelahanka's #1",
+    description: "Transform your space with award-winning designs and quality craftsmanship",
   },
 ];
 

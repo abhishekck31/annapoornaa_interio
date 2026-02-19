@@ -8,11 +8,11 @@ import type { Metadata } from "next"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | Annapoornaa Interio",
+  title: "Best Interior Company Near Me Yelahanka | Construction Company Bangalore",
   description:
-    "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products like UPVC windows, fire doors, and more.",
+    "Yelahanka's #1 interior design & construction company near you. Serving all Bangalore with home interiors, modular kitchens, office design & building construction. Free consultation!",
   keywords:
-    "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, false ceilings Bangalore, workstations Yelahanka",
+    "best interior company near me, interior design near me, construction company near me, Yelahanka best interior, interior design Yelahanka, construction Yelahanka, home interior near me, office interior Yelahanka, modular kitchen Bangalore",
   alternates: {
     canonical: `https://www.annapoornaainterio.com/bangalore-yelahanka`,
   },
@@ -24,31 +24,31 @@ export const metadata: Metadata = {
 const BangaloreYelahankaPage = () => {
   const services = [
     {
-      title: "Home Interior Design in Bangalore",
+      title: "Interior Design Near Me - Yelahanka",
       icon: <Home className="h-10 w-10 text-gold-500" />,
       description:
-        "Transform your Bangalore home with our expert interior design services tailored to local aesthetics and preferences.",
+        "Best interior design near you in Yelahanka. Transform your home with expert designers serving Bangalore's top neighborhoods.",
       link: "/services#home-interior",
     },
     {
-      title: "Office Interior Design in Yelahanka",
+      title: "Office Interior Designers Yelahanka",
       icon: <Briefcase className="h-10 w-10 text-gold-500" />,
       description:
-        "Create productive and inspiring workspaces in Yelahanka with our office interior solutions designed for Bangalore businesses.",
+        "Create productive workspaces with Yelahanka's best office interior designers. Serving Whitefield, HSR Layout & all Bangalore.",
       link: "/services#office-interior",
     },
     {
-      title: "Construction Services in Bangalore",
+      title: "Construction Company Near Me Yelahanka",
       icon: <Building className="h-10 w-10 text-gold-500" />,
       description:
-        "Build your dream property in Bangalore with our professional construction services that understand local regulations and requirements.",
+        "Trusted construction company near you. A-class contractors for residential & commercial projects in Yelahanka, Bangalore.",
       link: "/services#construction",
     },
     {
-      title: "Renovation Services in Yelahanka",
+      title: "Home Renovation Services Yelahanka",
       icon: <Paintbrush className="h-10 w-10 text-gold-500" />,
       description:
-        "Revitalize your existing spaces in Yelahanka with our comprehensive renovation services tailored to Bangalore's unique architecture.",
+        "Revitalize your home with expert renovation services. Serving Yelahanka, Whitefield, HSR Layout, JP Nagar & all Bangalore.",
       link: "/services#renovation",
     },
   ]
@@ -137,13 +137,13 @@ const BangaloreYelahankaPage = () => {
             <div className="lg:w-1/2">
               <div className="flex items-center mb-4 text-gold-500 font-medium">
                 <MapPin className="h-6 w-6 mr-2" />
-                <span className="uppercase tracking-wider">Flagship Services in Bangalore & Yelahanka</span>
+                <span className="uppercase tracking-wider">Best Interior & Construction Company Near You</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 italic leading-tight">
-                Premium <span className="text-gold-500">Interior & Construction</span> in Bangalore
+                Best <span className="text-gold-500">Interior Company Near Me</span> in Yelahanka
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Transforming spaces across Bangalore and Yelahanka with innovative design solutions and world-class craftsmanship since 2010. Our office in Yelahanka New Town serves as a hub for excellence.
+                Looking for the best interior company near you? Annapoornaa Interio is Yelahanka's premier interior design and construction company serving all Bangalore neighborhoods - Whitefield, HSR Layout, JP Nagar, Koramangala & beyond. Award-winning designs since 2010.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">

@@ -35,8 +35,8 @@ export const services: Service[] = [
         slug: "home-interiors",
         title: "Home Interiors",
         iconName: "home",
-        shortDescription: "Bespoke home interior solutions from concept to completion. We specialize in luxury and functional living spaces in Bangalore.",
-        description: "Annapoornaa Interio is Bangalore's premier home interior design firm, dedicated to transforming your vision into reality. We combine aesthetic elegance with functional brilliance to create personalized living spaces. From luxury villas to modern apartments, our expert designers ensure every corner of your home reflects your personality. Our end-to-end service includes everything from initial concepts and 3D visualizations to final execution, ensuring a stress-free experience for our clients.",
+        shortDescription: "Best interior company near me for home solutions. Bespoke designs from modular kitchens to luxury living spaces across Yelahanka, Whitefield, HSR Layout & Bangalore.",
+        description: "Looking for the best interior company near me? Annapoornaa Interio is Yelahanka's premier interior design firm serving Bangalore for 10+ years. We specialize in transforming homes across Yelahanka, Whitefield, HSR Layout, JP Nagar, and Koramangala. Our expert designers combine aesthetic elegance with functional brilliance to create personalized living spaces. From luxury villas to modern apartments, we ensure every corner reflects your personality. Our comprehensive service includes 3D visualizations, premium material selection, and stress-free execution.",
         features: [
             "Bespoke Concept & Mood Board Design",
             "Advanced 3D Visualization & VR Walkthroughs",
@@ -65,9 +65,9 @@ export const services: Service[] = [
                 ],
             },
         ],
-        seoTitle: "Best Home Interior Designers in Bangalore | Luxury & Modular Interiors",
-        seoDescription: "Searching for the best home interior designers in Bangalore? Annapoornaa Interio offers premium modular kitchens, custom wardrobes, and full-home interiors. Free consultation!",
-        keywords: ["home interior designers Bangalore", "best interior designers Bangalore", "modular kitchen Bangalore", "wardrobe design Bangalore", "residential interiors Bangalore"],
+        seoTitle: "Interior Design Near Me Yelahanka | #1 Home Designers",
+        seoDescription: "Searching for interior design near me? Annapoornaa Interio is Yelahanka's best interior company. Luxury homes, modular kitchens, 3D designs. Call now!",
+        keywords: ["interior design near me", "best interior company near me", "home interior designers Yelahanka", "modular kitchen near me", "interior designers Bangalore", "Yelahanka best interior", "wardrobe design Bangalore"],
     },
     {
         id: "office-interior",
@@ -113,8 +113,8 @@ export const services: Service[] = [
         slug: "residential-commercial-construction",
         title: "Residential & Commercial Construction",
         iconName: "building",
-        shortDescription: "End-to-end building construction with expert architectural planning and structural engineering in Bangalore.",
-        description: "Annapoornaa Interio is a leading A-class civil contractor and building construction company in Bangalore. We provide comprehensive 'Design to Delivery' construction services for residential villas, apartments, and commercial complexes. Our team of experienced architects and structural engineers ensures that every project meets the highest standards of safety, durability, and aesthetics. We handle everything from land survey and soil testing to structural design, regulatory approvals, and final construction with premium finishes.",
+        shortDescription: "Trusted construction company near you in Yelahanka. End-to-end building construction with expert architectural planning and structural engineering across Bangalore.",
+        description: "Searching for a reliable construction company near me? Annapoornaa Interio is Yelahanka's leading A-class civil contractor and building construction company serving all of Bangalore. We provide comprehensive 'Design to Delivery' construction services for residential villas, apartments, and commercial complexes in Yelahanka, Whitefield, HSR Layout, JP Nagar, and Koramangala. Our experienced architects and structural engineers ensure every project meets the highest standards of safety, durability, and aesthetics. We handle everything from land survey, soil testing, structural design, and regulatory approvals to final construction with premium finishes.",
         features: [
             "Turnkey Residential & Commercial Construction",
             "A-Class Civil Contracting Services",
@@ -143,9 +143,9 @@ export const services: Service[] = [
                 ]
             }
         ],
-        seoTitle: "Best Construction Company in Bangalore | Residential & Commercial Builders",
-        seoDescription: "Searching for top building contractors in Bangalore? Annapoornaa Interio offers turnkey residential and commercial construction with expert architectural and structural planning.",
-        keywords: ["construction company Bangalore", "building contractors Bangalore", "house construction Bangalore", "civil contractors Bangalore", "residential construction Bangalore"],
+        seoTitle: "Construction Company Near Me | Yelahanka Builders Bangalore",
+        seoDescription: "Trusted construction company near me in Yelahanka & Bangalore. A-class contractors for residential & commercial projects. Expert builders, on-time delivery!",
+        keywords: ["construction company near me", "best construction company Yelahanka", "building contractors Bangalore", "house construction near me", "civil contractors Yelahanka", "residential construction Bangalore"],
     },
     {
         id: "renovation",

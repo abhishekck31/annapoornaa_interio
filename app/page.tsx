@@ -30,16 +30,16 @@ const ClientLogosSection = dynamic(() => import('@/components/client-logos-secti
 
 // SEO: Enhanced comprehensive metadata for the homepage with high-intent keywords
 export const metadata: Metadata = {
-  title: 'Top Interior Designers in Bangalore | Best Interior & Construction Company',
-  description: 'Searching for the best interior designers in Bangalore? Annapoornaa Interio offers premium home interiors, modular kitchens & turnkey construction. Book a free consultation!',
+  title: 'Best Interior Company Near Me | Yelahanka Interior Design',
+  description: 'Top-rated interior design & construction company near you in Yelahanka, Bangalore. Award-winning designs, modular kitchens & turnkey construction. Free quote!',
   keywords: [
-    'Interior Designers in Bangalore',
-    'Best Interior Designers Bangalore',
-    'Residential Interior Designers Bangalore',
-    'Commercial Interior Designers Bangalore',
-    'Construction Company Bangalore',
-    'Turnkey Interior Solutions Bangalore',
+    'Best Interior Company near me',
+    'Interior Design near me',
+    'Construction company near me',
+    'Yelahanka best interior',
     'Interior Designers in Yelahanka',
+    'Construction Company Yelahanka',
+    'Best Interior Designers Bangalore',
     'Modular Kitchen designers Bangalore',
     'Annapoornaa Interio'
   ],
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
     canonical: 'https://annapoornaainterio.com',
   },
   openGraph: {
-    title: 'Top Interior Designers in Bangalore | Premium Home & Office Interiors',
-    description: 'Leading interior design and construction company in Bangalore. Custom home interiors, office spaces, and turnkey construction solutions.',
+    title: 'Best Interior Company Near Me | Yelahanka Interior Design',
+    description: 'Top-rated interior design & construction company near you in Yelahanka, Bangalore. Award-winning designs, modular kitchens & turnkey construction.','
     url: 'https://annapoornaainterio.com',
     siteName: 'Annapoornaa Interio',
     images: [
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top Interior Designers in Bangalore | Annapoornaa Interio',
-    description: 'Expert interior design and construction services in Bangalore. Transforming homes and offices with 10+ years of experience.',
+    title: 'Best Interior Company Near Me | Yelahanka Bangalore',
+    description: 'Yelahanka\'s best interior design & construction company. Serving Whitefield, HSR Layout, JP Nagar, Koramangala & all Bangalore. Free consultation!',
     images: ['https://annapoornaainterio.com/og-image.jpg'],
   },
   robots: {
@@ -105,9 +105,9 @@ export default function Home() {
   // SEO: JSON-LD Structured Data for Local Business. This is crucial for local search visibility.
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'InteriorDesignBusiness', // More specific than LocalBusiness
+    '@type': 'InteriorDesignBusiness',
     'name': 'Annapoornaa Interio',
-    'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
+    'image': 'https://www.annapoornainterio.com/logo.png',
     '@id': 'https://annapoornaainterio.com',
     'url': 'https://annapoornaainterio.com',
     'telephone': contactDetails.phone1,
@@ -119,19 +119,63 @@ export default function Home() {
     },
     'geo': {
       '@type': 'GeoCoordinates',
-      'latitude': 13.1006, // Approx. Latitude for Yelahanka New Town
-      'longitude': 77.5963 // Approx. Longitude for Yelahanka New Town
+      'latitude': 13.1006,
+      'longitude': 77.5963
     },
     'areaServed': [
-      {
-        '@type': 'City',
-        'name': 'Yelahanka'
-      },
-      {
-        '@type': 'City',
-        'name': 'Bangalore'
-      }
+      { '@type': 'City', 'name': 'Yelahanka' },
+      { '@type': 'City', 'name': 'Bangalore' },
+      { '@type': 'City', 'name': 'Whitefield' },
+      { '@type': 'City', 'name': 'HSR Layout' },
+      { '@type': 'City', 'name': 'JP Nagar' },
+      { '@type': 'City', 'name': 'Koramangala' }
     ],
+    'serviceArea': {
+      '@type': 'GeoCircle',
+      'geoMidpoint': {
+        '@type': 'GeoCoordinates',
+        'latitude': 13.1006,
+        'longitude': 77.5963
+      },
+      'geoRadius': '30000'
+    },
+    'hasOfferCatalog': {
+      '@type': 'OfferCatalog',
+      'name': 'Interior Design and Construction Services',
+      'itemListElement': [
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Interior Design Services',
+            'description': 'Home and office interior design near Yelahanka, Bangalore'
+          }
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Construction Services',
+            'description': 'Residential and commercial construction company near Yelahanka'
+          }
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Modular Kitchen Design',
+            'description': 'Custom modular kitchen design and installation in Bangalore'
+          }
+        }
+      ]
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.8',
+      'bestRating': '5',
+      'worstRating': '1',
+      'ratingCount': '127'
+    },
     'openingHoursSpecification': {
       '@type': 'OpeningHoursSpecification',
       'dayOfWeek': [

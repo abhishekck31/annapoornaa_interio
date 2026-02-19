@@ -51,8 +51,7 @@ const ServicesSection = () => {
             </div>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gold-600 max-w-3xl mx-auto">
-              We offer a complete range of Interior and Construction
-              services tailored to your specific needs
+              Complete interior design and construction services near you in Yelahanka, Whitefield, HSR Layout & all Bangalore
             </p>
           </div>
         </ScrollAnimation>
@@ -78,7 +77,7 @@ const ServicesSection = () => {
                     <div className="h-48 overflow-hidden relative">
                       <Image
                         src={service.image || "/placeholder.svg"}
-                        alt={service.title}
+                        alt={`${service.title} - Best interior company near me Yelahanka Bangalore`}
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
                         loading="lazy"

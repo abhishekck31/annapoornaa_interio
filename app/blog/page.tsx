@@ -45,20 +45,12 @@ export default function BlogListingPage() {
                 key={post.slug}
                 className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col h-full border border-gray-100"
               >
-                <div className="relative aspect-[16/10] overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-gold-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                <div className="p-8 flex flex-col flex-grow">
+                  <div className="mb-6">
+                    <span className="bg-gold-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                       {post.category}
                     </span>
                   </div>
-                </div>
-
-                <div className="p-8 flex flex-col flex-grow">
                   <div className="flex items-center gap-4 text-xs text-gray-500 mb-4 font-medium">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-3 w-3 text-gold-600" />

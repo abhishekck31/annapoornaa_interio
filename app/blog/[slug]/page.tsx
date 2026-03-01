@@ -133,13 +133,7 @@ export default async function BlogPostPage({ params }: Props) {
                         </div>
                     </header>
 
-                    <div className="relative aspect-[16/9] mb-12 rounded-3xl overflow-hidden shadow-2xl">
-                        <img
-                            src={post.image}
-                            alt={post.title}
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
+
 
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
                         <div

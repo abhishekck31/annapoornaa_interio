@@ -42,9 +42,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const blogSlugs = [
-    'top-10-interior-design-trends-bangalore-2025',
-    'modular-kitchen-design-guide-bangalore',
-    'office-interior-design-productivity'
+    'best-interior-designers-in-bangalore-guide',
+    'cost-of-3bhk-interior-design-bangalore',
+    'commercial-office-interior-contractors-bangalore',
+    'construction-company-bangalore-turnkey',
+    'home-renovation-services-modern-interiors'
   ]
 
   const blogPages = blogSlugs.map(slug => ({

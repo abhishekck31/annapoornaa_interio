@@ -1,295 +1,502 @@
-import { Home, Briefcase, Building, Paintbrush, ClipboardList, PencilRuler, Hammer, PaintBucket } from "lucide-react";
-import React from 'react';
+export interface ServiceFaq {
+  question: string;
+  answer: string;
+}
 
 export interface ServiceDetail {
-    title: string;
-    emoji: string;
-    items: string[];
+  title: string;
+  emoji: string;
+  items: string[];
 }
 
 export interface PMCSection {
-    title: string;
-    emoji: string;
-    items: string[];
+  title: string;
+  emoji: string;
+  items: string[];
 }
 
 export interface Service {
-    id: string;
-    slug: string;
-    title: string;
-    iconName: string;
-    description: string;
-    shortDescription: string;
-    features: string[];
-    image: string;
-    designSections?: ServiceDetail[];
-    pmcSections?: PMCSection[];
-    seoTitle: string;
-    seoDescription: string;
-    keywords: string[];
+  id: string;
+  slug: string;
+  title: string;
+  iconName: string;
+  description: string;
+  shortDescription: string;
+  features: string[];
+  image: string;
+  designSections?: ServiceDetail[];
+  pmcSections?: PMCSection[];
+  seoTitle: string;
+  seoDescription: string;
+  keywords: string[];
+  pricingGuide: string;
+  timeline: string;
+  proofPoints: string[];
+  serviceAreas: string[];
+  faqs: ServiceFaq[];
 }
 
+const coreLocations = [
+  "Yelahanka",
+  "Whitefield",
+  "HSR Layout",
+  "Koramangala",
+  "Indiranagar",
+  "JP Nagar",
+  "Hebbal",
+  "Jayanagar",
+];
+
 export const services: Service[] = [
-    {
-        id: "home-interior",
-        slug: "home-interiors",
-        title: "Home Interiors",
-        iconName: "home",
-        shortDescription: "Best interior company near me for home solutions. Bespoke designs from modular kitchens to luxury living spaces across Yelahanka, Whitefield, HSR Layout & Bangalore.",
-        description: "Looking for the best interior company near me? Annapoornaa Interio is Yelahanka's premier interior design firm serving Bangalore for 10+ years. We specialize in transforming homes across Yelahanka, Whitefield, HSR Layout, JP Nagar, and Koramangala. Our expert designers combine aesthetic elegance with functional brilliance to create personalized living spaces. From luxury villas to modern apartments, we ensure every corner reflects your personality. Our comprehensive service includes 3D visualizations, premium material selection, and stress-free execution.",
-        features: [
-            "Bespoke Concept & Mood Board Design",
-            "Advanced 3D Visualization & VR Walkthroughs",
-            "Custom-built Modular Kitchens & Wardrobes",
-            "Premium Material Selection & Procurement",
-            "Expert Site Supervision & Quality Audits",
-            "On-time Project Delivery Guarantee",
-            "Post-handover Service Support"
+  {
+    id: "home-interior",
+    slug: "home-interiors",
+    title: "Home Interiors",
+    iconName: "home",
+    shortDescription:
+      "Custom home interiors, modular kitchens, wardrobes, and turnkey execution for apartments, villas, and independent homes in Bangalore.",
+    description:
+      "Annapoornaa Interio designs and delivers complete home interior projects across Bangalore. We handle modular kitchens, wardrobes, false ceilings, living rooms, bedrooms, utility areas, lighting coordination, and full-site execution with a single accountable team.",
+    features: [
+      "Concept development and space planning",
+      "3D design support and material selection",
+      "Modular kitchens, wardrobes, and storage systems",
+      "False ceiling, lighting, and electrical coordination",
+      "Premium finishes, fabrication, and installation",
+      "Site supervision with milestone-based updates",
+      "Post-handover support for adjustments and fixes",
+    ],
+    image: "/updated-homein.jpg",
+    designSections: [
+      {
+        title: "What We Cover",
+        emoji: "Home",
+        items: [
+          "Full-home interior design",
+          "Modular kitchens",
+          "Wardrobes and loft storage",
+          "TV units and living room features",
+          "Bedroom interiors and study units",
+          "Pooja units and niche carpentry",
+          "False ceilings and lighting plans",
+          "Soft furnishings and finishing inputs",
         ],
-        image: "/updated-homein.jpg",
-        designSections: [
-            {
-                title: "Comprehensive Home Design Services",
-                emoji: "🏠",
-                items: [
-                    "Full-Home Interior Designing",
-                    "Modular Kitchen Systems",
-                    "Luxury Wardrobes & Storage",
-                    "Elegant Living Room Units",
-                    "Custom Pooja Room Designs",
-                    "Kids' Bedroom Interior",
-                    "False Ceiling & Lighting",
-                    "Premium Wall Finishes & Painting",
-                    "Curtains, Blinds & Soft Furnishings",
-                    "Smart Home Automation Integration"
-                ],
-            },
+      },
+    ],
+    seoTitle: "Home Interior Designers in Bangalore | Annapoornaa Interio",
+    seoDescription:
+      "Looking for home interior designers in Bangalore? We design and execute modular kitchens, wardrobes, living rooms, and full-home interiors across key Bangalore neighborhoods.",
+    keywords: [
+      "home interior designers Bangalore",
+      "modular kitchen Bangalore",
+      "wardrobe design Bangalore",
+      "apartment interiors Bangalore",
+      "villa interiors Bangalore",
+    ],
+    pricingGuide:
+      "Most home interior projects start with a scope review, layout discussion, material shortlist, and room-by-room budget estimate.",
+    timeline:
+      "Typical apartment interior timelines range from 6 to 12 weeks depending on scope, material selection, and site readiness.",
+    proofPoints: [
+      "Designed for Bangalore apartments, villas, and independent homes",
+      "Single-vendor execution reduces coordination gaps",
+      "Detailed room-wise planning before site execution",
+    ],
+    serviceAreas: coreLocations,
+    faqs: [
+      {
+        question: "Do you handle full-home interiors or only modular work?",
+        answer:
+          "We handle both. We can take up a full-home interior scope or specific areas like kitchen, wardrobes, bedrooms, or living spaces.",
+      },
+      {
+        question: "Can you help with budgeting before finalizing materials?",
+        answer:
+          "Yes. We usually start with your floor plan, priorities, and preferred finish level to create a realistic room-wise estimate.",
+      },
+      {
+        question: "Which Bangalore locations do you cover for home interiors?",
+        answer:
+          "We work across Yelahanka, Whitefield, HSR Layout, Koramangala, Indiranagar, JP Nagar, Hebbal, Jayanagar, and nearby areas.",
+      },
+    ],
+  },
+  {
+    id: "office-interior",
+    slug: "office-corporate-interiors",
+    title: "Office and Corporate Interiors",
+    iconName: "briefcase",
+    shortDescription:
+      "Workspace planning, fit-outs, workstations, meeting rooms, and office execution for startups and established businesses in Bangalore.",
+    description:
+      "We create office interiors that support productivity, branding, circulation, and practical day-to-day operations. Our office design and fit-out services include planning, partitions, workstations, conference spaces, flooring, ceilings, lighting, and coordinated execution.",
+    features: [
+      "Office planning aligned to team size and workflow",
+      "Reception, cabins, meeting rooms, and open work areas",
+      "Workstations, storage, and ergonomic furniture support",
+      "Electrical, lighting, HVAC, and signage coordination",
+      "Execution support for commercial schedules and handover",
+      "Clear milestone planning for fit-out completion",
+      "Suitable for startups, SMEs, and enterprise offices",
+    ],
+    image: "/Updated-officein-services.jpg",
+    designSections: [
+      {
+        title: "Commercial Interior Scope",
+        emoji: "Office",
+        items: [
+          "Reception and waiting areas",
+          "Executive cabins",
+          "Workstations and benching systems",
+          "Meeting and conference rooms",
+          "Breakout spaces and pantry areas",
+          "Glass and drywall partitions",
+          "Signage and branding elements",
+          "Storage and utility spaces",
         ],
-        seoTitle: "Interior Design Near Me Yelahanka | #1 Home Designers",
-        seoDescription: "Searching for interior design near me? Annapoornaa Interio is Yelahanka's best interior company. Luxury homes, modular kitchens, 3D designs. Call now!",
-        keywords: ["interior design near me", "best interior company near me", "home interior designers Yelahanka", "modular kitchen near me", "interior designers Bangalore", "Yelahanka best interior", "wardrobe design Bangalore"],
-    },
-    {
-        id: "office-interior",
-        slug: "office-corporate-interiors",
-        title: "Office/Corporate Interiors",
-        iconName: "briefcase",
-        shortDescription: "Scalable and productive workspace solutions for startups and corporate giants in Bangalore.",
-        description: "Create a workspace that inspires innovation and drives productivity with Annapoornaa Interio's corporate interior solutions. We specialize in designing and building high-performance work environments for Bangalore's growing businesses. Our designs focus on employee well-being, brand identity, and ergonomic efficiency. Whether you're a startup needing a collaborative hub or an established firm requiring a sophisticated headquarters, we deliver turnkey solutions that align with your business goals.",
-        features: [
-            "Strategic Workspace Optimization",
-            "Ergonomic Furniture & Seating Solutions",
-            "Advanced IT Networking & Low Voltage Systems",
-            "Comprehensive HVAC & Ventilation Labs",
-            "Acoustic & Soundproofing Solutions",
-            "Standard-compliant Safety & Security Systems",
-            "Sustainable & Green Office Design"
+      },
+    ],
+    seoTitle: "Office Interior Designers in Bangalore | Corporate Fit-Out Experts",
+    seoDescription:
+      "Need office interior designers in Bangalore? We plan and execute office fit-outs, workstations, meeting rooms, partitions, and commercial interiors for growing businesses.",
+    keywords: [
+      "office interior designers Bangalore",
+      "corporate interiors Bangalore",
+      "office fit out Bangalore",
+      "commercial interior contractors Bangalore",
+    ],
+    pricingGuide:
+      "Commercial pricing depends on carpet area, workstation density, meeting rooms, MEP coordination, and finish standards.",
+    timeline:
+      "Most office fit-outs move through planning, approvals, procurement, and execution over 4 to 10 weeks depending on scope.",
+    proofPoints: [
+      "Designed for functional workflows and team growth",
+      "Suitable for fast-turnaround commercial handovers",
+      "Execution support across design and site coordination",
+    ],
+    serviceAreas: coreLocations,
+    faqs: [
+      {
+        question: "Do you work on office renovation as well as new fit-outs?",
+        answer:
+          "Yes. We take up both fresh office fit-outs and renovation or reconfiguration of existing office spaces.",
+      },
+      {
+        question: "Can you support furniture and workstation planning?",
+        answer:
+          "Yes. We can coordinate workstation layouts, storage planning, meeting areas, and ergonomic furniture recommendations.",
+      },
+      {
+        question: "Do you work with tight business timelines?",
+        answer:
+          "Yes. We plan milestones around business handover schedules wherever site conditions, approvals, and procurement allow it.",
+      },
+    ],
+  },
+  {
+    id: "construction",
+    slug: "residential-commercial-construction",
+    title: "Residential and Commercial Construction",
+    iconName: "building",
+    shortDescription:
+      "Design-to-delivery construction support for villas, homes, commercial buildings, and structural execution in Bangalore.",
+    description:
+      "Our construction services cover planning support, structural coordination, material review, vendor execution, and on-site progress management for residential and commercial projects. We work with clients who want a more accountable route from design through site delivery.",
+    features: [
+      "Residential and commercial construction execution",
+      "Coordination with design, structural, and site teams",
+      "Material and vendor planning support",
+      "Milestone-based supervision and progress reviews",
+      "Construction for villas, homes, and select commercial projects",
+      "Finishing and allied scope coordination",
+      "Support for practical site decision-making",
+    ],
+    image: "/Const1.png",
+    designSections: [
+      {
+        title: "Construction Scope",
+        emoji: "Build",
+        items: [
+          "Residential home construction",
+          "Villa construction",
+          "Commercial construction support",
+          "Structural and site coordination",
+          "Electrical and plumbing planning inputs",
+          "Waterproofing and terrace treatment",
+          "Exterior and finishing coordination",
+          "Turnkey planning discussions",
         ],
-        image: "/Updated-officein-services.jpg",
-        designSections: [
-            {
-                title: "End-to-End Corporate Solutions",
-                emoji: "🏢",
-                items: [
-                    "Executive Office Design",
-                    "Collaborative Breakout Zones",
-                    "Modern Conference & Meeting Rooms",
-                    "Ergonomic Workstations",
-                    "Reception & Lobby Design",
-                    "Cafeteria & Pantry Interiors",
-                    "Data Centers & Server Rooms",
-                    "Industrial-grade Flooring & Ceilings",
-                    "Professional Signages & Branding",
-                    "Glass & Drywall Partitions"
-                ],
-            },
+      },
+    ],
+    seoTitle: "Construction Company in Bangalore | Residential and Commercial Builds",
+    seoDescription:
+      "Searching for a construction company in Bangalore? We support residential and commercial construction with site coordination, execution planning, and accountable project delivery.",
+    keywords: [
+      "construction company Bangalore",
+      "villa construction Bangalore",
+      "residential construction Bangalore",
+      "commercial construction Bangalore",
+      "building contractors Bangalore",
+    ],
+    pricingGuide:
+      "Construction budgets depend on land conditions, structural requirements, built-up area, finish level, and whether the scope is shell-only or turnkey.",
+    timeline:
+      "Timelines vary significantly by project size, approvals, and finish level, but planning and milestone control are built into every engagement.",
+    proofPoints: [
+      "Useful for clients who want one accountable execution partner",
+      "Structured reviews reduce site delays and rework",
+      "Suitable for both new builds and integrated finishing work",
+    ],
+    serviceAreas: coreLocations,
+    faqs: [
+      {
+        question: "Do you handle both residential and commercial construction?",
+        answer:
+          "Yes. We support both residential and selected commercial construction projects depending on scope and location.",
+      },
+      {
+        question: "Can you work as a turnkey construction partner?",
+        answer:
+          "Yes. For suitable projects, we support a design-to-delivery model that reduces coordination gaps between consultants and contractors.",
+      },
+      {
+        question: "Do you also coordinate interior finishing after construction?",
+        answer:
+          "Yes. One of our strengths is aligning interior and finishing scope with the broader construction plan.",
+      },
+    ],
+  },
+  {
+    id: "renovation",
+    slug: "renovation-services",
+    title: "Home and Office Renovation",
+    iconName: "paint",
+    shortDescription:
+      "Renovation planning and execution for apartments, houses, offices, kitchens, bathrooms, and older properties in Bangalore.",
+    description:
+      "We help clients modernize homes and workspaces through structured renovation planning. Our team works on layout updates, kitchens, wardrobes, bathrooms, ceilings, finishes, and broader renovation scopes where design decisions need to align with practical site realities.",
+    features: [
+      "Apartment and villa renovation support",
+      "Kitchen and bathroom remodeling",
+      "False ceiling, lighting, and finish upgrades",
+      "Wardrobe, carpentry, and storage redesign",
+      "Electrical and plumbing retrofit coordination",
+      "Selective structural strengthening discussions",
+      "Execution support for occupied and aging properties",
+    ],
+    image: "/Updated-renovation.png",
+    designSections: [
+      {
+        title: "Typical Renovation Work",
+        emoji: "Renovate",
+        items: [
+          "Kitchen renovation",
+          "Bathroom renovation",
+          "Apartment modernization",
+          "Office renovation",
+          "Flooring and false ceiling upgrades",
+          "Electrical and plumbing updates",
+          "Storage redesign and carpentry changes",
+          "Paint, polish, and finish improvements",
         ],
-        seoTitle: "Office & Corporate Interior Designers Bangalore | Workspace Experts",
-        seoDescription: "Top-rated office interior designers in Bangalore. We build productive, ergonomic, and tech-enabled corporate spaces. Turnkey solutions for startups & enterprises.",
-        keywords: ["office interior Bangalore", "corporate office design Bangalore", "commercial interiors Bangalore", "workstation designers Bangalore"],
-    },
-    {
-        id: "construction",
-        slug: "residential-commercial-construction",
-        title: "Residential & Commercial Construction",
-        iconName: "building",
-        shortDescription: "Trusted construction company near you in Yelahanka. End-to-end building construction with expert architectural planning and structural engineering across Bangalore.",
-        description: "Searching for a reliable construction company near me? Annapoornaa Interio is Yelahanka's leading A-class civil contractor and building construction company serving all of Bangalore. We provide comprehensive 'Design to Delivery' construction services for residential villas, apartments, and commercial complexes in Yelahanka, Whitefield, HSR Layout, JP Nagar, and Koramangala. Our experienced architects and structural engineers ensure every project meets the highest standards of safety, durability, and aesthetics. We handle everything from land survey, soil testing, structural design, and regulatory approvals to final construction with premium finishes.",
-        features: [
-            "Turnkey Residential & Commercial Construction",
-            "A-Class Civil Contracting Services",
-            "Expert Architectural & Structural Planning",
-            "Liaisoning & BBMP/BDA Approval Assistance",
-            "High-grade Material Selection (Cement, Steel, etc.)",
-            "Real-time Project Progress Tracking",
-            "Compliance with IS Codes & Safety Standards"
+      },
+    ],
+    seoTitle: "Renovation Services in Bangalore | Home and Office Remodeling",
+    seoDescription:
+      "Need renovation services in Bangalore? We handle home and office renovation, kitchen remodeling, bathroom upgrades, layout refreshes, and coordinated interior improvements.",
+    keywords: [
+      "renovation services Bangalore",
+      "home renovation Bangalore",
+      "office renovation Bangalore",
+      "kitchen remodeling Bangalore",
+      "bathroom renovation Bangalore",
+    ],
+    pricingGuide:
+      "Renovation costs depend on demolition, plumbing and electrical changes, finish level, and how much of the existing structure can be retained.",
+    timeline:
+      "Renovation timelines vary by site condition and scope, but most projects benefit from a phased room-by-room or milestone-based execution plan.",
+    proofPoints: [
+      "Suitable for old apartments and occupied homes",
+      "Helps reduce hidden site surprises through early planning",
+      "Integrates design upgrades with practical execution",
+    ],
+    serviceAreas: coreLocations,
+    faqs: [
+      {
+        question: "Do you renovate only homes or offices too?",
+        answer:
+          "We handle both home and office renovation depending on scope, access, and timeline requirements.",
+      },
+      {
+        question: "Can you renovate older Bangalore apartments?",
+        answer:
+          "Yes. Older apartments often need a careful mix of redesign, storage optimization, and services upgrades, which is a common renovation use case for us.",
+      },
+      {
+        question: "Do you help prioritize essential work versus aesthetic upgrades?",
+        answer:
+          "Yes. We can help separate critical upgrades like plumbing, electrical, waterproofing, or layout issues from purely aesthetic changes.",
+      },
+    ],
+  },
+  {
+    id: "pmc",
+    slug: "pmc-project-management-consultancy",
+    title: "Project Management and Consultancy",
+    iconName: "clipboard-list",
+    shortDescription:
+      "Planning, monitoring, vendor coordination, and quality oversight for construction and interior projects in Bangalore.",
+    description:
+      "Our PMC service is designed for clients who need professional oversight across design, budgeting, procurement, execution, and milestone control. We help reduce ambiguity and improve accountability in multi-vendor interior and construction projects.",
+    features: [
+      "Project planning and milestone setup",
+      "Budgeting and scope clarity support",
+      "Vendor coordination and review",
+      "Quality oversight and progress reporting",
+      "Risk tracking and issue escalation",
+      "Documentation and handover support",
+      "Useful for complex interior and construction projects",
+    ],
+    image: "/PMC1.png",
+    pmcSections: [
+      {
+        title: "Pre-Construction Planning",
+        emoji: "Plan",
+        items: [
+          "Feasibility and scope review",
+          "Budget and milestone planning",
+          "Consultant and vendor alignment",
+          "Technical review and execution readiness",
         ],
-        image: "/Const1.png",
-        designSections: [
-            {
-                title: "Core Construction Expertise",
-                emoji: "🏗️",
-                items: [
-                    "New Building Construction",
-                    "A-Class Civil Works",
-                    "Vastu-compliant Architectural Planning",
-                    "Premium Villa Construction",
-                    "Commercial Building Contractors",
-                    "Structural Engineering & Analysis",
-                    "Landscaping & Exterior Development",
-                    "Waterproofing & Terrace Treatment",
-                    "Electrical & Plumbing Layouts",
-                    "Sanitary & Sewage Systems"
-                ]
-            }
+      },
+      {
+        title: "Execution Oversight",
+        emoji: "Track",
+        items: [
+          "Progress reviews and reporting",
+          "Quality checks and site coordination",
+          "Material and workmanship verification",
+          "Issue tracking and decision support",
         ],
-        seoTitle: "Construction Company Near Me | Yelahanka Builders Bangalore",
-        seoDescription: "Trusted construction company near me in Yelahanka & Bangalore. A-class contractors for residential & commercial projects. Expert builders, on-time delivery!",
-        keywords: ["construction company near me", "best construction company Yelahanka", "building contractors Bangalore", "house construction near me", "civil contractors Yelahanka", "residential construction Bangalore"],
-    },
-    {
-        id: "renovation",
-        slug: "renovation-services",
-        title: "Home & Office Renovation",
-        iconName: "paint",
-        shortDescription: "Renew your old spaces with our expert structural and aesthetic renovation services in Bangalore.",
-        description: "Breathe new life into your existing property with Annapoornaa Interio's expert renovation services. We specialize in transforming old Bangalore homes, apartments, and offices into modern, functional spaces. Our renovation process involves a deep audit of the existing structure, followed by creative redesigning and meticulous execution. Whether it's a kitchen makeover, bathroom remodeling, or a complete structural overhaul, we ensure your renovated space meets contemporary standards while preserving its original charm.",
-        features: [
-            "Complete Home & Office Makeovers",
-            "Structural Integrity Checks & Strengthening",
-            "Modern Kitchen & Bathroom Remodeling",
-            "Electrical & Plumbing Retrofitting",
-            "Modern Flooring & False Ceiling Upgrades",
-            "External Elevation & Facade Renovation",
-            "Eco-friendly & Energy-efficient Upgrades"
+      },
+      {
+        title: "Close-Out Support",
+        emoji: "Finish",
+        items: [
+          "Snag review and completion follow-up",
+          "Vendor close-out support",
+          "Documentation review",
+          "Handover coordination",
         ],
-        image: "/Updated-renovation.png",
-        designSections: [
-            {
-                title: "Specialized Renovation Solutions",
-                emoji: "🛠️",
-                items: [
-                    "Old Home Structural Strengthening",
-                    "Premium Kitchen Remodeling",
-                    "Modern Bathroom Makeovers",
-                    "Apartment Internal Renovations",
-                    "Commercial Space Retrofitting",
-                    "External Elevation Designing",
-                    "Full-house Painting & Polishing",
-                    "Door & Window Replacements",
-                    "Waterproofing & Damage Repairs",
-                    "Modern Lighting & Electrical Retrofitting"
-                ]
-            }
+      },
+    ],
+    seoTitle: "PMC Services in Bangalore | Project Management and Consultancy",
+    seoDescription:
+      "Need PMC services in Bangalore? We provide project management, quality oversight, milestone planning, and coordination support for interior and construction projects.",
+    keywords: [
+      "PMC services Bangalore",
+      "project management consultancy Bangalore",
+      "construction project management Bangalore",
+      "interior project consultancy Bangalore",
+    ],
+    pricingGuide:
+      "PMC fees depend on project size, duration, stakeholder complexity, and the level of reporting or on-site oversight required.",
+    timeline:
+      "PMC engagement can start from feasibility and planning or mid-project when execution needs stronger control and coordination.",
+    proofPoints: [
+      "Useful when multiple vendors or consultants are involved",
+      "Improves visibility across cost, schedule, and quality",
+      "Supports better decision-making for owners and teams",
+    ],
+    serviceAreas: coreLocations,
+    faqs: [
+      {
+        question: "Is PMC different from turnkey execution?",
+        answer:
+          "Yes. PMC focuses on oversight, coordination, quality, and project control, while turnkey execution includes direct delivery responsibility.",
+      },
+      {
+        question: "Can you join a project after execution has already started?",
+        answer:
+          "In many cases, yes. We can assess the project stage and decide whether structured oversight can still add value.",
+      },
+      {
+        question: "Who usually hires PMC services?",
+        answer:
+          "Clients with larger homes, commercial projects, or multi-vendor execution often benefit the most from PMC support.",
+      },
+    ],
+  },
+  {
+    id: "design-and-drawings",
+    slug: "design-and-drawings",
+    title: "Architectural Design and Drawings",
+    iconName: "pencil-ruler",
+    shortDescription:
+      "Architectural planning, technical drawings, visualization support, and design documentation for Bangalore projects.",
+    description:
+      "We support clients and teams with architectural design, working drawings, visualization inputs, and execution-ready documentation. This service is useful for projects that need stronger planning before construction or interior execution begins.",
+    features: [
+      "Architectural planning and layout development",
+      "Execution-ready drawing support",
+      "Interior layout and planning documents",
+      "Visualization and design communication support",
+      "Coordination between concept and execution needs",
+      "Useful for residential and commercial project planning",
+      "Helps reduce ambiguity before site work begins",
+    ],
+    image: "/Updated-D&D.jpg",
+    designSections: [
+      {
+        title: "Design Documentation Scope",
+        emoji: "Draw",
+        items: [
+          "Architectural layout planning",
+          "Interior planning drawings",
+          "Elevation and design visualization",
+          "Execution coordination drawings",
+          "Design detailing for site clarity",
+          "Working drawing support",
+          "Plan revisions for practical use",
+          "Presentation-ready design outputs",
         ],
-        seoTitle: "Home & Office Renovation Services Bangalore | Best Remodeling Experts",
-        seoDescription: "Transform your old space with Bangalore's best renovation experts. We provide complete home, kitchen, and bathroom remodeling with quality assurance and on-time delivery.",
-        keywords: ["home renovation Bangalore", "apartment renovation Bangalore", "kitchen remodeling Bangalore", "office renovation Bangalore", "renovation contractors Bangalore"],
-    },
-    {
-        id: "pre-engineered-building",
-        slug: "pmc-project-management-consultancy",
-        title: "PMC - Project Management & Consultancy",
-        iconName: "clipboard-list",
-        shortDescription: "Professional construction management services ensuring timely delivery, cost control, and quality assurance in Bangalore.",
-        features: [
-            "Strategic Project Planning & Budgeting",
-            "Real-time Milestone & Progress Monitoring",
-            "Rigorous Quality Control & IS Code Compliance",
-            "Efficient Resource & Material Management",
-            "Detailed Risk Mitigation & Problem Solving",
-            "Transparent Communication & Reporting",
-            "Final Handover & Snag-list Clearance"
-        ],
-        description: "At Annapoornaa Interio, we provide specialized Project Management and Consultancy (PMC) services for complex construction and interior projects in Bangalore. We act as the technical bridge between the client and various contractors, ensuring that the project is delivered on time, within budget, and as per specifications. Our PMC team focuses on value engineering to optimize costs without compromising on quality, making us the preferred consultancy partner for developers and corporate firms.",
-        image: "/PMC1.png",
-        pmcSections: [
-            {
-                title: "Pre-Construction Excellence",
-                emoji: "🏗️",
-                items: [
-                    "Detailed Project Feasibility Studies",
-                    "Budget Estimation & Cost Planning",
-                    "Vetting of Designs & Technical Specs",
-                    "Tendering & Contractor Selection Support"
-                ],
-            },
-            {
-                title: "On-site Execution & Governance",
-                emoji: "🛠️",
-                items: [
-                    "Daily Site Supervision & Quality Audits",
-                    "Safety & Environmental Compliance",
-                    "Material Testing & Approval Management",
-                    "Inventory & Wastage Control"
-                ],
-            },
-            {
-                title: "Cost & Schedule Oversight",
-                emoji: "📋",
-                items: [
-                    "Cash Flow Analysis & Bill Certification",
-                    "Critical Path Management (CPM)",
-                    "Vendor & Stakeholder Management",
-                    "Dispute Resolution & Contract Admin"
-                ],
-            },
-        ],
-        seoTitle: "Construction Project Management Bangalore | Professional PMC Services",
-        seoDescription: "Lead your construction project with Bangalore's top PMC experts. We handle project scheduling, cost control, and quality audits for residential & commercial builds.",
-        keywords: ["PMC services Bangalore", "construction management Bangalore", "project consultancy Bangalore", "structural consultancy Bangalore", "best project management Bangalore"],
-    },
-    {
-        id: "products",
-        slug: "design-and-drawings",
-        title: "Architectural Design & Drawings",
-        iconName: "pencil-ruler",
-        shortDescription: "Precision architectural, structural, and MEP design services for Bangalore's modern building projects.",
-        features: [
-            "Vastu-compliant Architectural Planning",
-            "High-precision Structural Design & Detailing",
-            "Comprehensive MEP (Electrical, Plumbing, HVAC) Drawings",
-            "Advanced 3D BIM (Building Information Modelling)",
-            "Detailed GFC (Good for Construction) Documentation",
-            "As-built Drawings for Final Documentation",
-            "Professional Walkthrough Videos & Renderings"
-        ],
-        description: "Annapoornaa Interio providing high-precision building design services that serve as the blueprint for excellence. Our 'Design and Drawings' wing provides architects and developers in Bangalore with technically sound and aesthetically pleasing solutions. We specialize in converting conceptual ideas into detailed, executable GFC drawings while ensuring compliance with local building bylaws and engineering standards.",
-        image: "/Updated-D&D.jpg",
-        designSections: [
-            {
-                title: "Architectural & 3D Visualization",
-                emoji: "🧱",
-                items: [
-                    "Conceptual Building Layouts",
-                    "Interior & Exterior 3D Renderings",
-                    "Site Development & Landscaping Plans",
-                    "Detailed Elevation & Section Drawings"
-                ],
-            },
-            {
-                title: "Engineering & Technical Drawings",
-                emoji: "🏗️",
-                items: [
-                    "RCC & Steel Structural Detailing",
-                    "MEP Layouts (Electrical & HVAC)",
-                    "Plumbing & Sanitation Schematics",
-                    "Fire Safety & Life Safety Designs"
-                ],
-            },
-            {
-                title: "Construction Support Documentation",
-                emoji: "📐",
-                items: [
-                    "GFC (Good for Construction) Drawings",
-                    "Bar Bending Schedules (BBS)",
-                    "Project Specifications & BOM",
-                    "Clash Detection & BIM Support"
-                ],
-            },
-        ],
-        seoTitle: "Architectural Design & Structural Drawings Bangalore | Expert Drafting",
-        seoDescription: "Get technically sound architectural and structural drawings for your project in Bangalore. We provide GFC drawings, MEP plans, and 3D visualizations for all builds.",
-        keywords: ["architectural drawings Bangalore", "structural design Bangalore", "MEP design Bangalore", "3D building plans Bangalore", "best architects Bangalore"],
-    },
+      },
+    ],
+    seoTitle: "Architectural Design and Drawings in Bangalore | Planning Support",
+    seoDescription:
+      "Need architectural design and drawings in Bangalore? We provide planning support, working drawings, layout development, and visualization inputs for homes and commercial spaces.",
+    keywords: [
+      "architectural design Bangalore",
+      "working drawings Bangalore",
+      "planning drawings Bangalore",
+      "interior layout drawings Bangalore",
+    ],
+    pricingGuide:
+      "Design and drawing fees depend on project size, number of revisions, drawing depth, and whether visualization or execution support is included.",
+    timeline:
+      "Smaller drawing packages move quickly, while larger residential and commercial sets require staged reviews and coordinated approvals.",
+    proofPoints: [
+      "Creates stronger clarity before execution begins",
+      "Useful for aligning design intent with site reality",
+      "Supports both interior and construction planning",
+    ],
+    serviceAreas: coreLocations,
+    faqs: [
+      {
+        question: "Do you provide only design drawings or execution support too?",
+        answer:
+          "We can support drawings alone or align them with broader execution services depending on project needs.",
+      },
+      {
+        question: "Is this useful before starting construction or interiors?",
+        answer:
+          "Yes. Strong planning and documentation reduce confusion, delays, and rework once site work starts.",
+      },
+      {
+        question: "Can you help update an existing design package?",
+        answer:
+          "Yes. We can review an existing concept and help improve clarity, detail, and execution readiness.",
+      },
+    ],
+  },
 ];

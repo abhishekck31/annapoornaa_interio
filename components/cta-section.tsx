@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
 import ScrollAnimation from "@/components/scroll-animation"
+import LeadLink from "@/components/lead-link"
 
 const CTASection = () => {
   return (
@@ -32,21 +32,30 @@ const CTASection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="/contact" scroll={false}>
+                <LeadLink
+                  href="/contact"
+                  scroll={false}
+                  eventName="lead_quote_request"
+                  eventParams={{ sourcePage: "/", placement: "cta_section" }}
+                >
                   <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-8 py-6 rounded-md text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
                     Contact us Now <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </LeadLink>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="/gallery">
+                <LeadLink
+                  href="/gallery"
+                  eventName="lead_quote_request"
+                  eventParams={{ sourcePage: "/", placement: "cta_portfolio" }}
+                >
                   <Button
                     variant="outline"
                     className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 rounded-md text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
                   >
                     View Our Portfolio
                   </Button>
-                </Link>
+                </LeadLink>
               </motion.div>
             </div>
           </div>

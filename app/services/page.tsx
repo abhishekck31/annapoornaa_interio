@@ -1,146 +1,100 @@
-import { Metadata } from 'next'
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import { services } from "@/data/services-data";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Home,
-  Briefcase,
-  Building,
-  Paintbrush,
-  ClipboardList,
-  Hammer,
-  PaintBucket,
-  PencilRuler,
-  ExternalLink,
-  Sparkles
-} from "lucide-react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CollapsibleSection } from "@/components/collapsible-section";
+import { ArrowRight, ExternalLink, Sparkles } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: 'Interior Design & Construction Services Near Me | Yelahanka',
-  description: 'Best interior design & construction services near you in Yelahanka, Bangalore. Home interiors, modular kitchens, office design & building construction. Free quote!',
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import { services } from "@/data/services-data";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Interior Design and Construction Services in Bangalore | Annapoornaa Interio",
+  description:
+    "Explore home interiors, office interiors, construction, renovation, PMC, and design services delivered across Bangalore.",
+  path: "/services",
   keywords: [
-    'interior design services near me',
-    'construction services near me',
-    'home interior services Yelahanka',
-    'office interior services Bangalore',
-    'construction services Yelahanka',
-    'renovation services Bangalore',
-    'best interior company near me',
-    'Annapoornaa Interio services'
+    "interior services Bangalore",
+    "construction services Bangalore",
+    "renovation services Bangalore",
+    "office interiors Bangalore",
+    "home interiors Bangalore",
   ],
-  metadataBase: new URL('https://annapoornaainterio.com'),
-  alternates: {
-    canonical: 'https://annapoornaainterio.com/services',
-  },
-}
-
-const IconComponent = ({ name, className }: { name: string, className?: string }) => {
-  const icons: Record<string, React.ReactNode> = {
-    home: <Home className={className} />,
-    briefcase: <Briefcase className={className} />,
-    building: <Building className={className} />,
-    paint: <PaintBucket className={className} />,
-    "clipboard-list": <ClipboardList className={className} />,
-    "pencil-ruler": <PencilRuler className={className} />,
-  };
-  return icons[name] || <Sparkles className={className} />;
-}
+});
 
 export default function ServicesPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="mt-24 pb-20 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center pt-16 mb-20">
-            <h1 className="text-4xl md:text-5xl font-bold text-navy-900 mb-6 flex items-center justify-center gap-3">
+      <section className="mt-24 border-t border-gray-200 bg-gray-50 pb-20">
+        <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
+          <div className="mb-20 text-center">
+            <h1 className="mb-6 flex items-center justify-center gap-3 text-4xl font-bold text-navy-900 md:text-5xl">
               <Sparkles className="h-8 w-8 text-gold-500" />
-              Best Interior & Construction Services Near You
+              Bangalore Services Built to Rank and Convert
               <Sparkles className="h-8 w-8 text-gold-500" />
             </h1>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-8 rounded-full"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive interior design and construction solutions in Yelahanka, Whitefield, HSR Layout & all Bangalore with 3D designs and walkthroughs
+            <div className="mx-auto mb-8 h-1.5 w-24 rounded-full bg-gradient-to-r from-navy-900 to-gold-500" />
+            <p className="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+              Explore our most important service pages for Bangalore homeowners, businesses, and construction clients.
             </p>
           </div>
 
-          <div className="space-y-32">
+          <div className="space-y-24">
             {services.map((service, index) => (
               <div
                 key={service.id}
-                id={service.id}
-                className={`flex flex-col lg:flex-row gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                  }`}
+                className={`flex flex-col items-center gap-12 lg:flex-row ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
               >
                 <div className="flex-1 space-y-8">
-                  <div className="flex items-center gap-4">
-                    <div className="p-4 rounded-2xl bg-gold-500/10 border border-gold-500/20">
-                      <IconComponent name={service.iconName} className="h-10 w-10 text-gold-500" />
-                    </div>
-                    <h2 className="text-3xl font-bold text-navy-900 leading-tight">
-                      {service.title}
-                    </h2>
+                  <div>
+                    <h2 className="mb-4 text-3xl font-bold text-navy-900">{service.title}</h2>
+                    <p className="text-lg leading-relaxed text-gray-700">{service.description}</p>
                   </div>
 
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                    {service.description}
-                  </p>
-
-                  <div className="space-y-4">
-                    {service.pmcSections ? (
-                      service.pmcSections.slice(0, 3).map((section, idx) => (
-                        <CollapsibleSection
-                          key={idx}
-                          title={section.title}
-                          emoji={section.emoji}
-                          items={section.items}
-                        />
-                      ))
-                    ) : (
-                      service.designSections?.slice(0, 1).map((section, idx) => (
-                        <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                          <h3 className="text-xl font-semibold text-navy-900 mb-4 flex items-center gap-2">
-                            <span>{section.emoji}</span> {section.title}
-                          </h3>
-                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                            {section.items.slice(0, 8).map((item, i) => (
-                              <li key={i} className="flex items-center gap-2 text-sm text-gray-600">
-                                <span className="text-gold-500">•</span> {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))
-                    )}
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    {service.proofPoints.map((point) => (
+                      <div key={point} className="rounded-2xl border border-gray-100 bg-white p-4 text-sm text-gray-700 shadow-sm">
+                        {point}
+                      </div>
+                    ))}
                   </div>
 
-                  <Link href={`/services/${service.slug}`} className="inline-block group">
-                    <button className="flex items-center gap-2 bg-navy-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-navy-800 transition-all shadow-lg hover:shadow-navy-900/20">
-                      Explore Full Service Details
-                      <ExternalLink className="h-4 w-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                    </button>
-                  </Link>
+                  <div className="rounded-3xl bg-white p-6 shadow-sm">
+                    <h3 className="mb-3 text-lg font-semibold text-navy-900">Planning snapshot</h3>
+                    <p className="mb-3 text-sm text-gray-700">{service.pricingGuide}</p>
+                    <p className="text-sm text-gray-700">{service.timeline}</p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="inline-flex items-center gap-2 rounded-xl bg-navy-900 px-6 py-4 font-bold text-white transition hover:bg-navy-800"
+                    >
+                      Explore full service page
+                      <ExternalLink className="h-4 w-4" />
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="inline-flex items-center gap-2 rounded-xl border border-navy-900 px-6 py-4 font-bold text-navy-900 transition hover:bg-navy-50"
+                    >
+                      Request a quote
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
 
-                <div className="flex-1 w-full">
-                  <Card className="overflow-hidden shadow-2xl rounded-3xl border-none">
-                    <CardContent className="p-0 relative aspect-[4/3] group">
-                      <Image
-                        src={service.image}
-                        alt={`${service.title} - Best interior company near me Yelahanka Bangalore`}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        quality={90}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent"></div>
-                    </CardContent>
-                  </Card>
+                <div className="w-full flex-1">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl">
+                    <Image
+                      src={service.image}
+                      alt={`${service.title} in Bangalore`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
               </div>
             ))}

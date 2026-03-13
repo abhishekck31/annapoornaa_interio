@@ -3,11 +3,16 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Mail, MapPin, Phone, Sparkles } from "lucide-react"
 import FormspreeForm from "./FormspreeForm"
+import { buildMetadata } from "@/lib/seo"
+import { siteConfig } from "@/lib/site-config"
 
-export const metadata: Metadata = {
-  title: 'Contact Us | Annapoornaa Interio - Interior Designers Bangalore',
-  description: 'Contact Annapoornaa Interio for interior design services in Bangalore. Free consultation, expert team, quality workmanship.',
-}
+export const metadata: Metadata = buildMetadata({
+  title: 'Contact Annapoornaa Interio | Bangalore Consultation and Quotes',
+  description:
+    'Call, WhatsApp, or send a project brief to discuss interiors, renovation, construction, and product requirements in Bangalore.',
+  path: '/contact',
+  keywords: ['contact interior designers Bangalore', 'construction quote Bangalore', 'interior consultation Yelahanka'],
+})
 
 export default function ContactPage() {
 
@@ -44,15 +49,15 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-gold-400 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gold-300 mb-1">Email Us</h4>
-                    <p className="text-gray-300">info@annapoornainterio.com</p>
+                    <a href="mailto:info@annapoornainterio.com" className="text-gray-300 hover:text-white">info@annapoornainterio.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="h-6 w-6 text-gold-400 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gold-300 mb-1">Call Us</h4>
-                    <p className="text-gray-300">+91 99000 94942</p>
-                    <p className="text-gray-300">+91 80731 41413</p>
+                    <a href={siteConfig.primaryPhoneHref} className="block text-gray-300 hover:text-white">+91 99000 94942</a>
+                    <a href={siteConfig.secondaryPhoneHref} className="block text-gray-300 hover:text-white">+91 80731 41413</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

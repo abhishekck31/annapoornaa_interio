@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   keywords:
     "best interior company near me, interior design near me, construction company near me, Yelahanka best interior, interior design Yelahanka, construction Yelahanka, home interior near me, office interior Yelahanka, modular kitchen Bangalore",
   alternates: {
-    canonical: `https://www.annapoornaainterio.com/bangalore-yelahanka`,
+    canonical: `https://annapoornaainterio.com/bangalore-yelahanka`,
   },
   icons: {
     icon: '/favicon.ico',
@@ -82,7 +82,7 @@ const BangaloreYelahankaPage = () => {
       title: "Premium Chairs for Yelahanka Offices",
       description:
         "Comfortable, stylish, and ergonomic chairs for offices, homes, and commercial spaces throughout Bangalore and Yelahanka.",
-      link: "/products/chairs",
+      link: "/products/workstations",
     },
   ]
 

@@ -4,10 +4,13 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Poppins } from "next/font/google"
 import ClientRootLayout from "./client-layout"
+import GoogleAnalytics from "@/components/google-analytics"
 import StructuredData from "@/components/structured-data"
 import GridOverlay from "@/components/grid-overlay"
 import { GridBackground } from "@/components/grid-background"
 import Script from "next/script"
+import { buildMetadata } from "@/lib/seo"
+import { primarySiteUrl } from "@/lib/site-config"
 
 // Initialize Poppins font with the weights we need
 const poppins = Poppins({
@@ -18,10 +21,21 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Best Interior Company Near Me | Construction Company Yelahanka",
-  description: "Yelahanka's best interior design & construction company. Serving Whitefield, HSR Layout, JP Nagar, Koramangala & all Bangalore. Custom home interiors, modular kitchens & turnkey construction.",
-  keywords:
-    "Best Interior Company near me, Interior Design near me, Construction company near me, Yelahanka best interior, Interior Designers Bangalore, Home Interiors Yelahanka, Construction Company Yelahanka, Modular Kitchen Bangalore",
+  ...buildMetadata({
+    title: "Interior Designers and Construction Company in Bangalore | Annapoornaa Interio",
+    description:
+      "Interior design, renovation, construction, modular kitchens, and building products for homes and offices across Bangalore.",
+    path: "/",
+    keywords: [
+      "interior designers Bangalore",
+      "construction company Bangalore",
+      "home interiors Yelahanka",
+      "renovation company Bangalore",
+      "office interiors Bangalore",
+      "modular kitchen Bangalore",
+    ],
+  }),
+  metadataBase: primarySiteUrl,
   authors: [{ name: "Annapoornaa Interio" }],
   creator: "Annapoornaa Interio",
   publisher: "Annapoornaa Interio",
@@ -30,55 +44,17 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  metadataBase: new URL("https://annapoornaainterio.com"),
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Best Interior Company Near Me | Construction Company Yelahanka",
-    description: "Yelahanka's premier interior design & construction company serving all Bangalore. Award-winning designs, modular kitchens & turnkey projects.",
-    url: "https://annapoornaainterio.com",
-    siteName: "Annapoornaa Interio",
-    locale: "en_IN",
-    type: "website",
-    images: [
-      {
-        url: "https://annapoornaainterio.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Annapoornaa Interio - Best Interior & Construction Company in Bangalore",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Best Interior Company Near Me | Yelahanka Bangalore",
-    description: "Expert interior designers & construction company in Yelahanka. Serving all Bangalore neighborhoods. Free consultation!",
-    images: ["https://annapoornaainterio.com/og-image.jpg"],
-    creator: "@annapoornaainterio",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
   icons: {
     icon: [
       { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon_io/favicon.ico", sizes: "192x192", type: "image/png" },
+      { url: "/favicon_io/favicon.ico", sizes: "any" },
     ],
     shortcut: "/favicon_io/favicon.ico",
     apple: "/favicon_io/apple-touch-icon.png",
   },
   manifest: "/favicon_io/site.webmanifest",
-  generator: 'v0.dev'
+  generator: "Next.js",
 }
 
 
@@ -119,6 +95,7 @@ export default function RootLayout({
 
       </head>
       <body className="font-poppins">
+        <GoogleAnalytics />
         <StructuredData />
         <GridBackground />
         <GridOverlay />

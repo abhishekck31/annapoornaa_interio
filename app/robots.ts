@@ -1,11 +1,16 @@
 import { MetadataRoute } from 'next'
+import { siteConfig } from '@/lib/site-config'
 
 export default function robots(): MetadataRoute.Robots {
     return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-        },
-        sitemap: 'https://annapoornaainterio.com/sitemap.xml',
+        rules: [
+            {
+                userAgent: '*',
+                allow: '/',
+                disallow: ['/api/'],
+            },
+        ],
+        sitemap: `${siteConfig.domain}/sitemap.xml`,
+        host: siteConfig.domain,
     }
 }

@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Annapoorna Interio | Interior Design Services in Bangalore",
-  description: "Bespoke interior design & construction services in Bangalore. Residential, commercial, turnkey solutions. Free consultation!",
-  alternates: {
-    canonical: "https://www.annapoornaainterio.com/interio",
-  },
-}
+  description: "Bespoke interior design and construction services in Bangalore.",
+  path: "/interio",
+  noIndex: true,
+})
 
 export default function InterioPage() {
   return (

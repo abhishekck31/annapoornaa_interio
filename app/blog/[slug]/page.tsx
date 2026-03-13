@@ -1,166 +1,143 @@
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import Navbar from "@/components/navbar";
+import { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft, Calendar, ChevronRight, Clock } from "lucide-react";
+import { notFound } from "next/navigation";
+
 import Footer from "@/components/footer";
+import LeadLink from "@/components/lead-link";
+import Navbar from "@/components/navbar";
 import { blogPosts } from "@/data/blog-data";
-import { Calendar, User, Clock, ArrowLeft, ChevronRight, Share2 } from "lucide-react";
+import { buildMetadata } from "@/lib/seo";
 
 interface Props {
-    params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
-    const post = blogPosts.find((p) => p.slug === slug);
+  const { slug } = await params;
+  const post = blogPosts.find((item) => item.slug === slug);
 
-    if (!post) {
-        return {
-            title: 'Post Not Found',
-        };
-    }
+  if (!post) {
+    return buildMetadata({
+      title: "Blog Post Not Found | Annapoornaa Interio",
+      description: "The requested blog post could not be found.",
+      path: "/blog",
+      noIndex: true,
+    });
+  }
 
-    return {
-        title: post.seoTitle,
-        description: post.seoDescription,
-        keywords: post.keywords,
-        alternates: {
-            canonical: `https://annapoornaainterio.com/blog/${post.slug}`,
-        },
-        openGraph: {
-            title: post.seoTitle,
-            description: post.seoDescription,
-            url: `https://annapoornaainterio.com/blog/${post.slug}`,
-            type: 'article',
-            publishedTime: new Date(post.date).toISOString(),
-            images: [
-                {
-                    url: post.image,
-                    width: 1200,
-                    height: 630,
-                    alt: post.title,
-                },
-            ],
-        },
-    };
+  return buildMetadata({
+    title: post.seoTitle,
+    description: post.seoDescription,
+    path: `/blog/${post.slug}`,
+    keywords: post.keywords,
+    image: post.image,
+    type: "article",
+  });
 }
 
 export async function generateStaticParams() {
-    return blogPosts.map((post) => ({
-        slug: post.slug,
-    }));
+  return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export default async function BlogPostPage({ params }: Props) {
-    const { slug } = await params;
-    const post = blogPosts.find((p) => p.slug === slug);
+  const { slug } = await params;
+  const post = blogPosts.find((item) => item.slug === slug);
 
-    if (!post) {
-        notFound();
-    }
+  if (!post) {
+    notFound();
+  }
 
-    const articleSchema = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": post.title,
-        "image": `https://annapoornaainterio.com${post.image}`,
-        "author": {
-            "@type": "Organization",
-            "name": "Annapoornaa Interio"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Annapoornaa Interio",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://annapoornaainterio.com/favicon-for-app/logo-with-name.png"
-            }
-        },
-        "datePublished": new Date(post.date).toISOString().split('T')[0],
-        "dateModified": new Date(post.date).toISOString().split('T')[0],
-        "description": post.excerpt
-    };
+  return (
+    <main className="min-h-screen bg-gray-50">
+      <Navbar />
+      <div className="h-24" />
 
-    return (
-        <main className="min-h-screen bg-gray-50">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      <article className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <nav className="mb-8 flex items-center gap-2 overflow-x-auto whitespace-nowrap text-sm text-gray-500">
+            <Link href="/" className="hover:text-gold-600">
+              Home
+            </Link>
+            <ChevronRight className="h-4 w-4" />
+            <Link href="/blog" className="hover:text-gold-600">
+              Blog
+            </Link>
+            <ChevronRight className="h-4 w-4" />
+            <span className="truncate font-medium text-navy-900">{post.title}</span>
+          </nav>
+
+          <Link href="/blog" className="mb-6 inline-flex items-center font-medium text-gold-600 hover:text-gold-700">
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Blog
+          </Link>
+
+          <header className="mb-10">
+            <span className="mb-4 inline-flex rounded-full bg-gold-500 px-3 py-1 text-xs font-bold uppercase tracking-wider text-navy-900">
+              {post.category}
+            </span>
+            <h1 className="mb-6 text-4xl font-bold leading-tight text-navy-900 md:text-5xl">{post.title}</h1>
+            <div className="flex flex-wrap items-center gap-6 border-y border-gray-200 py-4 text-gray-600">
+              <div className="flex items-center gap-2 text-sm font-medium">
+                <Calendar className="h-4 w-4 text-gold-600" />
+                {post.publishedAt}
+              </div>
+              <div className="flex items-center gap-2 text-sm font-medium">
+                <Clock className="h-4 w-4 text-gold-600" />5 min read
+              </div>
+              <div className="text-sm font-medium">By {post.author}</div>
+            </div>
+          </header>
+
+          <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-xl md:p-12">
+            <div
+              className="prose prose-lg max-w-none prose-headings:text-navy-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700"
+              dangerouslySetInnerHTML={{ __html: post.content }}
             />
-            <Navbar />
 
-            {/* Spacer for fixed navbar */}
-            <div className="h-24"></div>
-
-            <article className="py-12 px-4 sm:px-6 lg:px-8">
-                <div className="max-w-4xl mx-auto">
-                    {/* Breadcrumbs */}
-                    <nav className="flex items-center gap-2 text-sm text-gray-500 mb-8 overflow-x-auto whitespace-nowrap">
-                        <Link href="/" className="hover:text-gold-600">Home</Link>
-                        <ChevronRight className="h-4 w-4" />
-                        <Link href="/blog" className="hover:text-gold-600">Blog</Link>
-                        <ChevronRight className="h-4 w-4" />
-                        <span className="text-navy-900 font-medium truncate">{post.title}</span>
-                    </nav>
-
-                    <Link href="/blog" className="inline-flex items-center text-gold-600 hover:text-gold-700 mb-6 font-medium group">
-                        <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
-                        Back to Blog
-                    </Link>
-
-                    <header className="mb-10">
-                        <div className="flex items-center gap-3 mb-6">
-                            <span className="bg-gold-500 text-navy-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                                {post.category}
-                            </span>
-                        </div>
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy-900 mb-6 leading-tight">
-                            {post.title}
-                        </h1>
-                        <div className="flex flex-wrap items-center gap-6 text-gray-600 border-y border-gray-200 py-4">
-                            <div className="flex items-center gap-2 text-sm font-medium">
-                                <Calendar className="h-4 w-4 text-gold-600" />
-                                {post.date}
-                            </div>
-                            <div className="flex items-center gap-2 text-sm font-medium">
-                                <User className="h-4 w-4 text-gold-600" />
-                                By Annapoornaa Interio
-                            </div>
-                            <div className="flex items-center gap-2 text-sm font-medium">
-                                <Clock className="h-4 w-4 text-gold-600" />
-                                5 min read
-                            </div>
-                        </div>
-                    </header>
-
-
-
-                    <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100">
-                        <div
-                            className="prose prose-lg max-w-none prose-headings:text-navy-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700"
-                            dangerouslySetInnerHTML={{ __html: post.content }}
-                        />
-
-                        <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-6">
-                            <div className="flex items-center gap-4">
-                                <span className="font-bold text-navy-900">Share this post:</span>
-                                <div className="flex gap-2">
-                                    <button className="h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-all">
-                                        <Share2 className="h-5 w-5" />
-                                    </button>
-                                </div>
-                            </div>
-                            <Link href="/contact">
-                                <button className="bg-navy-900 text-white px-8 py-3 rounded-full font-bold hover:bg-gold-500 transition-all shadow-lg hover:shadow-gold-500/20 active:scale-95">
-                                    Book a Consultation
-                                </button>
-                            </Link>
-                        </div>
+            {post.faqs.length > 0 && (
+              <section className="mt-14 border-t border-gray-100 pt-8">
+                <h2 className="mb-6 text-2xl font-bold text-navy-900">Frequently asked questions</h2>
+                <div className="space-y-6">
+                  {post.faqs.map((faq) => (
+                    <div key={faq.question}>
+                      <h3 className="mb-2 text-lg font-semibold text-navy-900">{faq.question}</h3>
+                      <p className="text-gray-700">{faq.answer}</p>
                     </div>
+                  ))}
                 </div>
-            </article>
+              </section>
+            )}
 
-            <Footer />
-        </main>
-    );
+            <section className="mt-14 rounded-3xl bg-navy-900 p-8 text-white">
+              <h2 className="mb-3 text-2xl font-bold">Need help with a similar project?</h2>
+              <p className="mb-6 text-gray-300">
+                Move from research to action with a practical consultation for your Bangalore project.
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <LeadLink
+                  href={post.ctaHref}
+                  eventName="lead_consultation_booking"
+                  eventParams={{ sourcePage: `/blog/${post.slug}`, service: post.primaryServiceSlug }}
+                  className="rounded-xl bg-gold-500 px-6 py-4 text-center font-semibold text-navy-900 transition hover:bg-gold-400"
+                >
+                  {post.ctaLabel}
+                </LeadLink>
+                <LeadLink
+                  href={`/${post.primaryLocationSlug}`}
+                  eventName="lead_quote_request"
+                  eventParams={{ sourcePage: `/blog/${post.slug}`, location: post.primaryLocationSlug }}
+                  className="rounded-xl border border-white/20 px-6 py-4 text-center font-semibold text-white transition hover:bg-white/10"
+                >
+                  Explore Related Location Page
+                </LeadLink>
+              </div>
+            </section>
+          </div>
+        </div>
+      </article>
+
+      <Footer />
+    </main>
+  );
 }

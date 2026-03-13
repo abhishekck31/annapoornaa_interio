@@ -4,10 +4,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { Clock, MapPin, Mail, Phone, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
+import LeadLink from "@/components/lead-link"
+import { siteConfig, whatsappUrl } from "@/lib/site-config"
+import { trackEvent } from "@/lib/tracking"
 
 const Footer = () => {
-  const whatsappMessage = "Hello! I'm interested in learning more about Annapoornaa Interio's services. Could you please provide more information?"
-  const whatsappLink = `https://wa.me/918073141413?text=${encodeURIComponent(whatsappMessage)}`
+  const socialLinks = [
+    { icon: <Facebook className="h-4 w-4" />, url: siteConfig.socialLinks.facebook, label: "Facebook" },
+    { icon: <Instagram className="h-4 w-4" />, url: siteConfig.socialLinks.instagram, label: "Instagram" },
+    { icon: <Linkedin className="h-4 w-4" />, url: siteConfig.socialLinks.linkedin, label: "LinkedIn" },
+  ].filter((link) => Boolean(link.url))
 
   return (
     <footer className="bg-navy-900 text-white pt-16 pb-8 rounded-t-xl" id="contact">
@@ -29,35 +35,24 @@ const Footer = () => {
             <p className="text-gray-300 mb-6">
               Yelahanka's Best Interior Company & Construction Experts. Serving all Bangalore.
             </p>
-            <div className="flex space-x-4 justify-center sm:justify-start">
-              <motion.a
-                href="#"
-                whileHover={{ y: -5, scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-                className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
-              >
-                <Facebook className="h-4 w-4" />
-                <span className="sr-only">Facebook</span>
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ y: -5, scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-                className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
-              >
-                <Instagram className="h-4 w-4" />
-                <span className="sr-only">Instagram</span>
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ y: -5, scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-                className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
-              >
-                <Linkedin className="h-4 w-4" />
-                <span className="sr-only">LinkedIn</span>
-              </motion.a>
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="flex space-x-4 justify-center sm:justify-start">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
+                  >
+                    {social.icon}
+                    <span className="sr-only">{social.label}</span>
+                  </motion.a>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Quick Links */}
@@ -144,15 +139,28 @@ const Footer = () => {
               <li className="flex items-center justify-center sm:justify-start group">
                 <Phone className="h-5 w-5 text-gold-500 mr-3 flex-shrink-0 group-hover:rotate-12 transition-transform" />
                 <div className="flex flex-col">
-                  <a href="tel:+919900094942" className="text-gray-300 hover:text-gold-400 transition-colors">+91 99000 94942</a>
-                  <a href="tel:+918073141413" className="text-gray-300 hover:text-gold-400 transition-colors">+91 80731 41413</a>
+                  <a href="tel:+919900094942" className="text-gray-300 hover:text-gold-400 transition-colors" onClick={() => trackEvent("lead_call_click", { sourcePage: "footer", phone: siteConfig.phones[0] })}>+91 99000 94942</a>
+                  <a href="tel:+918073141413" className="text-gray-300 hover:text-gold-400 transition-colors" onClick={() => trackEvent("lead_call_click", { sourcePage: "footer", phone: siteConfig.phones[1] })}>+91 80731 41413</a>
                 </div>
               </li>
               <li className="flex items-center justify-center sm:justify-start group">
                 <Mail className="h-5 w-5 text-gold-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <a href="mailto:info@annapoornainterio.com" className="text-gray-300 hover:text-gold-400 transition-colors">
+                <a href="mailto:info@annapoornainterio.com" className="text-gray-300 hover:text-gold-400 transition-colors" onClick={() => trackEvent("lead_email_click", { sourcePage: "footer" })}>
                   info@annapoornainterio.com
                 </a>
+              </li>
+              <li className="flex items-center justify-center sm:justify-start group">
+                <MessageCircle className="h-5 w-5 text-gold-500 mr-3 flex-shrink-0" />
+                <LeadLink
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  eventName="lead_whatsapp_click"
+                  eventParams={{ sourcePage: "footer" }}
+                  className="text-gray-300 hover:text-gold-400 transition-colors"
+                >
+                  WhatsApp quick inquiry
+                </LeadLink>
               </li>
             </ul>
           </div>

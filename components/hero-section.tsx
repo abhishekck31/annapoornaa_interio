@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import LeadLink from "@/components/lead-link";
 
 const slides = [
   {
@@ -133,11 +133,15 @@ const HeroSection = () => {
                   transition={{ duration: 0.8, delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  <Link href="/contact">
+                  <LeadLink
+                    href="/contact"
+                    eventName="lead_consultation_booking"
+                    eventParams={{ sourcePage: "/", placement: "hero" }}
+                  >
                     <Button className="bg-gold-600 hover:bg-gold-700 text-navy-900 font-semibold px-8 py-6 rounded-md text-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-gold-500 hover-3d">
                       Get in Touch <Sparkles className="ml-2 h-5 w-5" />
                     </Button>
-                  </Link>
+                  </LeadLink>
                 </motion.div>
               </div>
             </div>

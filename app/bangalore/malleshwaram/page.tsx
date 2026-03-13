@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     description: `Looking for top interior designers in ${LOCALITY}, ${CITY}? ${COMPANY} provides luxury home interiors, modular kitchens, and turnkey construction services in ${LOCALITY}. Book a free consultation today!`,
     keywords: [`interior designers in ${LOCALITY}`, `best interior designers ${LOCALITY}`, `home interiors ${LOCALITY}`, `office interiors ${LOCALITY}`, `${LOCALITY} interior design company`],
     alternates: {
-        canonical: `https://www.annapoornaainterio.com/bangalore/${LOCALITY.toLowerCase().replace(/\s+/g, '-')}`,
+        canonical: `https://annapoornaainterio.com/bangalore/${LOCALITY.toLowerCase().replace(/\s+/g, '-')}`,
     },
 }
 

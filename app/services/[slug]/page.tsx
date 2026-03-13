@@ -1,226 +1,226 @@
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import { services } from "@/data/services-data";
-import { Card, CardContent } from "@/components/ui/card";
-import { CollapsibleSection } from "@/components/collapsible-section";
+import { Metadata } from "next";
 import Image from "next/image";
-import {
-    Home,
-    Briefcase,
-    Building,
-    Paintbrush,
-    ClipboardList,
-    PencilRuler,
-    Hammer,
-    PaintBucket,
-    ChevronRight,
-    Sparkles
-} from "lucide-react";
-import Link from 'next/link';
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { CheckCircle2, ChevronRight, MapPin, Phone, Sparkles } from "lucide-react";
 
-// Icon mapping component
-const IconComponent = ({ name, className }: { name: string; className?: string }) => {
-    const icons: Record<string, React.ReactNode> = {
-        home: <Home className={className} />,
-        briefcase: <Briefcase className={className} />,
-        building: <Building className={className} />,
-        brush: <Paintbrush className={className} />, // fallback brush
-        paint: <PaintBucket className={className} />,
-        "clipboard-list": <ClipboardList className={className} />,
-        "pencil-ruler": <PencilRuler className={className} />,
-        hammer: <Hammer className={className} />,
-    };
-    return icons[name] || <Sparkles className={className} />;
-};
+import StickyMobileCta from "@/components/sticky-mobile-cta";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import LeadLink from "@/components/lead-link";
+import { services } from "@/data/services-data";
+import { buildMetadata } from "@/lib/seo";
+import { siteConfig, whatsappUrl } from "@/lib/site-config";
 
 interface Props {
-    params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
-    const service = services.find((s) => s.slug === slug);
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
 
-    if (!service) {
-        return {
-            title: 'Service Not Found',
-        };
-    }
+  if (!service) {
+    return buildMetadata({
+      title: "Service Not Found | Annapoornaa Interio",
+      description: "The requested service page could not be found.",
+      path: "/services",
+      noIndex: true,
+    });
+  }
 
-    return {
-        title: service.seoTitle,
-        description: service.seoDescription,
-        keywords: service.keywords,
-        alternates: {
-            canonical: `https://annapoornaainterio.com/services/${service.slug}`,
-        },
-        openGraph: {
-            title: service.seoTitle,
-            description: service.seoDescription,
-            url: `https://annapoornaainterio.com/services/${service.slug}`,
-            images: [
-                {
-                    url: service.image,
-                    width: 1200,
-                    height: 630,
-                    alt: service.title,
-                },
-            ],
-        },
-    };
+  return buildMetadata({
+    title: service.seoTitle,
+    description: service.seoDescription,
+    path: `/services/${service.slug}`,
+    keywords: service.keywords,
+    image: service.image,
+  });
 }
 
 export async function generateStaticParams() {
-    return services.map((service) => ({
-        slug: service.slug,
-    }));
+  return services.map((service) => ({ slug: service.slug }));
 }
 
 export default async function ServicePage({ params }: Props) {
-    const { slug } = await params;
-    const service = services.find((s) => s.slug === slug);
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
 
-    if (!service) {
-        notFound();
-    }
+  if (!service) {
+    notFound();
+  }
 
-    return (
-        <main className="min-h-screen bg-white">
-            <Navbar />
+  return (
+    <>
+      <main className="min-h-screen bg-white pb-20 md:pb-0">
+        <Navbar />
 
-            {/* Hero Section */}
-            <section className="relative pt-32 pb-20 overflow-hidden bg-navy-900 border-b border-navy-800">
-                <div className="absolute inset-0 z-0 opacity-20">
-                    <Image
-                        src={service.image}
-                        alt={service.title}
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                    <div className="absolute inset-0 bg-navy-900/80"></div>
+        <section className="relative overflow-hidden bg-navy-900 pt-32 pb-20 text-white">
+          <div className="absolute inset-0 opacity-20">
+            <Image src={service.image} alt={service.title} fill className="object-cover" priority />
+            <div className="absolute inset-0 bg-navy-900/80" />
+          </div>
+
+          <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-8 px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center gap-2 text-sm text-gold-400">
+              <Link href="/services" className="hover:text-gold-300">
+                Services
+              </Link>
+              <ChevronRight className="h-4 w-4" />
+              <span>{service.title}</span>
+            </div>
+            <div className="max-w-3xl">
+              <h1 className="mb-6 text-4xl font-bold md:text-6xl">{service.title}</h1>
+              <p className="mb-8 text-lg text-gray-200 md:text-xl">{service.description}</p>
+              <div className="flex flex-wrap gap-4">
+                <LeadLink
+                  href="/contact"
+                  eventName="lead_quote_request"
+                  eventParams={{ sourcePage: `/services/${service.slug}`, service: service.slug }}
+                  className="rounded-xl bg-gold-500 px-6 py-4 font-semibold text-navy-900 shadow-lg transition hover:bg-gold-400"
+                >
+                  Request a Quote
+                </LeadLink>
+                <LeadLink
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  eventName="lead_whatsapp_click"
+                  eventParams={{ sourcePage: `/services/${service.slug}`, service: service.slug }}
+                  className="rounded-xl border border-white/30 px-6 py-4 font-semibold text-white transition hover:bg-white/10"
+                >
+                  WhatsApp Consultation
+                </LeadLink>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16">
+          <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.4fr_0.8fr] lg:px-8">
+            <div className="space-y-10">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {service.features.map((feature) => (
+                  <div
+                    key={feature}
+                    className="flex items-start gap-3 rounded-2xl border border-gray-100 bg-gray-50 p-5"
+                  >
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-gold-500" />
+                    <span className="text-sm font-medium text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-2xl font-bold text-navy-900">Pricing and planning</h2>
+                <p className="mb-4 text-gray-700">{service.pricingGuide}</p>
+                <p className="text-gray-700">{service.timeline}</p>
+              </div>
+
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-2xl font-bold text-navy-900">Why clients choose this service</h2>
+                <ul className="space-y-3">
+                  {service.proofPoints.map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-gray-700">
+                      <Sparkles className="mt-0.5 h-5 w-5 text-gold-500" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h2 className="mb-4 text-2xl font-bold text-navy-900">Areas we serve</h2>
+                <div className="flex flex-wrap gap-3">
+                  {service.serviceAreas.map((location) => (
+                    <span
+                      key={location}
+                      className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700"
+                    >
+                      {location}
+                    </span>
+                  ))}
                 </div>
+              </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="p-4 rounded-2xl bg-gold-500/10 border border-gold-500/20 backdrop-blur-sm">
-                            <IconComponent name={service.iconName} className="h-16 w-16 text-gold-500" />
-                        </div>
-                        <div>
-                            <div className="flex items-center gap-2 text-gold-500 font-medium mb-4">
-                                <Link href="/services" className="hover:text-gold-400">Services</Link>
-                                <ChevronRight className="h-4 w-4" />
-                                <span>{service.title}</span>
-                            </div>
-                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                                {service.title}
-                            </h1>
-                            <p className="text-xl text-gray-300 max-w-2xl">
-                                {service.description}
-                            </p>
-                        </div>
+              <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-sm">
+                <h2 className="mb-6 text-2xl font-bold text-navy-900">Frequently asked questions</h2>
+                <div className="space-y-6">
+                  {service.faqs.map((faq) => (
+                    <div key={faq.question}>
+                      <h3 className="mb-2 text-lg font-semibold text-navy-900">{faq.question}</h3>
+                      <p className="text-gray-700">{faq.answer}</p>
                     </div>
+                  ))}
                 </div>
-            </section>
+              </div>
+            </div>
 
-            {/* Main Content */}
-            <section className="py-20 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <aside className="space-y-8">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-xl">
+                <Image
+                  src={service.image}
+                  alt={`${service.title} in Bangalore`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 35vw"
+                />
+              </div>
 
-                        {/* Left Column: Image and Features */}
-                        <div className="space-y-12">
-                            <Card className="overflow-hidden shadow-2xl rounded-2xl border-none">
-                                <CardContent className="p-0 relative aspect-[4/3]">
-                                    <Image
-                                        src={service.image}
-                                        alt={`${service.title} - Annapoornaa Interio`}
-                                        fill
-                                        className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                    />
-                                </CardContent>
-                            </Card>
-
-                            <div>
-                                <h3 className="text-2xl font-bold text-navy-900 mb-6 flex items-center gap-2">
-                                    <Sparkles className="h-6 w-6 text-gold-500" />
-                                    Key Features
-                                </h3>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    {service.features.map((feature, idx) => (
-                                        <div key={idx} className="flex items-start gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-gold-300 transition-colors">
-                                            <div className="h-6 w-6 rounded-full bg-gold-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                                <div className="h-2 w-2 rounded-full bg-gold-500"></div>
-                                            </div>
-                                            <span className="text-gray-700 font-medium">{feature}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Right Column: Detailed Sections */}
-                        <div className="space-y-10">
-                            {service.pmcSections ? (
-                                <div className="space-y-6">
-                                    <h3 className="text-2xl font-bold text-navy-900 mb-2">Process & Management</h3>
-                                    <div className="space-y-4">
-                                        {service.pmcSections.map((section, idx) => (
-                                            <CollapsibleSection
-                                                key={idx}
-                                                title={section.title}
-                                                emoji={section.emoji}
-                                                items={section.items}
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            ) : (
-                                <div className="space-y-8">
-                                    {service.designSections?.map((section, idx) => (
-                                        <div key={idx} className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                                            <div className="flex items-center gap-4 mb-8">
-                                                <span className="text-4xl">{section.emoji}</span>
-                                                <h3 className="text-2xl font-bold text-navy-900">{section.title}</h3>
-                                            </div>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
-                                                {section.items.map((item, itemIdx) => (
-                                                    <li key={itemIdx} className="flex items-center gap-3">
-                                                        <span className="text-gold-500 flex-shrink-0">•</span>
-                                                        <span className="text-navy-900">{item}</span>
-                                                    </li>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-
-                            {/* CTA Section */}
-                            <Card className="bg-navy-900 text-white overflow-hidden rounded-2xl border-none">
-                                <CardContent className="p-8 relative">
-                                    <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500 opacity-10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
-                                    <h3 className="text-2xl font-bold mb-4">Interested in {service.title}?</h3>
-                                    <p className="text-gray-400 mb-8">
-                                        Let's discuss how we can bring your vision to life. Our experts are ready to assist you.
-                                    </p>
-                                    <Link href="/contact">
-                                        <button className="w-full bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold py-4 rounded-xl transition-all shadow-lg shadow-gold-500/20 active:scale-[0.98]">
-                                            Get a Free Quote
-                                        </button>
-                                    </Link>
-                                </CardContent>
-                            </Card>
-                        </div>
-
-                    </div>
+              <div className="rounded-3xl bg-navy-900 p-8 text-white shadow-xl">
+                <h2 className="mb-4 text-2xl font-bold">Talk to our team</h2>
+                <p className="mb-6 text-gray-300">
+                  Need help with pricing, scope, materials, or timelines for {service.title.toLowerCase()}?
+                </p>
+                <div className="space-y-4">
+                  <a
+                    href={siteConfig.primaryPhoneHref}
+                    className="flex items-center gap-3 rounded-2xl bg-white/10 px-4 py-4 text-sm font-medium hover:bg-white/15"
+                  >
+                    <Phone className="h-4 w-4 text-gold-400" />
+                    {siteConfig.phones[0]}
+                  </a>
+                  <LeadLink
+                    href={whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    eventName="lead_consultation_booking"
+                    eventParams={{ sourcePage: `/services/${service.slug}`, service: service.slug }}
+                    className="block rounded-2xl bg-gold-500 px-4 py-4 text-center font-semibold text-navy-900 transition hover:bg-gold-400"
+                  >
+                    Book a WhatsApp Consultation
+                  </LeadLink>
+                  <LeadLink
+                    href="/contact"
+                    eventName="lead_quote_request"
+                    eventParams={{ sourcePage: `/services/${service.slug}`, service: service.slug }}
+                    className="block rounded-2xl border border-white/20 px-4 py-4 text-center font-semibold text-white transition hover:bg-white/10"
+                  >
+                    Request a Detailed Quote
+                  </LeadLink>
                 </div>
-            </section>
+              </div>
 
-            <Footer />
-        </main>
-    );
+              <div className="rounded-3xl border border-gray-100 bg-gray-50 p-8">
+                <h2 className="mb-4 text-xl font-bold text-navy-900">Service coverage</h2>
+                <div className="space-y-4 text-sm text-gray-700">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="mt-0.5 h-4 w-4 text-gold-500" />
+                    <span>Focused on Yelahanka and major Bangalore neighborhoods with on-site coordination support.</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Sparkles className="mt-0.5 h-4 w-4 text-gold-500" />
+                    <span>Suitable for both new projects and scope-driven upgrades where execution quality matters.</span>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <Footer />
+      </main>
+      <StickyMobileCta sourcePage={`/services/${service.slug}`} service={service.slug} />
+    </>
+  );
 }

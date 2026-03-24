@@ -31,7 +31,7 @@ export default function BlogListingPage() {
             Knowledge Base
           </span>
           <h1 className="mb-6 text-5xl font-bold md:text-7xl">
-            Bangalore SEO-Driven <span className="text-gold-500">Project Guides</span>
+            Bangalore <span className="text-gold-500">Project Guides</span>
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-gray-300">
             Content built around the real questions clients ask before starting interior, renovation, office, and construction work in Bangalore.

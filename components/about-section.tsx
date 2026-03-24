@@ -18,7 +18,7 @@ const AboutSection = () => {
   <div className="flex flex-col items-center mb-8">
     <OptimizedImage
       src="/ammanavaru.png"
-      alt="Sri Annapoorneshwari Ammanavaru - Best Interior Company Yelahanka Bangalore"
+      alt="Sri Annapoorneshwari Ammanavaru - Annapoornaa Interio Yelahanka Bangalore"
       width={350}
       height={350}
       className="rounded-xl shadow-lg"
@@ -66,11 +66,11 @@ const AboutSection = () => {
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-6 heading-glow-scroll">
-              Yelahanka's <span className="text-gold-600">Best Interior Company & Construction Experts</span>
+              Yelahanka's <span className="text-gold-600">Interior Design & Construction Experts</span>
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mb-6 rounded-full"></div>
             <p className="text-lg text-gray-700 mb-6 text-glow-scroll">
-              Looking for the best interior company near me in Yelahanka? Annapoorneshwari Constructions Interiors Private Limited is a premier interior design and construction company dedicated to transforming spaces across Bangalore. Serving Yelahanka, Whitefield, HSR Layout, JP Nagar, and Koramangala for over 10 years, we've established ourselves as the trusted name for quality craftsmanship, innovative design solutions, and reliable construction services.
+              Annapoorneshwari Constructions Interiors Private Limited is an interior design and construction company serving Yelahanka, Whitefield, HSR Layout, JP Nagar, Koramangala, and other Bangalore neighborhoods. For over 10 years, we have delivered quality craftsmanship, practical design planning, and reliable project execution.
             </p>
 
             <div className="space-y-4 mb-8">

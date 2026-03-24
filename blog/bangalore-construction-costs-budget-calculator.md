@@ -493,7 +493,7 @@ PMC oversees construction, ensures quality, prevents overruns.
 
 ---
 
-## Why Hire a Construction Company Near Me in Bangalore
+## Why Hire a Construction Company in Bangalore
 
 If you're looking to build in Bangalore, professional contractors matter.
 
@@ -563,7 +563,7 @@ Every project is unique. Your villa in Yelahanka won't cost exactly like your ne
 ## **👉 GET YOUR CONSTRUCTION COST ESTIMATE**
 
 ### **Contact Annapoornaa Interio**
-**A-Class Construction Company Near You in Bangalore**
+**A-Class Construction Company in Bangalore**
 
 📞 **Call Now**: [+91 99000 94942](tel:+919900094942) | [+91 80731 41413](tel:+918073141413)
 

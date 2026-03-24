@@ -1,4 +1,4 @@
-# How to Find the Best Construction Company Near Me in Bangalore: Complete Buyer's Guide
+# How to Find the Best Construction Company in Bangalore: Complete Buyer's Guide
 
 ## Stop Hiring the Wrong Contractor. Here's Exactly What You Need to Know
 
@@ -127,7 +127,7 @@ Construction is the second-biggest investment most people make (after buying lan
 
 ---
 
-## How to Find the Best Construction Company Near You
+## How to Find the Best Construction Company in Bangalore
 
 ### Step 1: Define Your Project Scope
 
@@ -153,7 +153,7 @@ Construction is the second-biggest investment most people make (after buying lan
 **Source options:**
 
 #### A. Google Search
-- Search: "A-Class construction contractor near me [your area]"
+- Search: "A-Class construction contractor in Bangalore [your area]"
 - Check Google reviews (4.5+ rating is good)
 - Look at photos of completed projects
 - Read review comments (watch for patterns)

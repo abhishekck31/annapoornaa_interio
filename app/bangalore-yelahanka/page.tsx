@@ -6,28 +6,36 @@ import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paint
 import Link from "next/link"
 import type { Metadata } from "next"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = {
-  title: "Best Interior Company Near Me Yelahanka | Construction Company Bangalore",
-  description:
-    "Yelahanka's #1 interior design & construction company near you. Serving all Bangalore with home interiors, modular kitchens, office design & building construction. Free consultation!",
-  keywords:
-    "best interior company near me, interior design near me, construction company near me, Yelahanka best interior, interior design Yelahanka, construction Yelahanka, home interior near me, office interior Yelahanka, modular kitchen Bangalore",
-  alternates: {
-    canonical: `https://annapoornaainterio.com/bangalore-yelahanka`,
-  },
+  ...buildMetadata({
+    title: "Interior Designers in Yelahanka, Bangalore | Annapoornaa Interio",
+    description:
+      "Annapoornaa Interio offers home interiors, office interiors, modular kitchens, renovation, and construction services in Yelahanka and across Bangalore.",
+    path: "/bangalore-yelahanka",
+    keywords: [
+      "interior designers Yelahanka",
+      "home interior designers Yelahanka",
+      "office interior designers Yelahanka",
+      "construction company Yelahanka",
+      "renovation services Yelahanka",
+      "modular kitchen Yelahanka",
+      "interior company Bangalore",
+    ],
+  }),
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 }
 
 const BangaloreYelahankaPage = () => {
   const services = [
     {
-      title: "Interior Design Near Me - Yelahanka",
+      title: "Home Interior Designers in Yelahanka",
       icon: <Home className="h-10 w-10 text-gold-500" />,
       description:
-        "Best interior design near you in Yelahanka. Transform your home with expert designers serving Bangalore's top neighborhoods.",
+        "Custom home interior design for apartments and villas in Yelahanka, planned for function, storage, and long-term durability.",
       link: "/services#home-interior",
     },
     {
@@ -38,10 +46,10 @@ const BangaloreYelahankaPage = () => {
       link: "/services#office-interior",
     },
     {
-      title: "Construction Company Near Me Yelahanka",
+      title: "Construction Services in Yelahanka",
       icon: <Building className="h-10 w-10 text-gold-500" />,
       description:
-        "Trusted construction company near you. A-class contractors for residential & commercial projects in Yelahanka, Bangalore.",
+        "Trusted residential and commercial construction services in Yelahanka with structured planning, supervision, and quality execution.",
       link: "/services#construction",
     },
     {
@@ -137,13 +145,13 @@ const BangaloreYelahankaPage = () => {
             <div className="lg:w-1/2">
               <div className="flex items-center mb-4 text-gold-500 font-medium">
                 <MapPin className="h-6 w-6 mr-2" />
-                <span className="uppercase tracking-wider">Best Interior & Construction Company Near You</span>
+                <span className="uppercase tracking-wider">Interior Design and Construction in Yelahanka</span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 italic leading-tight">
-                Best <span className="text-gold-500">Interior Company Near Me</span> in Yelahanka
+                Leading <span className="text-gold-500">Interior Designers</span> in Yelahanka
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
-                Looking for the best interior company near you? Annapoornaa Interio is Yelahanka's premier interior design and construction company serving all Bangalore neighborhoods - Whitefield, HSR Layout, JP Nagar, Koramangala & beyond. Award-winning designs since 2010.
+                Annapoornaa Interio delivers end-to-end home interiors, office interiors, renovation, and construction services in Yelahanka and across Bangalore with a quality-first execution approach.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">

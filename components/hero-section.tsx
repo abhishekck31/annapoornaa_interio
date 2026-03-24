@@ -9,17 +9,17 @@ import LeadLink from "@/components/lead-link";
 const slides = [
   {
     image: "/UP-Hero3.png",
-    title: "Best Interior Company Near Me in Yelahanka",
-    description: "Premium interior design solutions for homes and offices across Bangalore",
+    title: "Interior Designers in Yelahanka, Bangalore",
+    description: "Premium home and office interior solutions with end-to-end execution across Bangalore",
   },
   {
     image: "/UP-Hero2.png",
-    title: "Trusted Construction Company Near You",
+    title: "Trusted Construction Company in Bangalore",
     description: "Expert A-class construction services in Yelahanka, Whitefield & all Bangalore",
   },
   {
     image: "/UP-Hero1.png",
-    title: "Interior Design Near Me - Yelahanka's #1",
+    title: "Home Interiors, Renovation and Modular Kitchens",
     description: "Transform your space with award-winning designs and quality craftsmanship",
   },
 ];

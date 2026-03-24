@@ -1,4 +1,4 @@
-# Best Interior Company Near Me: How to Choose Between Design Cafes, Livspace & Local Designers
+# Best Interior Company in Bangalore: How to Choose Between Design Cafes, Livspace and Local Designers
 
 ## Stop Googling. Here's Exactly How to Pick the Right Interior Design Company
 You've narrowed it down to 3-4 options. But which is BEST for your home? This guide shows you exactly how to evaluate and choose (spoiler: the "best" isn't always the most famous).

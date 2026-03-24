@@ -24,15 +24,18 @@ export const metadata: Metadata = {
   ...buildMetadata({
     title: "Interior Designers and Construction Company in Bangalore | Annapoornaa Interio",
     description:
-      "Interior design, renovation, construction, modular kitchens, and building products for homes and offices across Bangalore.",
+      "Interior design, modular kitchens, renovation, and construction services for homes and offices in Yelahanka, Whitefield, HSR Layout, and across Bangalore.",
     path: "/",
     keywords: [
       "interior designers Bangalore",
+      "interior designers Yelahanka",
+      "home interior designers Bangalore",
+      "office interior designers Bangalore",
       "construction company Bangalore",
       "home interiors Yelahanka",
+      "modular kitchen designers Bangalore",
       "renovation company Bangalore",
-      "office interiors Bangalore",
-      "modular kitchen Bangalore",
+      "turnkey interior design Bangalore",
     ],
   }),
   metadataBase: primarySiteUrl,

@@ -32,15 +32,18 @@ const ClientLogosSection = dynamic(() => import("@/components/client-logos-secti
 export const metadata: Metadata = buildMetadata({
   title: "Interior Designers and Construction Company in Bangalore | Annapoornaa Interio",
   description:
-    "Interior design, renovation, construction, modular kitchens, office interiors, and product solutions across Yelahanka and major Bangalore neighborhoods.",
+    "Interior design, renovation, construction, modular kitchens, and office interior services across Yelahanka, Whitefield, HSR Layout, and major Bangalore neighborhoods.",
   path: "/",
   keywords: [
     "interior designers Bangalore",
+    "interior designers Yelahanka",
+    "home interior designers Bangalore",
+    "office interior designers Bangalore",
     "construction company Bangalore",
     "home interiors Yelahanka",
-    "office interiors Bangalore",
     "renovation services Bangalore",
-    "modular kitchen Bangalore",
+    "modular kitchen designers Bangalore",
+    "turnkey interior design Bangalore",
   ],
 });
 

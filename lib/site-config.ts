@@ -5,7 +5,7 @@ export const siteConfig = {
   defaultOgImage: "/images/logo.png",
   description:
     "Interior design, renovation, construction, and building product solutions for homes and businesses across Bangalore.",
-  email: "info@annapoornainterio.com",
+  email: "info@ac-ipl.in",
   phones: ["+91 99000 94942", "+91 80731 41413"],
   primaryPhoneHref: "tel:+919900094942",
   secondaryPhoneHref: "tel:+918073141413",

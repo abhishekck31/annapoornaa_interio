@@ -366,7 +366,7 @@ Don't settle for "good enough". Build RIGHT from the start.
 📞 **Contact Annapoornaa Interio**
 - Call: +91 99000 94942 | +91 80731 41413
 - WhatsApp: Send site photos for instant feedback
-- Email: info@annapoornainterio.com
+- Email: info@ac-ipl.in
 - Visit: Yelahanka New Town | Free site consultation
 
 **What You Get:**

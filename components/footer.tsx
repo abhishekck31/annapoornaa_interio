@@ -145,8 +145,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center justify-center sm:justify-start group">
                 <Mail className="h-5 w-5 text-gold-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                <a href="mailto:info@annapoornainterio.com" className="text-gray-300 hover:text-gold-400 transition-colors" onClick={() => trackEvent("lead_email_click", { sourcePage: "footer" })}>
-                  info@annapoornainterio.com
+                <a href="mailto:info@ac-ipl.in" className="text-gray-300 hover:text-gold-400 transition-colors" onClick={() => trackEvent("lead_email_click", { sourcePage: "footer" })}>
+                  info@ac-ipl.in
                 </a>
               </li>
               <li className="flex items-center justify-center sm:justify-start group">

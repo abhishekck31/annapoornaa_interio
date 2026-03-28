@@ -344,7 +344,7 @@ Transform your Whitefield home or office with design that reflects YOUR style.
 
 💬 **WhatsApp**: Message us for instant response
 
-📧 **Email**: info@annapoornainterio.com
+📧 **Email**: info@ac-ipl.in
 
 🏢 **Visit Our Office**: Yelahanka New Town (We visit Whitefield locations regularly)
 

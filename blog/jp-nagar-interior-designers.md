@@ -282,7 +282,7 @@ Stop overthinking. Get expert guidance.
 📞 **Book FREE Home Consultation**
 - Call: +91 99000 94942 | +91 80731 41413
 - WhatsApp: Send photos of your space
-- Email: info@annapoornainterio.com
+- Email: info@ac-ipl.in
 - Visit: Yelahanka New Town (we visit JP Nagar regularly)
 
 **What You Get in Consultation:**

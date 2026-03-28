@@ -44,7 +44,7 @@ export default function ContactPage() {
             {/* CONTACT INFO CARD */}
             <div className="bg-navy-900 text-white p-8 rounded-xl shadow-xl flex flex-col justify-center">
               <h3 className="text-2xl font-bold mb-6 text-gold-400">Contact Information</h3>
-              <div className="space-y-6">
+                         <a href="mailto:info@ac-ipl.in" className="text-gray-300 hover:text-white">info@ac-ipl.in</a>
                 <div className="flex items-start gap-4">
                   <Mail className="h-6 w-6 text-gold-400 mt-1" />
                   <div>

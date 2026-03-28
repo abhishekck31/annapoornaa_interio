@@ -695,7 +695,7 @@ Stop wondering about costs. Get a clear, honest quote.
 
 💬 **WhatsApp**: Send budget details for quick quote
 
-📧 **Email**: info@annapoornainterio.com
+📧 **Email**: info@ac-ipl.in
 
 🏢 **Visit Us**: Yelahanka New Town (Free home consultation)
 

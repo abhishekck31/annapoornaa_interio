@@ -569,7 +569,7 @@ Every project is unique. Your villa in Yelahanka won't cost exactly like your ne
 
 💬 **WhatsApp**: Upload photos + details for quick estimate
 
-📧 **Email**: info@annapoornainterio.com
+📧 **Email**: info@ac-ipl.in
 
 🏢 **Visit Us**: Yelahanka New Town | Free site consultation
 

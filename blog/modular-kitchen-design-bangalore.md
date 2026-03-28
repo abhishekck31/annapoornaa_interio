@@ -573,7 +573,7 @@ Your beautiful, functional, space-saving modular kitchen is 3 consultations away
 
 💬 **WhatsApp**: Quick quote on WhatsApp
 
-📧 **Email**: info@annapoornainterio.com
+📧 **Email**: info@ac-ipl.in
 
 🏢 **Visit Our Office**: Yelahanka New Town | We visit your home for FREE consultation
 

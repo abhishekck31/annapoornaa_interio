@@ -246,7 +246,7 @@ From construction planning to interior design execution, Annapoornaa Interio han
 📞 **Schedule FREE Site Consultation & Estimation**
 - Call: +91 99000 94942 | +91 80731 41413
 - WhatsApp: Upload plot photos for instant feedback
-- Email: info@annapoornainterio.com
+- Email: info@ac-ipl.in
 - Visit: Yelahanka New Town (we visit HSR Layout regularly)
 
 **Why Choose Us:**

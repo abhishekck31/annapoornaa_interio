@@ -175,7 +175,7 @@ Book consultations with 3 companies (including us). Let's see who truly understa
 📞 **Schedule FREE Design Consultation**
 - Call: +91 99000 94942 | +91 80731 41413
 - WhatsApp: Upload photos for instant feedback
-- Email: info@annapoornainterio.com
+- Email: info@ac-ipl.in
 - Visit: Yelahanka New Town (we visit your home for free)
 
 **Special Offer:** First 5 consultations this month get a free ₹25K furniture placement plan (worth the consultation fee alone).

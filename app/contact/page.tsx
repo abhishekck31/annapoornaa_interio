@@ -82,7 +82,6 @@ export default function ContactPage() {
               referrerPolicy="no-referrer-when-downgrade"
               title="Annapoorneshwari Constructions Interiors Location"
             ></iframe>
-          </div>
         </div>
       </section>
       <Footer />

@@ -44,14 +44,13 @@ export default function ContactPage() {
             {/* CONTACT INFO CARD */}
             <div className="bg-navy-900 text-white p-8 rounded-xl shadow-xl flex flex-col justify-center">
               <h3 className="text-2xl font-bold mb-6 text-gold-400">Contact Information</h3>
-                         <a href="mailto:info@ac-ipl.in" className="text-gray-300 hover:text-white">info@ac-ipl.in</a>
-                <div className="flex items-start gap-4">
-                  <Mail className="h-6 w-6 text-gold-400 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gold-300 mb-1">Email Us</h4>
-                    <a href="mailto:info@annapoornainterio.com" className="text-gray-300 hover:text-white">info@annapoornainterio.com</a>
-                  </div>
+              <div className="flex items-start gap-4">
+                <Mail className="h-6 w-6 text-gold-400 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gold-300 mb-1">Email Us</h4>
+                  <a href="mailto:info@ac-ipl.in" className="text-gray-300 hover:text-white">info@ac-ipl.in</a>
                 </div>
+              </div>
                 <div className="flex items-start gap-4">
                   <Phone className="h-6 w-6 text-gold-400 mt-1" />
                   <div>

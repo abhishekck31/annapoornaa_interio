@@ -17,6 +17,10 @@ export const metadata: Metadata = buildMetadata({
     "construction blog Bangalore",
     "renovation tips Bangalore",
     "modular kitchen guide Bangalore",
+    "home interiors Bangalore",
+    "office renovation Bangalore",
+    "interior cost guide Bangalore",
+    "turnkey construction Bangalore",
   ],
 });
 

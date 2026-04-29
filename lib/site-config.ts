@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "Annapoornaa Interio",
+  name: "ACIPL",
   legalName: "Annapoorneshwari Constructions Interiors Private Limited",
-  domain: "https://annapoornaainterio.com",
+  domain: "https://www.ac-ipl.in",
   defaultOgImage: "/images/logo.png",
   description:
     "Interior design, renovation, construction, and building product solutions for homes and businesses across Bangalore.",

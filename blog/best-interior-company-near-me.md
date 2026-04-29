@@ -151,7 +151,7 @@ Don't just trust Google reviews. Call 2-3 previous clients:
 | **Value for Money** | Good if budget allows | Best for mid-range | Best if designer matched |
 | **Risk Level** | Low | Medium | Higher |
 
-## The Annapoornaa Interio Advantage
+## The ACIPL Advantage
 Why we're different:
 
 ✅ **Transparent Pricing:** Every item listed, no hidden charges

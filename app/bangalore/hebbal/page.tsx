@@ -11,14 +11,14 @@ import CTASection from '@/components/cta-section';
 
 const LOCALITY = 'Hebbal';
 const CITY = 'Bangalore';
-const COMPANY = 'Annapoornaa Interio';
+const COMPANY = 'ACIPL';
 
 export const metadata: Metadata = {
     title: `Best Interior Designers in ${LOCALITY}, ${CITY} | ${COMPANY}`,
     description: `Looking for top interior designers in ${LOCALITY}, ${CITY}? ${COMPANY} provides luxury home interiors, modular kitchens, and turnkey construction services in ${LOCALITY}. Book a free consultation today!`,
     keywords: [`interior designers in ${LOCALITY}`, `best interior designers ${LOCALITY}`, `home interiors ${LOCALITY}`, `office interiors ${LOCALITY}`, `${LOCALITY} interior design company`],
     alternates: {
-        canonical: `https://annapoornaainterio.com/bangalore/${LOCALITY.toLowerCase().replace(/\s+/g, '-')}`,
+        canonical: `https://www.ac-ipl.in/bangalore/${LOCALITY.toLowerCase().replace(/\s+/g, '-')}`,
     },
 }
 

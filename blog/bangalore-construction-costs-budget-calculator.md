@@ -497,7 +497,7 @@ PMC oversees construction, ensures quality, prevents overruns.
 
 If you're looking to build in Bangalore, professional contractors matter.
 
-### **Annapoornaa Interio's Construction Advantage**
+### **ACIPL's Construction Advantage**
 
 ### ✓ **Transparent Per Sq. Ft. Pricing**
 - We quote ₹2,200-2,800/sq. ft. (mid-range quality)
@@ -562,7 +562,7 @@ Every project is unique. Your villa in Yelahanka won't cost exactly like your ne
 
 ## **👉 GET YOUR CONSTRUCTION COST ESTIMATE**
 
-### **Contact Annapoornaa Interio**
+### **Contact ACIPL**
 **A-Class Construction Company in Bangalore**
 
 📞 **Call Now**: [+91 99000 94942](tel:+919900094942) | [+91 80731 41413](tel:+918073141413)
@@ -575,7 +575,7 @@ Every project is unique. Your villa in Yelahanka won't cost exactly like your ne
 
 ---
 
-### **Why Choose Annapoornaa Interio?**
+### **Why Choose ACIPL?**
 
 ⭐ **500+ Completed Projects** across Bangalore (villa + apartment)
 ⭐ **Transparent Pricing** (no surprises, detailed breakdown)
@@ -588,10 +588,10 @@ Every project is unique. Your villa in Yelahanka won't cost exactly like your ne
 
 ## **Other Construction Resources**
 
-- [BBMP Approval Process Guide](https://annapoornaainterio.com/blog)
-- [How to Find Best Construction Company Bangalore](https://annapoornaainterio.com/blog)
-- [Vastu-Compliant Home Design](https://annapoornaainterio.com/blog)
-- [View Completed Construction Projects](https://annapoornaainterio.com/gallery)
+- [BBMP Approval Process Guide](https://www.ac-ipl.in/blog)
+- [How to Find Best Construction Company Bangalore](https://www.ac-ipl.in/blog)
+- [Vastu-Compliant Home Design](https://www.ac-ipl.in/blog)
+- [View Completed Construction Projects](https://www.ac-ipl.in/gallery)
 
 ---
 
@@ -609,4 +609,4 @@ With transparent pricing, quality work, and honest contractors—you'll know exa
 
 *Keywords: Construction cost Bangalore, cost per sq ft, villa construction cost, apartment construction, building budget, contractor Bangalore*
 
-*Related: [How to Find Best Construction Company](https://annapoornaainterio.com/blog), [BBMP Process Guide](https://annapoornaainterio.com/blog), [Project Management Services](https://annapoornaainterio.com/blog)*
+*Related: [How to Find Best Construction Company](https://www.ac-ipl.in/blog), [BBMP Process Guide](https://www.ac-ipl.in/blog), [Project Management Services](https://www.ac-ipl.in/blog)*

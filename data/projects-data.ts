@@ -32,7 +32,7 @@ export const projects: Project[] = [
       "/asmaranew/asmaraoffice2.jpg",
       "/asmaranew/asmaraoffice3.jpg",
       "/asmaranew/asmaraoffice4.jpg",
-      
+
     ],
     mainImage: "/Asmara-project/Asmara1.jpg",
     video: "/asmaranew/WhatsApp Video 2025-04-16 at 17.01.20_c52476c6.mp4",
@@ -50,7 +50,7 @@ export const projects: Project[] = [
       "A state-of-the-art commercial interior project that combines modern aesthetics with professional functionality. The design focuses on creating an impressive and productive workspace.",
     clientName: "Black BX",
     clientReview:
-      "The team at Annapoornaa Interio understood our vision perfectly and delivered a space that exceeds our expectations. The modern design elements and attention to detail are outstanding.",
+      "The team at ACIPL understood our vision perfectly and delivered a space that exceeds our expectations. The modern design elements and attention to detail are outstanding.",
     clientRating: 5,
     images: [
       "/Blackbx-project/Blackbox1.jpg",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "A comprehensive Office Interior design that combines functionality with modern architectural elements. The project showcases innovative space utilization and contemporary design.",
     clientName: "Emudhra",
     clientReview:
-      "Annapoornaa Interio has created a remarkable commercial space that perfectly balances functionality and design. Their attention to detail and innovative solutions have made this project a success.",
+      "ACIPL has created a remarkable commercial space that perfectly balances functionality and design. Their attention to detail and innovative solutions have made this project a success.",
     clientRating: 5,
     images: [
       "/images/emudra/emudra1.jpg",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
       "An innovative project that showcases modern architecture and sustainable design principles. The project emphasizes community living and environmental consciousness.",
     clientName: "Mr.Satish,Manager - SMEC",
     clientReview:
-      "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged Annapoornaa Interio for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
+      "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged ACIPL for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
     clientRating: 5,
     images: [
       "/images/surbana/surbana1.jpg",
@@ -164,7 +164,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: "Golden Harness",  
+    title: "Golden Harness",
     location: "Bangalore",
     category: "Office Interior",
     description:
@@ -203,7 +203,7 @@ export const projects: Project[] = [
       "A luxurious resort interior design project nestled in the scenic hills of Ooty. The design harmoniously blends with the natural surroundings while providing modern comforts and amenities to create a memorable stay experience for guests.",
     clientName: "Ooty Resort",
     clientReview:
-      "Annapoornaa Interio has created a stunning resort environment that perfectly captures the essence of Ooty's natural beauty. Their thoughtful design has enhanced the guest experience and received numerous compliments from our visitors.",
+      "ACIPL has created a stunning resort environment that perfectly captures the essence of Ooty's natural beauty. Their thoughtful design has enhanced the guest experience and received numerous compliments from our visitors.",
     clientRating: 5,
     images: [
       "/ootyresort/mainres.jpg",

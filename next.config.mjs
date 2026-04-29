@@ -125,7 +125,7 @@ const nextConfig = {
   },
   // Make environment variables available to the browser
   env: {
-    NEXT_PUBLIC_SITE_URL: 'https://annapoornaainterio.com'
+    NEXT_PUBLIC_SITE_URL: 'https://www.ac-ipl.in'
   }
 };
 

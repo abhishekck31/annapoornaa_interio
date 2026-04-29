@@ -23,7 +23,7 @@ export default function StructuredData() {
     schemas.push(
       buildFaqSchema([
         {
-          question: "What services does Annapoornaa Interio offer in Bangalore?",
+          question: "What services does ACIPL offer in Bangalore?",
           answer:
             "We offer home interiors, office interiors, construction, renovation, project management consultancy, architectural design, and selected building products across Bangalore.",
         },

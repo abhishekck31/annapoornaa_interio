@@ -307,7 +307,7 @@ Don't compare ₹1,500/sq.ft. vs ₹2,000/sq.ft. directly. Compare scope:
 
 ---
 
-## Why Annapoornaa Interio: Bangalore's Trusted Constructor
+## Why ACIPL: Bangalore's Trusted Constructor
 
 ### Our Credentials
 ✅ **A-Class BBMP License** - Full legal authority for residential projects
@@ -363,7 +363,7 @@ Don't compare ₹1,500/sq.ft. vs ₹2,000/sq.ft. directly. Compare scope:
 
 Don't settle for "good enough". Build RIGHT from the start.
 
-📞 **Contact Annapoornaa Interio**
+📞 **Contact ACIPL**
 - Call: +91 99000 94942 | +91 80731 41413
 - WhatsApp: Send site photos for instant feedback
 - Email: info@ac-ipl.in

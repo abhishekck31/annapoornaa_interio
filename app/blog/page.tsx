@@ -8,7 +8,7 @@ import { blogPosts } from "@/data/blog-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Interior Design and Construction Blog Bangalore | Annapoornaa Interio",
+  title: "Interior Design and Construction Blog Bangalore | ACIPL",
   description:
     "Guides on interior costs, renovation planning, office fit-outs, and construction decisions for Bangalore homes and businesses.",
   path: "/blog",

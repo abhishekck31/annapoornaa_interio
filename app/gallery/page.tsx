@@ -4,7 +4,7 @@ import Footer from "@/components/footer"
 import GallerySection from "@/components/gallery-section"
 
 export const metadata: Metadata = {
-  title: 'Gallery | Interior Design Projects - Annapoornaa Interio Bangalore',
+  title: 'Gallery | Interior Design Projects - ACIPL Bangalore',
   description: 'View our interior design gallery showcasing completed projects in Bangalore. Home interiors, office spaces, construction work.',
 }
 

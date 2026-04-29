@@ -51,7 +51,7 @@ const ServicesSection = () => {
             </div>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gold-600 max-w-3xl mx-auto">
-              Complete interior design and construction services in Yelahanka, Whitefield, HSR Layout, and across Bangalore
+              Complete interior design and construction services across Bangalore
             </p>
           </div>
         </ScrollAnimation>
@@ -77,7 +77,7 @@ const ServicesSection = () => {
                     <div className="h-48 overflow-hidden relative">
                       <Image
                         src={service.image || "/placeholder.svg"}
-                        alt={`${service.title} service in Yelahanka and Bangalore by Annapoornaa Interio`}
+                        alt={`${service.title} service in Yelahanka and Bangalore by ACIPL`}
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
                         loading="lazy"

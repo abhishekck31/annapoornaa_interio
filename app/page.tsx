@@ -30,9 +30,9 @@ const ClientLogosSection = dynamic(() => import("@/components/client-logos-secti
 });
 
 export const metadata: Metadata = buildMetadata({
-  title: "Interior Designers and Construction Company in Bangalore | Annapoornaa Interio",
+  title: "Interior Designers and Construction Company in Bangalore | ACIPL",
   description:
-    "Interior design, renovation, construction, modular kitchens, and office interior services across Yelahanka, Whitefield, HSR Layout, and major Bangalore neighborhoods.",
+    "Interior design, renovation, construction, modular kitchens, and office interior services across Bangalore.",
   path: "/",
   keywords: [
     "interior designers Bangalore",

@@ -7,8 +7,8 @@ import Link from "next/link"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
 export const metadata: Metadata = {
-  title: 'About Us | Annapoornaa Interio - Premier Interior Designers Bangalore',
-  description: 'Learn about Annapoornaa Interio - premier interior design & construction company in Bangalore. Expert team, quality materials, timely completion.',
+  title: 'About Us | ACIPL - Premier Interior Designers Bangalore',
+  description: 'Learn about ACIPL - premier interior design & construction company in Bangalore. Expert team, quality materials, timely completion.',
 }
 
 const AboutPage = () => {

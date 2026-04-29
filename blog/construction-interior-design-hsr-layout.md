@@ -241,7 +241,7 @@ Look for someone with:
 
 ## Ready to Build Your Dream Home in HSR Layout?
 
-From construction planning to interior design execution, Annapoornaa Interio handles everything.
+From construction planning to interior design execution, ACIPL handles everything.
 
 📞 **Schedule FREE Site Consultation & Estimation**
 - Call: +91 99000 94942 | +91 80731 41413

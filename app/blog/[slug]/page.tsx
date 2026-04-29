@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return buildMetadata({
-      title: "Blog Post Not Found | Annapoornaa Interio",
+      title: "Blog Post Not Found | ACIPL",
       description: "The requested blog post could not be found.",
       path: "/blog",
       noIndex: true,

@@ -255,7 +255,7 @@ The highest-scoring designer who also "feels right" to work with.
 - Best for: Families, those loving classical aesthetics
 - Maintenance: Can look dated if overdone
 
-## Annapoornaa Interio: Your JP Nagar Design Partner
+## ACIPL: Your JP Nagar Design Partner
 
 ### Why JP Nagar Families Choose Us
 

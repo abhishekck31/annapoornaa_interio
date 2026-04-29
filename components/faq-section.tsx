@@ -7,9 +7,9 @@ import ScrollAnimation from "@/components/scroll-animation"
 
 const faqs = [
   {
-    question: "Is Annapoornaa Interio the best interior designer in Bangalore?",
+    question: "Is ACIPL the best interior designer in Bangalore?",
     answer:
-      "Annapoornaa Interio is a top-rated interior design and construction company in Bangalore with 4.9/5 stars. We specialize in:",
+      "ACIPL is a top-rated interior design and construction company in Bangalore with 4.9/5 stars. We specialize in:",
     bullets: [
       "End-to-end Turnkey Construction",
       "Premium Home Interiors (Villas & Apartments)",
@@ -63,7 +63,7 @@ const faqs = [
     ]
   },
   {
-    question: "Why choose Annapoornaa Interio over other designers?",
+    question: "Why choose ACIPL over other designers?",
     answer:
       "We are one of the few company in Bangalore offering both Civil Construction + Interiors under one roof.",
     bullets: [

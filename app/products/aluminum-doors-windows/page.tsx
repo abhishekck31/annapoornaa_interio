@@ -8,7 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'Modern Aluminum Doors & Windows Bangalore | Annapoornaa Interio',
+  title: 'Modern Aluminum Doors & Windows Bangalore | ACIPL',
   description: 'Durable and sleek aluminum windows and doors in Bangalore. Modern designs for residential and commercial buildings. Corrosion-resistant and stylish.',
   keywords: ['aluminum windows Bangalore', 'aluminum doors Bangalore', 'sliding aluminum doors', 'modern window designs', 'commercial aluminum windows'],
 }

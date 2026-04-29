@@ -9,13 +9,13 @@ import { Testimonial } from "@/types/testimonial"
 const testimonials: Testimonial[] = [
   {
     name: "Darhini B S",
-    testimonial: "I would like to extend my sincere appreciation for the outstanding interior work done by Annapoornaa Interio. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch.The craftsmanship, choice of materials, and attention to detail truly reflect a high standard of excellence. The space has been transformed beautifully, balancing aesthetics with functionality. The team’s dedication, timely delivery, and willingness to accommodate our preferences made the entire experience seamless and enjoyable.Thank you for your hard work and commitment to quality. I highly recommend Annapoornaa Interio to anyone looking for superior interior design and execution.",
+    testimonial: "I would like to extend my sincere appreciation for the outstanding interior work done by ACIPL. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch.The craftsmanship, choice of materials, and attention to detail truly reflect a high standard of excellence. The space has been transformed beautifully, balancing aesthetics with functionality. The team’s dedication, timely delivery, and willingness to accommodate our preferences made the entire experience seamless and enjoyable.Thank you for your hard work and commitment to quality. I highly recommend ACIPL to anyone looking for superior interior design and execution.",
     rating: 5,
     isGoogleReview: true
   },
   {
     name: "Satish Krishnan",
-    testimonial: "Good work done by Annapoornaa Interio. I got their reference from a known friends circle. My house was 15+ years old and there was good amount of renovation need to be done. Ragu and team did a fabulous job in understanding the issues, consulting design specialists and executing seamlessly. What we liked the most is the professional approach, constant communication with owners, taking efforts to execute as per plan and also suggesting measures for improvement. Overall delighted with their work and would recommend anyone who is planning for their new home design or renovation. Kudos to their entire team !",
+    testimonial: "Good work done by ACIPL. I got their reference from a known friends circle. My house was 15+ years old and there was good amount of renovation need to be done. Ragu and team did a fabulous job in understanding the issues, consulting design specialists and executing seamlessly. What we liked the most is the professional approach, constant communication with owners, taking efforts to execute as per plan and also suggesting measures for improvement. Overall delighted with their work and would recommend anyone who is planning for their new home design or renovation. Kudos to their entire team !",
     rating: 5,
     isGoogleReview: true
   },
@@ -27,13 +27,13 @@ const testimonials: Testimonial[] = [
   },
   {
     name: "Deepa Nagarajan",
-    testimonial: "I had a great experience with the team of Annapoornaa Interiors. They executed a wide range of works for us like UPVC windows, all doors including gates, HPL cladding for the exterior elevation, exterior false ceiling works, balcony railings, skylights, shower enclosures, wooden flooring, waterproofing etc Mr. Raghu the owner takes the effort to personally inspect the works regularly and do a quality check. Name the work and he got it done for us. His team of site supervisors also oversee the work. Special thanks to Thangavelu for being responsive. There is no compromise on quality. Highly appreciate and thank Annapoornaa Interiors for making our house a lovely home!",
+    testimonial: "I had a great experience with the team of ACIPLrs. They executed a wide range of works for us like UPVC windows, all doors including gates, HPL cladding for the exterior elevation, exterior false ceiling works, balcony railings, skylights, shower enclosures, wooden flooring, waterproofing etc Mr. Raghu the owner takes the effort to personally inspect the works regularly and do a quality check. Name the work and he got it done for us. His team of site supervisors also oversee the work. Special thanks to Thangavelu for being responsive. There is no compromise on quality. Highly appreciate and thank ACIPLrs for making our house a lovely home!",
     rating: 5,
     isGoogleReview: true
   },
   {
     name: "Satish Kumar",
-    testimonial: "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged Annapoornaa Interio for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
+    testimonial: "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged ACIPL for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
     rating: 5,
     isGoogleReview: true
   }
@@ -84,11 +84,10 @@ const TestimonialsSection = () => {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-6 w-6 ${
-                        i < testimonials[currentIndex].rating
+                      className={`h-6 w-6 ${i < testimonials[currentIndex].rating
                           ? "text-gold-500 fill-gold-500"
                           : "text-gray-300"
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -104,10 +103,10 @@ const TestimonialsSection = () => {
                   </h4>
                   {testimonials[currentIndex].isGoogleReview && (
                     <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
-                        <img 
-                          src="/google-icon.svg" 
-                          alt="Interior and Construction services in Yelahanka, Bangalore" 
-                        className="h-4 w-4" 
+                      <img
+                        src="/google-icon.svg"
+                        alt="Interior and Construction services in Yelahanka, Bangalore"
+                        className="h-4 w-4"
                         loading="lazy"
                       />
                       <span className="text-sm text-gray-600">Verified Review</span>
@@ -140,11 +139,10 @@ const TestimonialsSection = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? "w-8 bg-gold-500" 
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                    ? "w-8 bg-gold-500"
                     : "w-2 bg-gray-300 hover:bg-gray-400"
-                }`}
+                  }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}

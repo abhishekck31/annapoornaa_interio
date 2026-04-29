@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return buildMetadata({
-      title: "Service Not Found | Annapoornaa Interio",
+      title: "Service Not Found | ACIPL",
       description: "The requested service page could not be found.",
       path: "/services",
       noIndex: true,

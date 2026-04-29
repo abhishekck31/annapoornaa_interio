@@ -107,9 +107,9 @@ const ProjectsSection = () => {
                         <p className="text-gray-600 text-sm sm:text-base break-words whitespace-normal mt-1">
                           {project.description}
                         </p>
-                        <Link 
-                          href="/featured-projects" 
-                          scroll={true} 
+                        <Link
+                          href="/featured-projects"
+                          scroll={true}
                           className="text-gold-600 font-medium flex items-center text-sm sm:text-base mt-2"
                         >
                           View Details <ArrowRight className="ml-1 h-4 w-4 sm:h-4 sm:w-4" />
@@ -128,7 +128,7 @@ const ProjectsSection = () => {
                 <Sparkles className="mr-2 text-gold-500" />Our Esteemed Clients
               </h4>
               <p className="text-gray-700 mb-4 text-sm sm:text-base">
-                Annapoornaa Interio has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
+                ACIPL has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
               </p>
               <div className="mb-4">
                 <h5 className="font-semibold text-navy-800 mb-2 text-base">Notable Clients:</h5>
@@ -160,12 +160,12 @@ const ProjectsSection = () => {
       </div>
 
       <div className="mt-12 flex flex-col gap-2 items-center sm:flex-row sm:gap-4 sm:justify-center">
-  <Link href="/featured-projects" className="w-full sm:w-auto">
-    <Button className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
-      View All Projects
-    </Button>
-  </Link>
-</div>
+        <Link href="/featured-projects" className="w-full sm:w-auto">
+          <Button className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+            View All Projects
+          </Button>
+        </Link>
+      </div>
     </section>
   );
 }

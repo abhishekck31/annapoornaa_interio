@@ -13,50 +13,50 @@ const AboutSection = () => {
     <section className="py-20 bg-white" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <ScrollAnimation className="relative">
-  {/* Ammanavaru image and text */}
-  <div className="flex flex-col items-center mb-8">
-    <OptimizedImage
-      src="/ammanavaru.png"
-      alt="Sri Annapoorneshwari Ammanavaru - Annapoornaa Interio Yelahanka Bangalore"
-      width={350}
-      height={350}
-      className="rounded-xl shadow-lg"
-      style={{ background: "#fff" }}
-      priority={true}
-    />
-    <div className="mt-3 text-xl font-bold text-gold-700 text-center">
-      ಶ್ರೀ ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು
-    </div>
-  </div>
+          <ScrollAnimation className="relative">
+            {/* Ammanavaru image and text */}
+            <div className="flex flex-col items-center mb-8">
+              <OptimizedImage
+                src="/ammanavaru.png"
+                alt="Sri Annapoorneshwari Ammanavaru - ACIPL Yelahanka Bangalore"
+                width={350}
+                height={350}
+                className="rounded-xl shadow-lg"
+                style={{ background: "#fff" }}
+                priority={true}
+              />
+              <div className="mt-3 text-xl font-bold text-gold-700 text-center">
+                ಶ್ರೀ ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು
+              </div>
+            </div>
 
-  {/* CEO image and overlay */}
-  <motion.div
-    whileHover={{ scale: 1.02 }}
-    transition={{ duration: 0.3 }}
-    className="relative"
-  >
-    <div className="absolute -top-4 -left-4 w-20 h-20 bg-gold-200 rounded-tl-3xl z-0"></div>
-    <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
-      <img
-        src="/CEOimage.jpg"
-        alt="Interior Design and Construction Company Yelahanka Bangalore - CEO Raghu Lakshmipathi"
-        className="w-full h-[400px] object-cover"
-        loading="lazy"
-      />
-      {/* CEO Information Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-2">
-            Raghu Lakshmipathi
-          </h3>
-          <p className="text-gold-400 text-lg">CEO & Director</p>
-        </div>
-      </div>
-    </div>
-    <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-navy-200 rounded-br-3xl z-0"></div>
-  </motion.div>
-</ScrollAnimation>
+            {/* CEO image and overlay */}
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
+              className="relative"
+            >
+              <div className="absolute -top-4 -left-4 w-20 h-20 bg-gold-200 rounded-tl-3xl z-0"></div>
+              <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
+                <img
+                  src="/CEOimage.jpg"
+                  alt="Interior Design and Construction Company Yelahanka Bangalore - CEO Raghu Lakshmipathi"
+                  className="w-full h-[400px] object-cover"
+                  loading="lazy"
+                />
+                {/* CEO Information Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
+                  <div className="text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Raghu Lakshmipathi
+                    </h3>
+                    <p className="text-gold-400 text-lg">CEO & Director</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-navy-200 rounded-br-3xl z-0"></div>
+            </motion.div>
+          </ScrollAnimation>
 
           <ScrollAnimation>
             <div className="inline-flex items-center justify-start mb-4">
@@ -70,7 +70,7 @@ const AboutSection = () => {
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mb-6 rounded-full"></div>
             <p className="text-lg text-gray-700 mb-6 text-glow-scroll">
-              Annapoorneshwari Constructions Interiors Private Limited is an interior design and construction company serving Yelahanka, Whitefield, HSR Layout, JP Nagar, Koramangala, and other Bangalore neighborhoods. For over 10 years, we have delivered quality craftsmanship, practical design planning, and reliable project execution.
+              Annapoorneshwari Constructions Interiors Private Limited is an interior design and construction company serving across Bangalore. For over 10 years, we have delivered quality craftsmanship, practical design planning, and reliable project execution.
             </p>
 
             <div className="space-y-4 mb-8">

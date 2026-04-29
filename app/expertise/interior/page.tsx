@@ -1,7 +1,24 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "Interior Design Expertise in Bangalore | ACIPL",
+  description:
+    "Expert interior design services for homes, offices, retail spaces, and hospitality in Bangalore. Over 10 years of experience in creating beautiful spaces.",
+  path: "/expertise/interior",
+  keywords: [
+    "interior design expertise",
+    "residential interior design Bangalore",
+    "commercial interior design Bangalore",
+    "retail interior design",
+    "hospitality interior design",
+  ],
+})
+
 
 const interiorExpertise = [
   {
@@ -80,7 +97,7 @@ export default function InteriorExpertisePage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Interior Design Approach</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  At Annapoornaa Interio, we believe that great interior design is about creating spaces that are not
+                  At ACIPL, we believe that great interior design is about creating spaces that are not
                   only beautiful but also functional and reflective of the people who use them. Our comprehensive
                   approach combines creativity, technical expertise, and attention to detail to deliver exceptional
                   results.

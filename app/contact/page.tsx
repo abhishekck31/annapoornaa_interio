@@ -7,7 +7,7 @@ import { buildMetadata } from "@/lib/seo"
 import { siteConfig } from "@/lib/site-config"
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact Annapoornaa Interio | Bangalore Consultation and Quotes',
+  title: 'Contact ACIPL | Bangalore Consultation and Quotes',
   description:
     'Call, WhatsApp, or send a project brief to discuss interiors, renovation, construction, and product requirements in Bangalore.',
   path: '/contact',
@@ -51,37 +51,37 @@ export default function ContactPage() {
                   <a href="mailto:info@ac-ipl.in" className="text-gray-300 hover:text-white">info@ac-ipl.in</a>
                 </div>
               </div>
-                <div className="flex items-start gap-4">
-                  <Phone className="h-6 w-6 text-gold-400 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gold-300 mb-1">Call Us</h4>
-                    <a href={siteConfig.primaryPhoneHref} className="block text-gray-300 hover:text-white">+91 99000 94942</a>
-                    <a href={siteConfig.secondaryPhoneHref} className="block text-gray-300 hover:text-white">+91 80731 41413</a>
-                  </div>
+              <div className="flex items-start gap-4">
+                <Phone className="h-6 w-6 text-gold-400 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gold-300 mb-1">Call Us</h4>
+                  <a href={siteConfig.primaryPhoneHref} className="block text-gray-300 hover:text-white">+91 99000 94942</a>
+                  <a href={siteConfig.secondaryPhoneHref} className="block text-gray-300 hover:text-white">+91 80731 41413</a>
                 </div>
-                <div className="flex items-start gap-4">
-                  <MapPin className="h-6 w-6 text-gold-400 mt-1" />
-                  <div>
-                    <h4 className="font-semibold text-gold-300 mb-1">Our Location</h4>
-                    <p className="text-gray-300">1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector, Yelahanka New Town, Bangalore - 560064.</p>
-                  </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <MapPin className="h-6 w-6 text-gold-400 mt-1" />
+                <div>
+                  <h4 className="font-semibold text-gold-300 mb-1">Our Location</h4>
+                  <p className="text-gray-300">1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector, Yelahanka New Town, Bangalore - 560064.</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Full width map below cards */}
-          <div className="rounded-xl overflow-hidden shadow-xl h-64 md:h-80 w-full">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4093.4913874230583!2d77.57682457525138!3d13.097041212115355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae195d4e36c281%3A0x65c9d0a66be1de7e!2sAnnapoorneshwari%20constructions%20interiors%20private%20limited!5e1!3m2!1sen!2sin!4v1744939312882!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Annapoorneshwari Constructions Interiors Location"
-            ></iframe>
+        {/* Full width map below cards */}
+        <div className="rounded-xl overflow-hidden shadow-xl h-64 md:h-80 w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4093.4913874230583!2d77.57682457525138!3d13.097041212115355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae195d4e36c281%3A0x65c9d0a66be1de7e!2sAnnapoorneshwari%20constructions%20interiors%20private%20limited!5e1!3m2!1sen!2sin!4v1744939312882!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Annapoorneshwari Constructions Interiors Location"
+          ></iframe>
         </div>
       </section>
       <Footer />

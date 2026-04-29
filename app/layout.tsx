@@ -1,7 +1,7 @@
 import './globals.css'
 
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Poppins } from "next/font/google"
 import ClientRootLayout from "./client-layout"
 import GoogleAnalytics from "@/components/google-analytics"
@@ -20,11 +20,18 @@ const poppins = Poppins({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  themeColor: "#001252",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: "Interior Designers and Construction Company in Bangalore | Annapoornaa Interio",
+    title: "Interior Designers and Construction Company in Bangalore | ACIPL",
     description:
-      "Interior design, modular kitchens, renovation, and construction services for homes and offices in Yelahanka, Whitefield, HSR Layout, and across Bangalore.",
+      "ACIPL is a premium interior design and construction company in Bangalore. We specialize in luxury home interiors, modular kitchens, and turnkey construction services.",
     path: "/",
     keywords: [
       "interior designers Bangalore",
@@ -39,9 +46,9 @@ export const metadata: Metadata = {
     ],
   }),
   metadataBase: primarySiteUrl,
-  authors: [{ name: "Annapoornaa Interio" }],
-  creator: "Annapoornaa Interio",
-  publisher: "Annapoornaa Interio",
+  authors: [{ name: "ACIPL" }],
+  creator: "ACIPL",
+  publisher: "ACIPL",
   formatDetection: {
     email: false,
     address: true,
@@ -58,7 +65,10 @@ export const metadata: Metadata = {
   },
   manifest: "/favicon_io/site.webmanifest",
   generator: "Next.js",
+  category: "Interior Design & Construction",
+  classification: "Business",
 }
+
 
 
 

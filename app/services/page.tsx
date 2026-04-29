@@ -9,7 +9,7 @@ import { services } from "@/data/services-data";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Interior Design and Construction Services in Bangalore | Annapoornaa Interio",
+  title: "Interior Design and Construction Services in Bangalore | ACIPL",
   description:
     "Explore home interiors, office interiors, construction, renovation, PMC, and design services delivered across Bangalore.",
   path: "/services",
@@ -32,7 +32,7 @@ export default function ServicesPage() {
           <div className="mb-20 text-center">
             <h1 className="mb-6 flex items-center justify-center gap-3 text-4xl font-bold text-navy-900 md:text-5xl">
               <Sparkles className="h-8 w-8 text-gold-500" />
-              Bangalore Services Built to Rank and Convert
+              Our Services
               <Sparkles className="h-8 w-8 text-gold-500" />
             </h1>
             <div className="mx-auto mb-8 h-1.5 w-24 rounded-full bg-gradient-to-r from-navy-900 to-gold-500" />

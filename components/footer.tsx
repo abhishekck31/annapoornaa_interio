@@ -25,7 +25,7 @@ const Footer = () => {
               <div className="bg-white p-1 rounded-md inline-block">
                 <Image
                   src="/images/logo.png"
-                  alt="Annapoornaa Interio Logo - Interior Designers and Construction Company in Yelahanka Bangalore"
+                  alt="ACIPL Logo - Interior Designers and Construction Company in Yelahanka Bangalore"
                   width={220}
                   height={62}
                   className="h-16 w-auto"
@@ -175,7 +175,7 @@ const Footer = () => {
               <a href="https://www.bis.gov.in/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gold-400 transition-colors">Bureau of Indian Standards</a>
             </div>
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} Annapoornaa Interio. All rights reserved.</p>
+              <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} ACIPL. All rights reserved.</p>
             </div>
           </div>
         </div>

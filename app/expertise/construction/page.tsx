@@ -1,7 +1,24 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "A-Class Construction Company in Bangalore | ACIPL",
+  description:
+    "Professional construction services in Bangalore. We specialize in residential, commercial, and pre-engineered buildings with precision engineering.",
+  path: "/expertise/construction",
+  keywords: [
+    "construction company Bangalore",
+    "residential construction Bangalore",
+    "commercial construction Bangalore",
+    "pre-engineered buildings Bangalore",
+    "renovation and remodeling",
+  ],
+})
+
 
 const constructionExpertise = [
   {
@@ -81,7 +98,7 @@ export default function ConstructionExpertisePage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Construction Approach</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  At Annapoornaa Interio, we approach construction with a commitment to quality, efficiency, and client
+                  At ACIPL, we approach construction with a commitment to quality, efficiency, and client
                   satisfaction. Our comprehensive construction services cover everything from initial planning and
                   design to final execution and finishing touches.
                 </p>

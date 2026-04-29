@@ -56,7 +56,7 @@ export const services: Service[] = [
     shortDescription:
       "Custom home interiors, modular kitchens, wardrobes, and turnkey execution for apartments, villas, and independent homes in Bangalore.",
     description:
-      "Annapoornaa Interio designs and delivers complete home interior projects across Bangalore. We handle modular kitchens, wardrobes, false ceilings, living rooms, bedrooms, utility areas, lighting coordination, and full-site execution with a single accountable team.",
+      "ACIPL designs and delivers complete home interior projects across Bangalore. We handle modular kitchens, wardrobes, false ceilings, living rooms, bedrooms, utility areas, lighting coordination, and full-site execution with a single accountable team.",
     features: [
       "Concept development and space planning",
       "3D design support and material selection",
@@ -83,7 +83,7 @@ export const services: Service[] = [
         ],
       },
     ],
-    seoTitle: "Home Interior Designers in Bangalore | Annapoornaa Interio",
+    seoTitle: "Home Interior Designers in Bangalore | ACIPL",
     seoDescription:
       "Looking for home interior designers in Bangalore? We design and execute modular kitchens, wardrobes, living rooms, and full-home interiors across key Bangalore neighborhoods.",
     keywords: [
@@ -117,7 +117,7 @@ export const services: Service[] = [
       {
         question: "Which Bangalore locations do you cover for home interiors?",
         answer:
-          "We work across Yelahanka, Whitefield, HSR Layout, Koramangala, Indiranagar, JP Nagar, Hebbal, Jayanagar, and nearby areas.",
+          "We work across Bangalore.",
       },
     ],
   },

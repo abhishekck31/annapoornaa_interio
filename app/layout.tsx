@@ -10,7 +10,7 @@ import GridOverlay from "@/components/grid-overlay"
 import { GridBackground } from "@/components/grid-background"
 import Script from "next/script"
 import { buildMetadata } from "@/lib/seo"
-import { primarySiteUrl } from "@/lib/site-config"
+import { primarySiteUrl, siteConfig } from "@/lib/site-config"
 
 // Initialize Poppins font with the weights we need
 const poppins = Poppins({
@@ -70,8 +70,6 @@ export const metadata: Metadata = {
 }
 
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -80,6 +78,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
+        {/* Google Search Console ownership verification — set NEXT_PUBLIC_GSC_VERIFICATION in env */}
+        {siteConfig.searchConsoleVerification && (
+          <meta name="google-site-verification" content={siteConfig.searchConsoleVerification} />
+        )}
         {/* Resource hints for performance */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />

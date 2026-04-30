@@ -123,6 +123,61 @@ export function buildOrganizationSchema() {
   };
 }
 
+export function buildLocalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "@id": `${siteConfig.domain}/#localbusiness`,
+    name: siteConfig.name,
+    legalName: siteConfig.legalName,
+    url: siteConfig.domain,
+    email: siteConfig.email,
+    telephone: siteConfig.phones[0],
+    logo: absoluteUrl("/images/logo.png"),
+    image: absoluteUrl("/opengraph-image"),
+    description: siteConfig.description,
+    priceRange: "₹₹–₹₹₹",
+    currenciesAccepted: "INR",
+    paymentAccepted: "Cash, Bank Transfer, UPI",
+    address: {
+      "@type": "PostalAddress",
+      ...siteConfig.address,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      ...siteConfig.geo,
+    },
+    hasMap: `https://www.google.com/maps?q=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
+    areaServed: siteConfig.serviceAreas.map((name) => ({
+      "@type": "City",
+      name,
+      addressCountry: "IN",
+    })),
+    openingHoursSpecification: siteConfig.businessHours.map((hours) => ({
+      "@type": "OpeningHoursSpecification",
+      ...hours,
+    })),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "50",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: siteConfig.phones[0],
+        email: siteConfig.email,
+        areaServed: "IN",
+        availableLanguage: ["en", "hi", "kn"],
+      },
+    ],
+    sameAs: Object.values(siteConfig.socialLinks).filter(Boolean),
+  };
+}
+
 export function buildBreadcrumbSchema(items: Array<{ name: string; path: string }>) {
   return {
     "@context": "https://schema.org",

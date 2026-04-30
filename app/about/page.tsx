@@ -5,11 +5,21 @@ import { CheckCircle, Award, Users, TrendingUp, Shield, Clock, HeartHandshake, T
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: 'About Us | ACIPL - Premier Interior Designers Bangalore',
-  description: 'Learn about ACIPL - premier interior design & construction company in Bangalore. Expert team, quality materials, timely completion.',
-}
+export const metadata: Metadata = buildMetadata({
+  title: 'About ACIPL | Interior Design & Construction Company Bangalore',
+  description: 'Learn about ACIPL – Annapoorneshwari Constructions Interiors Pvt Ltd, a premier interior design and construction company in Bangalore with 10+ years of experience and 200+ completed projects.',
+  path: '/about',
+  keywords: [
+    'about ACIPL',
+    'interior design company Bangalore',
+    'construction company Bangalore',
+    'Annapoorneshwari Constructions',
+    'interior designers Yelahanka',
+    'best interior company Bangalore',
+  ],
+})
 
 const AboutPage = () => {
   return (
@@ -32,7 +42,7 @@ const AboutPage = () => {
               <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
                 <img
                   src="/CEOimage.jpg"
-                  alt="About Annapoornaa Constructions & Interiors Private Limited"
+                  alt="About Annapoorneshwari Constructions Interiors Private Limited"
                   className="w-full h-[400px] object-cover"
                 />
                 {/* CEO Information Overlay */}
@@ -97,7 +107,7 @@ const AboutPage = () => {
               </h2>
               <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                At Annapoornaa Constructions & Interiors Private Limited, we pride ourselves on our commitment to excellence and customer satisfaction. Our
+                At Annapoorneshwari Constructions & Interiors Private Limited, we pride ourselves on our commitment to excellence and customer satisfaction. Our
                 approach combines creativity, technical expertise, and attention to detail to deliver exceptional
                 results that exceed expectations.
               </p>

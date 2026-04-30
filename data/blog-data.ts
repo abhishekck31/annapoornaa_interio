@@ -883,4 +883,214 @@ export const blogPosts: BlogPost[] = [
       </p>
     `,
   },
+  {
+    slug: "home-interior-design-cost-bangalore",
+    title: "Home Interior Design Cost in Bangalore: A Complete 2026 Guide",
+    excerpt:
+      "A detailed breakdown of home interior design costs in Bangalore covering 1BHK, 2BHK, and 3BHK apartments with room-wise pricing and material grades.",
+    category: "Costs",
+    image: "/BlogImages/top10trends.png",
+    seoTitle: "Home Interior Design Cost in Bangalore 2026 | 1BHK 2BHK 3BHK Price Guide",
+    seoDescription:
+      "Find out what home interior design actually costs in Bangalore in 2026. Room-wise breakdown for 1BHK, 2BHK, and 3BHK apartments with budget and premium options.",
+    keywords: [
+      "home interior design cost Bangalore",
+      "interior design cost per sq ft Bangalore",
+      "2BHK interior cost Bangalore",
+      "1BHK interior design cost Bangalore",
+      "apartment interior cost Bangalore",
+      "home interiors budget Bangalore",
+    ],
+    author: "ACIPL",
+    publishedAt: "2026-04-01",
+    modifiedAt: "2026-04-30",
+    primaryServiceSlug: "home-interiors",
+    primaryLocationSlug: "bangalore-yelahanka",
+    ctaLabel: "Get a Free Interior Cost Estimate",
+    ctaHref: "/services/home-interiors",
+    faqs: [
+      {
+        question: "What is the cost of a full home interior in Bangalore?",
+        answer:
+          "A full home interior in Bangalore ranges from ₹6–12 lakhs for a 2BHK and ₹10–20 lakhs for a 3BHK depending on the finish level, scope, and material grade selected.",
+      },
+      {
+        question: "How much does interior design cost per sq ft in Bangalore?",
+        answer:
+          "Interior design costs in Bangalore range from ₹800–1,000 per sq ft for a budget finish, ₹1,100–1,400 per sq ft for premium, and ₹1,500+ for luxury finishes with veneer and PU polish.",
+      },
+      {
+        question: "What is included in a full home interior package?",
+        answer:
+          "A typical full home interior package covers modular kitchen, wardrobes, storage units, false ceiling, lighting, flooring, paint, and TV unit. Plumbing and electrical scope varies by vendor.",
+      },
+    ],
+    content: `
+      <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+        Home interior design in Bangalore is one of the most searched topics for new homeowners — and for good reason. With prices varying from ₹800 to ₹1,500+ per sq ft, understanding what drives the cost is critical before signing any contract.
+      </p>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">What determines interior design cost in Bangalore?</h2>
+      <p class="text-gray-700 mb-4">The main cost drivers are:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+        <li><strong>Material grade:</strong> Membrane shutters, acrylic, or veneer for kitchen and wardrobes</li>
+        <li><strong>Hardware brand:</strong> Hettich, Hafele, Blum hardware each carry different price points</li>
+        <li><strong>False ceiling scope:</strong> POP, gypsum, or PVC panels across rooms</li>
+        <li><strong>Flooring type:</strong> Vitrified tiles, engineered wood, or marble</li>
+        <li><strong>Electrical and lighting:</strong> Modular switches, concealed wiring, and feature lighting</li>
+      </ul>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Room-wise cost breakdown</h2>
+      <p class="text-gray-700 mb-4">Typical Bangalore pricing for individual rooms in 2026:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+        <li><strong>Modular kitchen (10 ft):</strong> ₹1.8–4 lakhs</li>
+        <li><strong>Master bedroom wardrobe (8 ft):</strong> ₹60,000–1.5 lakhs</li>
+        <li><strong>Living and dining false ceiling + paint:</strong> ₹80,000–1.8 lakhs</li>
+        <li><strong>TV unit + foyer storage:</strong> ₹45,000–1 lakh</li>
+        <li><strong>Bathroom upgrades (per unit):</strong> ₹40,000–1.2 lakhs</li>
+      </ul>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Budget vs premium vs luxury interiors</h2>
+      <p class="text-gray-700 mb-6">
+        Budget interiors (₹800–1,000/sq ft) use standard laminates, basic hardware, and gypsum ceilings. Premium (₹1,100–1,400/sq ft) adds high-gloss or matte finishes, Hettich/Hafele hardware, and feature lighting. Luxury (₹1,500+) includes veneer, PU polish, imported hardware, and custom joinery.
+      </p>
+      <p class="text-gray-700 mb-6">
+        ACIPL offers all three tiers with itemised quotations so you can see exactly where your budget goes. <a href="/services/home-interiors" class="text-gold-600 underline font-medium">Learn more about our home interior services</a> or <a href="/contact" class="text-gold-600 underline font-medium">request a free estimate</a>.
+      </p>
+    `,
+  },
+  {
+    slug: "modular-kitchen-designs-bangalore",
+    title: "Modular Kitchen Designs in Bangalore: Layouts, Materials & 2026 Pricing",
+    excerpt:
+      "A practical guide to choosing the right modular kitchen design, layout, and material for Bangalore apartments — with 2026 pricing benchmarks.",
+    category: "Guides",
+    image: "/BlogImages/modularkitchen.png",
+    seoTitle: "Modular Kitchen Designs Bangalore 2026 | Layouts, Materials & Pricing",
+    seoDescription:
+      "Explore modular kitchen designs for Bangalore homes — L-shape, parallel, U-shape, and island layouts with 2026 material and price comparisons.",
+    keywords: [
+      "modular kitchen designs Bangalore",
+      "modular kitchen price Bangalore",
+      "L-shape modular kitchen Bangalore",
+      "best modular kitchen company Bangalore",
+      "modular kitchen cost per running foot Bangalore",
+      "kitchen interior designers Bangalore",
+    ],
+    author: "ACIPL",
+    publishedAt: "2026-04-05",
+    modifiedAt: "2026-04-30",
+    primaryServiceSlug: "home-interiors",
+    primaryLocationSlug: "bangalore-yelahanka",
+    ctaLabel: "Plan Your Modular Kitchen",
+    ctaHref: "/services/home-interiors",
+    faqs: [
+      {
+        question: "Which modular kitchen layout is best for a 2BHK in Bangalore?",
+        answer:
+          "For most 2BHK apartments in Bangalore, an L-shape or parallel kitchen layout works best. L-shape suits compact spaces, while parallel kitchens maximise workflow in narrow but long kitchen areas.",
+      },
+      {
+        question: "What is the cost of a modular kitchen per running foot in Bangalore?",
+        answer:
+          "Modular kitchen cost per running foot in Bangalore ranges from ₹1,200–3,500 depending on the shutter material, carcase material (HDHMR vs plywood), hardware brand, and countertop.",
+      },
+      {
+        question: "How long does a modular kitchen installation take?",
+        answer:
+          "A standard modular kitchen installation in Bangalore takes 20–25 days from design finalisation to handover, assuming civil work like tiling and electrical points are ready.",
+      },
+    ],
+    content: `
+      <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+        The modular kitchen is usually the highest-value room in any home interior project. Getting the layout, material, and pricing right upfront saves both money and post-installation regret.
+      </p>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Popular kitchen layouts for Bangalore apartments</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+        <li><strong>Straight / single-wall:</strong> Ideal for studio or compact 1BHK kitchens with limited depth</li>
+        <li><strong>L-shape:</strong> The most popular layout for 2BHK and 3BHK apartments — efficient triangle workflow</li>
+        <li><strong>Parallel / galley:</strong> Great for narrow kitchens with windows on one end</li>
+        <li><strong>U-shape:</strong> Best for larger kitchens needing maximum storage and prep space</li>
+        <li><strong>Island kitchen:</strong> Premium option for open-plan villas and duplex homes</li>
+      </ul>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Shutter material comparison</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+        <li><strong>Membrane / foil:</strong> Budget-friendly, heat-formed finish, good moisture resistance</li>
+        <li><strong>Acrylic:</strong> High-gloss, easy to clean, mid-range price — very popular in Bangalore</li>
+        <li><strong>PU paint:</strong> Premium matte or satin, durable, custom colour options</li>
+        <li><strong>Veneer:</strong> Luxury natural wood grain appearance, highest price point</li>
+      </ul>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">2026 modular kitchen pricing benchmarks</h2>
+      <p class="text-gray-700 mb-6">
+        In Bangalore in 2026, a 10-ft L-shape modular kitchen with HDHMR carcase, acrylic shutters, Hettich hardware, and a quartz countertop costs approximately ₹2.2–2.8 lakhs installed. The same with membrane shutters costs ₹1.6–2.0 lakhs, and a veneer finish costs ₹3.2–4.5 lakhs.
+      </p>
+      <p class="text-gray-700 mb-6">
+        ACIPL manufactures modular kitchens in our own unit to maintain quality control and offer faster timelines. <a href="/services/home-interiors" class="text-gold-600 underline font-medium">View our modular kitchen packages</a> or <a href="/contact" class="text-gold-600 underline font-medium">book a free kitchen planning consultation</a>.
+      </p>
+    `,
+  },
+  {
+    slug: "construction-company-yelahanka-guide",
+    title: "Choosing a Construction Company in Yelahanka, Bangalore: A Practical Guide",
+    excerpt:
+      "What to look for when hiring a civil contractor or construction company in Yelahanka — from legal compliance and material sourcing to project management and timelines.",
+    category: "Guides",
+    image: "/Construction.png",
+    seoTitle: "Construction Company in Yelahanka Bangalore | How to Choose the Right Contractor",
+    seoDescription:
+      "Looking for a construction company in Yelahanka, Bangalore? This guide covers what to check before hiring a civil contractor for new construction or renovation.",
+    keywords: [
+      "construction company Yelahanka",
+      "civil contractor Yelahanka Bangalore",
+      "best construction company Yelahanka",
+      "turnkey construction Yelahanka",
+      "home construction contractor North Bangalore",
+      "residential construction company Bangalore",
+    ],
+    author: "ACIPL",
+    publishedAt: "2026-04-10",
+    modifiedAt: "2026-04-30",
+    primaryServiceSlug: "residential-commercial-construction",
+    primaryLocationSlug: "bangalore-yelahanka",
+    ctaLabel: "Get a Construction Quote",
+    ctaHref: "/services/residential-commercial-construction",
+    faqs: [
+      {
+        question: "How much does house construction cost in Yelahanka, Bangalore?",
+        answer:
+          "House construction in Yelahanka costs between ₹1,800–2,800 per sq ft for the basic civil structure depending on specification. G+1 or G+2 with standard finishes averages ₹2,200 per sq ft in 2026.",
+      },
+      {
+        question: "Should I hire a contractor or a construction company in Yelahanka?",
+        answer:
+          "A registered construction company offers accountability, warranty, and project management that individual contractors cannot. For a full build, a company with in-house design, structural, and interior capability reduces risk significantly.",
+      },
+      {
+        question: "How long does new home construction take in Bangalore?",
+        answer:
+          "A typical G+1 residential construction in Bangalore takes 12–18 months from approvals to handover. Factors include monsoon season, BBMP plan approval timelines, and material procurement schedules.",
+      },
+    ],
+    content: `
+      <p class="text-xl text-gray-700 mb-6 leading-relaxed">
+        Yelahanka has grown significantly as a residential hub in North Bangalore, and the demand for reliable construction companies has risen with it. Whether you are building a new home, adding a floor, or undertaking a full renovation, choosing the right contractor matters enormously.
+      </p>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Check legal registration and compliance</h2>
+      <p class="text-gray-700 mb-6">
+        Always verify that the contractor or company is a registered business with a GST number, and that they can provide a proper contract with itemised scope, payment milestones, and warranty terms. Never pay the full amount upfront.
+      </p>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Evaluate actual project experience</h2>
+      <p class="text-gray-700 mb-6">
+        Ask for references from completed projects in Yelahanka or nearby areas. Site visits to completed homes are the best way to assess finish quality, material durability, and how well the team resolved problems during construction.
+      </p>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Look for integrated capability</h2>
+      <p class="text-gray-700 mb-6">
+        Companies that handle design, structural work, and interior finishing under one contract reduce coordination risk. Separate vendors for each stage often leads to delays, blame-shifting, and cost overruns.
+      </p>
+      <h2 class="text-3xl font-bold text-navy-900 mt-12 mb-6">Understand the material sourcing process</h2>
+      <p class="text-gray-700 mb-6">
+        Ask who sources the materials, whether approved brand lists are used, and how material substitution is handled if a specified item is unavailable. Transparent sourcing prevents quiet cost-cutting on site.
+      </p>
+      <p class="text-gray-700 mb-6">
+        ACIPL is a registered construction company in Yelahanka with 10+ years of residential and commercial construction experience across North Bangalore. <a href="/services/residential-commercial-construction" class="text-gold-600 underline font-medium">View our construction services</a> or <a href="/bangalore-yelahanka" class="text-gold-600 underline font-medium">explore our Yelahanka project work</a>.
+      </p>
+    `,
+  },
 ];

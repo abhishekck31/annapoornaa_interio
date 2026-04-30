@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "ACIPL",
   legalName: "Annapoorneshwari Constructions Interiors Private Limited",
   domain: "https://www.ac-ipl.in",
-  defaultOgImage: "/images/logo.png",
+  defaultOgImage: "/opengraph-image",
   description:
     "Interior design, renovation, construction, and building product solutions for homes and businesses across Bangalore.",
   email: "info@ac-ipl.in",
@@ -41,10 +41,14 @@ export const siteConfig = {
     "Bangalore",
   ],
   socialLinks: {
-    facebook: "",
-    instagram: "",
+    facebook: "https://www.facebook.com/acinteriors.in",
+    instagram: "https://www.instagram.com/acipl_bangalore",
     linkedin: "",
+    google: "https://g.page/acipl-bangalore",
   },
+  // Google Search Console site verification token — replace with the actual value from
+  // Google Search Console → Settings → Ownership verification → HTML tag method.
+  searchConsoleVerification: "",
   businessHours: [
     {
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

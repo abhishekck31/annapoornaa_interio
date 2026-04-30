@@ -80,7 +80,7 @@ export default function InteriorExpertisePage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Interior Design Approach</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  At Annapoornaa Interio, we believe that great interior design is about creating spaces that are not
+                  At ACIPL, we believe that great interior design is about creating spaces that are not
                   only beautiful but also functional and reflective of the people who use them. Our comprehensive
                   approach combines creativity, technical expertise, and attention to detail to deliver exceptional
                   results.
@@ -125,9 +125,8 @@ export default function InteriorExpertisePage() {
             {interiorExpertise.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">{item.title}</h2>

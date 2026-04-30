@@ -54,7 +54,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-gold-400 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gold-300 mb-1">Email Us</h4>
-                    <p className="text-gray-300">info@annapoornainterio.com</p>
+                    <p className="text-gray-300">raghu@ac-ipl.in</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -78,7 +78,7 @@ export default function ContactPage() {
 
           {/* Full width map below cards */}
           <div className="rounded-xl overflow-hidden shadow-xl h-64 md:h-80 w-full">
-            <iframe 
+            <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4093.4913874230583!2d77.57682457525138!3d13.097041212115355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae195d4e36c281%3A0x65c9d0a66be1de7e!2sAnnapoorneshwari%20constructions%20interiors%20private%20limited!5e1!3m2!1sen!2sin!4v1744939312882!5m2!1sen!2sin"
               width="100%"
               height="100%"

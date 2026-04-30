@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 const Footer = () => {
-  const whatsappMessage = "Hello! I'm interested in learning more about Annapoornaa Interio's services. Could you please provide more information?"
+  const whatsappMessage = "Hello! I'm interested in learning more about ACIPL's services. Could you please provide more information?"
   const whatsappLink = `https://wa.me/918073141413?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
@@ -18,14 +18,14 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <div className="bg-white p-1 rounded-md inline-block">
-  <Image
-    src="/images/logo.png"
-    alt="Annapoornaa Interio Logo"
-    width={220}
-    height={62}
-    className="h-16 w-auto"
-  />
-</div>
+                <Image
+                  src="/images/logo.png"
+                  alt="ACIPL Logo"
+                  width={220}
+                  height={62}
+                  className="h-16 w-auto"
+                />
+              </div>
             </div>
             <p className="text-gray-300 mb-6">
               Smart Designs. Seamless Execution
@@ -155,7 +155,7 @@ const Footer = () => {
                   <MapPin className="h-4 w-4 text-gold-400" />
                 </div>
                 <p className="text-gray-300 group-hover:text-white transition-colors duration-300 mb-0">
-                1st floor,  #395,  8th 'B' Main,  14th 'B' cross, 2nd stage,  'B' sector,  Yelahanka New Town,  Bangalore - 560064.
+                  1st floor,  #395,  8th 'B' Main,  14th 'B' cross, 2nd stage,  'B' sector,  Yelahanka New Town,  Bangalore - 560064.
                 </p>
               </li>
               <li className="flex items-center group">
@@ -163,10 +163,10 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-gold-400" />
                 </div>
                 <a
-                  href="mailto:info@annapoornainterio.com"
+                  href="mailto:raghu@ac-ipl.in"
                   className="text-gray-300 hover:text-gold-400 transition-colors"
                 >
-                  info@annapoornainterio.com
+                  raghu@ac-ipl.in
                 </a>
               </li>
               <li className="flex items-center group">
@@ -198,7 +198,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-navy-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Annapoornaa Interio. All rights reserved.</p>
+          <p className="text-gray-400">&copy; {new Date().getFullYear()} ACIPL. All rights reserved.</p>
         </div>
       </div>
     </footer>

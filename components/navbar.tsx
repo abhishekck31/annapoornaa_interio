@@ -61,11 +61,10 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-white/95 backdrop-blur-sm shadow-md py-1"
           : "bg-white py-2"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
@@ -73,7 +72,7 @@ const Navbar = () => {
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="Annapoornaa Interio Logo"
+                alt="ACIPL Logo"
                 width={220}
                 height={60}
                 className="h-14 w-auto"
@@ -85,9 +84,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-2">
             <Link
               href="/"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -98,9 +96,8 @@ const Navbar = () => {
 
             <Link
               href="/about"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/about" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/about" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -111,9 +108,8 @@ const Navbar = () => {
 
             <Link
               href="/services"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/services" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/services" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -126,11 +122,10 @@ const Navbar = () => {
               <DropdownMenuTrigger asChild>
                 <Button
                   variant="ghost"
-                  className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 bg-transparent hover:bg-transparent focus:bg-transparent ${
-                    activeLink.includes("/products")
+                  className={`flex items-center text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 bg-transparent hover:bg-transparent focus:bg-transparent ${activeLink.includes("/products")
                       ? "text-gold-600 font-semibold"
                       : ""
-                  }`}
+                    }`}
                 >
                   Products <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
@@ -213,9 +208,8 @@ const Navbar = () => {
 
             <Link
               href="/gallery"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/gallery" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/gallery" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -226,11 +220,10 @@ const Navbar = () => {
 
             <Link
               href="/featured-projects"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/featured-projects"
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/featured-projects"
                   ? "text-gold-600 font-semibold"
                   : ""
-              }`}
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -241,9 +234,8 @@ const Navbar = () => {
 
             <Link
               href="/interio"
-              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${
-                activeLink === "/interio" ? "text-gold-600 font-semibold" : ""
-              }`}
+              className={`text-gray-700 hover:text-gold-600 px-2 py-2 rounded-md font-medium transition-colors duration-300 ${activeLink === "/interio" ? "text-gold-600 font-semibold" : ""
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -288,11 +280,10 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/"
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/"
                   ? "text-gold-600 font-semibold"
                   : "text-gray-700"
-              }`}
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -303,11 +294,10 @@ const Navbar = () => {
 
             <Link
               href="/about"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/about"
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/about"
                   ? "text-gold-600 font-semibold"
                   : "text-gray-700"
-              }`}
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -318,11 +308,10 @@ const Navbar = () => {
 
             <Link
               href="/services"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/services"
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/services"
                   ? "text-gold-600 font-semibold"
                   : "text-gray-700"
-              }`}
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();
@@ -333,11 +322,10 @@ const Navbar = () => {
 
             <div className="relative">
               <button
-                className={`w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                  activeLink.includes("/products")
+                className={`w-full text-left px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink.includes("/products")
                     ? "text-gold-600 font-semibold"
                     : "text-gray-700"
-                }`}
+                  }`}
               >
                 Products
               </button>
@@ -390,7 +378,7 @@ const Navbar = () => {
                     scrollToTop();
                   }}
                 >
-                   Soffit False Ceilings
+                  Soffit False Ceilings
                 </Link>
                 <Link
                   href="/products/workstations"
@@ -407,11 +395,10 @@ const Navbar = () => {
 
             <Link
               href="/gallery"
-              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${
-                activeLink === "/gallery"
+              className={`block px-3 py-2 rounded-md text-base font-medium hover:text-gold-600 hover:bg-gray-50 transition-colors duration-300 ${activeLink === "/gallery"
                   ? "text-gold-600 font-semibold"
                   : "text-gray-700"
-              }`}
+                }`}
               onClick={() => {
                 setIsMenuOpen(false);
                 scrollToTop();

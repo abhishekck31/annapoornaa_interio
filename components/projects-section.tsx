@@ -69,7 +69,7 @@ const ProjectsSection = () => {
         </ScrollAnimation>
 
         {/* Featured Projects Grid View - Only 2 projects */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-16 w-full overflow-x-hidden">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-16 w-full">
           {/* Project Card */}
           <div className="md:w-1/2 w-full flex items-stretch justify-center">
             {homePageProjects.filter(project => project.id === 1).map((project, index) => (
@@ -104,9 +104,9 @@ const ProjectsSection = () => {
                         <p className="text-gray-600 text-sm sm:text-base break-words whitespace-normal mt-1">
                           {project.description}
                         </p>
-                        <Link 
-                          href="/featured-projects" 
-                          scroll={true} 
+                        <Link
+                          href="/featured-projects"
+                          scroll={true}
                           className="text-gold-600 font-medium flex items-center text-sm sm:text-base mt-2"
                         >
                           View Details <ArrowRight className="ml-1 h-4 w-4 sm:h-4 sm:w-4" />
@@ -120,12 +120,12 @@ const ProjectsSection = () => {
           </div>
           {/* Enhanced Clients Section */}
           <div className="md:w-1/2 w-full flex items-stretch justify-center mt-6 md:mt-0">
-            <div className="w-full max-w-md md:max-w-none bg-gradient-to-br from-gold-50 to-white border border-gold-100 rounded-xl shadow-md p-4 sm:p-8 text-center md:text-left">
+            <div className="w-full h-full bg-gradient-to-br from-gold-50 to-white border border-gold-100 rounded-xl shadow-md p-6 sm:p-8 text-center md:text-left flex flex-col">
               <h4 className="text-xl sm:text-2xl font-bold text-navy-900 mb-3 flex items-center justify-center md:justify-start">
                 <Sparkles className="mr-2 text-gold-500" />Our Esteemed Clients
               </h4>
               <p className="text-gray-700 mb-4 text-sm sm:text-base">
-                Annapoornaa Interio has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
+                ACIPL has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
               </p>
               <div className="mb-4">
                 <h5 className="font-semibold text-navy-800 mb-2 text-base">Notable Clients:</h5>
@@ -157,12 +157,12 @@ const ProjectsSection = () => {
       </div>
 
       <div className="mt-12 flex flex-col gap-2 items-center sm:flex-row sm:gap-4 sm:justify-center">
-  <Link href="/featured-projects" className="w-full sm:w-auto">
-    <Button className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
-      View All Projects
-    </Button>
-  </Link>
-</div>
+        <Link href="/featured-projects" className="w-full sm:w-auto">
+          <Button className="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+            View All Projects
+          </Button>
+        </Link>
+      </div>
     </section>
   );
 }

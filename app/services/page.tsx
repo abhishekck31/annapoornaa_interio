@@ -177,7 +177,7 @@ const services: Service[] = [
     title: "PMC - Project Management & Consultancy",
     icon: <ClipboardList className="h-12 w-12 text-primary" />,
     description:
-      "At Annapoornaa Interio, we offer specialized Project Management and Consultancy (PMC) services tailored for the construction industry. From concept to commissioning, we ensure that every stage of your project is planned, executed, and delivered with precision.",
+      "At ACIPL, we offer specialized Project Management and Consultancy (PMC) services tailored for the construction industry. From concept to commissioning, we ensure that every stage of your project is planned, executed, and delivered with precision.",
     pmcSections: [
       {
         title: "Pre-Construction Planning",
@@ -243,7 +243,7 @@ const services: Service[] = [
     title: "Design and Drawings",
     icon: <PencilRuler className="h-12 w-12 text-primary" />,
     description:
-      "At Annapoornaa Interio, we provide comprehensive Architectural, Structural, and MEP (Mechanical, Electrical, Plumbing) design and drafting services that form the foundation of any successful construction project. We combine creativity, functionality, and technical expertise to deliver designs that are both aesthetically pleasing and structurally sound.",
+      "At ACIPL, we provide comprehensive Architectural, Structural, and MEP (Mechanical, Electrical, Plumbing) design and drafting services that form the foundation of any successful construction project. We combine creativity, functionality, and technical expertise to deliver designs that are both aesthetically pleasing and structurally sound.",
     designSections: [
       {
         title: "Architectural Design",
@@ -320,9 +320,8 @@ export default function ServicesPage() {
               <div
                 key={service.id}
                 id={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <div className="flex items-center mb-4">
@@ -351,157 +350,157 @@ export default function ServicesPage() {
                     </div>
                   ) : (
                     <div>
-                      
+
                       {/* Custom static visible lists for each service */}
-{service.id === "renovation" && (
-  <div className="mb-10">
-    <h3 className="text-xl font-semibold text-navy-900 mb-4">Renovation Services</h3>
-    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Space planning & layout redesign</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Repairing & Decorating of Walls & Ceilings</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Flooring works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Painting & Decoration of walls</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Electrical & lighting works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Plumbing works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Wood works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Kitchen & bathroom remodeling</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">False ceiling works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Window & door replacements</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Wardrobe & storage solutions</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Fabrication works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Curtains & Blinds</span></li>
-    </ul>
-  </div>
-)}
-{service.id === "products" && (
-  <div className="mb-10">
-    <h3 className="text-xl font-semibold text-navy-900 mb-4">Design and Drawings Services</h3>
-    {service.designSections && (
-      <div className="space-y-4">
-        {service.designSections.map((section, sectionIndex) => (
-          <CollapsibleSection
-            key={sectionIndex}
-            title={section.title}
-            emoji={section.emoji}
-            items={section.items}
-          />
-        ))}
-      </div>
-    )}
-  </div>
-)}
-{service.id === "home-interior" && (
-  <div className="mb-10">
-    <h3 className="text-2xl font-semibold text-navy-900 mb-6">Home Interior Services</h3>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div>
-        <ul className="space-y-2">
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Concepts, Designs & Drawings</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Pooja room</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Modular kitchens</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Wardrobes</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">TV units</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">False ceilings</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Flooring solutions</span>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <ul className="space-y-2">
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Fabrication works</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Painting and wall finishes</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Railings</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Electrical and lighting works</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Plumbing works</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Wall decoration</span>
-          </li>
-          <li className="flex items-center gap-2">
-            <span className="text-gold-500 flex-shrink-0">•</span>
-            <span className="text-navy-900">Curtains & Blinds</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-)}
-{service.id === "office-interior" && (
-  <div className="mb-10">
-    <h3 className="text-xl font-semibold text-navy-900 mb-4">Office Interior Services</h3>
-    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Concepts, designs & drawings</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Painting works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Space planning & layout</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Railing works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Workstations and chairs</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Electrical works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Storage units</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Plumbing works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Glazing</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Carpentary works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Glass partition</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">HVAC - Heating Ventilation & Air Conditioning</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Dry wall partition</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Signages</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">False ceilings</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Curtains and Blinds</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Flooring</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Fabrication works</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Civil works</span></li>
-    </ul>
-  </div>
-)}
-{service.id === "construction" && (
-  <div className="mb-10">
-    <h3 className="text-xl font-semibold text-navy-900 mb-4">Residential & Commercial Construction Services</h3>
-    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Architectural Planning & Designs</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Structural engineering</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Project Planning & Control</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Budget & Cost Control</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Procurement & Material Selection</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Labor Management</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">On-site Supervision & Quality Control</span></li>
-      <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Risk Management & Problem-Solving</span></li>
-    </ul>
-  </div>
-)}
+                      {service.id === "renovation" && (
+                        <div className="mb-10">
+                          <h3 className="text-xl font-semibold text-navy-900 mb-4">Renovation Services</h3>
+                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Space planning & layout redesign</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Repairing & Decorating of Walls & Ceilings</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Flooring works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Painting & Decoration of walls</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Electrical & lighting works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Plumbing works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Wood works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Kitchen & bathroom remodeling</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">False ceiling works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Window & door replacements</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Wardrobe & storage solutions</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Fabrication works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Curtains & Blinds</span></li>
+                          </ul>
+                        </div>
+                      )}
+                      {service.id === "products" && (
+                        <div className="mb-10">
+                          <h3 className="text-xl font-semibold text-navy-900 mb-4">Design and Drawings Services</h3>
+                          {service.designSections && (
+                            <div className="space-y-4">
+                              {service.designSections.map((section, sectionIndex) => (
+                                <CollapsibleSection
+                                  key={sectionIndex}
+                                  title={section.title}
+                                  emoji={section.emoji}
+                                  items={section.items}
+                                />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                      {service.id === "home-interior" && (
+                        <div className="mb-10">
+                          <h3 className="text-2xl font-semibold text-navy-900 mb-6">Home Interior Services</h3>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                              <ul className="space-y-2">
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Concepts, Designs & Drawings</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Pooja room</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Modular kitchens</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Wardrobes</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">TV units</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">False ceilings</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Flooring solutions</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div>
+                              <ul className="space-y-2">
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Fabrication works</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Painting and wall finishes</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Railings</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Electrical and lighting works</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Plumbing works</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Wall decoration</span>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                  <span className="text-gold-500 flex-shrink-0">•</span>
+                                  <span className="text-navy-900">Curtains & Blinds</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      {service.id === "office-interior" && (
+                        <div className="mb-10">
+                          <h3 className="text-xl font-semibold text-navy-900 mb-4">Office Interior Services</h3>
+                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Concepts, designs & drawings</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Painting works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Space planning & layout</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Railing works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Workstations and chairs</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Electrical works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Storage units</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Plumbing works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Glazing</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Carpentary works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Glass partition</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">HVAC - Heating Ventilation & Air Conditioning</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Dry wall partition</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Signages</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">False ceilings</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Curtains and Blinds</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Flooring</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Fabrication works</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Civil works</span></li>
+                          </ul>
+                        </div>
+                      )}
+                      {service.id === "construction" && (
+                        <div className="mb-10">
+                          <h3 className="text-xl font-semibold text-navy-900 mb-4">Residential & Commercial Construction Services</h3>
+                          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 pl-3">
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Architectural Planning & Designs</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Structural engineering</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Project Planning & Control</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Budget & Cost Control</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Procurement & Material Selection</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Labor Management</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">On-site Supervision & Quality Control</span></li>
+                            <li className="flex items-center gap-2 pl-2"><span className="text-gold-500 flex-shrink-0">&#9679;</span><span className="text-navy-900 items-center">Risk Management & Problem-Solving</span></li>
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>

@@ -11,86 +11,29 @@ import {
   Hammer,
   PaintBucket,
   Briefcase,
+  Home,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import ScrollAnimation from "@/components/scroll-animation";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { services } from "@/data/services-data";
 
-type Service = {
-  title: string;
-  description: string;
-  icon: keyof typeof icons;
-  link: string;
-  image?: string;
-};
-
-const services: Service[] = [
-  {
-    title: "Home Interiors",
-    description:
-      "Transform your living spaces with our comprehensive Interiors design solutions, from concept to completion.",
-    icon: "brush",
-    link: "/services#home-interiors",
-    image: "/updated-homein.jpg",
-  },
-  {
-    title: "Office/Corporate Interiors",
-    description:
-      "Create productive and stylish workspaces with our expert corporate Interiors design and implementation services.",
-    icon: "briefcase",
-    link: "/services#office-interiors",
-    image: "/Updated-officein.jpg",
-  },
-  {
-    title: "Residential & Commercial Construction",
-    description:
-      "End-to-end construction services with expert architectural planning, structural engineering, and project management.",
-    icon: "hammer",
-    link: "/services#construction",
-    image: "/Const1.png",
-  },
-  {
-    title: "Renovation",
-    description:
-      "Revitalize your existing spaces with our comprehensive renovation services.",
-    icon: "paint",
-    link: "/services#renovation",
-    image: "/Updated-renovation.png",
-  },
-  {
-    title: "PMC - Project Management & Consultancy",
-    description:
-      "Expert project management and consultancy services to ensure your construction projects are delivered on time and within budget.",
-    icon: "clipboard-list",
-    link: "/services#pre-engineered-building",
-    image: "/PMC1.png",
-  },
-  {
-    title: "Design & Drawings",
-    description:
-      "Detailed architectural drawings and design documentation with precision engineering and creative excellence.",
-    icon: "pencil-ruler",
-    link: "/services#products",
-    image: "/Updated-D&D.jpg",
-  },
-];
-
-const icons = {
-  brush: <Paintbrush className="h-8 w-8 text-gold-500" />,
+const icons: Record<string, React.ReactNode> = {
+  home: <Home className="h-8 w-8 text-gold-500" />,
   briefcase: <Briefcase className="h-8 w-8 text-gold-500" />,
-  hammer: <Hammer className="h-8 w-8 text-gold-500" />,
+  building: <Building2 className="h-8 w-8 text-gold-500" />,
   paint: <PaintBucket className="h-8 w-8 text-gold-500" />,
   "clipboard-list": <ClipboardList className="h-8 w-8 text-gold-500" />,
   "pencil-ruler": <PencilRuler className="h-8 w-8 text-gold-500" />,
-} as const;
+};
 
 const ServicesSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const router = useRouter();
 
-  const handleCardClick = (link: string) => {
-    router.push(link);
+  const handleCardClick = (slug: string) => {
+    router.push(`/services/${slug}`);
     window.scrollTo(0, 0);
   };
 
@@ -108,15 +51,14 @@ const ServicesSection = () => {
             </div>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gold-600 max-w-3xl mx-auto">
-              We offer a complete range of Interior and Construction
-              services tailored to your specific needs
+              Complete interior design and construction services across Bangalore
             </p>
           </div>
         </ScrollAnimation>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <ScrollAnimation key={index} delay={index * 100}>
+            <ScrollAnimation key={service.id} delay={index * 100}>
               <motion.div
                 whileHover={{
                   y: -10,
@@ -127,7 +69,7 @@ const ServicesSection = () => {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 className="h-full cursor-pointer"
-                onClick={() => handleCardClick(service.link)}
+                onClick={() => handleCardClick(service.slug)}
               >
                 <Card className="h-full transition-all duration-300 hover:border-gold-300 overflow-hidden rounded-xl bg-white shadow-lg">
                   <div className="relative">
@@ -135,9 +77,12 @@ const ServicesSection = () => {
                     <div className="h-48 overflow-hidden relative">
                       <Image
                         src={service.image || "/placeholder.svg"}
-                        alt={service.title}
+                        alt={`${service.title} service in Yelahanka and Bangalore by ACIPL`}
                         fill
                         className="object-cover transition-transform duration-700 hover:scale-110"
+                        loading="lazy"
+                        quality={85}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
 
@@ -147,7 +92,7 @@ const ServicesSection = () => {
                         animate={{ rotate: hoveredIndex === index ? 360 : 0 }}
                         transition={{ duration: 0.5 }}
                       >
-                        {icons[service.icon]}
+                        {icons[service.iconName] || <Sparkles className="h-8 w-8 text-gold-500" />}
                       </motion.div>
                     </div>
                   </div>
@@ -157,7 +102,7 @@ const ServicesSection = () => {
                       {service.title}
                     </h3>
                     <div className="text-gray-600 mb-3 text-sm">
-                      <div dangerouslySetInnerHTML={{ __html: service.description }} />
+                      <div dangerouslySetInnerHTML={{ __html: service.shortDescription }} />
                     </div>
                     <motion.div
                       whileHover={{ scale: 1.05 }}

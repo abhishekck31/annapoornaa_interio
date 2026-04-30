@@ -16,6 +16,8 @@ const GallerySection = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({})
   const [loadingProgress, setLoadingProgress] = useState(0)
+  const [visibleImagesCount, setVisibleImagesCount] = useState(24) // Show only 24 images initially
+  const IMAGES_PER_PAGE = 24 // Load 24 more images at a time
 
   // Using interior design images as video thumbnails for better reliability
   // This approach will work consistently on Vercel
@@ -350,6 +352,7 @@ const GallerySection = () => {
     setIsLoading(true)
     setLoadingProgress(0)
     setLoadedImages({})
+    setVisibleImagesCount(24) // Reset to initial count
     
     // Get images for the selected category
     const newImages = categoryImages[selectedCategory as keyof typeof categoryImages] || []
@@ -491,16 +494,16 @@ const GallerySection = () => {
             </div>
           )}
           
-          {/* Images Grid */}
+          {/* Images Grid - Only show visible images */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ${isLoading ? 'opacity-0 h-0 overflow-hidden' : 'opacity-100 transition-opacity duration-500'}`}>
-            {images.map((img, idx) => (
+            {images.slice(0, visibleImagesCount).map((img, idx) => (
               <div
                 key={`${img}-${idx}`}
                 className="group relative"
               >
                 <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
                   {/* Loading placeholder */}
-                  {!loadedImages[img] && idx >= 8 && (
+                  {!loadedImages[img] && idx >= 4 && (
                     <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center">
                       <div className="w-8 h-8 border-4 border-navy-600 border-t-transparent rounded-full animate-spin"></div>
                     </div>
@@ -508,14 +511,17 @@ const GallerySection = () => {
                   
                   <Image
                     src={img}
-                    alt={`${selectedCategory} image ${idx + 1}`}
+                    alt={`Interior design project ${idx + 1} - ${selectedCategory} design Bangalore`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    priority={idx < 8}
-                    loading={idx < 8 ? "eager" : "lazy"}
+                    priority={idx < 4}
+                    loading={idx < 4 ? "eager" : "lazy"}
+                    quality={85}
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
                     onLoad={() => {
-                      if (idx >= 8) {
+                      if (idx >= 4) {
                         setLoadedImages(prev => ({...prev, [img]: true}))
                       }
                     }}
@@ -524,6 +530,18 @@ const GallerySection = () => {
               </div>
             ))}
           </div>
+          
+          {/* Load More Button */}
+          {images.length > visibleImagesCount && (
+            <div className="flex justify-center mt-8">
+              <Button
+                onClick={() => setVisibleImagesCount(prev => Math.min(prev + IMAGES_PER_PAGE, images.length))}
+                className="bg-navy-900 hover:bg-navy-800 text-white px-8 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                Load More Images ({images.length - visibleImagesCount} remaining)
+              </Button>
+            </div>
+          )}
         </ScrollAnimation>
       </div>
 

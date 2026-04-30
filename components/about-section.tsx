@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import ScrollAnimation from "@/components/scroll-animation";
 import { Award, CheckCircle, TrendingUp, Users, Sparkles } from "lucide-react";
 import Link from "next/link";
+import OptimizedImage from "./optimized-image";
 
 const AboutSection = () => {
   return (
@@ -15,11 +16,14 @@ const AboutSection = () => {
           <ScrollAnimation className="relative">
             {/* Ammanavaru image and text */}
             <div className="flex flex-col items-center mb-8">
-              <img
+              <OptimizedImage
                 src="/ammanavaru.png"
-                alt="ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು"
-                className="w-[350px] rounded-xl shadow-lg"
+                alt="Sri Annapoorneshwari Ammanavaru - ACIPL Yelahanka Bangalore"
+                width={350}
+                height={350}
+                className="rounded-xl shadow-lg"
                 style={{ background: "#fff" }}
+                priority={true}
               />
               <div className="mt-3 text-xl font-bold text-gold-700 text-center">
                 ಶ್ರೀ ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು
@@ -36,8 +40,9 @@ const AboutSection = () => {
               <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
                 <img
                   src="/CEOimage.jpg"
-                  alt="About ACIPLr & Construction Company"
+                  alt="Interior Design and Construction Company Yelahanka Bangalore - CEO Raghu Lakshmipathi"
                   className="w-full h-[400px] object-cover"
+                  loading="lazy"
                 />
                 {/* CEO Information Overlay */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-6">
@@ -61,15 +66,11 @@ const AboutSection = () => {
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-navy-900 mb-6 heading-glow-scroll">
-              About <span className="text-gold-600">Annapoorneshwari Constructions Interiors Private Limited</span>
+              Yelahanka's <span className="text-gold-600">Interior Design & Construction Experts</span>
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mb-6 rounded-full"></div>
             <p className="text-lg text-gray-700 mb-6 text-glow-scroll">
-              Annapoorneshwari Constructions Interiors Private Limited is a premier interior design and construction
-              company dedicated to transforming spaces into functional and
-              aesthetically pleasing environments. With years of experience in
-              the industry, we have established ourselves as a trusted name for
-              quality craftsmanship and innovative design solutions.
+              Annapoorneshwari Constructions Interiors Private Limited is an interior design and construction company serving across Bangalore. For over 10 years, we have delivered quality craftsmanship, practical design planning, and reliable project execution.
             </p>
 
             <div className="space-y-4 mb-8">

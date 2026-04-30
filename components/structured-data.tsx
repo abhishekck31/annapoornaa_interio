@@ -1,227 +1,121 @@
-"use client"
+"use client";
 
-import { usePathname } from "next/navigation"
-import Script from "next/script"
+import { usePathname } from "next/navigation";
+import Script from "next/script";
 
-const StructuredData = () => {
-  const pathname = usePathname()
+import { blogPosts } from "@/data/blog-data";
+import { siteFaqs } from "@/data/faq-data";
+import { services } from "@/data/services-data";
+import {
+  buildArticleSchema,
+  buildBreadcrumbSchema,
+  buildFaqSchema,
+  buildLocalBusinessSchema,
+  buildOrganizationSchema,
+  buildServiceSchema,
+} from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 
-  // Organization schema
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
-    name: "Annapoorneshwari Constructions Interiors Private Limited",
-    url: "https://annapoornaainterio.com",
-    logo: "https://annapoornaainterio.com/images/logo.png",
-    sameAs: [
-      "https://www.facebook.com/annapoornaainterio",
-      "https://www.instagram.com/annapoornaainterio",
-      "https://www.linkedin.com/company/annapoornaainterio",
-    ],
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross,2nd stage, 'B' sector",
-      addressLocality: "Yelahanka",
-      addressRegion: "Bangalore",
-      postalCode: "560064",
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 13.1005,
-      longitude: 77.5945,
-    },
-    telephone: "+91 99000 94942",
-    email: "raghu@ac-ipl.in",
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "19:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "10:00",
-        closes: "19:00",
-      },
-    ],
-    priceRange: "₹₹-₹₹₹₹",
-    areaServed: {
-      "@type": "City",
-      name: "Bangalore",
-    },
-    description:
-      "ACIPL is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services that transform your space.",
-  }
-
-  // Local business schema
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "ACIPL - Bangalore & Yelahanka",
-    image: "https://annapoornaainterio.com/images/logo.png",
-    url: "https://annapoornaainterio.com",
-    telephone: "+9199000 94942",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross,2nd stage, 'B' sector",
-      addressLocality: "Yelahanka",
-      addressRegion: "Bangalore",
-      postalCode: "560064",
-      addressCountry: "IN",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 13.1005,
-      longitude: 77.5945,
-    },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:00",
-        closes: "19:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: "Saturday",
-        opens: "10:00",
-        closes: "19:00",
-      },
-    ],
-    sameAs: [
-      "https://www.facebook.com/ainterio",
-      "https://www.instagram.com/annapoornaainterio",
-      "https://www.linkedin.com/company/annapoornaainterio",
-    ],
-  }
-
-  // Service schema
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Interior Design and Construction Services",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "ACIPL",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Yelahanka",
-        addressRegion: "Bangalore",
-      },
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Bangalore",
-    },
-    description:
-      "Premium interior design and construction services in Bangalore and Yelahanka, including home and office interiors, renovation, and high-quality products.",
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        priceCurrency: "INR",
-      },
-    },
-  }
-
-  // Product schema
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: "UPVC Windows and Doors in Bangalore",
-    description:
-      "Energy-efficient, durable UPVC windows and doors designed for Bangalore's climate and architectural styles.",
-    brand: {
-      "@type": "Brand",
-      name: "ACIPL",
-    },
-    offers: {
-      "@type": "AggregateOffer",
-      priceCurrency: "INR",
-      availability: "https://schema.org/InStock",
-      highPrice: "50000",
-      lowPrice: "5000",
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Bangalore",
-    },
-  }
-
-  // FAQ schema
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What services does ACIPL offer in Bangalore?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, Soffit False Ceilings, workstations, and chairs.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Does ACIPL serve the Yelahanka area in Bangalore?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, we provide all our services in Yelahanka and throughout Bangalore. Our team has extensive experience working in Yelahanka and understands the local preferences and requirements.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How long does a typical interior design project take in Bangalore?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Project timelines vary depending on the scope and complexity. A simple interior design project in Bangalore might take 4-6 weeks, while a full construction project could take several months. During our initial consultation, we'll provide you with a detailed timeline specific to your project.",
-        },
-      },
-    ],
-  }
-
-  let currentSchema: Record<string, any> = organizationSchema;
+export default function StructuredData() {
+  const pathname = usePathname();
+  const schemas: Record<string, unknown>[] = [];
 
   if (pathname === "/") {
-    currentSchema = organizationSchema
-  } else if (pathname === "/bangalore-yelahanka") {
-    currentSchema = localBusinessSchema
-  } else if (pathname === "/services") {
-    currentSchema = serviceSchema
-  } else if (pathname.includes("/products/")) {
-    // Handle specific product pages
-    if (pathname === "/products/upvc-windows-doors") {
-      currentSchema = {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "UPVC Windows & Doors",
-        "description": "Energy-efficient UPVC windows and doors installation in Bangalore",
-        "brand": {
-          "@type": "Brand",
-          "name": "ACIPL"
+    schemas.push(buildOrganizationSchema());
+    schemas.push(buildLocalBusinessSchema());
+    schemas.push(
+      buildFaqSchema([
+        {
+          question: "What services does ACIPL offer in Bangalore?",
+          answer:
+            "We offer home interiors, office interiors, construction, renovation, project management consultancy, architectural design, and selected building products across Bangalore.",
         },
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    } else {
-      currentSchema = productSchema
+        {
+          question: "Which Bangalore locations do you serve?",
+          answer: `We serve ${siteConfig.serviceAreas.join(", ")} and nearby areas from our Yelahanka office.`,
+        },
+        {
+          question: "How can I request a site visit or quote?",
+          answer:
+            "You can call, WhatsApp, or submit the contact form to request a consultation, site visit, budget discussion, or quote.",
+        },
+      ]),
+    );
+  }
+
+  if (pathname.startsWith("/services/")) {
+    const service = services.find((item) => pathname === `/services/${item.slug}`);
+    if (service) {
+      schemas.push(
+        buildServiceSchema({
+          name: service.title,
+          description: service.seoDescription,
+          path: pathname,
+        }),
+      );
+      schemas.push(
+        buildFaqSchema(service.faqs.map((faq) => ({ question: faq.question, answer: faq.answer }))),
+      );
     }
-  } else if (pathname === "/faq" || pathname === "/#faq") {
-    currentSchema = faqSchema
+  }
+
+  if (pathname.startsWith("/blog/")) {
+    const post = blogPosts.find((item) => pathname === `/blog/${item.slug}`);
+    if (post) {
+      schemas.push(
+        buildArticleSchema({
+          title: post.title,
+          description: post.seoDescription,
+          path: pathname,
+          image: post.image,
+          datePublished: post.publishedAt,
+          dateModified: post.modifiedAt,
+          author: post.author,
+        }),
+      );
+      if (post.faqs.length > 0) {
+        schemas.push(
+          buildFaqSchema(post.faqs.map((faq) => ({ question: faq.question, answer: faq.answer }))),
+        );
+      }
+    }
+  }
+
+  if (pathname === "/faq") {
+    schemas.push(buildFaqSchema(siteFaqs));
+  }
+
+  if (pathname !== "/") {
+    const segments = pathname.split("/").filter(Boolean);
+    schemas.push(
+      buildBreadcrumbSchema([
+        { name: "Home", path: "/" },
+        ...segments.map((segment, index) => ({
+          name: segment
+            .split("-")
+            .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+            .join(" "),
+          path: `/${segments.slice(0, index + 1).join("/")}`,
+        })),
+      ]),
+    );
+  }
+
+  if (schemas.length === 0) {
+    schemas.push(buildOrganizationSchema());
   }
 
   return (
-    <Script id="structured-data" type="application/ld+json">
-      {JSON.stringify(currentSchema)}
-    </Script>
-  )
+    <>
+      {schemas.map((schema, index) => (
+        <Script
+          key={`structured-data-${index}`}
+          id={`structured-data-${index}`}
+          type="application/ld+json"
+        >
+          {JSON.stringify(schema)}
+        </Script>
+      ))}
+    </>
+  );
 }
-
-export default StructuredData

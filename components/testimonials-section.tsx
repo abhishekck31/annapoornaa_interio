@@ -105,8 +105,9 @@ const TestimonialsSection = () => {
                     <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full">
                       <img
                         src="/google-icon.svg"
-                        alt="Google"
+                        alt="Interior and Construction services in Yelahanka, Bangalore"
                         className="h-4 w-4"
+                        loading="lazy"
                       />
                       <span className="text-sm text-gray-600">Verified Review</span>
                     </div>

@@ -1,13 +1,16 @@
 import './globals.css'
 
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Poppins } from "next/font/google"
 import ClientRootLayout from "./client-layout"
+import GoogleAnalytics from "@/components/google-analytics"
 import StructuredData from "@/components/structured-data"
 import GridOverlay from "@/components/grid-overlay"
 import { GridBackground } from "@/components/grid-background"
 import Script from "next/script"
+import { buildMetadata } from "@/lib/seo"
+import { primarySiteUrl, siteConfig } from "@/lib/site-config"
 
 // Initialize Poppins font with the weights we need
 const poppins = Poppins({
@@ -17,11 +20,32 @@ const poppins = Poppins({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  themeColor: "#001252",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+}
+
 export const metadata: Metadata = {
-  title: "ACIPL - Construction and Interior",
-  description: "ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
-  keywords:
-    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
+  ...buildMetadata({
+    title: "Interior Designers and Construction Company in Bangalore | ACIPL",
+    description:
+      "ACIPL is a premium interior design and construction company in Bangalore. We specialize in luxury home interiors, modular kitchens, and turnkey construction services.",
+    path: "/",
+    keywords: [
+      "interior designers Bangalore",
+      "interior designers Yelahanka",
+      "home interior designers Bangalore",
+      "office interior designers Bangalore",
+      "construction company Bangalore",
+      "home interiors Yelahanka",
+      "modular kitchen designers Bangalore",
+      "renovation company Bangalore",
+      "turnkey interior design Bangalore",
+    ],
+  }),
+  metadataBase: primarySiteUrl,
   authors: [{ name: "ACIPL" }],
   creator: "ACIPL",
   publisher: "ACIPL",
@@ -30,71 +54,21 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  metadataBase: new URL("https://ac-ipl.in"),
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "ACIPL | Premium Interior & Construction Services in Bangalore",
-    description:
-      "ACIPL is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
-    url: "https://ac-ipl.in",
-    siteName: "ACIPL",
-    locale: "en_IN",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
   icons: {
     icon: [
       { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
       { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon_io/favicon.ico", sizes: "192x192", type: "image/png" },
+      { url: "/favicon_io/favicon.ico", sizes: "any" },
     ],
     shortcut: "/favicon_io/favicon.ico",
     apple: "/favicon_io/apple-touch-icon.png",
   },
   manifest: "/favicon_io/site.webmanifest",
-  generator: 'v0.dev'
+  generator: "Next.js",
+  category: "Interior Design & Construction",
+  classification: "Business",
 }
 
-export function JsonLd() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "InteriorDesignBusiness",
-          "name": "Annapoorneshwari Constructions Interiors Private Limited",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bangalore",
-            "addressRegion": "KA",
-            "postalCode": "560064",
-            "streetAddress": "Your Street Address"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "13.1007",
-            "longitude": "77.5963"
-          },
-          "telephone": "+91 YOUR_PHONE",
-          "openingHours": "Mo-Sa 09:00-18:00"
-        })
-      }}
-    />
-  );
-}
 
 export default function RootLayout({
   children,
@@ -104,9 +78,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
+        {/* Google Search Console ownership verification — set NEXT_PUBLIC_GSC_VERIFICATION in env */}
+        {siteConfig.searchConsoleVerification && (
+          <meta name="google-site-verification" content={siteConfig.searchConsoleVerification} />
+        )}
+        {/* Resource hints for performance */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Favicons */}
         <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
+
+        {/* Critical resource preloading */}
+
+        <link rel="preload" href="/images/logo.png" as="image" />
         <Script
           id="scroll-to-top"
           strategy="afterInteractive"
@@ -118,10 +107,10 @@ export default function RootLayout({
             `,
           }}
         />
-        <JsonLd />
-        <meta name="description" content="ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
+
       </head>
       <body className="font-poppins">
+        <GoogleAnalytics />
         <StructuredData />
         <GridBackground />
         <GridOverlay />

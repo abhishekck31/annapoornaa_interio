@@ -88,7 +88,7 @@ const DifferenceSection = () => {
           </ScrollAnimation>
 
           <ScrollAnimation className="relative">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
@@ -96,9 +96,10 @@ const DifferenceSection = () => {
               >
                 <img
                   src="/Villain.png"
-                  alt="Luxury Living Room"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Luxury Living Room</h4>
@@ -108,13 +109,14 @@ const DifferenceSection = () => {
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
+                className="sm:mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
               >
                 <img
                   src="/Executive.png"
-                  alt="Executive Office"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Executive Office</h4>
@@ -128,9 +130,10 @@ const DifferenceSection = () => {
               >
                 <img
                   src="/modernvilla.png"
-                  alt="Modern Villa"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Modern Villa</h4>
@@ -140,13 +143,14 @@ const DifferenceSection = () => {
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
+                className="sm:mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
               >
                 <img
                   src="/Homein1.png"
-                  alt="Designer Kitchen"
+                  alt="Interior and Construction services in Yelahanka, Bangalore"
                   className="w-full h-full object-cover"
                   style={{ minHeight: "200px" }}
+                  loading="lazy"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Designer Kitchen</h4>
@@ -155,18 +159,18 @@ const DifferenceSection = () => {
               </motion.div>
             </div>
 
-            <div className="relative mt-8 mx-auto bg-white py-4 px-8 rounded-full shadow-xl z-10 max-w-max">
-              <div className="flex items-center space-x-4">
+            <div className="relative mt-8 mx-auto bg-white py-4 px-6 md:px-8 rounded-2xl md:rounded-full shadow-xl z-10 max-w-max">
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
                 <div className="text-center">
                   <p className="text-3xl font-bold text-navy-900">200+</p>
                   <p className="text-sm text-gray-600">Projects</p>
                 </div>
-                <div className="h-10 w-px bg-gray-300"></div>
+                <div className="hidden sm:block h-10 w-px bg-gray-300"></div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-navy-900">10+</p>
                   <p className="text-sm text-gray-600">Years</p>
                 </div>
-                <div className="h-10 w-px bg-gray-300"></div>
+                <div className="hidden sm:block h-10 w-px bg-gray-300"></div>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-navy-900">100%</p>
                   <p className="text-sm text-gray-600">Satisfaction</p>

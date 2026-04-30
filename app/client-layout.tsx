@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import ScrollNavigation from "@/components/scroll-navigation"
 import WhatsAppButton from "@/components/whatsapp-button"
 import SocialLinks from "@/components/social-links"
+import Breadcrumbs from "@/components/breadcrumbs"
 import { AnimatePresence } from "framer-motion"
 
 const poppins = Poppins({
@@ -22,6 +23,7 @@ export default function ClientRootLayout({
   return (
     <div className={`${poppins.variable} font-poppins relative bg-white`}>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+        <Breadcrumbs />
         <AnimatePresence mode="wait">{children}</AnimatePresence>
         <ScrollNavigation />
         <WhatsAppButton />

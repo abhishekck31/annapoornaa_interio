@@ -2,14 +2,15 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { whatsappUrl } from "@/lib/site-config"
+import { trackEvent } from "@/lib/tracking"
 
 const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false)
-  const whatsappMessage = "Hello! I'm interested in learning more about ACIPL's services. Could you please provide more information?"
-  const whatsappLink = `https://wa.me/918073141413?text=${encodeURIComponent(whatsappMessage)}`
 
   const handleWhatsAppClick = () => {
-    window.open(whatsappLink, "_blank")
+    trackEvent("lead_whatsapp_click", { sourcePage: window.location.pathname, placement: "floating_button" })
+    window.open(whatsappUrl, "_blank")
   }
 
   return (

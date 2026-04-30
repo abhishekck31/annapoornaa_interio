@@ -1,16 +1,32 @@
+import { Metadata } from 'next'
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { CheckCircle, Award, Users, TrendingUp, Shield, Clock, HeartHandshake, ThumbsUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: 'About ACIPL | Interior Design & Construction Company Bangalore',
+  description: 'Learn about ACIPL – Annapoorneshwari Constructions Interiors Pvt Ltd, a premier interior design and construction company in Bangalore with 10+ years of experience and 200+ completed projects.',
+  path: '/about',
+  keywords: [
+    'about ACIPL',
+    'interior design company Bangalore',
+    'construction company Bangalore',
+    'Annapoorneshwari Constructions',
+    'interior designers Yelahanka',
+    'best interior company Bangalore',
+  ],
+})
 
 const AboutPage = () => {
   return (
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 mt-32 pb-16 bg-white">
+      <section className="pt-32 pb-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center mb-4">
             <span className="text-lg text-secondary uppercase tracking-wider font-medium">ABOUT US</span>

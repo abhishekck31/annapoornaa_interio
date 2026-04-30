@@ -83,8 +83,11 @@ const ProjectsSection = () => {
                     <div className="relative w-full h-auto">
                       <img
                         src={project.mainImage}
-                        alt={project.title}
+                        alt="Interior and Construction services in Yelahanka, Bangalore"
                         className="object-cover w-full h-auto rounded-t-lg"
+                        loading="lazy"
+                        decoding="async"
+                        fetchPriority="low"
                       />
                     </div>
                     <CardContent className="p-4 sm:p-6 bg-white pb-28 sm:pb-6">
@@ -146,7 +149,7 @@ const ProjectsSection = () => {
                   We believe in a collaborative process, working closely with our clients from concept to completion. Our team ensures every project is delivered on time, within budget, and with the highest standards of quality and innovation.
                 </p>
               </div>
-              <Link href="/contact-us">
+              <Link href="/contact">
                 <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-4 py-2 sm:px-6 sm:py-2 rounded shadow-lg mt-2 text-sm sm:text-base">
                   Get in Touch
                 </Button>

@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -5,6 +6,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: 'Safety Fire Doors in Bangalore | Fire Rated Wooden & Steel Doors',
+  description: 'Safety-compliant fire doors in Bangalore. We provide fire-rated wooden and steel doors designed to prevent the spread of fire. Certified safety solutions.',
+  keywords: ['fire doors Bangalore', 'fire rated doors', 'steel fire doors', 'wooden fire doors', 'safety doors Bangalore'],
+}
 
 const FireDoorsPage = () => {
   const features = [

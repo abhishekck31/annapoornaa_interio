@@ -1,8 +1,11 @@
+"use client"
+
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import FormspreeThankYou from "./FormspreeThankYou";
+import { trackEvent } from "@/lib/tracking";
 
 
 // Make sure this endpoint matches your Formspree dashboard. If you have issues, check https://formspree.io/dashboard for errors or setup steps.
@@ -28,6 +31,10 @@ export default function FormspreeForm() {
         headers: { 'Accept': 'application/json' },
       });
       if (response.ok) {
+        trackEvent("lead_form_submit", {
+          sourcePage: "/contact",
+          method: "formspree",
+        });
         setSubmitted(true);
         form.reset();
       } else {

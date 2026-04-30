@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,12 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
+
+export const metadata: Metadata = {
+  title: 'Soffit False Ceilings Bangalore | PVC & POP Ceiling Solutions',
+  description: 'Enhance your interiors with modern soffit false ceilings in Bangalore. Water-resistant PVC and decorative designs for homes and offices. Durable & affordable.',
+  keywords: ['false ceilings Bangalore', 'PVC ceiling Bangalore', 'soffit ceilings', 'interior ceiling designs', 'modular false ceiling'],
+}
 
 const PVCFalseCeilingsPage = () => {
   const features = [
@@ -65,11 +72,11 @@ const PVCFalseCeilingsPage = () => {
 
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
-               Wide range of false ceilings
+                Wide range of false ceilings
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 False ceilings offer a wide variety of design and material options,
-                allowing for both aesthetic enhancement and practical benefits like hiding 
+                allowing for both aesthetic enhancement and practical benefits like hiding
                 wiring and improving insulation.Common materials include gypsum, POP(Plaster of Paris),
                 metal and wood. The choice of materials depends on factors like budget, desired design, and the room's specific needs.
               </p>

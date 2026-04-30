@@ -1,7 +1,24 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "Interior Design Expertise in Bangalore | ACIPL",
+  description:
+    "Expert interior design services for homes, offices, retail spaces, and hospitality in Bangalore. Over 10 years of experience in creating beautiful spaces.",
+  path: "/expertise/interior",
+  keywords: [
+    "interior design expertise",
+    "residential interior design Bangalore",
+    "commercial interior design Bangalore",
+    "retail interior design",
+    "hospitality interior design",
+  ],
+})
+
 
 const interiorExpertise = [
   {
@@ -66,7 +83,7 @@ export default function InteriorExpertisePage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Interior Design Expertise</h1>

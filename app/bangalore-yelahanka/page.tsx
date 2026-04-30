@@ -2,53 +2,56 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush } from "lucide-react"
+import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush, Quote } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import Head from 'next/head'
+import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | ACIPL",
-  description:
-    "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products like UPVC windows, fire doors, and more.",
-  keywords:
-    "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, false ceilings Bangalore, workstations Yelahanka",
-  alternates: {
-    canonical: "/bangalore-yelahanka",
-  },
-  icons: {
-    icon: '/favicon.ico',
-  },
-}
+export const metadata: Metadata = buildMetadata({
+    title: "Interior Designers in Yelahanka, Bangalore | ACIPL",
+    description:
+      "ACIPL offers home interiors, office interiors, modular kitchens, renovation, and construction services in Yelahanka and across Bangalore.",
+    path: "/bangalore-yelahanka",
+    keywords: [
+      "interior designers Yelahanka",
+      "home interior designers Yelahanka",
+      "office interior designers Yelahanka",
+      "construction company Yelahanka",
+      "renovation services Yelahanka",
+      "modular kitchen Yelahanka",
+      "interior company Bangalore",
+    ],
+  })
 
 const BangaloreYelahankaPage = () => {
   const services = [
     {
-      title: "Home Interior Design in Bangalore",
+      title: "Home Interior Designers in Yelahanka",
       icon: <Home className="h-10 w-10 text-gold-500" />,
       description:
-        "Transform your Bangalore home with our expert interior design services tailored to local aesthetics and preferences.",
+        "Custom home interior design for apartments and villas in Yelahanka, planned for function, storage, and long-term durability.",
       link: "/services#home-interior",
     },
     {
-      title: "Office Interior Design in Yelahanka",
+      title: "Office Interior Designers Yelahanka",
       icon: <Briefcase className="h-10 w-10 text-gold-500" />,
       description:
-        "Create productive and inspiring workspaces in Yelahanka with our office interior solutions designed for Bangalore businesses.",
+        "Create productive workspaces with Yelahanka's best office interior designers. Serving across Bangalore.",
       link: "/services#office-interior",
     },
     {
-      title: "Construction Services in Bangalore",
+      title: "Construction Services in Yelahanka",
       icon: <Building className="h-10 w-10 text-gold-500" />,
       description:
-        "Build your dream property in Bangalore with our professional construction services that understand local regulations and requirements.",
+        "Trusted residential and commercial construction services in Yelahanka with structured planning, supervision, and quality execution.",
       link: "/services#construction",
     },
     {
-      title: "Renovation Services in Yelahanka",
+      title: "Home Renovation Services Yelahanka",
       icon: <Paintbrush className="h-10 w-10 text-gold-500" />,
       description:
-        "Revitalize your existing spaces in Yelahanka with our comprehensive renovation services tailored to Bangalore's unique architecture.",
+        "Revitalize your home with expert renovation services. Serving across Bangalore.",
       link: "/services#renovation",
     },
   ]
@@ -82,7 +85,7 @@ const BangaloreYelahankaPage = () => {
       title: "Premium Chairs for Yelahanka Offices",
       description:
         "Comfortable, stylish, and ergonomic chairs for offices, homes, and commercial spaces throughout Bangalore and Yelahanka.",
-      link: "/products/chairs",
+      link: "/products/workstations",
     },
   ]
 
@@ -126,46 +129,48 @@ const BangaloreYelahankaPage = () => {
 
   return (
     <main className="min-h-screen">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Navbar />
       <div className="h-20"></div>
 
       {/* Hero Section */}
-      <section className="pt-56 pb-36 bg-gradient-to-r from-navy-900 to-navy-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-56 pb-36 bg-navy-900 text-white relative overflow-hidden">
+        {/* Subtle background pattern could go here */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <div className="flex items-center mb-4">
-                <MapPin className="h-6 w-6 text-gold-400 mr-2" />
-                <span className="text-gold-300 uppercase tracking-wider font-medium">Bangalore & Yelahanka</span>
+              <div className="flex items-center mb-4 text-gold-500 font-medium">
+                <MapPin className="h-6 w-6 mr-2" />
+                <span className="uppercase tracking-wider">Interior Design and Construction in Yelahanka</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Premium Interior & Construction Services in Bangalore
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 italic leading-tight">
+                Leading <span className="text-gold-500">Interior Designers</span> in Yelahanka
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Transforming spaces across Bangalore and Yelahanka with innovative design solutions and quality
-                craftsmanship since 2010.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                ACIPL delivers end-to-end home interiors, office interiors, renovation, and construction services in Yelahanka and across Bangalore with a quality-first execution approach.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/#contact">
-                  <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+                <Link href="/contact">
+                  <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold px-8 py-4 rounded-xl shadow-lg transition-all h-auto">
                     Get a Free Consultation
                   </Button>
                 </Link>
                 <Link href="/gallery">
                   <Button
                     variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="border-2 border-white text-white hover:bg-white/10 font-bold px-8 py-4 rounded-xl shadow-lg transition-all h-auto"
                   >
-                    View Our Bangalore Projects
+                    View Bangalore Projects
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              {/* Removed image section */}
+            <div className="lg:w-1/2 relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-navy-800">
+              <Image
+                src="/updated-homein.jpg"
+                alt="Premium Interior Design in Bangalore & Yelahanka"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

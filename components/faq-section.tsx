@@ -7,35 +7,72 @@ import ScrollAnimation from "@/components/scroll-animation"
 
 const faqs = [
   {
-    question: "What services do you offer?",
+    question: "Is ACIPL the best interior designer in Bangalore?",
     answer:
-      "We offer a comprehensive range of interior and construction services including home interior, office/corporate interiors, residential & commercial construction, renovation, and various products like UPVC windows, doors, fire doors, system railings, false ceilings, and workstations.",
+      "ACIPL is a top-rated interior design and construction company in Bangalore with 4.9/5 stars. We specialize in:",
+    bullets: [
+      "End-to-end Turnkey Construction",
+      "Premium Home Interiors (Villas & Apartments)",
+      "Commercial & Office Renovations",
+      "10+ Years Experience with 200+ Completed Projects"
+    ]
   },
   {
-    question: "How long does a typical project take?",
+    question: "What interior design services do you offer in Yelahanka?",
     answer:
-      "Project timelines vary depending on the scope and complexity. A simple interior design project might take 4-6 weeks, while a full construction project could take several months. During our initial consultation, we'll provide you with a detailed timeline specific to your project.",
+      "We provide comprehensive interior solutions in Yelahanka and North Bangalore:",
+    bullets: [
+      "Modular Kitchens & Wardrobes",
+      "False Ceiling & Lighting Design",
+      "Complete Civil Renovations",
+      "Custom Furniture Manufacturing",
+      "UPVC Windows & Fire Doors"
+    ]
   },
   {
-    question: "Do you provide free consultations?",
+    question: "What is the cost of interior design in Bangalore per sq ft?",
     answer:
-      "Yes, we offer a free initial consultation to understand your requirements, discuss your vision, and provide preliminary guidance. This helps us create a tailored proposal for your project.",
+      "Interior design costs in Bangalore typically range from ₹800 to ₹1,500+ per sq ft depending on materials and finishes. We offer:",
+    bullets: [
+      "Budget Series: Economical yet durable",
+      "Premium Series: High-gloss laminates & acrylics",
+      "Luxury Series: Veneers, PU polish, and premium hardware",
+      "Free detailed cost estimation provided upfront."
+    ]
   },
   {
-    question: "What is your pricing structure?",
+    question: "Do you handle turnkey house construction in Bangalore?",
     answer:
-      "Our pricing is project-specific and depends on factors such as scope, materials, complexity, and timeline. We provide detailed quotes after the initial consultation, ensuring transparency with no hidden costs.",
+      'Yes, we are "A to Z" civil contractors. We handle everything from mud-to-mud:',
+    bullets: [
+      "Architectural Design & Approval Plan",
+      "Structural Construction (Civil Work)",
+      "Plumbing, Electrical & Flooring",
+      "Final Interior Finishing & Handover"
+    ]
   },
   {
-    question: "Do you handle permits and regulations?",
+    question: "How long does a home interior project take?",
     answer:
-      "Yes, we handle all necessary permits, approvals, and ensure compliance with local building codes and regulations as part of our service, making the process hassle-free for you.",
+      "We value your time. Typical timelines are:",
+    bullets: [
+      "2BHK/3BHK Interiors: 35-45 Days (Execution)",
+      "Modular Kitchens: 20-25 Days",
+      "Full Home Renovation: 60-90 Days",
+      "New Construction: 12-18 Months depending on built-up area."
+    ]
   },
   {
-    question: "Can I see examples of your previous work?",
+    question: "Why choose ACIPL over other designers?",
     answer:
-      "You can view our portfolio on our website's gallery section, or we can arrange a visit to some of our completed projects during the consultation phase.",
-  },
+      "We are one of the few company in Bangalore offering both Civil Construction + Interiors under one roof.",
+    bullets: [
+      "No sub-contracting hassles",
+      "Single point of contact",
+      "Own manufacturing unit for quality control",
+      "5-Year Warrenty on Modular Interiors"
+    ]
+  }
 ]
 
 const FAQSection = () => {
@@ -69,11 +106,10 @@ const FAQSection = () => {
               <div className="mb-6">
                 <motion.button
                   onClick={() => toggleFAQ(index)}
-                  className={`w-full text-left p-6 rounded-xl flex justify-between items-center transition-all duration-300 ${
-                    activeIndex === index
-                      ? "bg-navy-900 text-white shadow-lg"
-                      : "bg-gray-50 text-navy-900 hover:bg-gray-100"
-                  }`}
+                  className={`w-full text-left p-6 rounded-xl flex justify-between items-center transition-all duration-300 ${activeIndex === index
+                    ? "bg-navy-900 text-white shadow-lg"
+                    : "bg-gray-50 text-navy-900 hover:bg-gray-100"
+                    }`}
                   whileHover={{ scale: 1.01 }}
                   whileTap={{ scale: 0.99 }}
                 >
@@ -93,7 +129,16 @@ const FAQSection = () => {
                       className="overflow-hidden"
                     >
                       <div className="p-6 bg-gray-50 rounded-b-xl border-t border-gray-200">
-                        <p className="text-gray-700">{faq.answer}</p>
+                        <p className="text-gray-700 mb-3">{faq.answer}</p>
+                        {/* @ts-ignore */}
+                        {faq.bullets && (
+                          <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                            {/* @ts-ignore */}
+                            {faq.bullets.map((bullet: string, i: number) => (
+                              <li key={i}>{bullet}</li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     </motion.div>
                   )}

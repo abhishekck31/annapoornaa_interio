@@ -4,23 +4,23 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
+import LeadLink from "@/components/lead-link";
 
 const slides = [
   {
-    image: "/UP-Hero3.png?height=800&width=1600",
-    title: "Transform Your Space",
-    description: "Professional interior design solutions for homes and offices",
+    image: "/UP-Hero3.png",
+    title: "Interior Designers in Yelahanka, Bangalore",
+    description: "Premium home and office interior solutions with end-to-end execution across Bangalore",
   },
   {
-    image: "/UP-Hero2.png?height=800&width=1600",
-    title: "Build Your Dream Home",
-    description: "Expert construction services with attention to detail",
+    image: "/UP-Hero2.png",
+    title: "Trusted Construction Company in Bangalore",
+    description: "Expert A-class construction services in Yelahanka, Whitefield & all Bangalore",
   },
   {
-    image: "/UP-Hero1.png?height=800&width=1600",
-    title: "Renovate With Confidence",
-    description: "Breathe new life into your existing spaces",
+    image: "/UP-Hero1.png",
+    title: "Home Interiors, Renovation and Modular Kitchens",
+    description: "Transform your space with award-winning designs and quality craftsmanship",
   },
 ];
 
@@ -64,6 +64,13 @@ const HeroSection = () => {
       }
     };
   }, []);
+
+  // Preload next slide image
+  useEffect(() => {
+    const nextSlideIndex = currentSlide === slides.length - 1 ? 0 : currentSlide + 1;
+    const nextImage = new Image();
+    nextImage.src = slides[nextSlideIndex].image;
+  }, [currentSlide]);
 
   const handleSlideChange = (index: number) => {
     if (slideInterval.current) {
@@ -126,11 +133,15 @@ const HeroSection = () => {
                   transition={{ duration: 0.8, delay: 0.7 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  <Link href="/contact">
+                  <LeadLink
+                    href="/contact"
+                    eventName="lead_consultation_booking"
+                    eventParams={{ sourcePage: "/", placement: "hero" }}
+                  >
                     <Button className="bg-gold-600 hover:bg-gold-700 text-navy-900 font-semibold px-8 py-6 rounded-md text-lg shadow-xl hover:shadow-2xl transition-all duration-300 border border-gold-500 hover-3d">
                       Get in Touch <Sparkles className="ml-2 h-5 w-5" />
                     </Button>
-                  </Link>
+                  </LeadLink>
                 </motion.div>
               </div>
             </div>

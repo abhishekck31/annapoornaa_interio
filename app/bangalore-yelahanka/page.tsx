@@ -2,53 +2,61 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush } from "lucide-react"
+import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush, Quote } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import Head from 'next/head'
+import Image from "next/image"
+import { buildMetadata } from "@/lib/seo"
 
 export const metadata: Metadata = {
-  title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | Annapoornaa Interio",
-  description:
-    "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products like UPVC windows, fire doors, and more.",
-  keywords:
-    "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, false ceilings Bangalore, workstations Yelahanka",
-  alternates: {
-    canonical: "/bangalore-yelahanka",
-  },
+  ...buildMetadata({
+    title: "Interior Designers in Yelahanka, Bangalore | ACIPL",
+    description:
+      "ACIPL offers home interiors, office interiors, modular kitchens, renovation, and construction services in Yelahanka and across Bangalore.",
+    path: "/bangalore-yelahanka",
+    keywords: [
+      "interior designers Yelahanka",
+      "home interior designers Yelahanka",
+      "office interior designers Yelahanka",
+      "construction company Yelahanka",
+      "renovation services Yelahanka",
+      "modular kitchen Yelahanka",
+      "interior company Bangalore",
+    ],
+  }),
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 }
 
 const BangaloreYelahankaPage = () => {
   const services = [
     {
-      title: "Home Interior Design in Bangalore",
+      title: "Home Interior Designers in Yelahanka",
       icon: <Home className="h-10 w-10 text-gold-500" />,
       description:
-        "Transform your Bangalore home with our expert interior design services tailored to local aesthetics and preferences.",
+        "Custom home interior design for apartments and villas in Yelahanka, planned for function, storage, and long-term durability.",
       link: "/services#home-interior",
     },
     {
-      title: "Office Interior Design in Yelahanka",
+      title: "Office Interior Designers Yelahanka",
       icon: <Briefcase className="h-10 w-10 text-gold-500" />,
       description:
-        "Create productive and inspiring workspaces in Yelahanka with our office interior solutions designed for Bangalore businesses.",
+        "Create productive workspaces with Yelahanka's best office interior designers. Serving across Bangalore.",
       link: "/services#office-interior",
     },
     {
-      title: "Construction Services in Bangalore",
+      title: "Construction Services in Yelahanka",
       icon: <Building className="h-10 w-10 text-gold-500" />,
       description:
-        "Build your dream property in Bangalore with our professional construction services that understand local regulations and requirements.",
+        "Trusted residential and commercial construction services in Yelahanka with structured planning, supervision, and quality execution.",
       link: "/services#construction",
     },
     {
-      title: "Renovation Services in Yelahanka",
+      title: "Home Renovation Services Yelahanka",
       icon: <Paintbrush className="h-10 w-10 text-gold-500" />,
       description:
-        "Revitalize your existing spaces in Yelahanka with our comprehensive renovation services tailored to Bangalore's unique architecture.",
+        "Revitalize your home with expert renovation services. Serving across Bangalore.",
       link: "/services#renovation",
     },
   ]
@@ -82,7 +90,7 @@ const BangaloreYelahankaPage = () => {
       title: "Premium Chairs for Yelahanka Offices",
       description:
         "Comfortable, stylish, and ergonomic chairs for offices, homes, and commercial spaces throughout Bangalore and Yelahanka.",
-      link: "/products/chairs",
+      link: "/products/workstations",
     },
   ]
 
@@ -91,14 +99,14 @@ const BangaloreYelahankaPage = () => {
       name: "Darhini B S",
       location: "Bangalore",
       testimonial:
-        "I would like to extend my sincere appreciation for the outstanding interior work done by Annapoornaa Interio. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch.The craftsmanship, choice of materials, and attention to detail truly reflect a high standard of excellence. The space has been transformed beautifully, balancing aesthetics with functionality. The team's dedication, timely delivery, and willingness to accommodate our preferences made the entire experience seamless and enjoyable.Thank you for your hard work and commitment to quality. I highly recommend Annapoornaa Interio to anyone looking for superior interior design and execution.",
+        "I would like to extend my sincere appreciation for the outstanding interior work done by ACIPL. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch. From the initial design, concepts to the final execution, every detail has been handled with exceptional professionalism and creativity.Mr. Raghu the proprietor takes the effort to personally inspect the works regularly and the team works tirelessly to ensure the work is top-notch.The craftsmanship, choice of materials, and attention to detail truly reflect a high standard of excellence. The space has been transformed beautifully, balancing aesthetics with functionality. The team's dedication, timely delivery, and willingness to accommodate our preferences made the entire experience seamless and enjoyable.Thank you for your hard work and commitment to quality. I highly recommend ACIPL to anyone looking for superior interior design and execution.",
       rating: 5,
     },
     {
       name: "Satish Krishnan",
       location: "Bangalore",
       testimonial:
-        "Good work done by Annapoornaa Interio. I got their reference from a known friends circle. My house was 15+ years old and there was good amount of renovation need to be done. Ragu and team did a fabulous job in understanding the issues, consulting design specialists and executing seamlessly. What we liked the most is the professional approach, constant communication with owners, taking efforts to execute as per plan and also suggesting measures for improvement. Overall delighted with their work and would recommend anyone who is planning for their new home design or renovation. Kudos to their entire team !",
+        "Good work done by ACIPL. I got their reference from a known friends circle. My house was 15+ years old and there was good amount of renovation need to be done. Ragu and team did a fabulous job in understanding the issues, consulting design specialists and executing seamlessly. What we liked the most is the professional approach, constant communication with owners, taking efforts to execute as per plan and also suggesting measures for improvement. Overall delighted with their work and would recommend anyone who is planning for their new home design or renovation. Kudos to their entire team !",
       rating: 5,
     },
     {
@@ -112,60 +120,62 @@ const BangaloreYelahankaPage = () => {
       name: "Deepa Nagarajan",
       location: "Bangalore",
       testimonial:
-        "I had a great experience with the team of Annapoornaa Interio. They executed a wide range of works for us like UPVC windows, all doors including gates, HPL cladding for the exterior elevation, exterior false ceiling works, balcony railings, skylights, shower enclosures, wooden flooring, waterproofing etc Mr. Raghu the owner takes the effort to personally inspect the works regularly and do a quality check. Name the work and he got it done for us. His team of site supervisors also oversee the work. Special thanks to Thangavelu for being responsive. There is no compromise on quality. Highly appreciate and thank Annapoornaa Interiors for making our house a lovely home!",
+        "I had a great experience with the team of ACIPL. They executed a wide range of works for us like UPVC windows, all doors including gates, HPL cladding for the exterior elevation, exterior false ceiling works, balcony railings, skylights, shower enclosures, wooden flooring, waterproofing etc Mr. Raghu the owner takes the effort to personally inspect the works regularly and do a quality check. Name the work and he got it done for us. His team of site supervisors also oversee the work. Special thanks to Thangavelu for being responsive. There is no compromise on quality. Highly appreciate and thank ACIPLrs for making our house a lovely home!",
       rating: 5,
     },
     {
       name: "Satish Kumar",
       location: "Bangalore",
       testimonial:
-        "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged Annapoornaa Interio for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
+        "I am Satish, working as an Admin Manager at SMEC India Pvt. Ltd., a Singapore-based company. We recently engaged ACIPL for our office interior work, and I am extremely pleased with the outcome. The team delivered high-quality work within the committed timeline, showcasing exceptional professionalism and responsiveness throughout the project. Their attention to detail, efficient project management, and commitment to excellence truly set them apart. I highly recommend Annapoornaa for any office interior projects.",
       rating: 5,
     },
   ]
 
   return (
     <main className="min-h-screen">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Navbar />
       <div className="h-20"></div>
 
       {/* Hero Section */}
-      <section className="pt-56 pb-36 bg-gradient-to-r from-navy-900 to-navy-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-56 pb-36 bg-navy-900 text-white relative overflow-hidden">
+        {/* Subtle background pattern could go here */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <div className="flex items-center mb-4">
-                <MapPin className="h-6 w-6 text-gold-400 mr-2" />
-                <span className="text-gold-300 uppercase tracking-wider font-medium">Bangalore & Yelahanka</span>
+              <div className="flex items-center mb-4 text-gold-500 font-medium">
+                <MapPin className="h-6 w-6 mr-2" />
+                <span className="uppercase tracking-wider">Interior Design and Construction in Yelahanka</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Premium Interior & Construction Services in Bangalore
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 italic leading-tight">
+                Leading <span className="text-gold-500">Interior Designers</span> in Yelahanka
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Transforming spaces across Bangalore and Yelahanka with innovative design solutions and quality
-                craftsmanship since 2010.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl leading-relaxed">
+                ACIPL delivers end-to-end home interiors, office interiors, renovation, and construction services in Yelahanka and across Bangalore with a quality-first execution approach.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Link href="/#contact">
-                  <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300">
+                <Link href="/contact">
+                  <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold px-8 py-4 rounded-xl shadow-lg transition-all h-auto">
                     Get a Free Consultation
                   </Button>
                 </Link>
                 <Link href="/gallery">
                   <Button
                     variant="outline"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="border-2 border-white text-white hover:bg-white/10 font-bold px-8 py-4 rounded-xl shadow-lg transition-all h-auto"
                   >
-                    View Our Bangalore Projects
+                    View Bangalore Projects
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="lg:w-1/2">
-              {/* Removed image section */}
+            <div className="lg:w-1/2 relative aspect-video rounded-2xl overflow-hidden shadow-2xl border-4 border-navy-800">
+              <Image
+                src="/updated-homein.jpg"
+                alt="Premium Interior Design in Bangalore & Yelahanka"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -176,7 +186,7 @@ const BangaloreYelahankaPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
-              Why Choose Annapoornaa Interio in Bangalore & Yelahanka
+              Why Choose ACIPL in Bangalore & Yelahanka
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">

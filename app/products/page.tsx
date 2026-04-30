@@ -1,8 +1,18 @@
+import { Metadata } from 'next'
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = buildMetadata({
+  title: 'Building Products in Bangalore | UPVC, Fire Doors, Railings, Ceilings',
+  description:
+    'Explore UPVC windows, aluminum doors, fire doors, railings, false ceilings, and workstation products with installation support in Bangalore.',
+  path: '/products',
+  keywords: ['UPVC windows Bangalore', 'fire doors Bangalore', 'system railings Bangalore', 'false ceiling Bangalore'],
+})
 
 const products = [
   {

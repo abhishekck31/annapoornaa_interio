@@ -1,7 +1,24 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "A-Class Construction Company in Bangalore | ACIPL",
+  description:
+    "Professional construction services in Bangalore. We specialize in residential, commercial, and pre-engineered buildings with precision engineering.",
+  path: "/expertise/construction",
+  keywords: [
+    "construction company Bangalore",
+    "residential construction Bangalore",
+    "commercial construction Bangalore",
+    "pre-engineered buildings Bangalore",
+    "renovation and remodeling",
+  ],
+})
+
 
 const constructionExpertise = [
   {
@@ -67,7 +84,7 @@ export default function ConstructionExpertisePage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Construction Expertise</h1>
@@ -81,7 +98,7 @@ export default function ConstructionExpertisePage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Construction Approach</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  At Annapoornaa Interio, we approach construction with a commitment to quality, efficiency, and client
+                  At ACIPL, we approach construction with a commitment to quality, efficiency, and client
                   satisfaction. Our comprehensive construction services cover everything from initial planning and
                   design to final execution and finishing touches.
                 </p>
@@ -125,9 +142,8 @@ export default function ConstructionExpertisePage() {
             {constructionExpertise.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">{item.title}</h2>

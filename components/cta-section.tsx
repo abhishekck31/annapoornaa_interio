@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
 import ScrollAnimation from "@/components/scroll-animation"
+import LeadLink from "@/components/lead-link"
 
 const CTASection = () => {
   return (
@@ -27,27 +27,35 @@ const CTASection = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Space?</h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-gold-400 to-gold-600 mx-auto mb-8 rounded-full"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-              Let's create something extraordinary together. Our team of experts is ready to bring your vision to life
-              with innovative design and quality craftsmanship.
+              Looking for interior designers in Yelahanka or Bangalore? Let's create something extraordinary together. We deliver home interiors, office interiors, renovation, and construction services with innovative designs and quality craftsmanship.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="/contact" scroll={false}>
+                <LeadLink
+                  href="/contact"
+                  scroll={false}
+                  eventName="lead_quote_request"
+                  eventParams={{ sourcePage: "/", placement: "cta_section" }}
+                >
                   <Button className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-semibold px-8 py-6 rounded-md text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
                     Contact us Now <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
-                </Link>
+                </LeadLink>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="/gallery">
+                <LeadLink
+                  href="/gallery"
+                  eventName="lead_quote_request"
+                  eventParams={{ sourcePage: "/", placement: "cta_portfolio" }}
+                >
                   <Button
                     variant="outline"
                     className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-6 rounded-md text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
                   >
                     View Our Portfolio
                   </Button>
-                </Link>
+                </LeadLink>
               </motion.div>
             </div>
           </div>

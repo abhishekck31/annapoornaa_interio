@@ -1,7 +1,24 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = buildMetadata({
+  title: "Interior Design Expertise in Bangalore | ACIPL",
+  description:
+    "Expert interior design services for homes, offices, retail spaces, and hospitality in Bangalore. Over 10 years of experience in creating beautiful spaces.",
+  path: "/expertise/interior",
+  keywords: [
+    "interior design expertise",
+    "residential interior design Bangalore",
+    "commercial interior design Bangalore",
+    "retail interior design",
+    "hospitality interior design",
+  ],
+})
+
 
 const interiorExpertise = [
   {
@@ -66,7 +83,7 @@ export default function InteriorExpertisePage() {
     <main className="min-h-screen">
       <Navbar />
 
-      <section className="pt-96 pb-16 bg-gray-50">
+      <section className="pt-32 pb-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Interior Design Expertise</h1>
@@ -80,7 +97,7 @@ export default function InteriorExpertisePage() {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Interior Design Approach</h2>
                 <p className="text-lg text-gray-700 mb-6">
-                  At Annapoornaa Interio, we believe that great interior design is about creating spaces that are not
+                  At ACIPL, we believe that great interior design is about creating spaces that are not
                   only beautiful but also functional and reflective of the people who use them. Our comprehensive
                   approach combines creativity, technical expertise, and attention to detail to deliver exceptional
                   results.
@@ -125,9 +142,8 @@ export default function InteriorExpertisePage() {
             {interiorExpertise.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">{item.title}</h2>

@@ -6,7 +6,7 @@ export default function InterioPage() {
       <SEO
         title="Annapoorna Interio | Interior Design Services in Bangalore"
         description="Discover Annapoorna Interio's bespoke interior design and construction services in Bangalore. Residential, commercial, and turnkey solutions for every space. Contact us for a free consultation!"
-        url="https://www.annapoornaainterio.com/interio"
+        url="https://www.ac-ipl.in/interio"
         image="/og-image.jpg"
       />
       <main className="container mx-auto px-4 py-8">

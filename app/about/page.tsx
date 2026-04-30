@@ -26,7 +26,7 @@ const AboutPage = () => {
               <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
                 <img
                   src="/CEOimage.jpg"
-                  alt="About Annapoornaa Constructions & Interiors Private Limited"
+                  alt="About Annapoorneshwari Constructions & Interiors Private Limited"
                   className="w-full h-[400px] object-cover"
                 />
                 {/* CEO Information Overlay */}
@@ -91,7 +91,7 @@ const AboutPage = () => {
               </h2>
               <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                At Annapoornaa Constructions & Interiors Private Limited, we pride ourselves on our commitment to excellence and customer satisfaction. Our
+                At Annapoorneshwari Constructions & Interiors Private Limited, we pride ourselves on our commitment to excellence and customer satisfaction. Our
                 approach combines creativity, technical expertise, and attention to detail to deliver exceptional
                 results that exceed expectations.
               </p>

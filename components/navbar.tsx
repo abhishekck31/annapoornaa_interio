@@ -73,7 +73,7 @@ const Navbar = () => {
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="Annapoornaa Interio Logo"
+                alt="ACIPL Logo"
                 width={220}
                 height={60}
                 className="h-14 w-auto"

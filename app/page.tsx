@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
   description: 'Annapoorna Interio offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
   keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'Annapoorna Interio', 'best interior designers', 'modular kitchen Bangalore'],
-  metadataBase: new URL('https://www.annapoornaainterio.com'), 
+  metadataBase: new URL('https://www.ac-ipl.in'), 
   openGraph: {
     title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
     description: 'Bespoke interior design services for residential and commercial spaces in Bangalore.',
-    url: 'https://www.annapoornaainterio.com', 
+    url: 'https://www.ac-ipl.in', 
     siteName: 'Annapoorna Interio',
     images: [
       {
@@ -57,7 +57,7 @@ export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'Annapoornaa Interio',
+    'name': 'ACIPL',
     'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
     '@id': '',
     'url': 'https://www.annapoornainterio.com', // Replace with your actual domain

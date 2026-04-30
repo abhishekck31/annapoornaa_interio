@@ -177,7 +177,7 @@ const services: Service[] = [
     title: "PMC - Project Management & Consultancy",
     icon: <ClipboardList className="h-12 w-12 text-primary" />,
     description:
-      "At Annapoornaa Interio, we offer specialized Project Management and Consultancy (PMC) services tailored for the construction industry. From concept to commissioning, we ensure that every stage of your project is planned, executed, and delivered with precision.",
+      "At ACIPL, we offer specialized Project Management and Consultancy (PMC) services tailored for the construction industry. From concept to commissioning, we ensure that every stage of your project is planned, executed, and delivered with precision.",
     pmcSections: [
       {
         title: "Pre-Construction Planning",
@@ -243,7 +243,7 @@ const services: Service[] = [
     title: "Design and Drawings",
     icon: <PencilRuler className="h-12 w-12 text-primary" />,
     description:
-      "At Annapoornaa Interio, we provide comprehensive Architectural, Structural, and MEP (Mechanical, Electrical, Plumbing) design and drafting services that form the foundation of any successful construction project. We combine creativity, functionality, and technical expertise to deliver designs that are both aesthetically pleasing and structurally sound.",
+      "At ACIPL, we provide comprehensive Architectural, Structural, and MEP (Mechanical, Electrical, Plumbing) design and drafting services that form the foundation of any successful construction project. We combine creativity, functionality, and technical expertise to deliver designs that are both aesthetically pleasing and structurally sound.",
     designSections: [
       {
         title: "Architectural Design",

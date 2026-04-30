@@ -36,7 +36,7 @@ const AboutSection = () => {
     <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
       <img
         src="/CEOimage.jpg"
-        alt="About Annapoornaa Interior & Construction Company"
+        alt="About ACIPLr & Construction Company"
         className="w-full h-[400px] object-cover"
       />
       {/* CEO Information Overlay */}

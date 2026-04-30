@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false)
-  const whatsappMessage = "Hello! I'm interested in learning more about Annapoornaa Interio's services. Could you please provide more information?"
+  const whatsappMessage = "Hello! I'm interested in learning more about ACIPL's services. Could you please provide more information?"
   const whatsappLink = `https://wa.me/918073141413?text=${encodeURIComponent(whatsappMessage)}`
 
   const handleWhatsAppClick = () => {

@@ -11,8 +11,8 @@ const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     name: "Annapoorna Interio",
-    url: "https://annapoornaainterio.com",
-    logo: "https://annapoornaainterio.com/images/logo.png",
+    url: "https://ac-ipl.in",
+    logo: "https://ac-ipl.in/images/logo.png",
     sameAs: [
       "https://www.facebook.com/annapoornaainterio",
       "https://www.instagram.com/annapoornaainterio",
@@ -53,16 +53,16 @@ const StructuredData = () => {
       name: "Bangalore",
     },
     description:
-      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services that transform your space.",
+      "ACIPL is the leading construction company in Yelahanka, Bangalore. We provide premium interior design, construction, and renovation services that transform your space.",
   }
 
   // Local business schema
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Annapoornaa Interio - Bangalore & Yelahanka",
-    image: "https://annapoornaainterio.com/images/logo.png",
-    url: "https://annapoornaainterio.com",
+    name: "ACIPL - Bangalore & Yelahanka",
+    image: "https://ac-ipl.in/images/logo.png",
+    url: "https://ac-ipl.in",
     telephone: "+9199000 94942",
     address: {
       "@type": "PostalAddress",
@@ -105,7 +105,7 @@ const StructuredData = () => {
     serviceType: "Interior Design and Construction Services",
     provider: {
       "@type": "LocalBusiness",
-      name: "Annapoornaa Interio",
+      name: "ACIPL",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Yelahanka",
@@ -137,7 +137,7 @@ const StructuredData = () => {
       "Energy-efficient, durable UPVC windows and doors designed for Bangalore's climate and architectural styles.",
     brand: {
       "@type": "Brand",
-      name: "Annapoornaa Interio",
+      name: "ACIPL",
     },
     offers: {
       "@type": "AggregateOffer",
@@ -159,7 +159,7 @@ const StructuredData = () => {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What services does Annapoornaa Interio offer in Bangalore?",
+        name: "What services does ACIPL offer in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "We offer a comprehensive range of interior design and construction services in Bangalore including home interior design, office interior design, construction, renovation, pre-engineered buildings, and various products like UPVC windows, doors, fire doors, system railings, Soffit False Ceilings, workstations, and chairs.",
@@ -167,7 +167,7 @@ const StructuredData = () => {
       },
       {
         "@type": "Question",
-        name: "Does Annapoornaa Interio serve the Yelahanka area in Bangalore?",
+        name: "Does ACIPL serve the Yelahanka area in Bangalore?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "Yes, we provide all our services in Yelahanka and throughout Bangalore. Our team has extensive experience working in Yelahanka and understands the local preferences and requirements.",
@@ -202,7 +202,7 @@ const StructuredData = () => {
         "description": "Energy-efficient UPVC windows and doors installation in Bangalore",
         "brand": {
           "@type": "Brand",
-          "name": "Annapoornaa Interio"
+          "name": "ACIPL"
         },
         "offers": {
           "@type": "AggregateOffer",

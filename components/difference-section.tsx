@@ -57,7 +57,7 @@ const DifferenceSection = () => {
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-navy-900 to-gold-500 mb-6 rounded-full"></div>
             <p className="text-lg text-gray-700 mb-8">
-              At Annapoornaa Interio, we pride ourselves on our commitment to excellence and customer satisfaction. Our
+              At ACIPL, we pride ourselves on our commitment to excellence and customer satisfaction. Our
               approach combines creativity, technical expertise, and attention to detail to deliver exceptional results
               that exceed expectations.
             </p>

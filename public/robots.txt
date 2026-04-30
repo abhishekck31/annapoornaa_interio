@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Crawl-delay: 1
 
-Sitemap: https://annapoornaainterio.com/sitemap.xml
+Sitemap: https://ac-ipl.in/sitemap.xml

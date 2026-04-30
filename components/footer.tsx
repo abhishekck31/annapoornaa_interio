@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 const Footer = () => {
-  const whatsappMessage = "Hello! I'm interested in learning more about Annapoornaa Interio's services. Could you please provide more information?"
+  const whatsappMessage = "Hello! I'm interested in learning more about ACIPL's services. Could you please provide more information?"
   const whatsappLink = `https://wa.me/918073141413?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
               <div className="bg-white p-1 rounded-md inline-block">
   <Image
     src="/images/logo.png"
-    alt="Annapoornaa Interio Logo"
+    alt="ACIPL Logo"
     width={220}
     height={62}
     className="h-16 w-auto"
@@ -198,7 +198,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-navy-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Annapoornaa Interio. All rights reserved.</p>
+          <p className="text-gray-400">&copy; {new Date().getFullYear()} ACIPL. All rights reserved.</p>
         </div>
       </div>
     </footer>

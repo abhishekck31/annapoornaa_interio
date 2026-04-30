@@ -125,7 +125,7 @@ const ProjectsSection = () => {
                 <Sparkles className="mr-2 text-gold-500" />Our Esteemed Clients
               </h4>
               <p className="text-gray-700 mb-4 text-sm sm:text-base">
-                Annapoornaa Interio has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
+                ACIPL has had the privilege of working with a wide range of reputed and prestigious clients across various industries. Our portfolio includes collaborations with leading corporates, innovative startups, and established institutions. We take pride in delivering tailored interior solutions that reflect our clients' unique visions and requirements.
               </p>
               <div className="mb-4">
                 <h5 className="font-semibold text-navy-800 mb-2 text-base">Notable Clients:</h5>

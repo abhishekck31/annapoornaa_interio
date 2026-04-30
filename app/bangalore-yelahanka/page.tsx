@@ -8,8 +8,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { buildMetadata } from "@/lib/seo"
 
-export const metadata: Metadata = {
-  ...buildMetadata({
+export const metadata: Metadata = buildMetadata({
     title: "Interior Designers in Yelahanka, Bangalore | ACIPL",
     description:
       "ACIPL offers home interiors, office interiors, modular kitchens, renovation, and construction services in Yelahanka and across Bangalore.",
@@ -23,11 +22,7 @@ export const metadata: Metadata = {
       "modular kitchen Yelahanka",
       "interior company Bangalore",
     ],
-  }),
-  icons: {
-    icon: "/favicon.ico",
-  },
-}
+  })
 
 const BangaloreYelahankaPage = () => {
   const services = [

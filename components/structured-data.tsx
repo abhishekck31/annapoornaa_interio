@@ -4,11 +4,13 @@ import { usePathname } from "next/navigation";
 import Script from "next/script";
 
 import { blogPosts } from "@/data/blog-data";
+import { siteFaqs } from "@/data/faq-data";
 import { services } from "@/data/services-data";
 import {
   buildArticleSchema,
   buildBreadcrumbSchema,
   buildFaqSchema,
+  buildLocalBusinessSchema,
   buildOrganizationSchema,
   buildServiceSchema,
 } from "@/lib/seo";
@@ -20,6 +22,7 @@ export default function StructuredData() {
 
   if (pathname === "/") {
     schemas.push(buildOrganizationSchema());
+    schemas.push(buildLocalBusinessSchema());
     schemas.push(
       buildFaqSchema([
         {
@@ -76,6 +79,10 @@ export default function StructuredData() {
         );
       }
     }
+  }
+
+  if (pathname === "/faq") {
+    schemas.push(buildFaqSchema(siteFaqs));
   }
 
   if (pathname !== "/") {

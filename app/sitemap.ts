@@ -83,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date("2026-04-30"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/products`,
       lastModified: new Date("2026-03-13"),
       changeFrequency: "monthly",

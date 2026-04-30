@@ -1,6 +1,6 @@
 # PowerShell script to convert HTML to PDF using Microsoft Edge in headless mode
-$htmlPath = "d:\annapoornaainterio\public\company-brochure.html"
-$pdfPath = "d:\annapoornaainterio\public\company-brochure.pdf"
+$htmlPath = "d:\ac-ipl\public\company-brochure.html"
+$pdfPath = "d:\ac-ipl\public\company-brochure.pdf"
 
 # Get the absolute file path with proper URI format
 $htmlUri = "file:///" + $htmlPath.Replace("\", "/")

@@ -15,18 +15,18 @@ import ClientLogosSection from '@/components/client-logos-section'
 
 // SEO: Added comprehensive metadata for the homepage.
 export const metadata: Metadata = {
-  title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
-  description: 'Annapoorna Interio offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
-  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'Annapoorna Interio', 'best interior designers', 'modular kitchen Bangalore'],
-  metadataBase: new URL('https://www.annapoornaainterio.com'), 
+  title: 'ACIPL | Top Interior Designers in Bangalore',
+  description: 'ACIPL offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
+  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'Annapoorneshwari Constructions Interiors Private Limited', 'best interior designers', 'modular kitchen Bangalore'],
+  metadataBase: new URL('https://www.ac-ipl.in'),
   openGraph: {
-    title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
+    title: 'ACIPL | Top Interior Designers in Bangalore',
     description: 'Bespoke interior design services for residential and commercial spaces in Bangalore.',
-    url: 'https://www.annapoornaainterio.com', 
-    siteName: 'Annapoorna Interio',
+    url: 'https://www.ac-ipl.in',
+    siteName: 'Annapoorneshwari Constructions Interiors Private Limited',
     images: [
       {
-        url: '/og-image.jpg', 
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
       },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 // BEST PRACTICE: Define contact info once to avoid repetition and errors.
 const contactDetails = {
-  email: "info@annapoornainterio.com",
+  email: "raghu@ac-ipl.in",
   phone1: "+91 99000 94942",
   phone2: "+91 80731 41413",
   address: {
@@ -57,10 +57,10 @@ export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    'name': 'Annapoornaa Interio',
-    'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
+    'name': 'Annapoorneshwari Constructions Interiors Private Limited',
+    'image': 'https://www.ac-ipl.in/logo.png', // Replace with your logo URL
     '@id': '',
-    'url': 'https://www.annapoornainterio.com', // Replace with your actual domain
+    'url': 'https://www.ac-ipl.in', // Replace with your actual domain
     'telephone': contactDetails.phone1,
     'email': contactDetails.email,
     'address': {
@@ -98,7 +98,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      
+
       <main className="min-h-screen">
         <Navbar />
         <HeroSection />

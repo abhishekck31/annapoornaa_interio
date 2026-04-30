@@ -18,28 +18,28 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Annapoornaa Interio - Construction and Interior",
-  description: "Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
+  title: "ACIPL - Construction and Interior",
+  description: "ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
   keywords:
     "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
-  authors: [{ name: "Annapoornaa Interio" }],
-  creator: "Annapoornaa Interio",
-  publisher: "Annapoornaa Interio",
+  authors: [{ name: "ACIPL" }],
+  creator: "ACIPL",
+  publisher: "ACIPL",
   formatDetection: {
     email: false,
     address: true,
     telephone: true,
   },
-  metadataBase: new URL("https://annapoornaainterio.com"),
+  metadataBase: new URL("https://ac-ipl.in"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Annapoornaa Interio | Premium Interior & Construction Services in Bangalore",
+    title: "ACIPL | Premium Interior & Construction Services in Bangalore",
     description:
-      "Annapoornaa Interio is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
-    url: "https://annapoornaainterio.com",
-    siteName: "Annapoornaa Interio",
+      "ACIPL is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
+    url: "https://ac-ipl.in",
+    siteName: "ACIPL",
     locale: "en_IN",
     type: "website",
   },
@@ -75,7 +75,7 @@ export function JsonLd() {
         __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "InteriorDesignBusiness",
-          "name": "Annapoornaa Interio",
+          "name": "Annapoorneshwari Constructions Interiors Private Limited",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Bangalore",
@@ -119,7 +119,7 @@ export default function RootLayout({
           }}
         />
         <JsonLd />
-        <meta name="description" content="Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
+        <meta name="description" content="ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
       </head>
       <body className="font-poppins">
         <StructuredData />

@@ -10,7 +10,7 @@ const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "Annapoorna Interio",
+    name: "Annapoorneshwari Constructions Interiors Private Limited",
     url: "https://annapoornaainterio.com",
     logo: "https://annapoornaainterio.com/images/logo.png",
     sameAs: [

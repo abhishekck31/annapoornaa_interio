@@ -2,7 +2,7 @@ import SEO from '@/components/SEO';
 
 const LOCALITY = 'BTM Layout';
 const CITY = 'Bangalore';
-const COMPANY = 'Annapoorna Interio';
+const COMPANY = 'Annapoorneshwari Constructions Interiors Private Limited';
 
 export default function BTMLayoutPage() {
   return (
@@ -10,7 +10,7 @@ export default function BTMLayoutPage() {
       <SEO
         title={`${COMPANY} | Interior Designers in ${LOCALITY}, ${CITY}`}
         description={`Looking for the best interior designers in ${LOCALITY}, ${CITY}? ${COMPANY} offers bespoke residential and commercial interior design and construction services across all of Bangalore.`}
-        url={`https://www.annapoornaainterio.com/bangalore/btm-layout`}
+        url={`https://www.ac-ipl.in/bangalore/btm-layout`}
         image="/og-image.jpg"
       />
       <main className="container mx-auto px-4 py-8">

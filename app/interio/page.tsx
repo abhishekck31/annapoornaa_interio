@@ -4,15 +4,15 @@ export default function InterioPage() {
   return (
     <>
       <SEO
-        title="Annapoorna Interio | Interior Design Services in Bangalore"
-        description="Discover Annapoorna Interio's bespoke interior design and construction services in Bangalore. Residential, commercial, and turnkey solutions for every space. Contact us for a free consultation!"
-        url="https://www.annapoornaainterio.com/interio"
+        title="Annapoorneshwari Constructions Interiors Private Limited | Interior Design Services in Bangalore"
+        description="Discover Annapoorneshwari Constructions Interiors Private Limited's bespoke interior design and construction services in Bangalore. Residential, commercial, and turnkey solutions for every space. Contact us for a free consultation!"
+        url="https://ac-ipl.in/interio"
         image="/og-image.jpg"
       />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">Annapoorna Interio</h1>
+        <h1 className="text-3xl font-bold mb-4">Annapoorneshwari Constructions Interiors Private Limited</h1>
         <p className="mb-4">
-          Welcome to Annapoorna Interio! We offer top-notch interior design and construction services across Bangalore, specializing in residential, commercial, and turnkey projects. Our expert team transforms your vision into reality with innovative designs and quality execution.
+          Welcome to Annapoorneshwari Constructions Interiors Private Limited! We offer top-notch interior design and construction services across Bangalore, specializing in residential, commercial, and turnkey projects. Our expert team transforms your vision into reality with innovative designs and quality execution.
         </p>
         <ul className="list-disc ml-6 mb-4">
           <li>Home and office interiors</li>

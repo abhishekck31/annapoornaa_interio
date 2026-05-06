@@ -10,7 +10,7 @@ const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    name: "Annapoorna Interio",
+    name: "ACIPL",
     url: "https://ac-ipl.in",
     logo: "https://ac-ipl.in/images/logo.png",
     sameAs: [

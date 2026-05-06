@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "ACIPL - Construction and Interior",
-  description: "Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
+  description: "ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
   keywords:
     "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
   authors: [{ name: "ACIPL" }],
@@ -119,7 +119,7 @@ export default function RootLayout({
           }}
         />
         <JsonLd />
-        <meta name="description" content="Annapoorna Interio is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
+        <meta name="description" content="ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
       </head>
       <body className="font-poppins">
         <StructuredData />

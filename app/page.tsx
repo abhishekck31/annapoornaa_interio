@@ -15,15 +15,15 @@ import ClientLogosSection from '@/components/client-logos-section'
 
 // SEO: Added comprehensive metadata for the homepage.
 export const metadata: Metadata = {
-  title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
-  description: 'Annapoorna Interio offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
-  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'Annapoorna Interio', 'best interior designers', 'modular kitchen Bangalore'],
+  title: 'ACIPL | Top Interior Designers in Bangalore',
+  description: 'ACIPL offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
+  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'ACIPL', 'best interior designers', 'modular kitchen Bangalore'],
   metadataBase: new URL('https://www.ac-ipl.in'), 
   openGraph: {
-    title: 'Annapoorna Interio | Top Interior Designers in Bangalore',
+    title: 'ACIPL | Top Interior Designers in Bangalore',
     description: 'Bespoke interior design services for residential and commercial spaces in Bangalore.',
     url: 'https://www.ac-ipl.in', 
-    siteName: 'Annapoorna Interio',
+    siteName: 'ACIPL',
     images: [
       {
         url: '/og-image.jpg', 

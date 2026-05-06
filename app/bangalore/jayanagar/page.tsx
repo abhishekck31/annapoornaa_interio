@@ -2,7 +2,7 @@ import SEO from '@/components/SEO';
 
 const LOCALITY = 'Jayanagar';
 const CITY = 'Bangalore';
-const COMPANY = 'Annapoorna Interio';
+const COMPANY = 'ACIPL';
 
 export default function JayanagarPage() {
   return (

@@ -54,7 +54,7 @@ export default function ContactPage() {
                   <Mail className="h-6 w-6 text-gold-400 mt-1" />
                   <div>
                     <h4 className="font-semibold text-gold-300 mb-1">Email Us</h4>
-                    <p className="text-gray-300">info@annapoornainterio.com</p>
+                    <p className="text-gray-300">raghu@ac-ipl.in</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

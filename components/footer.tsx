@@ -172,10 +172,10 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-gold-400" />
                 </div>
                 <a
-                  href="mailto:info@annapoornainterio.com"
+                  href="mailto:raghu@ac-ipl.in"
                   className="text-gray-300 hover:text-gold-400 transition-colors"
                 >
-                  info@annapoornainterio.com
+                  raghu@ac-ipl.in
                 </a>
               </li>
               <li className="flex items-center group">

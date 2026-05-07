@@ -32,7 +32,7 @@ const StructuredData = () => {
       longitude: 77.5945,
     },
     telephone: "+91 99000 94942",
-    email: "info@annapoornainterio.com",
+    email: "raghu@ac-ipl.in",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 // BEST PRACTICE: Define contact info once to avoid repetition and errors.
 const contactDetails = {
-  email: "info@annapoornainterio.com",
+  email: "raghu@ac-ipl.in",
   phone1: "+91 99000 94942",
   phone2: "+91 80731 41413",
   address: {

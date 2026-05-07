@@ -1,3 +1,4 @@
+// @ts-ignore: Allow side-effect global CSS import without type declarations
 import './globals.css'
 
 import type React from "react"

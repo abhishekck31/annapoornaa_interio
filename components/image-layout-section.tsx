@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Home, Building2, Building, Sparkles } from "lucide-react"
 import ScrollAnimation from "@/components/scroll-animation"
 import { useRouter } from "next/navigation"
+import Image from "next/image"
 
 const features = [
   {
@@ -70,10 +71,11 @@ const ImageLayoutSection = () => {
               >
                 <Card className="h-full overflow-hidden hover:border-secondary rounded-xl">
                   <div className="relative h-80 overflow-hidden group">
-                    <img
+                    <Image
                       src={feature.image || "/placeholder.svg"}
                       alt={feature.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-primary/40 flex items-center justify-center">
                       <div className="text-white p-6 text-center transform transition-transform duration-500 group-hover:scale-110">

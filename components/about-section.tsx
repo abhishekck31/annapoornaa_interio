@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import ScrollAnimation from "@/components/scroll-animation";
 import { Award, CheckCircle, TrendingUp, Users, Sparkles } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutSection = () => {
   return (
@@ -15,10 +16,12 @@ const AboutSection = () => {
         <ScrollAnimation className="relative">
   {/* Ammanavaru image and text */}
   <div className="flex flex-col items-center mb-8">
-    <img
+    <Image
       src="/ammanavaru.png"
       alt="ಅನ್ನಪೂರ್ಣೇಶ್ವರಿ ಅಮ್ಮನವರು"
-      className="w-[350px] rounded-xl shadow-lg"
+      width={350}
+      height={350}
+      className="w-[350px] h-auto rounded-xl shadow-lg"
       style={{ background: "#fff" }}
     />
     <div className="mt-3 text-xl font-bold text-gold-700 text-center">
@@ -34,9 +37,11 @@ const AboutSection = () => {
   >
     <div className="absolute -top-4 -left-4 w-20 h-20 bg-gold-200 rounded-tl-3xl z-0"></div>
     <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
-      <img
+      <Image
         src="/CEOimage.jpg"
         alt="About ACIPLr & Construction Company"
+        width={500}
+        height={400}
         className="w-full h-[400px] object-cover"
       />
       {/* CEO Information Overlay */}

@@ -6,24 +6,6 @@ import Footer from "@/components/footer"
 import { ArrowRight, Building2, CalendarDays, CheckCircle2, Clock, Lightbulb, Ruler } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-export const metadata: Metadata = {
-  title: "Blog | ACIPL Interior Design & Construction Insights",
-  description:
-    "Read ACIPL blog articles on home interiors, office interiors, construction planning, renovation, materials, and project execution in Bangalore.",
-  alternates: {
-    canonical: "/blog",
-  },
-  openGraph: {
-    title: "ACIPL Blog | Interior Design & Construction Insights",
-    description:
-      "Practical ideas and guidance from ACIPL for better interiors, construction, renovation, and project planning.",
-    url: "https://ac-ipl.in/blog",
-    siteName: "ACIPL",
-    locale: "en_IN",
-    type: "website",
-  },
-}
-
 const featuredPost = {
   title: "How to Plan a Stress-Free Interior Project in Bangalore",
   excerpt:

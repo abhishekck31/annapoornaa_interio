@@ -12,91 +12,58 @@ import CTASection from '@/components/cta-section'
 import StatsSection from '@/components/stats-section'
 import FAQSection from '@/components/faq-section'
 import ClientLogosSection from '@/components/client-logos-section'
+import Script from 'next/script'
 
-// SEO: Added comprehensive metadata for the homepage.
 export const metadata: Metadata = {
-  title: 'ACIPL | Top Interior Designers in Bangalore',
-  description: 'ACIPL offers bespoke interior design services in Yelahanka, Bangalore. From residential to commercial projects, we craft beautiful and functional spaces. Contact us for a free consultation.',
-  keywords: ['interior designers Bangalore', 'home interiors Yelahanka', 'commercial interior design', 'ACIPL', 'best interior designers', 'modular kitchen Bangalore'],
-  metadataBase: new URL('https://www.ac-ipl.in'), 
-  openGraph: {
-    title: 'ACIPL | Top Interior Designers in Bangalore',
-    description: 'Bespoke interior design services for residential and commercial spaces in Bangalore.',
-    url: 'https://www.ac-ipl.in', 
-    siteName: 'ACIPL',
-    images: [
-      {
-        url: '/og-image.jpg', 
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: 'en_IN',
-    type: 'website',
-  },
+  alternates: { canonical: 'https://www.ac-ipl.in/' }
 }
 
-
-// BEST PRACTICE: Define contact info once to avoid repetition and errors.
-const contactDetails = {
-  email: "raghu@ac-ipl.in",
-  phone1: "+91 99000 94942",
-  phone2: "+91 80731 41413",
-  address: {
-    streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector",
-    addressLocality: "Yelahanka New Town",
-    addressRegion: "Bangalore",
-    postalCode: "560064",
-    addressCountry: "IN"
-  }
-}
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ACIPL offers home interiors, office & corporate interiors, residential & commercial construction, renovation, PMC (project management & consultancy), and design & drawings services across Bangalore, Yelahanka and Hebbal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide free consultations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, ACIPL provides free initial consultations. Contact us at +91 99000 94942 or visit our office in Yelahanka New Town, Bangalore."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a typical project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Project timelines vary by scope. We ensure all projects are delivered within the agreed timeline. Home interiors typically take 45–90 days; construction projects are scoped individually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle permits and regulations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our PMC team handles all necessary permits, BBMP approvals and regulatory compliance for construction projects in Bangalore."
+      }
+    }
+  ]
+};
 
 export default function Home() {
-
-  // SEO: JSON-LD Structured Data for Local Business. This is crucial for local search visibility.
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    'name': 'ACIPL',
-    'image': 'https://www.annapoornainterio.com/logo.png', // Replace with your logo URL
-    '@id': '',
-    'url': 'https://www.annapoornainterio.com', // Replace with your actual domain
-    'telephone': contactDetails.phone1,
-    'email': contactDetails.email,
-    'address': {
-      '@type': 'PostalAddress',
-      ...contactDetails.address
-    },
-    'geo': {
-      '@type': 'GeoCoordinates',
-      'latitude': 13.1006, // Approx. Latitude for Yelahanka New Town
-      'longitude': 77.5963 // Approx. Longitude for Yelahanka New Town
-    },
-    'openingHoursSpecification': {
-      '@type': 'OpeningHoursSpecification',
-      'dayOfWeek': [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday'
-      ],
-      'opens': '09:00',
-      'closes': '20:00'
-    },
-  };
-
-
   return (
     <>
-      {/* PERFORMANCE: ScrollAnimator removed due to missing module */}
-      {/* <ScrollAnimator /> */}
-
-      {/* SEO: Adding structured data to the head */}
-      <script
+      <Script
+        id="schema-faq"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       
       <main className="min-h-screen">

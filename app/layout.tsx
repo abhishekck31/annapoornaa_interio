@@ -19,41 +19,49 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "ACIPL - Construction and Interior",
-  description: "ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services.",
-  keywords:
-    "interior design Bangalore, construction services Yelahanka, office interior Bangalore, home renovation Yelahanka, UPVC windows Bangalore, fire doors Yelahanka, system railings, false ceilings, workstations Bangalore, interior designers near me",
-  authors: [{ name: "ACIPL" }],
-  creator: "ACIPL",
-  publisher: "ACIPL",
-  formatDetection: {
-    email: false,
-    address: true,
-    telephone: true,
+  metadataBase: new URL('https://www.ac-ipl.in'),
+  title: {
+    default: 'Best Interior Designers in Bangalore | ACIPL \u2013 Yelahanka & Hebbal',
+    template: '%s | ACIPL Bangalore'
   },
-  metadataBase: new URL("https://ac-ipl.in"),
+  description: 'Top-rated interior designers & construction company in Yelahanka, Hebbal & Bangalore. Home interiors, office design, renovation & construction. Free consultation. Call +91 99000 94942.',
+  keywords: [
+    'interior designers Yelahanka',
+    'interior designers Bangalore',
+    'interior designers Hebbal',
+    'home interior design Bangalore',
+    'construction company Yelahanka',
+    'renovation services Bangalore',
+    'office interior designers Bangalore',
+    'modular kitchen Bangalore',
+    'ACIPL'
+  ],
   alternates: {
-    canonical: "/",
+    canonical: 'https://www.ac-ipl.in/',
+    languages: { 'en-IN': 'https://www.ac-ipl.in/' }
   },
   openGraph: {
-    title: "ACIPL | Premium Interior & Construction Services in Bangalore",
-    description:
-      "ACIPL is the leading construction company in Yelahanka, Bangalore. Transform your space with our expert team.",
-    url: "https://ac-ipl.in",
-    siteName: "ACIPL",
-    locale: "en_IN",
-    type: "website",
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://www.ac-ipl.in',
+    siteName: 'ACIPL',
+    title: 'Best Interior Designers in Bangalore | ACIPL',
+    description: 'Top-rated interior designers & construction company in Yelahanka, Hebbal & Bangalore. Home interiors, office design, renovation & construction.',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'ACIPL Interior Designers Bangalore' }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Interior Designers in Bangalore | ACIPL',
+    description: 'Top-rated interior design & construction in Yelahanka, Hebbal & Bangalore.',
+    images: ['/og-image.jpg']
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    index: true, follow: true,
+    googleBot: { index: true, follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
   },
   icons: {
     icon: [
@@ -68,34 +76,62 @@ export const metadata: Metadata = {
   generator: 'v0.dev'
 }
 
-export function JsonLd() {
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "InteriorDesignBusiness",
-          "name": "ACIPL",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bangalore",
-            "addressRegion": "KA",
-            "postalCode": "560064",
-            "streetAddress": "Your Street Address"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "13.1007",
-            "longitude": "77.5963"
-          },
-          "telephone": "+91 YOUR_PHONE",
-          "openingHours": "Mo-Sa 09:00-18:00"
-        })
-      }}
-    />
-  );
-}
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "InteriorDesigner"],
+  "name": "ACIPL – Annapoorneshwari Constructions Interiors Pvt Ltd",
+  "url": "https://www.ac-ipl.in",
+  "logo": "https://www.ac-ipl.in/images/logo.png",
+  "image": "https://www.ac-ipl.in/og-image.jpg",
+  "telephone": "+919900094942",
+  "email": "raghu@ac-ipl.in",
+  "priceRange": "₹₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "#395, 8th B Main, 14th B Cross, 2nd Stage, B Sector, Yelahanka New Town",
+    "addressLocality": "Yelahanka",
+    "addressRegion": "Karnataka",
+    "postalCode": "560064",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.1007,
+    "longitude": 77.5963
+  },
+  "areaServed": [
+    "Bangalore","Yelahanka","Yelahanka New Town",
+    "Hebbal","Kogilu","Thanisandra","Jakkur","Bagalur"
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday",
+      "Thursday","Friday","Saturday"],
+    "opens": "10:00",
+    "closes": "19:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "47",
+    "bestRating": "5"
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ACIPL",
+  "url": "https://www.ac-ipl.in",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.ac-ipl.in/search?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
 
 export default function RootLayout({
   children,
@@ -119,14 +155,23 @@ export default function RootLayout({
             `,
           }}
         />
-        <JsonLd />
-        <meta name="description" content="ACIPL is the leading interior & Construction company in Yelahanka, Bangalore. We provide best interior & Construction services." />
       </head>
       <body className="font-poppins">
         <StructuredData />
         <GridBackground />
         <GridOverlay />
         <ClientRootLayout>{children}</ClientRootLayout>
+
+        <Script
+          id="schema-local-business"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </body>
     </html>
   )

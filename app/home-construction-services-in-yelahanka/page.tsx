@@ -1,9 +1,11 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Metadata } from "next"
-import { CheckCircle, Home, HardHat, Building2, ShieldCheck, MapPin } from "lucide-react"
+import { CheckCircle, Home, HardHat, Building2, ShieldCheck, MapPin, Star, Award, Clock, HeartHandshake } from "lucide-react"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import GallerySection from "@/components/gallery-section"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
@@ -110,6 +112,108 @@ export default function YelahankaConstructionPage() {
               View Our Completed Projects
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Our Recent Works in Yelahanka
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Take a look at some of the premium spaces we have crafted. As a top residential construction company in yelahanka, our portfolio reflects our dedication to excellence.
+            </p>
+          </div>
+        </div>
+        <GallerySection />
+      </section>
+
+      {/* 10 Reasons Section */}
+      <section className="py-16 bg-slate-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              10 Reasons to Choose ACIPL in Yelahanka
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Whether you need home renovation or are looking for a complete home construction service in Yelahanka, here is why we stand out:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+            {[
+              "Unmatched Expertise as a leading home construction company yelahanka.",
+              "100% Transparent Pricing with detailed BOQs and zero hidden costs.",
+              "Premium Quality Materials sourced from certified top-tier vendors.",
+              "On-Time Project Delivery to respect your timeline and investment.",
+              "End-to-End Solutions covering architecture, approvals, and interiors.",
+              "Vastu-Compliant Designs tailored to traditional and modern preferences.",
+              "Dedicated Project Managers ensuring seamless site execution.",
+              "Proven Track Record as a trusted construction company yelahanka.",
+              "Comprehensive Post-Construction Support and warranty services.",
+              "Expert In-House Team of structural engineers and visionary architects."
+            ].map((reason, index) => (
+              <div key={index} className="flex items-start bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                <div className="bg-secondary/10 p-2 rounded-full mr-4 flex-shrink-0">
+                  <span className="text-secondary font-bold text-lg w-6 h-6 flex items-center justify-center">
+                    {index + 1}
+                  </span>
+                </div>
+                <p className="text-gray-700 font-medium text-lg pt-1">{reason}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 grid grid-cols-2 gap-4">
+              <div className="bg-slate-50 p-6 rounded-xl text-center border border-gray-100 shadow-sm">
+                <Star className="w-12 h-12 text-gold-500 mx-auto mb-4" />
+                <h3 className="text-3xl font-bold text-primary mb-2">4.9/5</h3>
+                <p className="text-gray-600 font-medium">Client Satisfaction</p>
+              </div>
+              <div className="bg-slate-50 p-6 rounded-xl text-center border border-gray-100 shadow-sm">
+                <Award className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h3 className="text-3xl font-bold text-primary mb-2">15+</h3>
+                <p className="text-gray-600 font-medium">Years Experience</p>
+              </div>
+              <div className="bg-slate-50 p-6 rounded-xl text-center border border-gray-100 shadow-sm">
+                <Clock className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h3 className="text-3xl font-bold text-primary mb-2">100%</h3>
+                <p className="text-gray-600 font-medium">On-Time Delivery</p>
+              </div>
+              <div className="bg-slate-50 p-6 rounded-xl text-center border border-gray-100 shadow-sm">
+                <HeartHandshake className="w-12 h-12 text-secondary mx-auto mb-4" />
+                <h3 className="text-3xl font-bold text-primary mb-2">500+</h3>
+                <p className="text-gray-600 font-medium">Happy Families</p>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                Why People Trust ACIPL
+              </h2>
+              <div className="w-20 h-1.5 bg-gradient-to-r from-primary to-secondary mb-6 rounded-full"></div>
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                Building a home is an emotional and financial milestone. Clients choose us not just for our building construction services yelahanka, but for the peace of mind we offer. We believe in building relationships as strong as our foundations.
+              </p>
+              <p className="text-gray-700 text-lg mb-8 leading-relaxed">
+                As a highly recognized residential and commercial construction company in yelahanka, ACIPL is synonymous with structural integrity and ethical business practices. Our clients are kept in the loop at every stage, with regular site updates, quality checks, and open communication channels. 
+              </p>
+              <Link href="/contact">
+                <Button className="bg-primary hover:bg-navy-800 text-white px-8 py-6 rounded-md text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+                  Talk To Our Experts Today
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

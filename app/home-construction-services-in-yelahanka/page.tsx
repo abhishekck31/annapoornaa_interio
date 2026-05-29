@@ -5,7 +5,8 @@ import { CheckCircle, Home, HardHat, Building2, ShieldCheck, MapPin, Star, Award
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import GallerySection from "@/components/gallery-section"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { projects } from "@/data/projects-data"
 
 export const metadata: Metadata = {
   title: "Best Home Construction Services in Yelahanka | Top Builders",
@@ -114,20 +115,47 @@ export default function YelahankaConstructionPage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 bg-white">
+      {/* Recent Works Carousel Section */}
+      <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Our Recent Works in Yelahanka
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
               Take a look at some of the premium spaces we have crafted. As a top residential construction company in yelahanka, our portfolio reflects our dedication to excellence.
             </p>
+
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-6xl mx-auto"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {projects.slice(0, 6).map((project, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="relative group overflow-hidden rounded-xl h-72 shadow-md">
+                      <img
+                        src={project.mainImage || "/placeholder.svg"}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 opacity-90 transition-opacity duration-300">
+                        <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
+                        <p className="text-gold-400 text-sm">{project.category}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12 bg-white text-primary border-gray-200 shadow-md hover:bg-slate-50" />
+              <CarouselNext className="hidden md:flex -right-12 bg-white text-primary border-gray-200 shadow-md hover:bg-slate-50" />
+            </Carousel>
           </div>
         </div>
-        <GallerySection />
       </section>
 
       {/* 10 Reasons Section */}

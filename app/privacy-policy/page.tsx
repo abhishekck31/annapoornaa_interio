@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
     <main className="min-h-screen flex flex-col">
       <Navbar />
 
-      <section className="pt-40 pb-16 bg-white flex-grow">
+      <section className="pt-96 mt-32 pb-16 bg-white flex-grow">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">Privacy Policy</h1>
           <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mb-12 rounded-full"></div>

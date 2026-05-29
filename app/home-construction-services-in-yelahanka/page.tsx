@@ -6,7 +6,6 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import GallerySection from "@/components/gallery-section"
-import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Best Home Construction Services in Yelahanka | Top Builders",

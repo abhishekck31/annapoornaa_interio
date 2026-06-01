@@ -141,6 +141,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-YXB89D6ZEH"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YXB89D6ZEH');
+          `}
+        </Script>
         <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />

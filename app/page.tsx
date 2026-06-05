@@ -165,9 +165,9 @@ export default function Home() {
   return (
     <>
       <Script
-        id="schema-faq"
+        id="schema-business"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <main className="min-h-screen">

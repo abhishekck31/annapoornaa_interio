@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { Clock, MapPin, Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Clock, MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa"
 import { motion } from "framer-motion"
 
@@ -18,21 +18,21 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <div className="bg-white p-1 rounded-md inline-block">
-  <Image
-    src="/images/logo.png"
-    alt="ACIPL Logo"
-    width={220}
-    height={62}
-    className="h-16 w-auto"
-  />
-</div>
+                <Image
+                  src="/images/logo.png"
+                  alt="ACIPL Logo"
+                  width={220}
+                  height={62}
+                  className="h-16 w-auto"
+                />
+              </div>
             </div>
             <p className="text-gray-300 mb-6">
               Smart Designs. Seamless Execution
             </p>
             <div className="flex space-x-4">
               <motion.a
-                href="#"
+                href="https://www.facebook.com/Annapoornainterio/"
                 whileHover={{ y: -5, scale: 1.1 }}
                 transition={{ duration: 0.2 }}
                 className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
@@ -41,22 +41,13 @@ const Footer = () => {
                 <span className="sr-only">Facebook</span>
               </motion.a>
               <motion.a
-                href="#"
+                href="https://www.instagram.com/annapoornaa_interio/"
                 whileHover={{ y: -5, scale: 1.1 }}
                 transition={{ duration: 0.2 }}
                 className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
               >
                 <Instagram className="h-4 w-4" />
                 <span className="sr-only">Instagram</span>
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ y: -5, scale: 1.1 }}
-                transition={{ duration: 0.2 }}
-                className="text-gray-300 hover:text-gold-400 transition-colors p-2 bg-navy-800 rounded-full"
-              >
-                <Linkedin className="h-4 w-4" />
-                <span className="sr-only">LinkedIn</span>
               </motion.a>
             </div>
           </div>
@@ -150,6 +141,15 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/interior-designers-in-yelahanka"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                >
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  Interior Designers in Yelahanka
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -164,7 +164,7 @@ const Footer = () => {
                   <MapPin className="h-4 w-4 text-gold-400" />
                 </div>
                 <p className="text-gray-300 group-hover:text-white transition-colors duration-300 mb-0">
-                1st floor,  #395,  8th 'B' Main,  14th 'B' cross, 2nd stage,  'B' sector,  Yelahanka New Town,  Bangalore - 560064.
+                  1st floor,  #395,  8th 'B' Main,  14th 'B' cross, 2nd stage,  'B' sector,  Yelahanka New Town,  Bangalore - 560064.
                 </p>
               </li>
               <li className="flex items-center group">

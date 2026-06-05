@@ -1,13 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Facebook, Instagram, Linkedin } from "lucide-react"
+import { Facebook, Instagram } from "lucide-react"
 
 const SocialLinks = () => {
   const socialLinks = [
-    { icon: <Facebook className="h-4 w-4" />, url: "#", label: "Facebook" },
-    { icon: <Instagram className="h-4 w-4" />, url: "#", label: "Instagram" },
-    { icon: <Linkedin className="h-4 w-4" />, url: "#", label: "LinkedIn" },
+    { icon: <Facebook className="h-4 w-4" />, url: "https://www.facebook.com/Annapoornainterio/", label: "Facebook" },
+    { icon: <Instagram className="h-4 w-4" />, url: "https://www.instagram.com/annapoornaa_interio/", label: "Instagram" },
   ]
 
   return (

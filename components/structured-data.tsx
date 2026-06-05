@@ -14,9 +14,8 @@ const StructuredData = () => {
     url: "https://ac-ipl.in",
     logo: "https://ac-ipl.in/images/logo.png",
     sameAs: [
-      "https://www.facebook.com/annapoornaainterio",
-      "https://www.instagram.com/annapoornaainterio",
-      "https://www.linkedin.com/company/annapoornaainterio",
+      "https://www.facebook.com/Annapoornainterio/",
+      "https://www.instagram.com/annapoornaa_interio/",
     ],
     address: {
       "@type": "PostalAddress",

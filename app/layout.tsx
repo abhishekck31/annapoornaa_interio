@@ -65,12 +65,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon_io/favicon.ico", sizes: "192x192", type: "image/png" },
+      { url: "/ac-ipllogo.png", sizes: "any", type: "image/png" },
     ],
-    shortcut: "/favicon_io/favicon.ico",
-    apple: "/favicon_io/apple-touch-icon.png",
+    shortcut: "/ac-ipllogo.png",
+    apple: "/ac-ipllogo.png",
   },
   manifest: "/favicon_io/site.webmanifest",
   generator: 'v0.dev'
@@ -153,9 +151,8 @@ export default function RootLayout({
             gtag('config', 'G-YXB89D6ZEH');
           `}
         </Script>
-        <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/ac-ipllogo.png" sizes="any" />
+        <link rel="apple-touch-icon" href="/ac-ipllogo.png" />
         <Script
           id="scroll-to-top"
           strategy="afterInteractive"

@@ -72,11 +72,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Image
-                src="/images/logo.png"
+                src="/ac-ipllogo.png"
                 alt="ACIPL Logo"
-                width={220}
-                height={60}
-                className="h-14 w-auto"
+                width={300}
+                height={80}
+                className="h-20 w-auto"
               />
             </Link>
           </div>

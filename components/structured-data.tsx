@@ -12,7 +12,7 @@ const StructuredData = () => {
     "@type": "HomeAndConstructionBusiness",
     name: "ACIPL",
     url: "https://ac-ipl.in",
-    logo: "https://ac-ipl.in/images/logo.png",
+    logo: "https://ac-ipl.in/ac-ipllogo.png",
     sameAs: [
       "https://www.facebook.com/Annapoornainterio/",
       "https://www.instagram.com/annapoornaa_interio/",
@@ -60,7 +60,7 @@ const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "ACIPL - Bangalore & Yelahanka",
-    image: "https://ac-ipl.in/images/logo.png",
+    image: "https://ac-ipl.in/ac-ipllogo.png",
     url: "https://ac-ipl.in",
     telephone: "+9199000 94942",
     address: {

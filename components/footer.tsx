@@ -18,14 +18,14 @@ const Footer = () => {
           <div>
             <div className="mb-6">
               <div className="bg-white p-1 rounded-md inline-block">
-                <Image
-                  src="/images/logo.png"
-                  alt="ACIPL Logo"
-                  width={220}
-                  height={62}
-                  className="h-16 w-auto"
-                />
-              </div>
+              <Image
+                src="/ac-ipllogo.png"
+                alt="ACIPL Logo"
+                width={300}
+                height={80}
+                className="h-24 w-auto"
+              />
+            </div>
             </div>
             <p className="text-gray-300 mb-6">
               Smart Designs. Seamless Execution

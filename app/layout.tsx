@@ -81,7 +81,7 @@ const localBusinessSchema = {
   "@type": ["LocalBusiness", "InteriorDesigner"],
   "name": "ACIPL – Annapoorneshwari Constructions Interiors Pvt Ltd",
   "url": "https://www.ac-ipl.in",
-  "logo": "https://www.ac-ipl.in/images/logo.png",
+  "logo": "https://www.ac-ipl.in/ac-ipllogo.png",
   "image": "https://www.ac-ipl.in/og-image.jpg",
   "telephone": "+919900094942",
   "email": "raghu@ac-ipl.in",

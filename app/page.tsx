@@ -31,18 +31,18 @@ export const metadata: Metadata = {
     'Annapoornaa Interio',
     'Annapoorneshwari Constructions'
   ],
-  metadataBase: new URL('https://annapoornaainterio.com'),
+  metadataBase: new URL('https://ac-ipl.in'),
   alternates: {
-    canonical: 'https://annapoornaainterio.com',
+    canonical: 'https://ac-ipl.in',
   },
   openGraph: {
-    title: 'Best Interior Designers & Construction Company Bangalore | Annapoornaa Interio',
-    description: 'Transform your space with Bangalore\'s most trusted interior design and construction experts. Specializing in home interiors, villas, and turnkey projects in Yelahanka & Bangalore.',
-    url: 'https://annapoornaainterio.com',
-    siteName: 'Annapoornaa Interio',
+    title: 'Top Interior Designers in Bangalore | Turnkey Interiors & Decorators',
+    description: 'Looking for the best interior designers in Bangalore? Annapoorneshwari Interio (ACIPL) offers expert residential and commercial interior solutions. Get a free quote today!',
+    url: 'https://ac-ipl.in',
+    siteName: 'Annapoorneshwari Interio (ACIPL)',
     images: [
       {
-        url: 'https://annapoornaainterio.com/og-image.jpg',
+        url: 'https://ac-ipl.in/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Annapoornaa Interio - Premium Interior Design & Construction',
@@ -53,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Top Interior Designers in Bangalore | Annapoornaa Interio',
-    description: 'Expert interior design and construction services in Bangalore. Transforming homes and offices with 10+ years of experience.',
-    images: ['https://annapoornaainterio.com/og-image.jpg'],
+    title: 'Top Interior Designers in Bangalore | Turnkey Interiors & Decorators',
+    description: 'Annapoorneshwari Interio offers the best turnkey interior design services in Bangalore. Transforming houses into beautiful homes.',
+    images: ['https://ac-ipl.in/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -96,9 +96,9 @@ export default function Home() {
     '@type': 'HomeAndConstructionBusiness',
     'name': 'Annapoornaa Interio',
     'alternateName': ['Annapoorneshwari Constructions Interiors Pvt Ltd', 'Annapoornaa Interiors'],
-    'image': 'https://www.annapoornaainterio.com/images/logo.png',
-    '@id': 'https://annapoornaainterio.com',
-    'url': 'https://annapoornaainterio.com',
+    'image': 'https://www.ac-ipl.in/images/logo.png',
+    '@id': 'https://ac-ipl.in',
+    'url': 'https://ac-ipl.in',
     'telephone': contactDetails.phone1,
     'email': contactDetails.email,
     'priceRange': '₹₹-₹₹₹',

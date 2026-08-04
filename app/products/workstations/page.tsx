@@ -5,6 +5,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMetadata } from "@/lib/seo/metadata";
+
+export const metadata = buildMetadata({
+  title: "Office Workstations in Bangalore | Modular Desks & Cubicles | ACIPL",
+  description:
+    "Office workstations in Bangalore — linear, bench, cubicle, height-adjustable and executive desking, plus conference tables and pods. Manufactured and installed for corporate fit-outs.",
+  path: "/products/workstations",
+  image: "/Workstations/Workstation-Main.webp",
+  imageAlt: "Modular office workstations supplied and installed by ACIPL in Bangalore",
+  keywords: [
+    "office workstations Bangalore",
+    "modular office furniture Bangalore",
+    "office cubicles Bangalore",
+    "height adjustable desks India",
+  ],
+});
 
 const WorkstationsPage = () => {
   const features = [

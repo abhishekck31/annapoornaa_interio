@@ -3,6 +3,21 @@ import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMetadata } from "@/lib/seo/metadata";
+
+export const metadata = buildMetadata({
+  title: "Building Products in Bangalore | UPVC, Fire Doors, Railings | ACIPL",
+  description:
+    "Supply and installation of UPVC and aluminium windows, fire doors, system railings, PVC false ceilings and office workstations across Bangalore. Manufacturer-backed warranties.",
+  path: "/products",
+  keywords: [
+    "building products Bangalore",
+    "UPVC windows Bangalore",
+    "fire doors Bangalore",
+    "system railings Bangalore",
+    "office workstations Bangalore",
+  ],
+});
 
 const products = [
   {

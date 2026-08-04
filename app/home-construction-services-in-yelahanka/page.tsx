@@ -9,8 +9,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from "@/data/projects-data"
 
 export const metadata: Metadata = {
-  title: "Best Home Construction Services in Yelahanka | Top Builders",
-  description: "Looking for expert home construction services in yelahanka? We are a trusted residential construction company in yelahanka delivering top-notch building construction services yelahanka.",
+  title: { absolute: "Home Construction Services in Yelahanka, Bangalore | ACIPL" },
+  description: "Home construction services in Yelahanka, Bangalore. Trusted residential contractors handling plan sanction, structural design and turnkey builds from foundation to handover.",
+  alternates: {
+    canonical: 'https://www.ac-ipl.in/home-construction-services-in-yelahanka',
+  },
 }
 
 export default function YelahankaConstructionPage() {

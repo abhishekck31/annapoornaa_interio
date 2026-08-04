@@ -508,11 +508,13 @@ const GallerySection = () => {
                   
                   <Image
                     src={img}
-                    alt={`${selectedCategory} image ${idx + 1}`}
+                    alt={`${selectedCategory} project by ACIPL in Bangalore — view ${idx + 1}`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    priority={idx < 8}
+                    // Was `priority={idx < 8}`, which preloaded eight images at
+                    // high fetch priority and starved the actual LCP element.
+                    priority={idx < 2}
                     loading={idx < 8 ? "eager" : "lazy"}
                     onLoad={() => {
                       if (idx >= 8) {

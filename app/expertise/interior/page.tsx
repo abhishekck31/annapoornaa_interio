@@ -2,6 +2,32 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import JsonLd from "@/components/seo/json-ld"
+import { buildMetadata } from "@/lib/seo/metadata"
+import { serviceSchema } from "@/lib/seo/schema"
+
+export const metadata = buildMetadata({
+  title: "Interior Design Services in Bangalore | Residential & Commercial | ACIPL",
+  description:
+    "Interior design services in Bangalore covering residential, commercial, modular kitchens, false ceilings and turnkey fit-outs. In-house design and execution from concept to handover.",
+  path: "/expertise/interior",
+  image: "/updated-homein.jpg",
+  imageAlt: "Interior design project completed by ACIPL in Bangalore",
+  keywords: [
+    "interior design services Bangalore",
+    "interior designers Bangalore",
+    "turnkey interiors Bangalore",
+    "commercial interior design Bangalore",
+  ],
+})
+
+const interiorServiceSchema = serviceSchema({
+  name: "Interior Design Services in Bangalore",
+  description:
+    "Residential and commercial interior design, modular kitchens, wardrobes, false ceilings and turnkey fit-outs delivered across Bangalore.",
+  path: "/expertise/interior",
+  serviceType: "Interior Design",
+})
 
 const interiorExpertise = [
   {
@@ -63,6 +89,8 @@ const interiorExpertise = [
 
 export default function InteriorExpertisePage() {
   return (
+    <>
+    <JsonLd id="schema-service-interior" data={interiorServiceSchema} />
     <main className="min-h-screen">
       <Navbar />
 
@@ -163,5 +191,6 @@ export default function InteriorExpertisePage() {
 
       <Footer />
     </main>
+    </>
   )
 }

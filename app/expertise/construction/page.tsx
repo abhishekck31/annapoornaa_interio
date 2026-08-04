@@ -2,6 +2,32 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import JsonLd from "@/components/seo/json-ld"
+import { buildMetadata } from "@/lib/seo/metadata"
+import { serviceSchema } from "@/lib/seo/schema"
+
+export const metadata = buildMetadata({
+  title: "Construction Services in Bangalore | Turnkey Contractors | ACIPL",
+  description:
+    "Construction services in Bangalore — residential and commercial builds, turnkey contracts, plan sanction support, structural design and project management from foundation to handover.",
+  path: "/expertise/construction",
+  image: "/Const1.png",
+  imageAlt: "Residential construction project managed by ACIPL in Bangalore",
+  keywords: [
+    "construction services Bangalore",
+    "turnkey construction Bangalore",
+    "civil contractors Bangalore",
+    "house construction Bangalore",
+  ],
+})
+
+const constructionServiceSchema = serviceSchema({
+  name: "Construction Services in Bangalore",
+  description:
+    "Residential and commercial construction, turnkey contracts, plan sanction support and project management delivered across Bangalore.",
+  path: "/expertise/construction",
+  serviceType: "General Contractor",
+})
 
 const constructionExpertise = [
   {
@@ -64,6 +90,8 @@ const constructionExpertise = [
 
 export default function ConstructionExpertisePage() {
   return (
+    <>
+    <JsonLd id="schema-service-construction" data={constructionServiceSchema} />
     <main className="min-h-screen">
       <Navbar />
 
@@ -163,5 +191,6 @@ export default function ConstructionExpertisePage() {
 
       <Footer />
     </main>
+    </>
   )
 }

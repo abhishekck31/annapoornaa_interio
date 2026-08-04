@@ -5,6 +5,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMetadata } from "@/lib/seo/metadata";
+
+export const metadata = buildMetadata({
+  title: "Aluminium Doors & Windows in Bangalore | Slim Profile Systems | ACIPL",
+  description:
+    "Aluminium doors and windows in Bangalore — slim-profile sliding, casement, bifold and French systems for large openings. Powder-coated finishes, supplied and installed.",
+  path: "/products/aluminum-doors-windows",
+  image: "/Alumilium Doors and Windows/Alumilium-Main.jpg",
+  imageAlt: "Slim profile aluminium sliding doors installed by ACIPL in Bangalore",
+  keywords: [
+    "aluminium windows Bangalore",
+    "aluminium doors Bangalore",
+    "slim profile aluminium windows India",
+    "aluminium bifold doors Bangalore",
+  ],
+});
 
 const AluminumDoorsWindowsPage = () => {
   const features = [

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Interior Design & Construction Portfolio | ACIPL Bangalore Gallery',
+  title: { absolute: "Project Gallery | Interior & Construction Portfolio Bangalore | ACIPL" },
   description: 'Explore ACIPL\'s project gallery — completed home interiors, office designs and construction projects in Yelahanka, Hebbal and across Bangalore.',
   alternates: { canonical: 'https://www.ac-ipl.in/gallery' }
 }

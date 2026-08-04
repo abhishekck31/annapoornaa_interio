@@ -3,8 +3,11 @@ import Footer from "@/components/footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Annapoorneshwari Constructions Interiors",
+  title: { absolute: "Terms & Conditions | ACIPL Bangalore" },
   description: "Terms and Conditions for Annapoorneshwari Constructions Interiors Private Limited",
+  alternates: {
+    canonical: 'https://www.ac-ipl.in/terms-and-conditions',
+  },
 }
 
 export default function TermsAndConditionsPage() {

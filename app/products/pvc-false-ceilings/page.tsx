@@ -5,6 +5,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMetadata } from "@/lib/seo/metadata";
+
+export const metadata = buildMetadata({
+  title: "PVC False Ceilings in Bangalore | Panels & Soffit Ceilings | ACIPL",
+  description:
+    "PVC false ceilings in Bangalore — moisture-resistant panels, tiles, perforated and backlit systems for balconies, bathrooms, utilities and commercial interiors. Supplied and installed.",
+  path: "/products/pvc-false-ceilings",
+  image: "/PVC-Panels.jpg",
+  imageAlt: "PVC false ceiling panels installed by ACIPL in Bangalore",
+  keywords: [
+    "PVC false ceiling Bangalore",
+    "PVC ceiling panels Bangalore",
+    "false ceiling contractors Bangalore",
+    "soffit ceiling Bangalore",
+  ],
+});
 
 
 const PVCFalseCeilingsPage = () => {

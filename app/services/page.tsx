@@ -306,9 +306,9 @@ export default function ServicesPage() {
       <section className="mt-24 pb-16 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-primary">
-              Our Services
-            </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-primary">
+              Interior Design &amp; Construction Services in Bangalore
+            </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive interior design and construction solutions tailored
               to your specific needs with 3D images and Walkthrough videos

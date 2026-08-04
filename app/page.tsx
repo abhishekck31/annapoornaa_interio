@@ -1,4 +1,8 @@
 import { Metadata } from 'next'
+import JsonLd from '@/components/seo/json-ld'
+import { faqPageSchema, ORGANIZATION_ID } from '@/lib/seo/schema'
+import { absoluteUrl, siteConfig } from '@/lib/seo/site'
+import { homepageFaqs } from '@/lib/seo/homepage-faqs'
 import Navbar from '@/components/navbar'
 import HeroSection from '@/components/hero-section'
 import ServicesSection from '@/components/services-section'
@@ -12,10 +16,9 @@ import CTASection from '@/components/cta-section'
 import StatsSection from '@/components/stats-section'
 import FAQSection from '@/components/faq-section'
 import ClientLogosSection from '@/components/client-logos-section'
-import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Interior Designers in Bangalore | Construction & Interiors Yelahanka | Annapoornaa Interio',
+  title: { absolute: 'Interior Designers in Bangalore | Interiors & Construction | ACIPL' },
   description: 'Looking for the best interior designers in Bangalore? Annapoornaa Interio provides premium home interiors, turnkey construction, and office renovation in Yelahanka & Bangalore. 10+ Years Exp.',
   keywords: [
     'Interior Designers in Bangalore',
@@ -31,21 +34,21 @@ export const metadata: Metadata = {
     'Annapoornaa Interio',
     'Annapoorneshwari Constructions'
   ],
-  metadataBase: new URL('https://ac-ipl.in'),
+  // Canonical must use the www host — the bare host 307-redirects.
   alternates: {
-    canonical: 'https://ac-ipl.in',
+    canonical: absoluteUrl('/'),
   },
   openGraph: {
     title: 'Top Interior Designers in Bangalore | Turnkey Interiors & Decorators',
-    description: 'Looking for the best interior designers in Bangalore? Annapoorneshwari Interio (ACIPL) offers expert residential and commercial interior solutions. Get a free quote today!',
-    url: 'https://ac-ipl.in',
-    siteName: 'Annapoorneshwari Interio (ACIPL)',
+    description: 'Looking for the best interior designers in Bangalore? ACIPL offers expert residential and commercial interior solutions. Get a free quote today!',
+    url: absoluteUrl('/'),
+    siteName: siteConfig.name,
     images: [
       {
-        url: 'https://ac-ipl.in/og-image.jpg',
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Annapoornaa Interio - Premium Interior Design & Construction',
+        alt: 'ACIPL - Premium Interior Design & Construction in Bangalore',
       },
     ],
     locale: 'en_IN',
@@ -54,8 +57,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Top Interior Designers in Bangalore | Turnkey Interiors & Decorators',
-    description: 'Annapoorneshwari Interio offers the best turnkey interior design services in Bangalore. Transforming houses into beautiful homes.',
-    images: ['https://ac-ipl.in/og-image.jpg'],
+    description: 'ACIPL offers turnkey interior design and construction services across Bangalore. Transforming houses into beautiful homes.',
+    images: [siteConfig.ogImage],
   },
   robots: {
     index: true,
@@ -68,107 +71,57 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
 }
 
 
-// BEST PRACTICE: Define contact info once to avoid repetition and errors.
-const contactDetails = {
-  email: "info@annapoornainterio.com",
-  phone1: "+91 99000 94942",
-  phone2: "+91 80731 41413",
-  address: {
-    streetAddress: "1st floor, #395, 8th 'B' Main, 14th 'B' cross, 2nd stage, 'B' sector",
-    addressLocality: "Yelahanka New Town",
-    addressRegion: "Bangalore",
-    postalCode: "560064",
-    addressCountry: "IN"
-  }
+/**
+ * The business entity itself is declared once in the root layout. This page
+ * only adds what is specific to it: the service catalogue and the FAQ markup
+ * for the FAQ section rendered below. Both reference the organisation by @id
+ * rather than restating its name, address and phone.
+ */
+const serviceCatalogueSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'OfferCatalog',
+  name: 'Design and Construction Services',
+  url: absoluteUrl('/services'),
+  provider: { '@id': ORGANIZATION_ID },
+  itemListElement: [
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Home Interior Design',
+        description: 'Premium home interiors, wardrobes, and modular kitchens in Bangalore.',
+        provider: { '@id': ORGANIZATION_ID },
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Turnkey Construction',
+        description: 'Complete residential and commercial construction services from foundation to finish.',
+        provider: { '@id': ORGANIZATION_ID },
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Office Interior Design & Renovation',
+        description: 'Corporate office interior design, fit-out and renovation services across Bangalore.',
+        provider: { '@id': ORGANIZATION_ID },
+      },
+    },
+  ],
 }
 
 export default function Home() {
-
-  // SEO: Comprehensive JSON-LD Structured Data for Local Dominance & Entity Building
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
-    'name': 'Annapoornaa Interio',
-    'alternateName': ['Annapoorneshwari Constructions Interiors Pvt Ltd', 'Annapoornaa Interiors'],
-    'image': 'https://www.ac-ipl.in/images/logo.png',
-    '@id': 'https://ac-ipl.in',
-    'url': 'https://ac-ipl.in',
-    'telephone': contactDetails.phone1,
-    'email': contactDetails.email,
-    'priceRange': '₹₹-₹₹₹',
-    'address': {
-      '@type': 'PostalAddress',
-      ...contactDetails.address
-    },
-    'geo': {
-      '@type': 'GeoCoordinates',
-      'latitude': 13.1006,
-      'longitude': 77.5963
-    },
-    'areaServed': [
-      { '@type': 'City', 'name': 'Yelahanka' },
-      { '@type': 'City', 'name': 'Bangalore' },
-      { '@type': 'City', 'name': 'North Bangalore' },
-      { '@type': 'City', 'name': 'Whitefield' },
-      { '@type': 'City', 'name': 'Hebbal' }
-    ],
-    'openingHoursSpecification': {
-      '@type': 'OpeningHoursSpecification',
-      'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      'opens': '09:00',
-      'closes': '20:00'
-    },
-    'sameAs': [
-      "https://www.facebook.com/annapoornaainterio",
-      "https://www.instagram.com/annapoornaainterio",
-      "https://www.linkedin.com/company/annapoornaainterio"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Design and Construction Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Home Interior Design",
-            "description": "Premium home interiors, wardrobes, and modular kitchens in Bangalore."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Turnkey Construction",
-            "description": "Complete residential and commercial construction services from foundation to finish."
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Office Renovation",
-            "description": "Corporate office interior design and renovation services."
-          }
-        }
-      ]
-    }
-  };
-
-
   return (
     <>
-      <Script
-        id="schema-business"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <JsonLd id="schema-service-catalogue" data={serviceCatalogueSchema} />
+      <JsonLd id="schema-homepage-faq" data={faqPageSchema(homepageFaqs)} />
 
       <main className="min-h-screen">
         <Navbar />

@@ -5,6 +5,22 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo/metadata"
+
+export const metadata = buildMetadata({
+  title: "System Railings in Bangalore | Glass & Steel Railings | ACIPL",
+  description:
+    "System railings in Bangalore — frameless glass, stainless steel, aluminium and combination railings for staircases, balconies and terraces. Engineered fixings, installed to spec.",
+  path: "/products/system-railings",
+  image: "/SystemRailings/SystemRailing-Main.jpg",
+  imageAlt: "Frameless glass system railing installed by ACIPL in Bangalore",
+  keywords: [
+    "system railings Bangalore",
+    "glass railings Bangalore",
+    "stainless steel railings Bangalore",
+    "balcony railing design India",
+  ],
+})
 
 const SystemRailingsPage = () => {
   const features = [

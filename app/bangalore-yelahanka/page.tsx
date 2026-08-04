@@ -8,7 +8,7 @@ import type { Metadata } from "next"
 import Head from 'next/head'
 
 export const metadata: Metadata = {
-  title: "Best Interior Design & Construction Services in Bangalore & Yelahanka | ACIPL",
+  title: { absolute: "Interior Design & Construction in Yelahanka, Bangalore | ACIPL" },
   description:
     "Premium interior design and construction services in Bangalore and Yelahanka. Specializing in home and office interiors, renovation, and high-quality products like UPVC windows, fire doors, and more.",
   keywords:

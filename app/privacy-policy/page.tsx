@@ -3,8 +3,11 @@ import Footer from "@/components/footer"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Annapoorneshwari Constructions Interiors",
+  title: { absolute: "Privacy Policy | ACIPL Bangalore" },
   description: "Privacy Policy for Annapoorneshwari Constructions Interiors Private Limited",
+  alternates: {
+    canonical: 'https://www.ac-ipl.in/privacy-policy',
+  },
 }
 
 export default function PrivacyPolicyPage() {

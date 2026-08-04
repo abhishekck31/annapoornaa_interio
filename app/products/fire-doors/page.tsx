@@ -5,6 +5,22 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { buildMetadata } from "@/lib/seo/metadata"
+
+export const metadata = buildMetadata({
+  title: "Fire Doors in Bangalore | Fire Rated Door Suppliers | ACIPL",
+  description:
+    "Fire rated doors in Bangalore — steel, wooden, glazed and acoustic fire doors with certified ratings for commercial and residential buildings. Supply, installation and compliance support.",
+  path: "/products/fire-doors",
+  image: "/Fire Doors/Firedoors-Main.jpg",
+  imageAlt: "Certified fire rated doors supplied and installed by ACIPL in Bangalore",
+  keywords: [
+    "fire doors Bangalore",
+    "fire rated doors Bangalore",
+    "fire door suppliers Bangalore",
+    "steel fire doors India",
+  ],
+})
 
 const FireDoorsPage = () => {
   const features = [

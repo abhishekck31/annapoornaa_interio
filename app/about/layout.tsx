@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'About ACIPL | Interior & Construction Company in Yelahanka, Bangalore',
+  title: { absolute: "About ACIPL | Interior & Construction Company in Yelahanka, Bangalore" },
   description: 'Learn about Annapoorneshwari Constructions Interiors Pvt Ltd — Bangalore\'s trusted interior design & construction company led by CEO Raghu Lakshmipathi. Based in Yelahanka New Town.',
   alternates: { canonical: 'https://www.ac-ipl.in/about' }
 }

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Contact ACIPL | Interior Designers in Yelahanka New Town, Bangalore',
+  title: { absolute: "Contact ACIPL | Interior Designers in Yelahanka New Town, Bangalore" },
   description: 'Get in touch with ACIPL for interior design, construction & renovation in Yelahanka, Hebbal & Bangalore. Call +91 99000 94942. Free consultation available.',
   alternates: { canonical: 'https://www.ac-ipl.in/contact' }
 }

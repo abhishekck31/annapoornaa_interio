@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Clock, MapPin, Mail, Phone, Facebook, Instagram } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa"
 import { motion } from "framer-motion"
+import ServiceAreas from "@/components/seo/service-areas"
 
 const Footer = () => {
   const whatsappMessage = "Hello! I'm interested in learning more about ACIPL's services. Could you please provide more information?"
@@ -143,6 +144,24 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  href="/expertise/interior"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                >
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  Interior Design Expertise
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/expertise/construction"
+                  className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
+                >
+                  <span className="w-2 h-2 bg-gold-400 rounded-full mr-2 transform transition-transform duration-300 group-hover:scale-150"></span>
+                  Construction Expertise
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/interior-designers-in-yelahanka"
                   className="text-gray-300 hover:text-gold-400 transition-colors flex items-center group"
                 >
@@ -204,6 +223,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <div className="mt-12">
+          <ServiceAreas />
         </div>
 
         <div className="border-t border-navy-800 mt-12 pt-8 text-center">

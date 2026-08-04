@@ -9,10 +9,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from "@/data/projects-data"
 
 export const metadata: Metadata = {
-  title: "Top Interior Designers in Jayanagar Bangalore | Luxury Home Designs",
+  title: { absolute: "Interior Designers in Jayanagar, Bangalore | ACIPL" },
   description: "Looking for expert Interior Designers in Jayanagar Bangalore? We are the leading firm providing customized residential and commercial interior design solutions.",
   alternates: {
-    canonical: 'https://ac-ipl.in/interior-designers-in-jayanagar-bangalore',
+    canonical: 'https://www.ac-ipl.in/interior-designers-in-jayanagar-bangalore',
   }
 }
 

@@ -5,6 +5,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { buildMetadata } from "@/lib/seo/metadata";
+
+export const metadata = buildMetadata({
+  title: "UPVC Windows & Doors in Bangalore | Supply & Installation | ACIPL",
+  description:
+    "UPVC windows and doors in Bangalore — sliding, casement, tilt-and-turn and French systems. Weather-sealed, low maintenance and quieter than aluminium. Free site measurement.",
+  path: "/products/upvc-windows-doors",
+  image: "/upvc-doors-and-windows/UPVC-Main.jpg",
+  imageAlt: "UPVC sliding windows and doors installed by ACIPL in Bangalore",
+  keywords: [
+    "UPVC windows Bangalore",
+    "UPVC doors Bangalore",
+    "UPVC sliding windows Bangalore",
+    "UPVC window price Bangalore",
+  ],
+});
 
 const UPVCWindowsDoorsPage = () => {
   const features = [

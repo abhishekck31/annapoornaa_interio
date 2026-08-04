@@ -9,8 +9,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { projects } from "@/data/projects-data"
 
 export const metadata: Metadata = {
-  title: "Top Interior Designers in Yelahanka | Luxury & Home Interiors",
-  description: "Looking for expert interior designers in yelahanka? We are the best interior designers in yelahanka, offering premium home and office interior design solutions.",
+  title: { absolute: "Interior Designers in Yelahanka, Bangalore | ACIPL" },
+  description: "Looking for expert interior designers in Yelahanka? ACIPL offers premium home and office interior design, modular kitchens and turnkey fit-outs across Yelahanka and North Bangalore.",
+  alternates: {
+    canonical: 'https://www.ac-ipl.in/interior-designers-in-yelahanka',
+  },
 }
 
 export default function YelahankaInteriorDesignersPage() {

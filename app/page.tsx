@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import JsonLd from '@/components/seo/json-ld'
-import { faqPageSchema, ORGANIZATION_ID } from '@/lib/seo/schema'
+import { faqPageSchema, offerCatalogSchema } from '@/lib/seo/schema'
 import { absoluteUrl, siteConfig } from '@/lib/seo/site'
 import { homepageFaqs } from '@/lib/seo/homepage-faqs'
 import Navbar from '@/components/navbar'
@@ -75,52 +75,17 @@ export const metadata: Metadata = {
 
 
 /**
- * The business entity itself is declared once in the root layout. This page
- * only adds what is specific to it: the service catalogue and the FAQ markup
- * for the FAQ section rendered below. Both reference the organisation by @id
- * rather than restating its name, address and phone.
+ * The business (LocalBusiness) entity itself is declared once in the root
+ * layout and already carries the address, phones, opening hours, geo and the
+ * full service catalogue. This page only adds what is specific to it: a
+ * standalone OfferCatalog and the FAQ markup for the section rendered below.
+ * Both reference the organisation by @id rather than restating it.
  */
-const serviceCatalogueSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'OfferCatalog',
-  name: 'Design and Construction Services',
-  url: absoluteUrl('/services'),
-  provider: { '@id': ORGANIZATION_ID },
-  itemListElement: [
-    {
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: 'Home Interior Design',
-        description: 'Premium home interiors, wardrobes, and modular kitchens in Bangalore.',
-        provider: { '@id': ORGANIZATION_ID },
-      },
-    },
-    {
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: 'Turnkey Construction',
-        description: 'Complete residential and commercial construction services from foundation to finish.',
-        provider: { '@id': ORGANIZATION_ID },
-      },
-    },
-    {
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: 'Office Interior Design & Renovation',
-        description: 'Corporate office interior design, fit-out and renovation services across Bangalore.',
-        provider: { '@id': ORGANIZATION_ID },
-      },
-    },
-  ],
-}
 
 export default function Home() {
   return (
     <>
-      <JsonLd id="schema-service-catalogue" data={serviceCatalogueSchema} />
+      <JsonLd id="schema-service-catalogue" data={offerCatalogSchema()} />
       <JsonLd id="schema-homepage-faq" data={faqPageSchema(homepageFaqs)} />
 
       <main className="min-h-screen">

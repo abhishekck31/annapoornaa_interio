@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/seo/metadata";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema";
 
 export const metadata = buildMetadata({
   title: "Building Products in Bangalore | UPVC, Fire Doors, Railings | ACIPL",
@@ -73,6 +75,22 @@ const products = [
 export default function ProductsPage() {
   return (
     <>
+      <JsonLd
+        id="schema-products-index"
+        data={[
+          serviceSchema({
+            name: "Building Products Supply & Installation in Bangalore",
+            description:
+              "Supply and installation of UPVC and aluminium windows and doors, fire-rated doors, glass and steel system railings, PVC false ceilings and modular office workstations across Bangalore.",
+            path: "/products",
+            serviceType: "Building Product Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
@@ -93,7 +111,7 @@ export default function ProductsPage() {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={product.image}
-                      alt={product.title}
+                      alt={`${product.title} — supplied and installed by ACIPL across Bangalore`}
                       fill
                       className="object-cover"
                     />

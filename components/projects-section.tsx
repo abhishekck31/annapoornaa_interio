@@ -84,6 +84,8 @@ const ProjectsSection = () => {
                       <img
                         src={project.mainImage}
                         alt={project.title}
+                        loading="lazy"
+                        decoding="async"
                         className="object-cover w-full h-auto rounded-t-lg"
                       />
                     </div>

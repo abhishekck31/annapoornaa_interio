@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ACIPL — SEO Implementation Report</title>
+<style>
+  @page { size: A4; margin: 14mm 13mm 16mm 13mm; }
+
+  :root {
+    --navy: #001254;
+    --navy-700: #1f3173;
+    --navy-400: #546297;
+    --gold: #e8bd42;
+    --gold-dark: #d0771d;
+    --ink: #1c2333;
+    --muted: #5b6478;
+    --line: #dfe3ec;
+    --bg-soft: #f5f7fb;
+    --green: #1a7f4b;
+    --red: #b3261e;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.2pt;
+    line-height: 1.55;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  h1, h2, h3 { margin: 0; font-weight: 700; }
+
+  /* ---------- Cover banner ---------- */
+  .cover {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-700) 100%);
+    color: #fff;
+    padding: 26px 28px 24px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .cover .eyebrow {
+    font-size: 8.5pt;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .cover h1 { font-size: 23pt; line-height: 1.2; margin-bottom: 8px; }
+  .cover .sub { font-size: 10.5pt; color: #c3c8da; max-width: 76%; }
+  .cover .meta {
+    margin-top: 18px; padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.18);
+    display: flex; gap: 34px; font-size: 9pt;
+  }
+  .cover .meta span { display: block; color: #9ba3c2; font-size: 7.8pt;
+    text-transform: uppercase; letter-spacing: 1.1px; margin-bottom: 2px; }
+  .cover .meta strong { font-weight: 600; color: #fff; font-size: 9.6pt; }
+
+  /* ---------- Section headings ---------- */
+  h2 {
+    font-size: 13pt; color: var(--navy);
+    margin: 24px 0 4px; padding-bottom: 6px;
+    border-bottom: 2px solid var(--gold);
+  }
+  h2 .num {
+    display: inline-block; width: 21px; height: 21px; line-height: 21px;
+    background: var(--navy); color: var(--gold); border-radius: 50%;
+    text-align: center; font-size: 9.5pt; margin-right: 8px;
+  }
+  h2 + .lede { color: var(--muted); font-size: 9.6pt; margin: 8px 0 12px; }
+  h3 { font-size: 10.6pt; color: var(--navy-700); margin: 15px 0 6px; }
+
+  p { margin: 0 0 9px; }
+
+  /* ---------- Callout ---------- */
+  .callout {
+    background: var(--bg-soft); border-left: 3px solid var(--gold);
+    padding: 12px 15px; border-radius: 0 4px 4px 0; margin: 12px 0;
+    font-size: 9.8pt;
+  }
+  .callout strong { color: var(--navy); }
+
+  /* ---------- Tables ---------- */
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 9.1pt; }
+  thead th {
+    background: var(--navy); color: #fff; text-align: left;
+    padding: 7px 9px; font-weight: 600; font-size: 8.4pt;
+    text-transform: uppercase; letter-spacing: .6px;
+  }
+  td { padding: 7px 9px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:nth-child(even) { background: #fafbfd; }
+  td.was { color: var(--red); }
+  td.now { color: var(--green); font-weight: 600; }
+  table.compact td, table.compact th { padding: 5.5px 9px; }
+
+  /* ---------- Stat row ---------- */
+  .stats { display: flex; gap: 10px; margin: 14px 0 4px; }
+  .stat {
+    flex: 1; background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: 5px; padding: 12px 10px; text-align: center;
+  }
+  .stat .big { font-size: 18pt; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .stat .lbl { font-size: 7.9pt; color: var(--muted); text-transform: uppercase;
+    letter-spacing: .7px; margin-top: 4px; }
+
+  /* ---------- Lists ---------- */
+  ul { margin: 6px 0 10px; padding-left: 17px; }
+  li { margin-bottom: 4.5px; }
+  ul.tick { list-style: none; padding-left: 2px; }
+  ul.tick li { padding-left: 17px; position: relative; }
+  ul.tick li::before {
+    content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700;
+  }
+
+  /* ---------- URL grid ---------- */
+  .urls { column-count: 2; column-gap: 20px; margin: 10px 0; }
+  .urls div {
+    font-family: "Consolas", "Courier New", monospace; font-size: 8.4pt;
+    padding: 3.5px 0; break-inside: avoid; color: var(--navy-700);
+  }
+  .urls div::before { content: "▸ "; color: var(--gold-dark); }
+
+  /* ---------- Misc ---------- */
+  .pill {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    font-size: 7.6pt; font-weight: 700; padding: 2px 7px; border-radius: 9px;
+    text-transform: uppercase; letter-spacing: .5px; vertical-align: middle;
+  }
+  .footer {
+    margin-top: 26px; padding-top: 12px; border-top: 1px solid var(--line);
+    font-size: 8.2pt; color: var(--muted); display: flex; justify-content: space-between;
+  }
+  .page-break { break-before: page; }
+  .avoid-break { break-inside: avoid; }
+  code { font-family: "Consolas", monospace; font-size: 8.6pt;
+    background: #eef1f7; padding: 1px 4px; border-radius: 3px; color: var(--navy-700); }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="eyebrow">Search Engine Optimisation</div>
+  <h1>Website SEO Overhaul<br>Implementation Report</h1>
+  <div class="sub">A complete technical and on-page SEO rebuild of ac-ipl.in, including sixteen new
+    location-targeted landing pages built to attract high-intent enquiries across Bangalore.</div>
+  <div class="meta">
+    <div><span>Prepared for</span><strong>ACIPL — Annapoorneshwari Constructions Interiors</strong></div>
+    <div><span>Website</span><strong>www.ac-ipl.in</strong></div>
+    <div><span>Date</span><strong>4 August 2026</strong></div>
+    <div><span>Status</span><strong>Deployed to production</strong></div>
+  </div>
+</div>
+
+<h2><span class="num">1</span>Executive Summary</h2>
+<p class="lede">What was wrong, what we did about it, and what it means commercially.</p>
+
+<p>A full audit of the website uncovered several faults that were actively preventing Google from
+indexing and ranking the site correctly &mdash; including thirteen location pages that were invisible
+to search engines, a sitemap file that Google could not read at all, and a social sharing image that
+had been broken sitewide. All of these have been corrected.</p>
+
+<p>Beyond the repairs, we built sixteen new landing pages targeting commercially valuable searches
+such as <em>&ldquo;modular kitchen in Whitefield&rdquo;</em> and <em>&ldquo;home renovation in JP
+Nagar&rdquo;</em>. Each is written specifically for that service and locality rather than being a
+copy with the area name swapped, which is what search engines penalise.</p>
+
+<div class="stats">
+  <div class="stat"><div class="big">16</div><div class="lbl">New landing pages</div></div>
+  <div class="stat"><div class="big">41</div><div class="lbl">Pages in sitemap</div></div>
+  <div class="stat"><div class="big">95%</div><div class="lbl">Smaller hero images</div></div>
+  <div class="stat"><div class="big">14</div><div class="lbl">Duplicates merged</div></div>
+  <div class="stat"><div class="big">76</div><div class="lbl">Files updated</div></div>
+</div>
+
+<h2><span class="num">2</span>Critical Faults Found &amp; Fixed</h2>
+<p class="lede">Each of these was measurably harming search visibility before this work began.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:26%">Issue</th><th style="width:37%">Before</th><th style="width:37%">After</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>13 location pages invisible</strong></td>
+      <td class="was">Pages for Koramangala, Hebbal, HSR Layout and ten other areas were built with a
+        method incompatible with the site&rsquo;s framework. They published <em>no page title and no
+        description</em> &mdash; Google saw thirteen identical, empty pages.</td>
+      <td class="now">Consolidated into properly built pages and permanently redirected, so their
+        accumulated value transfers rather than being lost.</td>
+    </tr>
+    <tr>
+      <td><strong>Sitemap unreadable</strong></td>
+      <td class="was">The sitemap file was corrupted &mdash; a structural tag was never closed, making
+        it invalid. Google could not parse it, so it could not reliably discover pages.</td>
+      <td class="now">Rebuilt and generated automatically. Now lists all 41 pages correctly and
+        updates itself whenever a page is added.</td>
+    </tr>
+    <tr>
+      <td><strong>Social image missing</strong></td>
+      <td class="was">Every page referenced a preview image that did not exist. Any link shared on
+        WhatsApp, Facebook or LinkedIn appeared blank and untrustworthy.</td>
+      <td class="now">Created and live. Shared links now display a proper branded preview.</td>
+    </tr>
+    <tr>
+      <td><strong>Split website address</strong></td>
+      <td class="was">Roughly half the site pointed to <code>ac-ipl.in</code> and half to
+        <code>www.ac-ipl.in</code>. Google treated these as two competing sites, dividing ranking
+        strength between them.</td>
+      <td class="now">Unified on <code>www.ac-ipl.in</code> throughout, consolidating all authority
+        into one address.</td>
+    </tr>
+    <tr>
+      <td><strong>Conflicting business details</strong></td>
+      <td class="was">The site declared <em>three different versions</em> of the business to Google
+        &mdash; with different email addresses, phone formats and social media links.</td>
+      <td class="now">A single, consistent business profile. Essential for Google Maps and local
+        search reliability.</td>
+    </tr>
+    <tr>
+      <td><strong>Slow-loading homepage</strong></td>
+      <td class="was">Homepage banner images were 6.4&nbsp;MB each and loaded in a way the browser
+        could not prioritise &mdash; punishing on mobile data.</td>
+      <td class="now">Reduced to 343&nbsp;KB with no visible quality loss, and now loaded first.</td>
+    </tr>
+    <tr>
+      <td><strong>Placeholder code left live</strong></td>
+      <td class="was">The homepage published a dummy Google verification tag reading
+        <code>your-google-verification-code</code>.</td>
+      <td class="now">Removed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2><span class="num">3</span>Work Completed by Area</h2>
+
+<h3>Technical foundations</h3>
+<ul class="tick">
+  <li>Sitemap and robots file rebuilt and now generated automatically from a central list.</li>
+  <li>Removed a sitemap entry pointing to a page that did not exist (returning an error to Google).</li>
+  <li>Every page given a single correct canonical address, eliminating duplicate-content risk.</li>
+  <li>Search engines blocked from crawling internal system routes with no public value.</li>
+  <li>Proper &ldquo;page not found&rdquo; page added, so error pages no longer confuse indexing.</li>
+</ul>
+
+<h3>On-page optimisation</h3>
+<ul class="tick">
+  <li>Unique, keyword-focused page title and description written for <em>every</em> page &mdash;
+    including nine product and service pages that previously had none at all.</li>
+  <li>Page titles shortened where they were being cut off in Google results.</li>
+  <li>Main headings added to the Services and Gallery pages, which were missing them.</li>
+  <li>Homepage heading fixed: it previously rotated between three generic phrases every five seconds,
+    so search engines never saw a consistent, meaningful heading.</li>
+  <li>Descriptive image alternative text improved for accessibility and image search.</li>
+</ul>
+
+<h3>Google rich results (structured data)</h3>
+<ul class="tick">
+  <li>One authoritative business profile covering name, address, phone, hours and service areas.</li>
+  <li>Service information added to every service and landing page.</li>
+  <li>Frequently Asked Questions marked up so answers can appear directly in Google results.</li>
+  <li>Navigation breadcrumbs added, which Google displays beneath listings.</li>
+</ul>
+
+<h3>Speed &amp; mobile experience</h3>
+<ul class="tick">
+  <li>Homepage banner images reduced by 95% and converted to a modern format.</li>
+  <li>Duplicate font loading removed &mdash; the site was downloading the same font twice.</li>
+  <li>Gallery corrected: eight images were competing for priority and slowing the visible content.</li>
+  <li>Image delivery tuned so phones receive appropriately sized images instead of desktop versions.</li>
+  <li>Removed a script that forced the page to jump to the top, which was breaking menu links.</li>
+</ul>
+
+<h2><span class="num">4</span>New Landing Pages</h2>
+<p class="lede">Sixteen pages targeting &ldquo;service + area&rdquo; searches &mdash; the terms used by
+people ready to request a quote.</p>
+
+<p>Each page carries genuinely original content about that service in that specific area, along with a
+project process, client testimonial, frequently asked questions with realistic pricing guidance, and
+prominent call and WhatsApp buttons.</p>
+
+<div class="urls">
+  <div>/modular-kitchen-in-yelahanka</div>
+  <div>/modular-kitchen-in-whitefield</div>
+  <div>/modular-kitchen-in-marathahalli</div>
+  <div>/home-interior-design-in-hebbal</div>
+  <div>/home-interior-design-in-koramangala</div>
+  <div>/office-interior-design-in-whitefield</div>
+  <div>/office-interior-design-in-electronic-city</div>
+  <div>/home-renovation-in-jp-nagar</div>
+  <div>/home-renovation-in-hsr-layout</div>
+  <div>/turnkey-construction-in-yelahanka</div>
+  <div>/turnkey-construction-in-hebbal</div>
+  <div>/false-ceiling-in-yelahanka</div>
+  <div>/interior-designers-in-banashankari</div>
+  <div>/interior-designers-in-btm-layout</div>
+  <div>/interior-designers-in-malleshwaram</div>
+  <div>/interior-designers-in-rajajinagar</div>
+</div>
+
+<div class="callout">
+  <strong>Built to scale.</strong> Adding a further area or service now requires a single content
+  entry &mdash; the page, its search settings, its sitemap listing and its internal links are all
+  created automatically. There is no development work involved in expanding coverage.
+</div>
+
+<h2><span class="num">5</span>Quality Verification</h2>
+<p class="lede">Every page was checked automatically before release.</p>
+
+<table class="compact">
+  <thead><tr><th style="width:52%">Check</th><th style="width:20%">Result</th><th style="width:28%">Coverage</th></tr></thead>
+  <tbody>
+    <tr><td>Unique page title on every page</td><td class="now">Passed</td><td>42 pages</td></tr>
+    <tr><td>Unique canonical address on every page</td><td class="now">Passed</td><td>42 pages</td></tr>
+    <tr><td>Exactly one main heading per page</td><td class="now">Passed</td><td>42 pages</td></tr>
+    <tr><td>All addresses on the correct domain</td><td class="now">Passed</td><td>42 pages</td></tr>
+    <tr><td>Google structured data valid</td><td class="now">Passed</td><td>136 blocks</td></tr>
+    <tr><td>Website builds and deploys without error</td><td class="now">Passed</td><td>51 routes</td></tr>
+    <tr><td>Sitemap reachable and valid for Google</td><td class="now">Passed</td><td>41 URLs</td></tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2><span class="num">6</span>What to Expect, and When</h2>
+<p class="lede">An honest timeline. SEO results are not immediate, and anyone promising otherwise
+should be treated with caution.</p>
+
+<table class="compact">
+  <thead><tr><th style="width:22%">Timeframe</th><th>Expected development</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Week 1&ndash;2</strong></td>
+      <td>Google reads the new sitemap and begins crawling the new pages. Faster loading takes effect
+        immediately for visitors.</td></tr>
+    <tr><td><strong>Week 2&ndash;4</strong></td>
+      <td>New landing pages enter the index and start appearing for long-tail searches. Impressions in
+        Search Console begin rising.</td></tr>
+    <tr><td><strong>Week 4&ndash;8</strong></td>
+      <td>Redirected pages consolidate, unifying ranking strength onto single addresses. FAQ answers
+        and breadcrumbs may begin appearing in results.</td></tr>
+    <tr><td><strong>Month 2&ndash;4</strong></td>
+      <td>Location pages compete meaningfully for &ldquo;service + area&rdquo; searches. This is where
+        qualified enquiries typically start to show.</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>Please note:</strong> this report documents work <em>implemented</em>, not results achieved.
+  Rankings depend on competition, backlinks, Google Business Profile activity and review volume &mdash;
+  factors outside the website itself. The technical foundation is now correct, which is a prerequisite
+  for ranking, not a guarantee of it.
+</div>
+
+<h2><span class="num">7</span>Recommended Next Steps</h2>
+
+<h3>Requires a decision from you</h3>
+<ul>
+  <li><strong>Customer review rating.</strong> The website currently tells Google it holds a 4.9 rating
+    from 47 reviews, but no reviews are displayed on the site to support this. Google can issue a
+    penalty for unverifiable claims of this kind. We recommend either displaying genuine reviews or
+    removing the claim. <span class="pill">Priority</span></li>
+  <li><strong>Third-party watermark.</strong> One photograph on the site carries another design
+    studio&rsquo;s watermark and should be replaced.</li>
+  <li><strong>Unused image files.</strong> Around 40&nbsp;MB of images are stored but not used anywhere.
+    Safe to remove once confirmed.</li>
+</ul>
+
+<h3>Ongoing activity we recommend</h3>
+<ul>
+  <li>Keep the Google Business Profile active with fresh project photographs and posts &mdash; the
+    strongest single factor for local map rankings.</li>
+  <li>Request reviews from completed clients, ideally mentioning the specific area and service.</li>
+  <li>Publish project case studies to the blog, linking to the relevant location pages.</li>
+  <li>Expand into further areas using the new page system as demand indicates.</li>
+  <li>Review Search Console monthly for coverage issues and emerging search terms.</li>
+</ul>
+
+<div class="footer">
+  <div>SEO Implementation Report &mdash; ACIPL (www.ac-ipl.in)</div>
+  <div>4 August 2026 &middot; Deployed to production</div>
+</div>
+
+</body>
+</html>

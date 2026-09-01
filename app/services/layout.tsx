@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
-import Script from 'next/script'
+
+import JsonLd from '@/components/seo/json-ld'
+import { breadcrumbSchema, servicesOfferedSchema } from '@/lib/seo/schema'
 
 export const metadata: Metadata = {
   title: { absolute: "Interior Design & Construction Services in Bangalore | ACIPL" },
@@ -7,34 +9,21 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.ac-ipl.in/services' }
 }
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://www.ac-ipl.in/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://www.ac-ipl.in/services"
-    }
-  ]
-}
-
 export default function ServicesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      {children}
-      <Script
+      {/* One Service node per offering, plus the breadcrumb. The business
+          (LocalBusiness) entity is emitted site-wide from the root layout; each
+          Service here references it by @id as its provider. */}
+      <JsonLd id="schema-services-offered" data={servicesOfferedSchema()} />
+      <JsonLd
         id="schema-breadcrumb-services"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        data={breadcrumbSchema([
+          { name: 'Home', path: '/' },
+          { name: 'Services', path: '/services' },
+        ])}
       />
+      {children}
     </>
   )
 }

@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/seo/metadata";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema";
 
 export const metadata = buildMetadata({
   title: "UPVC Windows & Doors in Bangalore | Supply & Installation | ACIPL",
@@ -75,6 +77,23 @@ const UPVCWindowsDoorsPage = () => {
 
   return (
     <main className="min-h-screen">
+      <JsonLd
+        id="schema-product-upvc-windows-doors"
+        data={[
+          serviceSchema({
+            name: "UPVC Windows & Doors in Bangalore",
+            description:
+              "Supply and installation of UPVC windows and doors in Bangalore — sliding, casement, tilt-and-turn and fixed systems that are energy-efficient, weather-sealed and low-maintenance.",
+            path: "/products/upvc-windows-doors",
+            serviceType: "UPVC Window and Door Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "UPVC Windows & Doors", path: "/products/upvc-windows-doors" },
+          ]),
+        ]}
+      />
       <Navbar />
 
       <section className="pt-24 pb-16 bg-white">
@@ -94,7 +113,7 @@ const UPVCWindowsDoorsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/upvcmainnew.jpg"
-                alt="UPVC Windows and Doors"
+                alt="Energy-efficient UPVC sliding and casement windows and doors for Bangalore homes — ACIPL"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -146,7 +165,7 @@ const UPVCWindowsDoorsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} — UPVC window and door system by ACIPL, Bangalore`}
                       fill
                       className="object-cover"
                     />

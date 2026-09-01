@@ -3,6 +3,7 @@ import Footer from "@/components/footer"
 import { CheckCircle, Award, Users, TrendingUp, Shield, Clock, HeartHandshake, ThumbsUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
 const AboutPage = () => {
@@ -24,9 +25,12 @@ const AboutPage = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-20 h-20 bg-secondary/20 rounded-tl-3xl z-0"></div>
               <div className="relative rounded-lg shadow-xl overflow-hidden max-w-md mx-auto">
-                <img
+                <Image
                   src="/CEOimage.jpg"
-                  alt="About Annapoorneshwari Constructions & Interiors Private Limited"
+                  alt="Raghu Lakshmipathi, CEO and Director of Annapoorneshwari Constructions Interiors Pvt Ltd, Bangalore"
+                  width={448}
+                  height={400}
+                  sizes="(max-width: 480px) 100vw, 448px"
                   className="w-full h-[400px] object-cover"
                 />
                 {/* CEO Information Overlay */}

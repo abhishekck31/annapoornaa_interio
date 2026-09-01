@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Check } from "lucide-react"
+import Image from "next/image"
 import JsonLd from "@/components/seo/json-ld"
 import { buildMetadata } from "@/lib/seo/metadata"
 import { serviceSchema } from "@/lib/seo/schema"
@@ -125,24 +126,36 @@ export default function ConstructionExpertisePage() {
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="/placeholder.svg?height=300&width=300"
-                  alt="Construction planning"
+                <Image
+                  src="/placeholder.svg"
+                  alt="Construction planning and site drawings by ACIPL, Bangalore"
+                  width={300}
+                  height={300}
+                  unoptimized
                   className="rounded-lg shadow-lg"
                 />
-                <img
-                  src="/placeholder.svg?height=300&width=300"
-                  alt="Construction materials"
+                <Image
+                  src="/placeholder.svg"
+                  alt="Quality construction materials sourced by ACIPL, Bangalore"
+                  width={300}
+                  height={300}
+                  unoptimized
                   className="rounded-lg shadow-lg mt-8"
                 />
-                <img
-                  src="/placeholder.svg?height=300&width=300"
-                  alt="Construction process"
+                <Image
+                  src="/placeholder.svg"
+                  alt="On-site construction process managed by ACIPL, Bangalore"
+                  width={300}
+                  height={300}
+                  unoptimized
                   className="rounded-lg shadow-lg"
                 />
-                <img
-                  src="/placeholder.svg?height=300&width=300"
-                  alt="Finished construction"
+                <Image
+                  src="/placeholder.svg"
+                  alt="Finished residential construction handover by ACIPL, Bangalore"
+                  width={300}
+                  height={300}
+                  unoptimized
                   className="rounded-lg shadow-lg mt-8"
                 />
               </div>
@@ -175,11 +188,16 @@ export default function ConstructionExpertisePage() {
                 <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                   <Card className="overflow-hidden shadow-lg">
                     <CardContent className="p-0">
-                      <img
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.title}
-                        className="w-full h-auto object-cover"
-                      />
+                      <div className="relative aspect-[3/2] w-full">
+                        <Image
+                          src={item.image || "/placeholder.svg"}
+                          alt={`${item.title} — construction service by ACIPL in Bangalore`}
+                          fill
+                          unoptimized={!item.image || item.image.startsWith("/placeholder")}
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="object-cover"
+                        />
+                      </div>
                     </CardContent>
                   </Card>
                 </div>

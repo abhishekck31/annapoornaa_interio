@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { Check, Sparkles, Shield, Clock, Users, ThumbsUp, HeartHandshake } from "lucide-react"
 import ScrollAnimation from "@/components/scroll-animation"
@@ -92,13 +93,15 @@ const DifferenceSection = () => {
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
+                className="rounded-2xl overflow-hidden shadow-xl relative image-info-overlay aspect-[4/3]"
               >
-                <img
-                  src="/Villain.png"
+                <Image
+                  src="/Villain.webp"
                   alt="Luxury Living Room"
-                  className="w-full h-full object-cover"
-                  style={{ minHeight: "200px" }}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Luxury Living Room</h4>
@@ -108,13 +111,15 @@ const DifferenceSection = () => {
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
+                className="mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay aspect-[4/3]"
               >
-                <img
+                <Image
                   src="/Executive.png"
                   alt="Executive Office"
-                  className="w-full h-full object-cover"
-                  style={{ minHeight: "200px" }}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Executive Office</h4>
@@ -124,13 +129,15 @@ const DifferenceSection = () => {
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
+                className="rounded-2xl overflow-hidden shadow-xl relative image-info-overlay aspect-[4/3]"
               >
-                <img
+                <Image
                   src="/modernvilla.png"
                   alt="Modern Villa"
-                  className="w-full h-full object-cover"
-                  style={{ minHeight: "200px" }}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Modern Villa</h4>
@@ -140,13 +147,15 @@ const DifferenceSection = () => {
               <motion.div
                 whileHover={{ y: -10, scale: 1.03 }}
                 transition={{ duration: 0.3 }}
-                className="mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay"
+                className="mt-12 rounded-2xl overflow-hidden shadow-xl relative image-info-overlay aspect-[4/3]"
               >
-                <img
+                <Image
                   src="/Homein1.png"
                   alt="Designer Kitchen"
-                  className="w-full h-full object-cover"
-                  style={{ minHeight: "200px" }}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover"
                 />
                 <div className="info">
                   <h4 className="text-white font-bold">Designer Kitchen</h4>

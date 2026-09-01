@@ -9,9 +9,70 @@
  */
 
 import { absoluteUrl, siteConfig } from "./site"
+import { offeredServices } from "./services"
 
 export const ORGANIZATION_ID = `${siteConfig.url}/#organization`
 export const WEBSITE_ID = `${siteConfig.url}/#website`
+export const OFFER_CATALOG_ID = `${siteConfig.url}/#service-catalog`
+
+/**
+ * Both published phone numbers, as schema.org ContactPoints. The top-level
+ * `telephone` on the business stays the primary line; this adds the second.
+ */
+const contactPoints = [
+  {
+    "@type": "ContactPoint",
+    telephone: siteConfig.telephone,
+    contactType: "sales",
+    areaServed: "IN",
+    availableLanguage: ["en", "kn", "hi"],
+  },
+  {
+    "@type": "ContactPoint",
+    telephone: siteConfig.telephoneAlt,
+    contactType: "customer service",
+    areaServed: "IN",
+    availableLanguage: ["en", "kn", "hi"],
+  },
+]
+
+/** The list of services ACIPL offers, as a schema.org OfferCatalog. */
+export function offerCatalogSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": OFFER_CATALOG_ID,
+    name: "Design and Construction Services",
+    url: absoluteUrl("/services"),
+    provider: { "@id": ORGANIZATION_ID },
+    itemListElement: offeredServices.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.name,
+        description: service.description,
+        serviceType: service.serviceType ?? service.name,
+        url: absoluteUrl(service.path),
+        provider: { "@id": ORGANIZATION_ID },
+      },
+    })),
+  }
+}
+
+/**
+ * One `Service` node per offering, for the `/services` hub page. Each is tied
+ * back to the single business entity by `@id` rather than restating it.
+ */
+export function servicesOfferedSchema() {
+  return offeredServices.map((service) =>
+    serviceSchema({
+      name: service.name,
+      description: service.description,
+      path: service.path,
+      serviceType: service.serviceType,
+    }),
+  )
+}
 
 const postalAddress = {
   "@type": "PostalAddress",
@@ -43,10 +104,12 @@ export function organizationSchema() {
     image: siteConfig.ogImage,
     description: siteConfig.description,
     telephone: siteConfig.telephone,
+    contactPoint: contactPoints,
     email: siteConfig.email,
     priceRange: siteConfig.priceRange,
     foundingDate: siteConfig.foundingYear,
     address: postalAddress,
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${siteConfig.geo.latitude},${siteConfig.geo.longitude}`,
     geo: {
       "@type": "GeoCoordinates",
       latitude: siteConfig.geo.latitude,
@@ -54,6 +117,7 @@ export function organizationSchema() {
     },
     areaServed: [
       "Bangalore",
+      "Bengaluru",
       "Yelahanka",
       "Hebbal",
       "Whitefield",
@@ -79,6 +143,21 @@ export function organizationSchema() {
       ratingValue: siteConfig.rating.ratingValue,
       reviewCount: siteConfig.rating.reviewCount,
       bestRating: siteConfig.rating.bestRating,
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      "@id": OFFER_CATALOG_ID,
+      name: "Design and Construction Services",
+      itemListElement: offeredServices.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.name,
+          serviceType: service.serviceType ?? service.name,
+          url: absoluteUrl(service.path),
+          provider: { "@id": ORGANIZATION_ID },
+        },
+      })),
     },
   }
 }

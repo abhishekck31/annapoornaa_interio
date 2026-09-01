@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/seo/metadata";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema";
 
 export const metadata = buildMetadata({
   title: "PVC False Ceilings in Bangalore | Panels & Soffit Ceilings | ACIPL",
@@ -54,6 +56,23 @@ const PVCFalseCeilingsPage = () => {
 
   return (
     <>
+      <JsonLd
+        id="schema-product-pvc-false-ceilings"
+        data={[
+          serviceSchema({
+            name: "PVC False Ceilings in Bangalore",
+            description:
+              "Supply and installation of PVC panel and soffit false ceilings in Bangalore — moisture-resistant, low-maintenance ceiling systems for homes, offices and wet areas.",
+            path: "/products/pvc-false-ceilings",
+            serviceType: "False Ceiling Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "PVC False Ceilings", path: "/products/pvc-false-ceilings" },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
@@ -72,7 +91,7 @@ const PVCFalseCeilingsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/newsoffit/WhatsApp Image 2025-04-26 at 21.27.44_c90fd73c.jpg"
-                alt="Soffit False Ceilings"
+                alt="PVC panel and soffit false ceiling systems for homes and offices in Bangalore — ACIPL"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -119,7 +138,7 @@ const PVCFalseCeilingsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={imageSrc}
-                      alt={`Soffit Ceiling Design ${index + 1}`}
+                      alt={`PVC soffit false ceiling design ${index + 1} by ACIPL, Bangalore`}
                       fill
                       className="object-cover"
                     />

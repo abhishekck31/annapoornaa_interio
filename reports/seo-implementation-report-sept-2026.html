@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ACIPL — SEO Implementation Report (September 2026)</title>
+<style>
+  @page { size: A4; margin: 14mm 13mm 16mm 13mm; }
+
+  :root {
+    --navy: #001254;
+    --navy-700: #1f3173;
+    --navy-400: #546297;
+    --gold: #e8bd42;
+    --gold-dark: #d0771d;
+    --ink: #1c2333;
+    --muted: #5b6478;
+    --line: #dfe3ec;
+    --bg-soft: #f5f7fb;
+    --green: #1a7f4b;
+    --red: #b3261e;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.2pt;
+    line-height: 1.55;
+    color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  h1, h2, h3 { margin: 0; font-weight: 700; }
+
+  /* ---------- Cover banner ---------- */
+  .cover {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-700) 100%);
+    color: #fff;
+    padding: 26px 28px 24px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+  }
+  .cover .eyebrow {
+    font-size: 8.5pt;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .cover h1 { font-size: 23pt; line-height: 1.2; margin-bottom: 8px; }
+  .cover .sub { font-size: 10.5pt; color: #c3c8da; max-width: 78%; }
+  .cover .meta {
+    margin-top: 18px; padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.18);
+    display: flex; gap: 34px; font-size: 9pt;
+  }
+  .cover .meta span { display: block; color: #9ba3c2; font-size: 7.8pt;
+    text-transform: uppercase; letter-spacing: 1.1px; margin-bottom: 2px; }
+  .cover .meta strong { font-weight: 600; color: #fff; font-size: 9.6pt; }
+
+  /* ---------- Section headings ---------- */
+  h2 {
+    font-size: 13pt; color: var(--navy);
+    margin: 24px 0 4px; padding-bottom: 6px;
+    border-bottom: 2px solid var(--gold);
+  }
+  h2 .num {
+    display: inline-block; width: 21px; height: 21px; line-height: 21px;
+    background: var(--navy); color: var(--gold); border-radius: 50%;
+    text-align: center; font-size: 9.5pt; margin-right: 8px;
+  }
+  h2 + .lede { color: var(--muted); font-size: 9.6pt; margin: 8px 0 12px; }
+  h3 { font-size: 10.6pt; color: var(--navy-700); margin: 15px 0 6px; }
+
+  p { margin: 0 0 9px; }
+
+  /* ---------- Callout ---------- */
+  .callout {
+    background: var(--bg-soft); border-left: 3px solid var(--gold);
+    padding: 12px 15px; border-radius: 0 4px 4px 0; margin: 12px 0;
+    font-size: 9.8pt;
+  }
+  .callout strong { color: var(--navy); }
+
+  /* ---------- Tables ---------- */
+  table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 9.1pt; }
+  thead th {
+    background: var(--navy); color: #fff; text-align: left;
+    padding: 7px 9px; font-weight: 600; font-size: 8.4pt;
+    text-transform: uppercase; letter-spacing: .6px;
+  }
+  td { padding: 7px 9px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tbody tr:nth-child(even) { background: #fafbfd; }
+  td.was { color: var(--red); }
+  td.now { color: var(--green); font-weight: 600; }
+  table.compact td, table.compact th { padding: 5.5px 9px; }
+
+  /* ---------- Stat row ---------- */
+  .stats { display: flex; gap: 10px; margin: 14px 0 4px; }
+  .stat {
+    flex: 1; background: var(--bg-soft); border: 1px solid var(--line);
+    border-radius: 5px; padding: 12px 10px; text-align: center;
+  }
+  .stat .big { font-size: 18pt; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .stat .lbl { font-size: 7.9pt; color: var(--muted); text-transform: uppercase;
+    letter-spacing: .7px; margin-top: 4px; }
+
+  /* ---------- Lists ---------- */
+  ul { margin: 6px 0 10px; padding-left: 17px; }
+  li { margin-bottom: 4.5px; }
+  ul.tick { list-style: none; padding-left: 2px; }
+  ul.tick li { padding-left: 17px; position: relative; }
+  ul.tick li::before {
+    content: "\2713"; position: absolute; left: 0; color: var(--green); font-weight: 700;
+  }
+
+  /* ---------- GBP posts ---------- */
+  .gbp {
+    border: 1px solid var(--line); border-radius: 6px; padding: 13px 15px;
+    margin: 11px 0; break-inside: avoid; background: #fff;
+  }
+  .gbp .hd {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--line); padding-bottom: 6px; margin-bottom: 7px;
+  }
+  .gbp .wk { font-weight: 700; color: var(--navy); font-size: 9.6pt; }
+  .gbp .dt { color: var(--muted); font-size: 8.4pt; }
+  .gbp .tags { margin-bottom: 6px; }
+  .gbp .body { font-size: 9.3pt; }
+  .gbp .cta { margin-top: 6px; font-size: 8.4pt; color: var(--navy-700); }
+  .gbp .wc { color: var(--muted); font-size: 8pt; }
+
+  /* ---------- Misc ---------- */
+  .pill {
+    display: inline-block; background: var(--gold); color: var(--navy);
+    font-size: 7.6pt; font-weight: 700; padding: 2px 7px; border-radius: 9px;
+    text-transform: uppercase; letter-spacing: .5px; vertical-align: middle;
+    margin-right: 4px;
+  }
+  .pill.svc { background: var(--navy); color: var(--gold); }
+  .pill.area { background: #e6ebf5; color: var(--navy-700); }
+  .footer {
+    margin-top: 26px; padding-top: 12px; border-top: 1px solid var(--line);
+    font-size: 8.2pt; color: var(--muted); display: flex; justify-content: space-between;
+  }
+  .page-break { break-before: page; }
+  .avoid-break { break-inside: avoid; }
+  code { font-family: "Consolas", monospace; font-size: 8.6pt;
+    background: #eef1f7; padding: 1px 4px; border-radius: 3px; color: var(--navy-700); }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="eyebrow">Search Engine Optimisation &mdash; Phase 2</div>
+  <h1>Structured Data, Site Speed<br>&amp; Local Presence</h1>
+  <div class="sub">A follow-on to the August rebuild: a complete LocalBusiness and Service
+    schema layer, a 95% reduction in image weight, modern image delivery across every
+    remaining page, and a ready-to-post ten-week Google Business Profile plan.</div>
+  <div class="meta">
+    <div><span>Prepared for</span><strong>ACIPL &mdash; Annapoorneshwari Constructions Interiors Pvt Ltd</strong></div>
+    <div><span>Website</span><strong>www.ac-ipl.in</strong></div>
+    <div><span>Date</span><strong>1 September 2026</strong></div>
+    <div><span>Status</span><strong>Built &amp; verified &middot; ready to deploy</strong></div>
+  </div>
+</div>
+
+<h2><span class="num">1</span>Executive Summary</h2>
+<p class="lede">What was still missing after the August work, and what this phase delivers.</p>
+
+<p>The August rebuild fixed the technical foundations &mdash; sitemap, canonicals, indexing and
+sixteen new landing pages. This phase completes the three areas that were still partial:
+<strong>structured data</strong>, <strong>image performance</strong>, and the
+<strong>off-site local signals</strong> that drive Google Maps rankings.</p>
+
+<p>Every page now carries a single, complete <em>LocalBusiness</em> profile &mdash; legal name,
+Yelahanka address, both phone numbers, opening hours, map coordinates and the full list of
+services &mdash; emitted once from a central source so it can never fall out of sync. The
+Services hub and every service page now also carry their own <em>Service</em> markup. Five
+oversized images totalling 32&nbsp;MB were compressed to 1.5&nbsp;MB, three unused 18&nbsp;MB
+banner files were removed, and 21 old-style image tags across the expertise, projects, about and
+location pages were converted to Next.js&rsquo;s optimised image system with fixed dimensions to
+stop layout shift. Finally, ten Google Business Profile posts are drafted and scheduled below.</p>
+
+<div class="stats">
+  <div class="stat"><div class="big">309</div><div class="lbl">Structured-data blocks</div></div>
+  <div class="stat"><div class="big">95%</div><div class="lbl">Image weight removed</div></div>
+  <div class="stat"><div class="big">21</div><div class="lbl">Image tags modernised</div></div>
+  <div class="stat"><div class="big">6</div><div class="lbl">Service nodes on /services</div></div>
+  <div class="stat"><div class="big">10</div><div class="lbl">GBP posts scheduled</div></div>
+</div>
+
+<h2><span class="num">2</span>Structured Data &mdash; LocalBusiness &amp; Service</h2>
+<p class="lede">One authoritative business entity, referenced everywhere; a Service description on
+every commercial page.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:24%">Item</th><th style="width:38%">Before this phase</th><th style="width:38%">After</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>LocalBusiness completeness</strong></td>
+      <td class="was">A single business entity existed but was missing the second phone number,
+        carried no list of services, and named only &ldquo;Bangalore&rdquo; as an alias.</td>
+      <td class="now">Added a two-number contact block (sales + support), a six-service catalogue,
+        a Google Maps link and the &ldquo;Bengaluru&rdquo; spelling. Legal name, Yelahanka street
+        address, geo-coordinates (13.1007,&nbsp;77.5963) and Mon&ndash;Sat 10:00&ndash;19:00 hours
+        were already correct and are retained.</td>
+    </tr>
+    <tr>
+      <td><strong>Coverage</strong></td>
+      <td class="was">Business markup rendered site-wide; service markup only on the two
+        <code>/expertise</code> pages and the sixteen landing pages.</td>
+      <td class="now">The <code>/services</code> hub now emits one <em>Service</em> node per
+        offering (six). The homepage service catalogue was expanded from three entries to the full
+        six. All reference the business by ID rather than restating it.</td>
+    </tr>
+    <tr>
+      <td><strong>Product pages</strong></td>
+      <td class="was">The six product pages and the products index carried no structured data
+        at all.</td>
+      <td class="now">Each now carries a <em>Service</em> (supply &amp; installation) node and a
+        breadcrumb trail.</td>
+    </tr>
+    <tr>
+      <td><strong>Location pages</strong></td>
+      <td class="was">Seven hand-built area pages (HSR Layout, Indiranagar, Jayanagar, Whitefield,
+        two Yelahanka pages, plus the Yelahanka overview) rendered visible FAQs but no FAQ markup,
+        and no Service or breadcrumb markup.</td>
+      <td class="now">All seven now emit <em>Service</em>, <em>FAQPage</em> and
+        <em>BreadcrumbList</em> markup, with the FAQ text mirrored exactly from what visitors see.</td>
+    </tr>
+    <tr>
+      <td><strong>Maintainability</strong></td>
+      <td class="was">The homepage service list was hand-written and had drifted to three items;
+        one location page still used an inert <code>next/head</code> tag and pointed at a
+        non-existent favicon.</td>
+      <td class="now">Services are now defined once in <code>lib/seo/services.ts</code> and consumed
+        by the business catalogue, the hub page and the homepage. The dead <code>next/head</code>
+        tag and broken icon reference were removed.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <strong>How to verify.</strong> After deploy, paste <code>www.ac-ipl.in</code> and
+  <code>www.ac-ipl.in/services</code> into Google&rsquo;s Rich Results Test. Expect
+  <em>Local business</em>, <em>Breadcrumb</em> and (on service and location pages)
+  <em>FAQ</em> / <em>Service</em> to be detected with no errors.
+</div>
+
+<div class="page-break"></div>
+
+<h2><span class="num">3</span>Page Speed &mdash; Image Compression</h2>
+<p class="lede">Five images were doing more damage to load time than the rest of the site combined.</p>
+
+<p>A reusable script (<code>scripts/optimize-images.mjs</code>, using the <code>sharp</code>
+library) was written to resize each file to a maximum width of 1600&nbsp;px and re-encode it as
+WebP at quality 80. It is safe to re-run and skips anything already processed.</p>
+
+<table class="compact">
+  <thead><tr><th style="width:34%">File</th><th style="width:22%">Before</th><th style="width:22%">After</th><th style="width:22%">Reduction</th></tr></thead>
+  <tbody>
+    <tr><td>Villa.png &rarr; Villa.webp</td><td class="was">8.6 MB</td><td class="now">610 KB</td><td>&minus;93%</td></tr>
+    <tr><td>Dreamhome.png &rarr; .webp</td><td class="was">7.9 MB</td><td class="now">268 KB</td><td>&minus;97%</td></tr>
+    <tr><td>Construction.png &rarr; .webp</td><td class="was">6.1 MB</td><td class="now">256 KB</td><td>&minus;96%</td></tr>
+    <tr><td>Officeinterior.png &rarr; .webp</td><td class="was">5.4 MB</td><td class="now">250 KB</td><td>&minus;95%</td></tr>
+    <tr><td>Villain.png &rarr; Villain.webp</td><td class="was">4.0 MB</td><td class="now">101 KB</td><td>&minus;97%</td></tr>
+    <tr><td><strong>Total</strong></td><td class="was"><strong>32.0 MB</strong></td><td class="now"><strong>1.5 MB</strong></td><td><strong>&minus;95%</strong></td></tr>
+  </tbody>
+</table>
+
+<ul class="tick">
+  <li>The one image still referenced in code (<code>Villain</code>, on the homepage
+    &ldquo;difference&rdquo; band) was repointed to its new <code>.webp</code> file.</li>
+  <li><code>Hero1.png</code>, <code>Hero2.png</code> and <code>Hero3.png</code> (17.8&nbsp;MB
+    combined) were deleted &mdash; the homepage banner was switched to compressed WebP in the
+    August work and these originals are no longer used anywhere.</li>
+  <li>Net result: roughly <strong>48&nbsp;MB</strong> removed from the deployed site.</li>
+</ul>
+
+<h2><span class="num">4</span>Modern Image Delivery (Layout-Shift Fix)</h2>
+<p class="lede">Old-style image tags don&rsquo;t reserve space while loading, which causes content to
+jump &mdash; a ranking factor Google measures as CLS.</p>
+
+<p>Twenty-one raw <code>&lt;img&gt;</code> tags were converted to the framework&rsquo;s image
+component, which serves modern formats, sizes images to the device, and lazy-loads anything
+below the fold. Every converted image was given either explicit width and height or a fixed
+aspect-ratio container, so no space is left undefined.</p>
+
+<table class="compact">
+  <thead><tr><th style="width:52%">File</th><th style="width:18%">Tags converted</th><th style="width:30%">Method</th></tr></thead>
+  <tbody>
+    <tr><td>app/expertise/construction/page.tsx</td><td class="now">5</td><td>Fixed 300&times;300 grid; 3:2 container for cards</td></tr>
+    <tr><td>app/expertise/interior/page.tsx</td><td class="now">5</td><td>Fixed 300&times;300 grid; 3:2 container for cards</td></tr>
+    <tr><td>app/featured-projects/page.tsx</td><td class="now">4</td><td>Fill within fixed-height / aspect parents</td></tr>
+    <tr><td>app/about/page.tsx</td><td class="now">1</td><td>Explicit 448&times;400 (CEO portrait)</td></tr>
+    <tr><td>6 &times; location page project carousels</td><td class="now">6</td><td>Fill within the existing <code>h-72</code> card</td></tr>
+  </tbody>
+</table>
+
+<ul class="tick">
+  <li>Placeholder-image fallbacks were pointed at a real raster file instead of an SVG, so the
+    optimiser never has to be bypassed.</li>
+  <li><code>components/partners-section.tsx</code> was deleted &mdash; it was never imported by any
+    page (dead code carrying its own unoptimised image).</li>
+  <li>Two <code>&lt;img&gt;</code> tags remain by design: a 16&nbsp;px Google &ldquo;verified
+    review&rdquo; icon, and one homepage project thumbnail that depends on natural aspect ratio and
+    is already lazy-loaded.</li>
+</ul>
+
+<h2><span class="num">5</span>Image Alt Text</h2>
+<p class="lede">Product images described themselves in one or two words. Search engines and screen
+readers got nothing useful.</p>
+
+<p>Thirteen alt descriptions across the seven product pages were rewritten from bare labels
+(&ldquo;Fire Doors&rdquo;, &ldquo;System Railings&rdquo;) to specific, location-aware sentences,
+e.g. <em>&ldquo;Fire-rated steel and timber doors for commercial and residential buildings in
+Bangalore &mdash; ACIPL&rdquo;</em>. Collection-grid images now build their alt text from the
+product name plus a service-and-city suffix, so every thumbnail is described.</p>
+
+<div class="page-break"></div>
+
+<h2><span class="num">6</span>Quality Verification</h2>
+<p class="lede">Checked automatically before hand-off.</p>
+
+<table class="compact">
+  <thead><tr><th style="width:56%">Check</th><th style="width:20%">Result</th><th style="width:24%">Coverage</th></tr></thead>
+  <tbody>
+    <tr><td>TypeScript compile &mdash; no errors</td><td class="now">Passed</td><td>whole project</td></tr>
+    <tr><td>Production build succeeds</td><td class="now">Passed</td><td>51 routes</td></tr>
+    <tr><td>Static pages generated without error</td><td class="now">Passed</td><td>51 / 51</td></tr>
+    <tr><td>Structured data present in served HTML</td><td class="now">Passed</td><td>309 blocks / 42 pages</td></tr>
+    <tr><td>LocalBusiness on homepage &amp; every service page</td><td class="now">Passed</td><td>single <code>@id</code></td></tr>
+    <tr><td>Both phone numbers in the business markup</td><td class="now">Passed</td><td>sales + support</td></tr>
+    <tr><td>No raw image tags in the eleven targeted files</td><td class="now">Passed</td><td>21 converted</td></tr>
+    <tr><td>Oversized source images removed from <code>public/</code></td><td class="now">Passed</td><td>~48 MB</td></tr>
+  </tbody>
+</table>
+
+<h2><span class="num">7</span>Google Business Profile &mdash; 10-Week Posting Plan</h2>
+<p class="lede">One post per week for ten weeks, rotating across five services and ten Bangalore
+localities. Each is around 150 words and ends with a WhatsApp call-to-action. Paste into GBP
+&rarr; Add update, attach a matching project photo, and set the &ldquo;Learn more&rdquo; button to
+the linked page.</p>
+
+<div class="callout">
+  <strong>WhatsApp link for every post:</strong> <code>https://wa.me/918073141413</code> &nbsp;&middot;&nbsp;
+  <strong>Phone:</strong> +91&nbsp;99000&nbsp;94942 &nbsp;&middot;&nbsp;
+  <strong>Rotation:</strong> Home Interiors &rarr; Office Renovation &rarr; Modular Kitchen &rarr;
+  Turnkey Construction &rarr; Renovation, twice.
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 1</span><span class="dt">Monday 7 September 2026</span></div>
+  <div class="tags"><span class="pill svc">Home Interiors</span><span class="pill area">Yelahanka</span></div>
+  <div class="body">Planning a home interior in Yelahanka? ACIPL is your local, in-house team for
+  turnkey interiors &mdash; design, execution and product supply under one contract. From modular
+  kitchens and wardrobes to false ceilings, TV units, lighting and painting, we run every trade so
+  you have one point of contact, not ten. Our office is in Yelahanka New Town, so site visits are
+  quick and supervision is daily. You get 2D layouts and full 3D visualisation before work starts,
+  an itemised quote with no hidden costs, and a realistic timeline &mdash; most 3BHK homes are
+  handed over in 45 to 60 days. We also cover Jakkur, Thanisandra and the wider Yelahanka belt, and
+  we can phase the work if you are living on site. Book a free site visit and written quote this
+  week. Message us on WhatsApp at wa.me/918073141413 or call +91&nbsp;99000&nbsp;94942 to get started.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/interior-designers-in-yelahanka</code>
+  &nbsp;<span class="wc">&middot; 145 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 2</span><span class="dt">Monday 14 September 2026</span></div>
+  <div class="tags"><span class="pill svc">Office Renovation</span><span class="pill area">Whitefield</span></div>
+  <div class="body">Is your Whitefield office starting to show its age? ACIPL handles commercial
+  renovation on live floors &mdash; phased so your team keeps working while we upgrade meeting
+  rooms, workstations, flooring, lighting, HVAC and cabling. We coordinate with your building
+  management on fit-out approvals and after-hours access, and we work to your headcount and brand
+  guidelines rather than a template. Every renovation starts with a measured site survey and an
+  itemised scope, so you can compare our quote line by line. Tech parks and standalone buildings
+  across Whitefield, Kadugodi and Brookefield are all within our regular service area, and most
+  refurbishments are delivered in four to eight weeks depending on floor size. We can also stage
+  the work so client-facing areas like reception are finished first. There is no charge for the
+  walkthrough or the estimate. Message us on WhatsApp at wa.me/918073141413 or call
+  +91&nbsp;99000&nbsp;94942 to book yours.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/office-interior-design-in-whitefield</code>
+  &nbsp;<span class="wc">&middot; 149 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 3</span><span class="dt">Monday 21 September 2026</span></div>
+  <div class="tags"><span class="pill svc">Modular Kitchen</span><span class="pill area">HSR Layout</span></div>
+  <div class="body">A modular kitchen in HSR Layout should be built for Bangalore&rsquo;s humidity,
+  not just photographed well. ACIPL uses moisture-resistant carcasses, branded hinges and channels,
+  and finishes you can actually maintain &mdash; then we coordinate the counter, backsplash,
+  plumbing and electrical points so nothing is an afterthought. You get a 3D design of your exact
+  layout, per-unit pricing you can adjust, and a clear delivery date. Whether it is a compact
+  L-shape in a 2BHK or an island kitchen in a villa, the quote is itemised down to each shutter and
+  drawer, with no lump-sum guesswork. We install across HSR Layout, Sarjapur Road and Agara,
+  usually within three to four weeks of design sign-off, and appliance cut-outs and chimney points
+  are set out to the exact models you choose. Send us your floor plan for a free layout and
+  estimate. Message us on WhatsApp at wa.me/918073141413 or call +91&nbsp;99000&nbsp;94942.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/interior-designers-in-hsr-layout-bangalore</code>
+  &nbsp;<span class="wc">&middot; 150 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 4</span><span class="dt">Monday 28 September 2026</span></div>
+  <div class="tags"><span class="pill svc">Turnkey Construction</span><span class="pill area">Hebbal</span></div>
+  <div class="body">Building on a site in Hebbal? ACIPL takes a plot to a finished home under one
+  turnkey contract &mdash; BBMP plan sanction and approvals, structural design on record,
+  architecture, MEP and interiors, all the way to handover. You deal with one team and one
+  stage-linked payment schedule, so money is released against work completed, not promises. We
+  share the structural drawings, the bill of quantities and a week-by-week programme before we
+  break ground, and you get regular site photos and a dedicated project manager throughout. Hebbal,
+  Kempapura, Sahakar Nagar and the wider north Bangalore belt are all areas we build in regularly,
+  and a typical independent house runs eight to twelve months. We also help with bank-loan
+  documentation and the completion certificate where you need them. Book a free consultation and
+  site assessment this week. Message us on WhatsApp at wa.me/918073141413 or call
+  +91&nbsp;99000&nbsp;94942 to start.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/turnkey-construction-in-hebbal</code>
+  &nbsp;<span class="wc">&middot; 148 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 5</span><span class="dt">Monday 5 October 2026</span></div>
+  <div class="tags"><span class="pill svc">Renovation</span><span class="pill area">Jayanagar</span></div>
+  <div class="body">Older homes in Jayanagar have great bones and dated everything else. ACIPL
+  renovates them without a full teardown &mdash; rewiring and re-plumbing, waterproofing, flooring,
+  kitchen and bathroom remodelling, false ceilings, painting and new windows and doors. We start
+  with a condition survey so surprises behind the walls are priced in from the beginning, not
+  sprung on you halfway through. You get a room-by-room scope, an itemised quote and a sequence
+  that keeps at least part of the house usable where possible. We work across Jayanagar, JP Nagar
+  and BTM Layout, and most whole-home renovations run six to ten weeks depending on scope. We can
+  also renovate one floor or one wing at a time if the house must stay occupied. The site visit and
+  written estimate are free. Message us on WhatsApp at wa.me/918073141413 or call
+  +91&nbsp;99000&nbsp;94942 to arrange a visit.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/interior-designers-in-jayanagar-bangalore</code>
+  &nbsp;<span class="wc">&middot; 143 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 6</span><span class="dt">Monday 12 October 2026</span></div>
+  <div class="tags"><span class="pill svc">Home Interiors</span><span class="pill area">Koramangala</span></div>
+  <div class="body">Fitting out an apartment in Koramangala? ACIPL delivers turnkey home interiors
+  designed around how you actually live &mdash; storage planned to the millimetre, lighting layered
+  for evenings, and finishes chosen for a rented or owned flat as needed. Design, carpentry,
+  electrical, painting and styling all run under one contract and one project manager, so the
+  timeline holds. Before anything is cut we walk you through 3D views of every room, and the quote
+  is itemised so you can trade a marble slab for a quartz one and see the difference instantly. We
+  cover Koramangala, Ejipura and St John&rsquo;s Road, and most flats are handed over in six to
+  eight weeks. Handover includes a snag-fix round, a written warranty on carpentry and finishes,
+  and a walkthrough of how every unit works. Message us on WhatsApp at wa.me/918073141413 or call
+  +91&nbsp;99000&nbsp;94942 to book a free consultation.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/home-interior-design-in-koramangala</code>
+  &nbsp;<span class="wc">&middot; 146 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 7</span><span class="dt">Monday 19 October 2026</span></div>
+  <div class="tags"><span class="pill svc">Office Renovation</span><span class="pill area">Electronic City</span></div>
+  <div class="body">Renovating an office in Electronic City means working around shifts, security
+  and a live network. ACIPL plans commercial refurbishments in phases so no team loses a working
+  day &mdash; we upgrade workstations and cabins to your current headcount, redo flooring, ceilings
+  and lighting, and re-route HVAC, power and data cleanly. We handle landlord and fit-out-manual
+  compliance, and we schedule the disruptive work for evenings and weekends. Every project begins
+  with a measured survey and a line-by-line scope you can put out to comparison. Phase 1, Phase 2
+  and the Neeladri Road cluster are all within our regular coverage, and a floor is typically
+  turned around in four to seven weeks. Reception, boardrooms and other client-facing areas can be
+  prioritised, and we hand the floor back cleaned and cable-managed. Message us on WhatsApp at
+  wa.me/918073141413 or call +91&nbsp;99000&nbsp;94942 for a free walkthrough.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/office-interior-design-in-electronic-city</code>
+  &nbsp;<span class="wc">&middot; 143 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 8</span><span class="dt">Monday 26 October 2026</span></div>
+  <div class="tags"><span class="pill svc">Modular Kitchen</span><span class="pill area">Marathahalli</span></div>
+  <div class="body">A modular kitchen in Marathahalli often has to fit fixed plumbing and a
+  compact apartment footprint &mdash; so we design around what cannot move. ACIPL prefabricates
+  units in the factory rather than cutting on site, which means a cleaner install and a tighter
+  finish. You choose the layout from a 3D model, pick shutter finishes and hardware to your budget,
+  and get per-unit pricing you can adjust before sign-off. Soft-close drawers, tall units, corner
+  carousels and a coordinated backsplash are all specified in writing. We fit kitchens across
+  Marathahalli, Kundalahalli and Varthur, usually within three to four weeks of approval, with
+  society gate-pass and debris clearance handled by us. Appliance points, chimney ducting and
+  water-purifier taps are all set out before the units go in, so nothing is retrofitted later.
+  Message us on WhatsApp at wa.me/918073141413 or call +91&nbsp;99000&nbsp;94942 for a free layout.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/modular-kitchen-in-marathahalli</code>
+  &nbsp;<span class="wc">&middot; 145 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 9</span><span class="dt">Monday 2 November 2026</span></div>
+  <div class="tags"><span class="pill svc">Turnkey Construction</span><span class="pill area">JP Nagar</span></div>
+  <div class="body">Constructing a home in JP Nagar? ACIPL runs the whole build under one turnkey
+  contract &mdash; plan sanction and BBMP approvals, structural engineering, architecture, MEP and
+  interiors through to handover. Payments are linked to completed stages, so you always know what
+  you are paying for. You receive the structural drawings, a full bill of quantities and a
+  week-by-week schedule before excavation, plus a dedicated project manager, regular site updates
+  and a shared folder of drawings and bills you can open anytime. We build across JP Nagar,
+  Bannerghatta Road and Puttenahalli, and a typical independent house takes eight to twelve months
+  depending on scope. We also coordinate soil testing, borewell drilling and the BESCOM and water
+  connections, so you are not chasing separate vendors during the build. Book a free consultation
+  and site assessment this week. Message us on WhatsApp at wa.me/918073141413 or call
+  +91&nbsp;99000&nbsp;94942 to begin.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/expertise/construction</code>
+  &nbsp;<span class="wc">&middot; 147 words</span></div>
+</div>
+
+<div class="gbp">
+  <div class="hd"><span class="wk">Week 10</span><span class="dt">Monday 9 November 2026</span></div>
+  <div class="tags"><span class="pill svc">Renovation</span><span class="pill area">Indiranagar</span></div>
+  <div class="body">Indiranagar homes and shops often need a smart refresh rather than a rebuild.
+  ACIPL handles targeted renovation &mdash; layout tweaks, waterproofing, flooring, kitchen and
+  bathroom updates, false ceilings, fresh electrical and lighting, painting and new joinery. We
+  survey the space first so anything hidden behind walls or under floors is priced from the start.
+  You get a room-by-room scope, an itemised quote and a work sequence that limits how long any area
+  is out of use. Commercial units on 100 Feet Road and CMH Road and homes across Indiranagar and
+  Domlur are all part of our regular coverage, and most projects run four to nine weeks. Shopfronts
+  and clinics can be scheduled around opening hours to avoid lost trading days, dust is contained
+  with temporary partitions, and we can take evening or Sunday slots to keep a shop trading through
+  the work. Message us on WhatsApp at wa.me/918073141413 or call +91&nbsp;99000&nbsp;94942 today.</div>
+  <div class="cta">&ldquo;Learn more&rdquo; link: <code>/interior-designers-in-indiranagar-bangalore</code>
+  &nbsp;<span class="wc">&middot; 150 words</span></div>
+</div>
+
+<div class="page-break"></div>
+
+<h2><span class="num">8</span>Recommended Next Steps</h2>
+
+<h3>Do now</h3>
+<ul class="tick">
+  <li>Deploy this branch, then submit <code>www.ac-ipl.in/sitemap.xml</code> in Google Search
+    Console and Bing Webmaster Tools if not already done.</li>
+  <li>Run the homepage and <code>/services</code> through the Rich Results Test and confirm
+    LocalBusiness, Service, FAQ and Breadcrumb parse cleanly.</li>
+  <li>Start the Google Business Profile schedule above &mdash; Week 1 on Monday 7 September. Attach
+    a real project photo to each post.</li>
+</ul>
+
+<h3>Requires a decision from you</h3>
+<ul>
+  <li><strong>Review rating claim.</strong> The site still tells Google it holds a 4.9 rating from
+    47 reviews with no reviews displayed to support it. Either surface genuine reviews on the site
+    or remove the claim. <span class="pill">Priority</span></li>
+  <li><strong>Replace placeholder photography.</strong> The two <code>/expertise</code> pages and
+    parts of the featured-projects page still use grey placeholder images. They now load
+    efficiently, but real project photos would materially help these pages rank and convert.</li>
+  <li><strong>Remaining large PNGs.</strong> A handful of other <code>public/</code> images
+    (<code>modernvilla.png</code>, <code>Homein1.png</code>, several hero-band files) are 0.7&ndash;1&nbsp;MB
+    each. Re-running <code>scripts/optimize-images.mjs</code> against an expanded list would clear them.</li>
+</ul>
+
+<h3>Ongoing</h3>
+<ul>
+  <li>Keep posting to Google Business Profile weekly after this batch ends &mdash; it is the single
+    strongest factor for local map rankings.</li>
+  <li>Request reviews from completed clients, ideally naming the area and the service.</li>
+  <li>Publish project case studies to the blog, each linking to the relevant location page.</li>
+  <li>Check Search Console monthly for coverage issues and new query opportunities.</li>
+</ul>
+
+<div class="callout">
+  <strong>Scope note.</strong> This report documents work implemented and verified in the build, not
+  rankings achieved. The structured-data and speed work is a prerequisite for local ranking; the
+  Google Business Profile activity and reviews are what convert that foundation into map placement
+  and calls.
+</div>
+
+<div class="footer">
+  <div>SEO Implementation Report (Phase 2) &mdash; ACIPL (www.ac-ipl.in)</div>
+  <div>1 September 2026 &middot; Built &amp; verified</div>
+</div>
+
+</body>
+</html>

@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/seo/metadata";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema";
 
 export const metadata = buildMetadata({
   title: "Aluminium Doors & Windows in Bangalore | Slim Profile Systems | ACIPL",
@@ -74,6 +76,23 @@ const AluminumDoorsWindowsPage = () => {
 
   return (
     <>
+      <JsonLd
+        id="schema-product-aluminium-doors-windows"
+        data={[
+          serviceSchema({
+            name: "Aluminium Doors & Windows in Bangalore",
+            description:
+              "Slim-profile aluminium windows and doors in Bangalore — sliding, casement and system solutions with supply, fabrication and installation for homes and commercial buildings.",
+            path: "/products/aluminum-doors-windows",
+            serviceType: "Aluminium Door and Window Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "Aluminium Doors & Windows", path: "/products/aluminum-doors-windows" },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
@@ -92,7 +111,7 @@ const AluminumDoorsWindowsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/alumainup.jpeg"
-                alt="Aluminum Doors and Windows"
+                alt="Slim-profile aluminium windows and doors for residential and commercial projects in Bangalore — ACIPL"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -143,7 +162,7 @@ const AluminumDoorsWindowsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} — aluminium door and window system by ACIPL, Bangalore`}
                       fill
                       className="object-cover"
                     />

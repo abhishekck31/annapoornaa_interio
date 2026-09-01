@@ -5,7 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, MapPin, Star, ArrowRight, Building, Home, Briefcase, Paintbrush } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
-import Head from 'next/head'
+
+import JsonLd from "@/components/seo/json-ld"
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema"
 
 export const metadata: Metadata = {
   title: { absolute: "Interior Design & Construction in Yelahanka, Bangalore | ACIPL" },
@@ -15,9 +17,6 @@ export const metadata: Metadata = {
     "interior design Bangalore, construction Yelahanka, home interior Bangalore, office interior Yelahanka, renovation services Bangalore, UPVC windows Yelahanka, fire doors Bangalore,  Yelahanka, false ceilings Bangalore, workstations Yelahanka",
   alternates: {
     canonical: "/bangalore-yelahanka",
-  },
-  icons: {
-    icon: '/favicon.ico',
   },
 }
 
@@ -126,9 +125,24 @@ const BangaloreYelahankaPage = () => {
 
   return (
     <main className="min-h-screen">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <JsonLd
+        id="schema-bangalore-yelahanka"
+        data={[
+          serviceSchema({
+            name: "Interior Design & Construction in Yelahanka, Bangalore",
+            description:
+              "Home and office interior design, turnkey construction and renovation in Yelahanka and across Bangalore, plus UPVC windows, fire doors, railings and false ceilings.",
+            path: "/bangalore-yelahanka",
+            areaServed: "Yelahanka, Bangalore",
+            serviceType: "Interior Design and Construction",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Interior Design & Construction in Yelahanka", path: "/bangalore-yelahanka" },
+          ]),
+        ]}
+      />
       <Navbar />
       <div className="h-20"></div>
 

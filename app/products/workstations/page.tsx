@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buildMetadata } from "@/lib/seo/metadata";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema";
 
 export const metadata = buildMetadata({
   title: "Office Workstations in Bangalore | Modular Desks & Cubicles | ACIPL",
@@ -89,6 +91,23 @@ const WorkstationsPage = () => {
 
   return (
     <>
+      <JsonLd
+        id="schema-product-workstations"
+        data={[
+          serviceSchema({
+            name: "Office Workstations in Bangalore",
+            description:
+              "Modular office workstations, cubicles and desking systems in Bangalore — supply, space planning and installation to your headcount and floor plate.",
+            path: "/products/workstations",
+            serviceType: "Office Workstation Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "Workstations", path: "/products/workstations" },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
@@ -107,7 +126,7 @@ const WorkstationsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/Workstations/Workstation-Main.webp"
-                alt="Office Workstations"
+                alt="Modular office workstations and cubicle systems for Bangalore workplaces — ACIPL"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -157,7 +176,7 @@ const WorkstationsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} — modular office workstation by ACIPL, Bangalore`}
                       fill
                       className="object-cover"
                     />

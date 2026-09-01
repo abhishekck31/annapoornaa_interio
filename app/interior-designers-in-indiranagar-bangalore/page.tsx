@@ -4,9 +4,13 @@ import { Metadata } from "next"
 import { CheckCircle, Home, HardHat, Building2, ShieldCheck, MapPin, Star, Award, Clock, HeartHandshake } from "lucide-react"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { projects } from "@/data/projects-data"
+import JsonLd from "@/components/seo/json-ld"
+import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/seo/schema"
+import { interiorDesignerLocationFaqs } from "@/lib/seo/hand-built-faqs"
 
 export const metadata: Metadata = {
   title: { absolute: "Interior Designers in Indiranagar, Bangalore | ACIPL" },
@@ -19,6 +23,25 @@ export const metadata: Metadata = {
 export default function IndiranagarBangaloreInteriorDesignersPage() {
   return (
     <main className="min-h-screen">
+      <JsonLd
+        id="schema-indiranagar-bangalore"
+        data={[
+          serviceSchema({
+            name: "Interior Designers in Indiranagar, Bangalore",
+            description:
+              "Residential and commercial interior design in Indiranagar, Bangalore — turnkey home interiors, modular kitchens, office fit-outs and renovation with transparent, itemised pricing.",
+            path: "/interior-designers-in-indiranagar-bangalore",
+            areaServed: "Indiranagar, Bangalore",
+            serviceType: "Interior Design",
+          }),
+          faqPageSchema(interiorDesignerLocationFaqs("Indiranagar")),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Services", path: "/services" },
+            { name: "Interior Designers in Indiranagar", path: "/interior-designers-in-indiranagar-bangalore" },
+          ]),
+        ]}
+      />
       <Navbar />
 
       {/* Hero Section */}
@@ -141,10 +164,13 @@ export default function IndiranagarBangaloreInteriorDesignersPage() {
                 {projects.slice(0, 6).map((project, index) => (
                   <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                     <div className="relative group overflow-hidden rounded-xl h-72 shadow-md">
-                      <img
-                        src={project.mainImage || "/placeholder.svg"}
+                      <Image
+                        src={project.mainImage || "/placeholder.jpg"}
                         alt={`Interior Designers in Indiranagar Bangalore - ${project.title}`}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        fill
+                        loading="lazy"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 opacity-90 transition-opacity duration-300">
                         <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>

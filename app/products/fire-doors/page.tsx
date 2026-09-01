@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { buildMetadata } from "@/lib/seo/metadata"
+import JsonLd from "@/components/seo/json-ld"
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema"
 
 export const metadata = buildMetadata({
   title: "Fire Doors in Bangalore | Fire Rated Door Suppliers | ACIPL",
@@ -69,6 +71,23 @@ const FireDoorsPage = () => {
 
   return (
     <>
+      <JsonLd
+        id="schema-product-fire-doors"
+        data={[
+          serviceSchema({
+            name: "Fire Doors in Bangalore",
+            description:
+              "Supply and installation of fire-rated doors in Bangalore — steel, wooden, glazed, acoustic and emergency-exit doors with certified ratings and compliance support.",
+            path: "/products/fire-doors",
+            serviceType: "Fire-Rated Door Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "Fire Doors", path: "/products/fire-doors" },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
@@ -84,7 +103,7 @@ const FireDoorsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/Fire Doors/Firedoors-Main.jpg"
-                alt="Fire Doors"
+                alt="Fire-rated steel and timber doors for commercial and residential buildings in Bangalore — ACIPL"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -123,7 +142,7 @@ const FireDoorsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} — fire-rated door supplied and installed by ACIPL in Bangalore`}
                       fill
                       className="object-cover"
                     />

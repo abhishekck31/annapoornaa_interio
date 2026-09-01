@@ -8,6 +8,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ScrollAnimation from "@/components/scroll-animation"
 import Link from "next/link"
+import Image from "next/image"
 import { projects } from "@/data/projects-data"
 import { motion, AnimatePresence } from "framer-motion"
 import VideoPlayer from "@/components/video-player" // Import the VideoPlayer component
@@ -102,10 +103,12 @@ export default function FeaturedProjectsPage() {
               <ScrollAnimation key={project.id} delay={index * 100}>
                 <div id={`project-${project.id}`} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="relative h-96">
-                    <img
+                    <Image
                       src={project.mainImage || "/Asmara-project/Asmara1.jpg"}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
+                      alt={`${project.title} — ${project.category} project by ACIPL in ${project.location}`}
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 1024px"
+                      className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 to-transparent flex flex-col justify-end p-8">
                       <div className="flex items-center mb-2">
@@ -176,10 +179,13 @@ export default function FeaturedProjectsPage() {
                                 setCurrentImageIndex(index)
                               }}
                             >
-                              <img
-                                src={image || "/placeholder.svg"}
-                                alt={`${project.title} - Image ${index + 1}`}
-                                className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                              <Image
+                                src={image || "/placeholder.jpg"}
+                                alt={`${project.title} in ${project.location} — photo ${index + 1}`}
+                                fill
+                                loading="lazy"
+                                sizes="(max-width: 1024px) 50vw, 300px"
+                                className="object-cover transition-transform duration-300 hover:scale-110"
                               />
                             </div>
                           ))}
@@ -227,10 +233,12 @@ export default function FeaturedProjectsPage() {
               {getProjectById(selectedProject) && (
                 <>
                   <div className="relative h-[70vh]">
-                    <img
-                      src={getProjectById(selectedProject)?.images[currentImageIndex] || "/placeholder.svg"}
+                    <Image
+                      src={getProjectById(selectedProject)?.images[currentImageIndex] || "/placeholder.jpg"}
                       alt={`${getProjectById(selectedProject)?.title} image ${currentImageIndex + 1}`}
-                      className="w-full h-full object-contain"
+                      fill
+                      sizes="100vw"
+                      className="object-contain"
                     />
 
                     <button
@@ -272,9 +280,12 @@ export default function FeaturedProjectsPage() {
                             setCurrentImageIndex(idx)
                           }}
                         >
-                          <img
-                            src={image || "/placeholder.svg"}
-                            alt={`Thumbnail ${idx + 1}`}
+                          <Image
+                            src={image || "/placeholder.jpg"}
+                            alt={`${getProjectById(selectedProject)?.title} thumbnail ${idx + 1}`}
+                            width={96}
+                            height={64}
+                            loading="lazy"
                             className="w-full h-16 object-cover"
                           />
                         </div>

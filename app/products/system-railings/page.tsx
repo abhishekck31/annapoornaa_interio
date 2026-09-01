@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { buildMetadata } from "@/lib/seo/metadata"
+import JsonLd from "@/components/seo/json-ld"
+import { breadcrumbSchema, serviceSchema } from "@/lib/seo/schema"
 
 export const metadata = buildMetadata({
   title: "System Railings in Bangalore | Glass & Steel Railings | ACIPL",
@@ -54,6 +56,23 @@ const SystemRailingsPage = () => {
 
   return (
     <>
+      <JsonLd
+        id="schema-product-system-railings"
+        data={[
+          serviceSchema({
+            name: "System Railings in Bangalore",
+            description:
+              "Design, supply and installation of glass, stainless steel and aluminium system railings for staircases, balconies and terraces across Bangalore.",
+            path: "/products/system-railings",
+            serviceType: "Railing Supply and Installation",
+          }),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" },
+            { name: "System Railings", path: "/products/system-railings" },
+          ]),
+        ]}
+      />
       <Navbar />
       <main className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-16">
@@ -69,7 +88,7 @@ const SystemRailingsPage = () => {
             <div className="relative aspect-[4/3] w-full">
               <Image
                 src="/SystemRailings/SystemRailing-Main.jpg"
-                alt="System Railings"
+                alt="Glass and stainless steel staircase and balcony railing systems in Bangalore — ACIPL"
                 fill
                 className="rounded-lg shadow-xl object-cover"
                 priority
@@ -108,7 +127,7 @@ const SystemRailingsPage = () => {
                   <div className="aspect-[4/3] relative">
                     <Image
                       src={imageSrc}
-                      alt={`Railing System ${index + 1}`}
+                      alt={`Glass and steel railing system design ${index + 1} by ACIPL, Bangalore`}
                       fill
                       className="object-cover"
                     />

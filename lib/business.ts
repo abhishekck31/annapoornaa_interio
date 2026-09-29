@@ -10,8 +10,17 @@
  * an estimate.
  */
 
+/** True while a string still carries an unconfirmed `{{CONFIRM: ...}}` value. */
+export function hasPlaceholder(value: string): boolean {
+  return value.includes("{{CONFIRM")
+}
+
 export const business = {
-  /** Shown in the navy "Why clients choose us" block on every new page. */
+  /**
+   * Shown in the navy "Why clients choose us" block on every new page. The
+   * first three confirmed entries are rendered; unconfirmed ones are skipped,
+   * so the years and project count appear as soon as they are filled in.
+   */
   stats: [
     {
       value: "{{CONFIRM: years in business — site.ts says founded 2014}}",
@@ -24,6 +33,14 @@ export const business = {
     {
       value: "In-house",
       label: "Design, drawings and site execution",
+    },
+    {
+      value: "Yelahanka",
+      label: "Office and site teams based in Yelahanka New Town",
+    },
+    {
+      value: "Free",
+      label: "Site visit and itemised quote, no obligation",
     },
   ],
 
@@ -86,3 +103,8 @@ export const business = {
     ],
   },
 } as const
+
+/** The stats actually rendered: confirmed values only, at most three. */
+export const confirmedStats = business.stats
+  .filter((stat) => !hasPlaceholder(stat.value))
+  .slice(0, 3)

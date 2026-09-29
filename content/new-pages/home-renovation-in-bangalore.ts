@@ -1,5 +1,3 @@
-import { business } from "@/lib/business"
-
 import type { NewLandingPage } from "./types"
 
 export const homeRenovationInBangalore: NewLandingPage = {
@@ -61,7 +59,7 @@ export const homeRenovationInBangalore: NewLandingPage = {
     },
     {
       title: "Waterproofing done properly",
-      body: `Terraces, bathrooms and external walls treated at the source, not patched from inside. Waterproofing warranty: ${business.construction.waterproofingWarranty}.`,
+      body: `Terraces, bathrooms and external walls treated at the source, not patched from inside, with curing and water tests before anything is covered.`,
     },
     {
       title: "Services renewed, not patched",
@@ -118,7 +116,7 @@ export const homeRenovationInBangalore: NewLandingPage = {
     {
       question: "How long does a full home renovation take?",
       answer:
-        "A full renovation of a typical independent house takes {{CONFIRM: weeks/months}}, and an apartment {{CONFIRM: weeks}}, depending on scope. Waterproofing needs curing and testing time that should not be skipped. The schedule is set out in the quote.",
+        "It depends on the scope: a kitchen and two bathrooms is a very different job from rewiring, re-plumbing and waterproofing a whole house, and working around a family that stays in adds time. Waterproofing needs curing and testing time that should not be skipped. The schedule is set out in the quote.",
     },
   ],
   related: [

@@ -85,10 +85,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={poppins.variable}>
       <head>
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-YXB89D6ZEH"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

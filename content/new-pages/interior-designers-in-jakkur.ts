@@ -42,7 +42,6 @@ export const interiorDesignersInJakkur: NewLandingPage = {
           ["TV unit and living-room storage", "Included", "Included"],
           ["False ceiling with lighting", "Living and dining", "Living, dining and master bedroom"],
           ["Shoe rack, crockery unit, study or pooja unit", "As needed", "As needed"],
-          ["Typical cost", "{{CONFIRM: ₹ range}}", "{{CONFIRM: ₹ range}}"],
         ],
       },
       note: "Your scope is set at the design stage; the table shows what most owners choose, not a fixed package.",
@@ -98,7 +97,7 @@ export const interiorDesignersInJakkur: NewLandingPage = {
     {
       question: "How long will interiors take for a new 3BHK?",
       answer:
-        "Typically {{CONFIRM: weeks}} from design sign-off for a full 3BHK scope, including production time. Community working-hour rules can stretch this a little, so we build them into the schedule you receive.",
+        "It depends on the scope, and most of the time is factory production rather than work in the flat. You get a dated schedule at design sign-off, covering production, installation and handover. Community working-hour rules can stretch this a little, so we build them into the schedule you receive.",
     },
     {
       question: "Should we replace the builder's tiles and bathroom fittings?",

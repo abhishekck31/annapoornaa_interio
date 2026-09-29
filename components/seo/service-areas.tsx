@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { MapPin } from "lucide-react"
 
-import { serviceAreaLinks } from "@/lib/seo/service-area-links"
+import { publishedNewPageLinks, serviceAreaLinks } from "@/lib/seo/service-area-links"
 
 /**
  * Internal linking hub for the location landing pages.
@@ -20,7 +20,7 @@ const ServiceAreas = () => (
       Interior design, modular kitchens, renovation and construction across Bangalore.
     </p>
     <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
-      {serviceAreaLinks.map((link) => (
+      {[...serviceAreaLinks, ...publishedNewPageLinks].map((link) => (
         <li key={link.slug}>
           <Link
             href={`/${link.slug}`}

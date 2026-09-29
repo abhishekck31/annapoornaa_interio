@@ -50,7 +50,7 @@ export const officeInteriorDesignersInYelahanka: NewLandingPage = {
   highlights: [
     {
       title: "Built for a fast opening",
-      body: "Design, material orders and site work planned to overlap, so the space is usable as soon as possible. {{CONFIRM: typical turnaround for a small fit-out}}.",
+      body: "Design, material orders and site work planned to overlap, so the space is usable as soon as possible, with a dated programme agreed before work starts.",
     },
     {
       title: "Workstations from our own range",
@@ -98,7 +98,7 @@ export const officeInteriorDesignersInYelahanka: NewLandingPage = {
     {
       question: "Do you take on small office and clinic fit-outs in Yelahanka?",
       answer:
-        "Yes. Much of our work in Yelahanka is compact commercial space — small offices, clinics, showrooms and training centres. {{CONFIRM: minimum project size, if any}}. Being based locally makes smaller jobs practical for us to supervise properly.",
+        "Yes. Much of our work in Yelahanka is compact commercial space — small offices, clinics, showrooms and training centres. Being based locally makes smaller jobs practical for us to supervise properly.",
     },
     {
       question: "Our unit is a bare shell in a new building. Where do we start?",
@@ -118,7 +118,7 @@ export const officeInteriorDesignersInYelahanka: NewLandingPage = {
     {
       question: "What does a small office fit-out in Yelahanka cost?",
       answer:
-        "A compact office with workstations, one cabin, a meeting room and a pantry typically costs {{CONFIRM: ₹ range for a small office}} with us, depending on the ceiling, partitions and whether the electrical supply needs upgrading. We give a fixed, itemised quote after the survey, and you can adjust the specification line by line.",
+        "A compact office with workstations, one cabin, a meeting room and a pantry is priced from the survey, and the cost depends mainly on the ceiling, partitions and whether the electrical supply needs upgrading. We give a fixed, itemised quote after the survey, and you can adjust the specification line by line.",
     },
   ],
   related: [

@@ -9,6 +9,7 @@
 import type { MetadataRoute } from "next"
 
 import { landingPageSlugs } from "./landing-pages"
+import { publishedNewPageLinks } from "./service-area-links"
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>
 
@@ -64,4 +65,11 @@ export const landingRoutes: SiteRoute[] = landingPageSlugs.map((slug) => ({
   priority: 0.9,
 }))
 
-export const allRoutes: SiteRoute[] = [...staticRoutes, ...landingRoutes]
+/** The October 2026 pages — only those switched to `published`. */
+export const newPageRoutes: SiteRoute[] = publishedNewPageLinks.map((link) => ({
+  path: `/${link.slug}`,
+  changeFrequency: "weekly" as const,
+  priority: link.slug.endsWith("-in-bangalore") ? 0.9 : 0.8,
+}))
+
+export const allRoutes: SiteRoute[] = [...staticRoutes, ...landingRoutes, ...newPageRoutes]

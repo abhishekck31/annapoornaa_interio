@@ -59,11 +59,6 @@ export const siteConfig = {
     "https://www.facebook.com/Annapoornainterio/",
     "https://www.instagram.com/annapoornaa_interio/",
   ],
-  rating: {
-    ratingValue: "4.9",
-    reviewCount: "47",
-    bestRating: "5",
-  },
 } as const
 
 /** Pre-built WhatsApp deep link used by landing page CTAs. */

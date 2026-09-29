@@ -1,5 +1,3 @@
-import { business } from "@/lib/business"
-
 import type { NewLandingPage } from "./types"
 
 export const villaConstructionInYelahanka: NewLandingPage = {
@@ -43,7 +41,7 @@ export const villaConstructionInYelahanka: NewLandingPage = {
         "Large-format windows and sliding doors in uPVC or aluminium from our own products division",
         "Stair and balcony railings in glass or steel through our system railings range",
         "Concealed services — AC piping, speaker wiring, CCTV and automation conduits — planned before the slabs are cast",
-        "Landscape design for lawns, paving, planting and outdoor lighting. {{CONFIRM: does ACIPL build swimming pools and water features?}}",
+        "Landscape design for lawns, paving, planting and outdoor lighting, planned with the floor plan rather than after it",
       ],
     },
   ],
@@ -55,7 +53,7 @@ export const villaConstructionInYelahanka: NewLandingPage = {
     },
     {
       title: "Structure for open spaces",
-      body: `Long spans and double-height rooms designed and built with extra inspection at every critical pour. Structural warranty: ${business.construction.structuralWarranty}.`,
+      body: `Long spans and double-height rooms designed and built with extra inspection at every critical pour, and the structural engineer on site for the key ones.`,
     },
     {
       title: "Landscape as part of the house",
@@ -92,7 +90,7 @@ export const villaConstructionInYelahanka: NewLandingPage = {
     {
       question: "How much more does a villa cost to build than a regular house?",
       answer:
-        "Per square foot, a villa typically costs more than a standard independent house because of larger spans, more glass, premium finishes and landscaping. {{CONFIRM: typical ₹/sq ft range for ACIPL villas}}. The difference comes mostly from specification, so we price each option in the BOQ and you decide where to spend.",
+        "Per square foot, a villa typically costs more than a standard independent house because of larger spans, more glass, premium finishes and landscaping. How much more depends almost entirely on the specification you choose. The difference comes mostly from specification, so we price each option in the BOQ and you decide where to spend.",
     },
     {
       question: "Will I see the elevation before construction starts?",

@@ -4,84 +4,82 @@ This covers the 13 new pages in `content/new-pages/`. Nothing below was invented
 `{{CONFIRM: …}}` in the copy is a gap for the client to fill with a real figure. Where
 we have no figure, the sentence should be rewritten or removed, never estimated.
 
-**How to use this list:** give the client sections A–E. Send the answers back and they get
-dropped into `lib/business.ts` (shared facts) or the page's file in `content/new-pages/`.
-To check nothing is left, run:
+## What is live and what is waiting
 
-```
-grep -rn "{{CONFIRM" content/new-pages lib/business.ts
-```
+Each page has a `published` switch in `newPageLinks` (`lib/seo/service-area-links.ts`).
+A published page is in the sitemap, linked from the footer and from the other new pages,
+and indexable. An unpublished page returns a 404 in production and nothing links to it.
+**The build fails if a published page still contains a `{{CONFIRM}}`**, so an unconfirmed
+figure cannot go live by accident.
+
+| Status | Pages |
+|---|---|
+| **Live** (no placeholders) | commercial-construction-in-bangalore, home-renovation-in-bangalore, home-renovation-in-yelahanka, office-interior-designers-in-yelahanka, interior-designers-in-jakkur, house-construction-in-thanisandra, interior-designers-in-sahakar-nagar, house-construction-in-devanahalli, villa-construction-in-yelahanka |
+| **Waiting for the client** (need real prices, rates or timelines) | house-construction-company-in-bangalore, house-construction-cost-in-bangalore, office-interior-designers-in-bangalore, modular-kitchen-in-bangalore |
+
+**To publish a waiting page:**
+1. Fill in its items below.
+2. Set `published: true`.
+3. Run `grep -rn "{{CONFIRM" content/new-pages lib/business.ts` to check nothing is left.
+
+To preview drafts locally, build with `SHOW_DRAFT_PAGES=1`. Drafts are always `noindex`.
+
+The stats block on every page shows only confirmed values. Until A1 and A2 are filled in,
+it shows "In-house / Yelahanka / Free site visit". Once they are filled in, the years and
+project count replace those automatically.
 
 ---
 
 ## A. Shared business facts — `lib/business.ts`
 
-These appear on several pages. Change them once and every page picks up the change.
-
 | # | Fact | Where it shows |
 |---|---|---|
-| A1 | Years in business. `site.ts` says the company was founded in 2014. Is that right? | Stats block, all 13 pages |
-| A2 | Number of completed projects (a real count, not a round-up) | Stats block, all 13 pages |
-| A3 | Current plan-sanction authority for city plots. BBMP was restructured under the Greater Bengaluru Authority in 2025, so which corporation or authority should we name? | House construction company page |
-| A4 | Plan-sanction authority for Devanahalli plots. Is it BIAAPA? | Devanahalli page (intro + FAQ) |
-| A5 | Structural warranty: how long, and what it covers | House construction company, Thanisandra, villa pages |
-| A6 | Waterproofing warranty period | House construction company page, renovation pillar |
-| A7 | Construction packages: 3 tiers. For each: the package name and ₹/sq ft rate, then cement and steel brands/grades, block type, flooring type and ₹/sq ft allowance, doors/windows spec, electrical brands, plumbing and sanitaryware brands, and paint spec. Is the rate on built-up area? | Package table (house construction company page); rates quoted in the cost-guide FAQ and worked examples |
+| A1 | Years in business. `site.ts` says the company was founded in 2014. Is that right? | Stats block on all pages, once filled in |
+| A2 | Number of completed projects (a real count, not a round-up) | Stats block on all pages, once filled in |
+| A3 | Current plan-sanction authority for city plots. BBMP was restructured under the Greater Bengaluru Authority in 2025, so which body should we name? | House construction company page |
+| A4 | Plan-sanction authority for Devanahalli plots. Is it BIAAPA? The live page currently says "the airport region's planning authority" without naming it. | Can be added to the Devanahalli page |
+| A5 | Structural warranty: how long, and what it covers | House construction company page |
+| A6 | Waterproofing warranty period | House construction company page |
+| A7 | Construction packages: 3 tiers. For each: name, ₹/sq ft rate, cement and steel brands/grades, block type, flooring type and allowance, doors/windows spec, electrical brands, plumbing and sanitaryware brands, and paint spec. Is the rate on built-up area? | House construction company page; cost guide |
 
-## B. Page-specific figures
+## B. Figures blocking the four waiting pages
 
 ### /house-construction-company-in-bangalore
-- [ ] Stage-wise timeline table. For **G+1** and **G+2**, typical weeks for each stage: design and sanction; excavation, footings and plinth; columns, slabs and roof (per floor); blockwork and conduits; plastering, waterproofing and flooring; doors, windows, painting and fixtures. Plus the total in months from the start on site.
+- [ ] A3, A5, A6, A7 above
+- [ ] Stage-wise timeline table. For **G+1** and **G+2**, typical weeks for each stage (design and sanction; excavation to plinth; frame per floor; blockwork and conduits; plaster, waterproofing and flooring; doors, windows, paint and fixtures), plus the total in months
 - [ ] FAQ: typical G+2 duration from the start on site
 
 ### /house-construction-cost-in-bangalore
-- [ ] Stage-by-stage cost split: the percentage for each of the 9 stages (foundation, RCC frame, masonry, plastering and waterproofing, flooring and tiling, electrical, plumbing and sanitaryware, doors and windows, painting), taken from real past projects
-- [ ] Worked examples: typical built-up area, and the total ₹ for each of the 3 packages, for 30x40 G+1, 30x40 G+2, 30x50 G+1 and 30x50 G+2
+- [ ] A7 above
+- [ ] Cost split: the percentage for each of the 9 stages, from real past projects
+- [ ] Worked examples: typical built-up area, and the total ₹ for each package, for 30x40 G+1, 30x40 G+2, 30x50 G+1 and 30x50 G+2
 - [ ] FAQ: ₹ range for a 30x40 G+1 and a 30x40 G+2
-- [ ] Confirm that quotes state a validity period and include a steel and cement price-variation clause, as the page says
-
-### /commercial-construction-in-bangalore
-- [ ] Which commercial building types ACIPL actually builds: showrooms? small office buildings? factory and warehouse sheds? This text appears in the intro and the first FAQ.
-- [ ] Aron Universal: what ACIPL's scope was. The gallery files it under "Construction", but the hero image of it on the site is an architect's rendering by Ambiant Associates.
-- [ ] Gokaldas, TSS, Hengst, Ingex: what ACIPL did for each (construction, interiors or products). If that can't be confirmed, delete the sentence.
-- [ ] Pre-engineered buildings: does ACIPL design and erect them itself, or through a partner?
-- [ ] Which commercial approvals ACIPL handles directly (fire, pollution control, power load and so on)
+- [ ] Confirm that quotes state a validity period and include a steel and cement price-variation clause
 
 ### /office-interior-designers-in-bangalore
-- [ ] Cost per seat for the 3 tiers (essential, standard, premium). The FAQ repeats the low and high ends.
-- [ ] Timeline: the seat range for a "small office" and its weeks, plus weeks for a full floor with cabins and HVAC
+- [ ] Cost per seat for the 3 tiers (the FAQ repeats the low and high ends)
+- [ ] Timeline: the seat range and weeks for a small office, and weeks for a full floor with cabins and HVAC
 
 ### /modular-kitchen-in-bangalore
 - [ ] Hardware brands used as standard
 - [ ] Are cabinets made in an in-house workshop or by a partner factory?
-- [ ] Typical ₹ range for a 2BHK kitchen and a 3BHK kitchen
-- [ ] Weeks from design sign-off to handover, and days of on-site installation
+- [ ] ₹ range for a typical 2BHK kitchen and a 3BHK kitchen
+- [ ] Weeks from sign-off to handover, and days of on-site installation
 
-### /home-renovation-in-bangalore
-- [ ] Typical duration for a full renovation of an independent house, and of an apartment
-- [ ] Century Club (Seshadri Road): confirm ACIPL renovated the washrooms and lounges shown in the photos, and that we may name the club
+## B2. Worth confirming on the live pages (not blocking)
 
-### /home-renovation-in-yelahanka
-- [ ] Typical lead time for a site inspection in Yelahanka (the page suggests "e.g. 2 working days")
+These pages went live with general wording in place of a figure. Adding the real figure
+later will make them stronger:
 
-### /office-interior-designers-in-yelahanka
-- [ ] Typical turnaround for a small fit-out
-- [ ] Minimum project size, if there is one
-- [ ] ₹ range for a small office (workstations, one cabin, a meeting room, a pantry)
-
-### /interior-designers-in-jakkur
-- [ ] Typical ₹ range for a 2BHK and a 3BHK handover scope
-- [ ] Weeks for a full 3BHK scope from design sign-off
-
-### /house-construction-in-thanisandra
-- [ ] Typical rental unit mix ACIPL recommends (1BHK, 2BHK and so on)
-
-### /house-construction-in-devanahalli
-- [ ] ACIPL's actual experience with the Airports Authority of India height NOC for Devanahalli plots
-
-### /villa-construction-in-yelahanka
-- [ ] Typical ₹/sq ft range for ACIPL villas
-- [ ] Does ACIPL build swimming pools and water features? The hero photo shows a villa with a pool.
+- **Commercial:** which building types ACIPL builds. The page says "commercial buildings and pre-engineered industrial buildings", based on the existing Construction page. Also confirm:
+  - ACIPL's scope on Aron Universal (not named on the page yet)
+  - what was done for Gokaldas, TSS, Hengst and Ingex (not named)
+  - whether pre-engineered buildings are erected in-house
+- **Home renovation (Bangalore):** typical durations for a house and for an apartment. Also confirm that ACIPL renovated the Century Club washrooms and lounges shown, and that we may name the club (it is named).
+- **Office interiors, Yelahanka:** cost range for a small office, and typical turnaround
+- **Jakkur:** ₹ range for a 2BHK and 3BHK scope, and weeks for a 3BHK
+- **Villa:** ₹/sq ft range; whether ACIPL builds pools and water features
+- **Devanahalli:** any Airports Authority of India height NOC experience
 
 ## C. Local statements to verify
 

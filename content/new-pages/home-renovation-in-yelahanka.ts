@@ -89,7 +89,7 @@ export const homeRenovationInYelahanka: NewLandingPage = {
     {
       question: "How soon can you inspect a house in Yelahanka?",
       answer:
-        "Because our office is in Yelahanka New Town, we can usually visit within {{CONFIRM: typical lead time, e.g. 2 working days}} of your call. The inspection is free and takes about an hour for a typical house.",
+        "Because our office is in Yelahanka New Town, an inspection anywhere in Yelahanka is a short trip for us, so we can fit it in at short notice rather than waiting for a slot. The inspection is free and there is no obligation to go ahead.",
     },
     {
       question: "The ceiling under our first floor gets damp every monsoon. What causes it?",

@@ -127,6 +127,8 @@ export function organizationSchema() {
       "JP Nagar",
       "Marathahalli",
       "Thanisandra",
+      "Devanahalli",
+      "Sahakar Nagar",
       "Jakkur",
     ].map((name) => ({ "@type": "City", name })),
     openingHoursSpecification: [
@@ -138,12 +140,9 @@ export function organizationSchema() {
       },
     ],
     sameAs: [...siteConfig.socials],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: siteConfig.rating.ratingValue,
-      reviewCount: siteConfig.rating.reviewCount,
-      bestRating: siteConfig.rating.bestRating,
-    },
+    // No aggregateRating: ratings a business publishes about itself are not
+    // eligible for review rich results, and an unverifiable score risks a
+    // manual action. Let the Google Business Profile carry the reviews.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       "@id": OFFER_CATALOG_ID,

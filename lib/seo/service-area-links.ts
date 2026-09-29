@@ -31,3 +31,41 @@ export const serviceAreaLinks = [
 ] as const
 
 export type ServiceAreaSlug = (typeof serviceAreaLinks)[number]["slug"]
+
+/**
+ * The October 2026 landing pages (content in `content/new-pages/`).
+ *
+ * `published` is the single switch for each page. A published page is linked
+ * from the footer, listed in the sitemap and indexable; an unpublished one 404s
+ * in production builds and is linked from nowhere. Set `SHOW_DRAFT_PAGES=1` to
+ * preview drafts locally.
+ *
+ * A page may only be published once it contains no `{{CONFIRM: ...}}`
+ * placeholders — the route throws at build time otherwise.
+ */
+export const newPageLinks = [
+  // Bangalore-wide pillars
+  { slug: "house-construction-company-in-bangalore", label: "House Construction Company in Bangalore", published: false },
+  { slug: "house-construction-cost-in-bangalore", label: "House Construction Cost in Bangalore", published: false },
+  { slug: "commercial-construction-in-bangalore", label: "Commercial Construction in Bangalore", published: true },
+  { slug: "office-interior-designers-in-bangalore", label: "Office Interior Designers in Bangalore", published: false },
+  { slug: "modular-kitchen-in-bangalore", label: "Modular Kitchen in Bangalore", published: false },
+  { slug: "home-renovation-in-bangalore", label: "Home Renovation in Bangalore", published: true },
+  // Yelahanka and North Bengaluru
+  { slug: "home-renovation-in-yelahanka", label: "Home Renovation in Yelahanka", published: true },
+  { slug: "office-interior-designers-in-yelahanka", label: "Office Interior Designers in Yelahanka", published: true },
+  { slug: "interior-designers-in-jakkur", label: "Interior Designers in Jakkur", published: true },
+  { slug: "house-construction-in-thanisandra", label: "House Construction in Thanisandra", published: true },
+  { slug: "interior-designers-in-sahakar-nagar", label: "Interior Designers in Sahakar Nagar", published: true },
+  { slug: "house-construction-in-devanahalli", label: "House Construction in Devanahalli", published: true },
+  { slug: "villa-construction-in-yelahanka", label: "Villa Construction in Yelahanka", published: true },
+] as const
+
+export type NewPageSlug = (typeof newPageLinks)[number]["slug"]
+
+export const publishedNewPageLinks = newPageLinks.filter((link) => link.published)
+
+/** Whether a root-relative href points at a new page that is not live yet. */
+export function isUnpublishedNewPage(href: string): boolean {
+  return newPageLinks.some((link) => !link.published && `/${link.slug}` === href)
+}

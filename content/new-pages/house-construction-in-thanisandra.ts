@@ -1,5 +1,3 @@
-import { business } from "@/lib/business"
-
 import type { NewLandingPage } from "./types"
 
 export const houseConstructionInThanisandra: NewLandingPage = {
@@ -42,7 +40,7 @@ export const houseConstructionInThanisandra: NewLandingPage = {
         "Separate electricity meters and, where possible, separate water metering or sub-meters for each unit",
         "Sump and overhead tank sized for every unit, with the pump and valves where the owner can control them",
         "Stacked kitchens and bathrooms floor to floor, so plumbing runs straight down and leaks stay easy to trace",
-        "Unit sizes chosen for the rental market around you — {{CONFIRM: typical unit mix ACIPL recommends, e.g. 1BHK/2BHK}}",
+        "Unit sizes chosen with you for the tenants you want to attract, rather than a standard plan repeated on every floor",
         "Parking planned for every unit within what the plot and setbacks allow",
       ],
     },
@@ -59,7 +57,7 @@ export const houseConstructionInThanisandra: NewLandingPage = {
     },
     {
       title: "Structure sized for the future",
-      body: `Foundation and columns designed for the floors you plan to add, even if you build fewer now. Structural warranty: ${business.construction.structuralWarranty}.`,
+      body: "Foundation and columns designed for the floors you plan to add, even if you build fewer now, so the next floor does not mean strengthening work.",
     },
     {
       title: "Sanction for the full building",

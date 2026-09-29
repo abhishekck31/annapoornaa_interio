@@ -1,5 +1,3 @@
-import { business } from "@/lib/business"
-
 import type { NewLandingPage } from "./types"
 
 export const houseConstructionInDevanahalli: NewLandingPage = {
@@ -30,8 +28,8 @@ export const houseConstructionInDevanahalli: NewLandingPage = {
   localContext: {
     heading: "Approvals and the airport",
     body: [
-      `Plots around Devanahalli generally fall outside the city corporation's limits, so plan sanction goes to the local planning authority for the airport region rather than to the city. ${business.approvals.devanahalliAuthority}. The documents, fees and timelines differ from a city sanction, and the plot's layout approval and land records need to be in order before an application can go in. We check those papers first — before any design money is spent.`,
-      "Being near an international airport also means height limits. Depending on how close the plot is to the runway approach, taller buildings may need a height clearance from the Airports Authority of India before construction. For most G+1 and G+2 homes this is a formality or not required, but we check it for your exact coordinates at the start rather than assume. {{CONFIRM: ACIPL's experience with AAI height NOC for Devanahalli plots}}",
+      `Plots around Devanahalli generally fall outside the city corporation's limits, so plan sanction goes to the local planning authority for the airport region rather than to the city. The documents, fees and timelines differ from a city sanction, and the plot's layout approval and land records need to be in order before an application can go in. We check those papers first — before any design money is spent.`,
+      "Being near an international airport also means height limits. Depending on how close the plot is to the runway approach, taller buildings may need a height clearance from the Airports Authority of India before construction. For most G+1 and G+2 homes this is a formality or not required, but we check it for your exact coordinates at the start rather than assume.",
     ],
   },
   details: [
@@ -90,7 +88,7 @@ export const houseConstructionInDevanahalli: NewLandingPage = {
   faqs: [
     {
       question: "Who approves building plans for plots in Devanahalli?",
-      answer: `Most plots around Devanahalli are outside the city corporation's limits and fall under the airport region's planning authority. ${business.approvals.devanahalliAuthority}. The correct authority depends on your plot's exact location and layout approval, which we check before preparing drawings.`,
+      answer: `Most plots around Devanahalli are outside the city corporation's limits and fall under the airport region's planning authority rather than the city. The correct authority depends on your plot's exact location and layout approval, which we check before preparing drawings.`,
     },
     {
       question: "Do I need an airport height clearance to build my house?",

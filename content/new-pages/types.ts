@@ -14,6 +14,7 @@
  */
 
 import type { FaqItem } from "@/lib/seo/schema"
+import type { NewPageSlug } from "@/lib/seo/service-area-links"
 
 export interface DetailTable {
   caption?: string
@@ -32,7 +33,8 @@ export interface DetailSection {
 }
 
 export interface NewLandingPage {
-  slug: string
+  /** Must also be registered in `newPageLinks` (lib/seo/service-area-links.ts). */
+  slug: NewPageSlug
   kind: "pillar" | "locality"
   /** The query this page exists to rank for. Used for QA, not rendered. */
   primaryKeyword: string

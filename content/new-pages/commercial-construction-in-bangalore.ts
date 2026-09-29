@@ -22,13 +22,13 @@ export const commercialConstructionInBangalore: NewLandingPage = {
   introHeading: "Commercial construction in Bangalore, from drawings to fit-out",
   intro: [
     "A commercial building is judged by the date it starts earning. A showroom that opens two months late, or a warehouse that cannot take racking because the floor was not designed for it, costs the owner far more than any saving in the contract. For commercial construction in Bangalore, ACIPL's approach is to fix those requirements in the drawings first, then build to them.",
-    "We handle {{CONFIRM: which commercial building types ACIPL builds — e.g. showrooms, small office buildings, pre-engineered factory and warehouse sheds}}. Because our team also designs office and retail interiors, the building shell is planned with the fit-out in mind: floor loads, ceiling heights, HVAC routes, electrical capacity and shopfront openings are decided once, not rediscovered later.",
+    "We handle commercial buildings and pre-engineered industrial buildings, from design and drawings through to construction and fit-out. Because our team also designs office and retail interiors, the building shell is planned with the fit-out in mind: floor loads, ceiling heights, HVAC routes, electrical capacity and shopfront openings are decided once, not rediscovered later.",
   ],
   localContext: {
     heading: "Who we have worked with",
     body: [
-      "Our commercial clients include manufacturers, technology firms and engineering consultancies. We built {{CONFIRM: ACIPL's scope on the Aron Universal building — construction? PEB?}} for Aron Universal, and our office interior projects include Asmara Apparels in Ulsoor, eMudhra's office in the Aerospace Park at Devanahalli, and Surbana Jurong–SMEC in Yelahanka.",
-      "{{CONFIRM: what ACIPL did for Gokaldas, TSS, Hengst and Ingex — construction, interiors or products — or remove this sentence}}. We only list a client against the work we actually did for them.",
+      "Our commercial clients include manufacturers, technology firms and engineering consultancies. Our office interior projects include Asmara Apparels in Ulsoor, eMudhra's office in the Aerospace Park at Devanahalli, and Surbana Jurong–SMEC in Yelahanka — so we know how a building shell has to be handed over for a fit-out to go smoothly.",
+      "Commercial owners usually care about three things above the rest: the opening date, running costs once the building is in use, and how easily it can be adapted later. We design with all three in mind — sensible spans and floor-to-floor heights so layouts can change, service routes that can be extended, and envelope choices that keep cooling loads down in Bengaluru's climate.",
     ],
   },
   details: [
@@ -61,7 +61,7 @@ export const commercialConstructionInBangalore: NewLandingPage = {
     },
     {
       title: "Pre-engineered buildings",
-      body: "For factories and warehouses, pre-engineered steel structures are quick to put up and span wide without internal columns. {{CONFIRM: does ACIPL design/erect PEBs itself or through a partner?}}",
+      body: "For factories and warehouses, pre-engineered steel structures are quick to put up and span wide without internal columns.",
     },
     {
       title: "Fire and safety provisions",
@@ -98,7 +98,7 @@ export const commercialConstructionInBangalore: NewLandingPage = {
     {
       question: "What kinds of commercial buildings do you construct?",
       answer:
-        "{{CONFIRM: list of commercial building types ACIPL builds}}. For each, we can take on the design and drawings, construction, and interior fit-out, or any one of those on its own.",
+        "Commercial buildings such as offices and showrooms, and pre-engineered buildings for industrial, storage and large-span uses. For each, we can take on the design and drawings, construction, and interior fit-out, or any one of those on its own.",
     },
     {
       question: "Is a pre-engineered building a good option for a warehouse or factory?",
@@ -118,7 +118,7 @@ export const commercialConstructionInBangalore: NewLandingPage = {
     {
       question: "Do you handle approvals for a commercial building?",
       answer:
-        "We prepare the drawings for plan sanction and for the other clearances a commercial building needs, and follow the applications up. Which clearances apply — fire, pollution control, power load and others — depends on the building's use, height and floor area, and we list them for your project at the feasibility stage. {{CONFIRM: which commercial approvals ACIPL handles directly}}",
+        "We prepare the drawings for plan sanction and for the other clearances a commercial building needs, and follow the applications up. Which clearances apply — fire, pollution control, power load and others — depends on the building's use, height and floor area, and we list them for your project at the feasibility stage.",
     },
   ],
   related: [

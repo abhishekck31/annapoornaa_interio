@@ -94,7 +94,11 @@ const Detail = ({ section, tinted }: { section: DetailSection; tinted: boolean }
   </section>
 )
 
-const NewLandingPageTemplate = ({ page }: { page: NewLandingPage }) => {
+const NewLandingPageTemplate = ({
+  page,
+}: {
+  page: Omit<NewLandingPage, "slug"> & { slug: string }
+}) => {
   const path = `/${page.slug}`
   const parent = page.parent && !isUnpublishedNewPage(page.parent.path) ? page.parent : undefined
   const related = page.related.filter((link) => !isUnpublishedNewPage(link.href))

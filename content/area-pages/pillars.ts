@@ -250,7 +250,7 @@ export const pillarInputs: PillarInput[] = [
     serviceType: "Wardrobe Design and Installation",
     primaryKeyword: "wardrobe designers in bangalore",
     breadcrumbLabel: "Wardrobe Designers in Bangalore",
-    title: "Wardrobe Designers in Bangalore | Sliding & Modular Wardrobes | ACIPL",
+    title: "Wardrobe Designers in Bangalore | Sliding Wardrobes | ACIPL",
     description:
       "Wardrobe designers in Bangalore: custom sliding, hinged and walk-in wardrobes with lofts, made to measure. Free site visit and itemised quote from ACIPL.",
     h1: "Wardrobe Designers in Bangalore",
@@ -343,7 +343,7 @@ export const pillarInputs: PillarInput[] = [
     serviceType: "False Ceiling Installation",
     primaryKeyword: "false ceiling contractors in bangalore",
     breadcrumbLabel: "False Ceiling Contractors in Bangalore",
-    title: "False Ceiling Contractors in Bangalore | Gypsum & PVC Ceilings | ACIPL",
+    title: "False Ceiling Contractors in Bangalore | Gypsum & PVC | ACIPL",
     description:
       "False ceiling contractors in Bangalore: gypsum, POP, PVC and grid ceilings with cove and concealed lighting for homes and offices. Free site visit and quote.",
     h1: "False Ceiling Contractors in Bangalore",
@@ -424,7 +424,7 @@ export const pillarInputs: PillarInput[] = [
     service: "interior",
     primaryKeyword: "turnkey interior contractors in bangalore",
     breadcrumbLabel: "Turnkey Interior Contractors in Bangalore",
-    title: "Turnkey Interior Contractors in Bangalore | Design to Handover | ACIPL",
+    title: "Turnkey Interior Contractors in Bangalore | ACIPL",
     description:
       "Turnkey interior contractors in Bangalore: design, carpentry, ceilings, electrical, painting and handover by one team, under one itemised quote.",
     h1: "Turnkey Interior Contractors in Bangalore",
@@ -812,7 +812,7 @@ export const pillarInputs: PillarInput[] = [
     areaServed: "North Bengaluru",
     primaryKeyword: "house construction in north bangalore",
     breadcrumbLabel: "House Construction in North Bangalore",
-    title: "House Construction in North Bangalore | Yelahanka-Based Builders | ACIPL",
+    title: "House Construction in North Bangalore | Builders | ACIPL",
     description:
       "House construction in North Bangalore by a Yelahanka-based design-and-build firm: independent houses and villas in Yelahanka, Hennur, Jakkur, Devanahalli and more.",
     h1: "House Construction in North Bangalore",

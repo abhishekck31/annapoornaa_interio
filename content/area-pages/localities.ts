@@ -243,7 +243,7 @@ export const localInputs: LocalInput[] = [
     key: "kalyan-nagar",
     badge: "Serving Kalyan Nagar, HRBR and HBR Layout",
     image: "stoneWall",
-    pitch: "interiors for independent houses and apartments in Kalyan Nagar, HRBR and HBR Layout — kitchens, wardrobes, ceilings and feature walls.",
+    pitch: "homes in HRBR and HBR Layout — kitchens, wardrobes, ceilings and feature walls.",
     subtitle:
       "Well-planned interiors for Kalyan Nagar homes — modern design, practical storage and one team from drawing to handover.",
     intro:
@@ -280,7 +280,7 @@ export const localInputs: LocalInput[] = [
     key: "banaswadi",
     badge: "Serving Banaswadi and Kammanahalli",
     image: "kitchenParallel",
-    pitch: "interiors for family homes, builder floors and apartments in Banaswadi and Kammanahalli — kitchens, wardrobes and refurbishment.",
+    pitch: "family homes, builder floors and flats in Banaswadi and Kammanahalli — kitchens and wardrobes.",
     subtitle:
       "Interiors for Banaswadi and Kammanahalli homes — practical, well-built and designed around your family.",
     intro:
@@ -693,7 +693,7 @@ export const localInputs: LocalInput[] = [
     key: "rajarajeshwari-nagar",
     badge: "Serving RR Nagar and Kengeri",
     image: "villaRoom",
-    pitch: "interiors for independent houses and apartments in RR Nagar and Kengeri — kitchens, wardrobes, ceilings and complete homes.",
+    pitch: "houses and flats in RR Nagar and Kengeri — kitchens, wardrobes, ceilings, full homes.",
     subtitle:
       "Interiors for RR Nagar homes — complete design for new houses and apartments, and upgrades for homes you already live in.",
     intro:

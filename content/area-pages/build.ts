@@ -443,7 +443,7 @@ export function buildLocal(input: LocalInput, index: number): AreaPage {
     breadcrumbLabel: `${p.label} in ${place}`,
     parent: p.pillar ? { name: p.pillar.label, path: p.pillar.href } : undefined,
     title: `${p.label} in ${place}, Bangalore | ACIPL`,
-    description: `${p.label} in ${place}, Bangalore: ${input.pitch} Free site visit and itemised quote.`,
+    description: `${p.label} in ${place}, Bangalore: ${input.pitch}`,
     h1: `${p.label} in ${place}, Bangalore`,
     heroBadge: input.badge,
     heroSubtitle: input.subtitle,

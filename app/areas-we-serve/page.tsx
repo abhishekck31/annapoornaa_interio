@@ -42,7 +42,7 @@ const allLinks = [
 ]
 
 const groups: { heading: string; test: (label: string) => boolean }[] = [
-  { heading: "Bangalore-wide services", test: (l) => /in (North )?Bangalore$/.test(l) },
+  { heading: "Bangalore-wide services", test: (l) => /in (North |South |East |West )?Bangalore$/.test(l) },
   { heading: "Interior designers by area", test: (l) => /Interior Design/.test(l) && !/Office/.test(l) },
   { heading: "Modular kitchens by area", test: (l) => /Kitchen/.test(l) },
   { heading: "House construction by area", test: (l) => /Construction/.test(l) },

@@ -1095,3 +1095,23 @@ select:focus {
     margin: 0 6px;
   }
 }
+
+/* Landing pages: mobile sticky contact bar (components/seo/mobile-contact-bar.tsx).
+   The bar already has a WhatsApp button, so the floating one is hidden, and the
+   scroll buttons and footer are lifted clear of the bar. */
+@media (max-width: 767px) {
+  body:has(.mobile-contact-bar) .floating-whatsapp {
+    display: none;
+  }
+  body:has(.mobile-contact-bar) .scroll-navigation {
+    bottom: 5rem;
+  }
+  body:has(.mobile-contact-bar) footer {
+    padding-bottom: calc(4.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Keep in-page jumps (#site-visit) clear of the fixed navbar. */
+#site-visit {
+  scroll-margin-top: 6rem;
+}

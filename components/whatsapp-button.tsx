@@ -3,17 +3,20 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
+import { trackEvent } from "@/lib/analytics"
+
 const WhatsAppButton = () => {
   const [showTooltip, setShowTooltip] = useState(false)
   const whatsappMessage = "Hello! I'm interested in learning more about ACIPL's services. Could you please provide more information?"
   const whatsappLink = `https://wa.me/918073141413?text=${encodeURIComponent(whatsappMessage)}`
 
   const handleWhatsAppClick = () => {
+    trackEvent("whatsapp_click", { cta_location: "floating_button" })
     window.open(whatsappLink, "_blank")
   }
 
   return (
-    <div className="fixed right-4 bottom-36 z-50">
+    <div className="floating-whatsapp fixed right-4 bottom-36 z-50">
       <AnimatePresence>
         {showTooltip && (
           <motion.div

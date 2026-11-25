@@ -1,0 +1,202 @@
+url,action,status,redirect_target,notes
+https://www.ac-ipl.in/,Keep URL unchanged,Needs optimisation,,title 70 chars (may truncate) ; meta description 195 chars (truncates ~155-160)
+https://www.ac-ipl.in/about,Keep URL unchanged,Needs optimisation,,title 73 chars (may truncate) ; meta description 190 chars (truncates ~155-160)
+https://www.ac-ipl.in/services,Keep URL unchanged,Needs optimisation,,meta description 178 chars (truncates ~155-160)
+https://www.ac-ipl.in/contact,Keep URL unchanged,Needs optimisation,,title 67 chars (may truncate) ; 318 visible words ; Title targets 'Interior Designers in Yelahanka New Town': competes with /interior-designers-in-yelahanka
+https://www.ac-ipl.in/gallery,Keep URL unchanged,Needs optimisation,,title 73 chars (may truncate) ; 288 visible words
+https://www.ac-ipl.in/featured-projects,Keep URL unchanged,Needs optimisation,,title 66 chars (may truncate) ; meta description 170 chars (truncates ~155-160)
+https://www.ac-ipl.in/blog,Keep URL unchanged,Needs optimisation,,meta description 173 chars (truncates ~155-160)
+https://www.ac-ipl.in/expertise/interior,Keep URL unchanged,Needs optimisation,,title 76 chars (may truncate) ; meta description 182 chars (truncates ~155-160) ; Title 'Interior Design Services in Bangalore' sits close to the homepage's 'Interior Designers in Bangalore'
+https://www.ac-ipl.in/expertise/construction,Keep URL unchanged,Needs optimisation,,meta description 183 chars (truncates ~155-160)
+https://www.ac-ipl.in/products,Keep URL unchanged,Needs optimisation,,title 67 chars (may truncate) ; meta description 176 chars (truncates ~155-160) ; 339 visible words
+https://www.ac-ipl.in/products/upvc-windows-doors,Keep URL unchanged,Needs optimisation,,title 73 chars (may truncate) ; meta description 173 chars (truncates ~155-160)
+https://www.ac-ipl.in/products/aluminum-doors-windows,Keep URL unchanged,Needs optimisation,,title 73 chars (may truncate) ; meta description 168 chars (truncates ~155-160)
+https://www.ac-ipl.in/products/fire-doors,Keep URL unchanged,Needs optimisation,,meta description 187 chars (truncates ~155-160)
+https://www.ac-ipl.in/products/system-railings,Keep URL unchanged,Needs optimisation,,meta description 178 chars (truncates ~155-160) ; 331 visible words
+https://www.ac-ipl.in/products/pvc-false-ceilings,Keep URL unchanged,Needs optimisation,,title 70 chars (may truncate) ; meta description 184 chars (truncates ~155-160)
+https://www.ac-ipl.in/products/workstations,Keep URL unchanged,Needs optimisation,,title 71 chars (may truncate) ; meta description 183 chars (truncates ~155-160)
+https://www.ac-ipl.in/bangalore-yelahanka,Keep URL unchanged,Redirect required,,"Proposal (needs approval, D3): 301 to /interior-designers-in-yelahanka after checking GSC clicks/links for this URL"
+https://www.ac-ipl.in/interior-designers-in-yelahanka,Keep URL unchanged,Needs optimisation,,meta description 181 chars (truncates ~155-160)
+https://www.ac-ipl.in/home-construction-services-in-yelahanka,Keep URL unchanged,Needs optimisation,,meta description 173 chars (truncates ~155-160) ; Overlaps /turnkey-construction-in-yelahanka for 'house construction Yelahanka' (decision D4 still open)
+https://www.ac-ipl.in/interior-designers-in-hsr-layout-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-indiranagar-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-jayanagar-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-whitefield-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/areas-we-serve,Keep URL unchanged,Needs optimisation,,title 66 chars (may truncate) ; meta description 171 chars (truncates ~155-160)
+https://www.ac-ipl.in/privacy-policy,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/terms-and-conditions,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-yelahanka,Keep URL unchanged,Needs optimisation,,meta description 190 chars (truncates ~155-160)
+https://www.ac-ipl.in/false-ceiling-in-yelahanka,Keep URL unchanged,Needs optimisation,,meta description 180 chars (truncates ~155-160)
+https://www.ac-ipl.in/turnkey-construction-in-yelahanka,Keep URL unchanged,Duplicate,,"Proposal (D4): keep one Yelahanka construction page; merge copy, 301 the other after GSC check"
+https://www.ac-ipl.in/modular-kitchen-in-whitefield,Keep URL unchanged,Needs optimisation,,meta description 194 chars (truncates ~155-160)
+https://www.ac-ipl.in/office-interior-design-in-whitefield,Keep URL unchanged,Needs optimisation,,meta description 200 chars (truncates ~155-160)
+https://www.ac-ipl.in/home-interior-design-in-hebbal,Keep URL unchanged,Needs optimisation,,meta description 189 chars (truncates ~155-160)
+https://www.ac-ipl.in/turnkey-construction-in-hebbal,Keep URL unchanged,Needs optimisation,,meta description 180 chars (truncates ~155-160)
+https://www.ac-ipl.in/home-interior-design-in-koramangala,Keep URL unchanged,Needs optimisation,,meta description 199 chars (truncates ~155-160)
+https://www.ac-ipl.in/office-interior-design-in-electronic-city,Keep URL unchanged,Needs optimisation,,meta description 192 chars (truncates ~155-160)
+https://www.ac-ipl.in/home-renovation-in-jp-nagar,Keep URL unchanged,Needs optimisation,,meta description 181 chars (truncates ~155-160)
+https://www.ac-ipl.in/home-renovation-in-hsr-layout,Keep URL unchanged,Needs optimisation,,meta description 185 chars (truncates ~155-160)
+https://www.ac-ipl.in/modular-kitchen-in-marathahalli,Keep URL unchanged,Needs optimisation,,meta description 180 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-banashankari,Keep URL unchanged,Needs optimisation,,meta description 178 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-btm-layout,Keep URL unchanged,Needs optimisation,,meta description 168 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-malleshwaram,Keep URL unchanged,Needs optimisation,,meta description 187 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-rajajinagar,Keep URL unchanged,Needs optimisation,,meta description 183 chars (truncates ~155-160)
+https://www.ac-ipl.in/commercial-construction-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-yelahanka,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/office-interior-designers-in-yelahanka,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-jakkur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-thanisandra,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-sahakar-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-devanahalli,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/villa-construction-in-yelahanka,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/2bhk-interior-design-in-bangalore,Keep URL unchanged,Needs optimisation,,title 67 chars (may truncate)
+https://www.ac-ipl.in/3bhk-interior-design-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/villa-interior-design-in-bangalore,Keep URL unchanged,Needs optimisation,,title 67 chars (may truncate)
+https://www.ac-ipl.in/wardrobe-designers-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/false-ceiling-contractors-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/turnkey-interior-contractors-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-north-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/kitchen-renovation-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/bathroom-renovation-in-bangalore,Keep URL unchanged,Needs optimisation,,title 70 chars (may truncate)
+https://www.ac-ipl.in/duplex-house-construction-in-bangalore,Keep URL unchanged,Needs optimisation,,title 67 chars (may truncate)
+https://www.ac-ipl.in/house-construction-in-north-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-south-bangalore,Keep URL unchanged,Needs optimisation,,meta description 248 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-east-bangalore,Keep URL unchanged,Needs optimisation,,meta description 232 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-west-bangalore,Keep URL unchanged,Needs optimisation,,meta description 232 chars (truncates ~155-160)
+https://www.ac-ipl.in/1bhk-interior-design-in-bangalore,Keep URL unchanged,Needs optimisation,,title 66 chars (may truncate)
+https://www.ac-ipl.in/budget-interior-designers-in-bangalore,Keep URL unchanged,Needs optimisation,,title 69 chars (may truncate)
+https://www.ac-ipl.in/luxury-interior-designers-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/independent-house-interior-design-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/pooja-room-design-in-bangalore,Keep URL unchanged,Needs optimisation,,title 66 chars (may truncate)
+https://www.ac-ipl.in/tv-unit-design-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/bedroom-interior-design-in-bangalore,Keep URL unchanged,Needs optimisation,,title 70 chars (may truncate)
+https://www.ac-ipl.in/rental-building-construction-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/additional-floor-construction-in-bangalore,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-hennur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-thanisandra,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-vidyaranyapura,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-rt-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-devanahalli,Keep URL unchanged,Needs optimisation,,meta description 168 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-yeshwanthpur,Keep URL unchanged,Needs optimisation,,meta description 170 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-kalyan-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-banaswadi,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-kr-puram,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-marathahalli,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-bellandur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-sarjapur-road,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-electronic-city,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-jp-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-bannerghatta-road,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-kanakapura-road,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-basavanagudi,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-vijayanagar,Keep URL unchanged,Needs optimisation,,meta description 166 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-rajarajeshwari-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-hebbal,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-hsr-layout,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-electronic-city,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-jp-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-sarjapur-road,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-hennur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-vidyaranyapura,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-jakkur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-bagalur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-hebbal,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-indiranagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-malleshwaram,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-varthur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-hoodi,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-brookefield,Keep URL unchanged,Needs optimisation,,meta description 166 chars (truncates ~155-160)
+https://www.ac-ipl.in/interior-designers-in-kadugodi,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-horamavu,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-cv-raman-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-old-airport-road,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-frazer-town,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-sadashivanagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-mathikere,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-jalahalli,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-kogilu,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-begur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-bommanahalli,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-uttarahalli,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-nagarbhavi,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-basaveshwaranagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/interior-designers-in-kengeri,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-koramangala,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-indiranagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-jayanagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-banashankari,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-bellandur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-kalyan-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-hennur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-thanisandra,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-sahakar-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/modular-kitchen-in-rajajinagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-sahakar-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-kogilu,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-rajarajeshwari-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-kengeri,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-uttarahalli,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-jp-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-sarjapur,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/house-construction-in-hoskote,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-koramangala,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-jayanagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-whitefield,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-banashankari,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-rajajinagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/home-renovation-in-sahakar-nagar,Keep URL unchanged,Existing and working,,
+https://www.ac-ipl.in/bangalore/whitefield,Keep redirect,Redirect required,-> /interior-designers-in-whitefield-bangalore,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/hsr-layout,Keep redirect,Redirect required,-> /interior-designers-in-hsr-layout-bangalore,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/indiranagar,Keep redirect,Redirect required,-> /interior-designers-in-indiranagar-bangalore,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/jayanagar,Keep redirect,Redirect required,-> /interior-designers-in-jayanagar-bangalore,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/koramangala,Keep redirect,Redirect required,-> /home-interior-design-in-koramangala,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/hebbal,Keep redirect,Redirect required,-> /home-interior-design-in-hebbal,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/electronic-city,Keep redirect,Redirect required,-> /office-interior-design-in-electronic-city,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/marathahalli,Keep redirect,Redirect required,-> /modular-kitchen-in-marathahalli,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/jp-nagar,Keep redirect,Redirect required,-> /home-renovation-in-jp-nagar,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/banashankari,Keep redirect,Redirect required,-> /interior-designers-in-banashankari,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/btm-layout,Keep redirect,Redirect required,-> /interior-designers-in-btm-layout,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/malleshwaram,Keep redirect,Redirect required,-> /interior-designers-in-malleshwaram,Already 308 to the keeper page
+https://www.ac-ipl.in/bangalore/rajajinagar,Keep redirect,Redirect required,-> /interior-designers-in-rajajinagar,Already 308 to the keeper page
+https://www.ac-ipl.in/interior-designers-in-yelahanka-bangalore,Keep redirect,Redirect required,-> /interior-designers-in-yelahanka,Already 308 to the keeper page
+https://www.ac-ipl.in/house-construction-company-in-bangalore,Publish when client supplies figures,Requires business verification,,"Contains {{CONFIRM}} placeholders: rates, warranties, years, project count, approvals"
+https://www.ac-ipl.in/house-construction-cost-in-bangalore,Publish when client supplies figures,Requires business verification,,"Contains {{CONFIRM}} placeholders: rates, warranties, years, project count, approvals"
+https://www.ac-ipl.in/office-interior-designers-in-bangalore,Publish when client supplies figures,Requires business verification,,"Contains {{CONFIRM}} placeholders: rates, warranties, years, project count, approvals"
+https://www.ac-ipl.in/modular-kitchen-in-bangalore,Publish when client supplies figures,Requires business verification,,"Contains {{CONFIRM}} placeholders: rates, warranties, years, project count, approvals"
+https://www.ac-ipl.in/interior-designers-in-bagalur,New locality page,New page recommended,,Locality covered by another service page but not interiors
+https://www.ac-ipl.in/modular-kitchen-in-bagalur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-bagalur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-banaswadi,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-banaswadi,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-banaswadi,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-devanahalli,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-devanahalli,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-hennur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-horamavu,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-horamavu,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-horamavu,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-jakkur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-jakkur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-jalahalli,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-jalahalli,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-jalahalli,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-kalyan-nagar,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-kalyan-nagar,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-kogilu,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-kogilu,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-mathikere,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-mathikere,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-mathikere,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-rt-nagar,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-rt-nagar,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-rt-nagar,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-thanisandra,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-vidyaranyapura,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/home-renovation-in-vidyaranyapura,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/modular-kitchen-in-yeshwanthpur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/house-construction-in-yeshwanthpur,New locality page,New page recommended,,North Bengaluru plots/rebuilds within reach of the Yelahanka site team
+https://www.ac-ipl.in/home-renovation-in-yeshwanthpur,New locality page,New page recommended,,Near office; same audience as existing interior page; distinct intent
+https://www.ac-ipl.in/4bhk-interior-design-in-bangalore,New Bangalore pillar,Requires business verification,,Requires business verification: needs real 4BHK project photos before a page
+https://www.ac-ipl.in/villa-construction-in-bangalore,New Bangalore pillar,New page recommended,,New pillar; /villa-construction-in-yelahanka is the local page
+https://www.ac-ipl.in/services/...,Proposed /services/ & /locations/ tree from brief,Not recommended,,Would move 147 indexed URLs; flat /service-in-locality URLs already work and are canonical. Hubs exist: /services and /areas-we-serve

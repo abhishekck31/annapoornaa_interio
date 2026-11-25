@@ -88,7 +88,13 @@ export default function RootLayout({
           strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-YXB89D6ZEH"
         />
-        <Script id="google-analytics" strategy="lazyOnload">
+        {/*
+          The tiny gtag bootstrap runs early so `gtag` exists before anyone can
+          click a call or WhatsApp button; the library above still loads lazily
+          and drains the queued commands (config first, then events) when it
+          arrives.
+        */}
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

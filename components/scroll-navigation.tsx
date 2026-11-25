@@ -41,7 +41,7 @@ const ScrollNavigation = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          className="fixed right-6 bottom-6 z-50 flex flex-col gap-3"
+          className="scroll-navigation fixed right-6 bottom-6 z-50 flex flex-col gap-3"
         >
           <motion.button
             whileHover={{ y: -3 }}

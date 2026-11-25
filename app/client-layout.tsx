@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import ScrollNavigation from "@/components/scroll-navigation"
 import WhatsAppButton from "@/components/whatsapp-button"
 import SocialLinks from "@/components/social-links"
+import ConversionTracker from "@/components/conversion-tracker"
 import { AnimatePresence } from "framer-motion"
 
 // Poppins is already initialised in app/layout.tsx and applied to <html>.
@@ -22,6 +23,7 @@ export default function ClientRootLayout({
         <ScrollNavigation />
         <WhatsAppButton />
         <SocialLinks />
+        <ConversionTracker />
       </ThemeProvider>
     </div>
   )

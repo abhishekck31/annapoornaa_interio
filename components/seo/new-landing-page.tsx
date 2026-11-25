@@ -17,6 +17,7 @@ import {
 import type { DetailSection, NewLandingPage } from "@/content/new-pages/types"
 import { confirmedStats } from "@/lib/business"
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/seo/schema"
+import { withNearby } from "@/lib/seo/nearby"
 import { isUnpublishedNewPage } from "@/lib/seo/service-area-links"
 import { siteConfig, whatsappLink } from "@/lib/seo/site"
 
@@ -103,7 +104,10 @@ const NewLandingPageTemplate = ({
 }) => {
   const path = `/${page.slug}`
   const parent = page.parent && !isUnpublishedNewPage(page.parent.path) ? page.parent : undefined
-  const related = page.related.filter((link) => !isUnpublishedNewPage(link.href))
+  const related = withNearby(
+    page.slug,
+    page.related.filter((link) => !isUnpublishedNewPage(link.href)),
+  )
   const testimonial = page.testimonial?.confirmed ? page.testimonial : undefined
   const details = page.details ?? []
 

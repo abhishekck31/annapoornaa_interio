@@ -11,6 +11,7 @@ import type { MetadataRoute } from "next"
 import { areaPages } from "@/content/area-pages"
 
 import { landingPageSlugs } from "./landing-pages"
+import { nearbyPages } from "./nearby-pages"
 import { publishedNewPageLinks } from "./service-area-links"
 
 type ChangeFrequency = NonNullable<MetadataRoute.Sitemap[number]["changeFrequency"]>
@@ -97,6 +98,11 @@ export const allRoutes: SiteRoute[] = [...staticRoutes, ...landingRoutes, ...new
     const links = [...page.related.map((link) => link.href), ...(page.parent ? [page.parent.path] : [])]
     for (const href of links) {
       if (!live.has(href)) throw new Error(`Area page /${page.slug} links to ${href}, which is not a live route`)
+    }
+  }
+  for (const [slug, links] of Object.entries(nearbyPages)) {
+    for (const link of links) {
+      if (!live.has(link.href)) throw new Error(`nearby-pages: /${slug} links to ${link.href}, which is not a live route`)
     }
   }
   const counts = new Map<string, number>()

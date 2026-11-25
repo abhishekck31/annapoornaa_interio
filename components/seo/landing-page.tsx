@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/accordion"
 import type { LandingPage } from "@/lib/seo/landing-pages"
 import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/seo/schema"
+import { withNearby } from "@/lib/seo/nearby"
 import { siteConfig, whatsappLink } from "@/lib/seo/site"
 
 /**
@@ -292,7 +293,7 @@ const LandingPageTemplate = ({ page }: { page: LandingPage }) => {
             </h2>
             <div className="mb-8 h-1.5 w-20 rounded-full bg-gradient-to-r from-navy-900 to-gold-500" />
             <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {page.related.map((link) => (
+              {withNearby(page.slug, page.related).map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

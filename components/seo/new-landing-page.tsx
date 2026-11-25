@@ -5,6 +5,8 @@ import { ArrowRight, CheckCircle, MapPin, MessageCircle, Phone, Quote } from "lu
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import JsonLd from "@/components/seo/json-ld"
+import MobileContactBar from "@/components/seo/mobile-contact-bar"
+import SiteVisitForm from "@/components/seo/site-visit-form"
 import { Button } from "@/components/ui/button"
 import {
   Accordion,
@@ -189,7 +191,7 @@ const NewLandingPageTemplate = ({
               </h1>
               <p className="mb-8 text-lg text-gray-200 md:text-xl">{page.heroSubtitle}</p>
 
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div data-cta="hero" className="flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-gold-600 text-navy-900 hover:bg-gold-700">
                   <Link href="/contact">
                     Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" />
@@ -236,7 +238,7 @@ const NewLandingPageTemplate = ({
 
             {/* Sticky enquiry card */}
             <aside className="lg:col-span-1">
-              <div className="sticky top-28 rounded-xl border border-gray-200 bg-slate-50 p-6 shadow-md">
+              <div data-cta="enquiry_card" className="sticky top-28 rounded-xl border border-gray-200 bg-slate-50 p-6 shadow-md">
                 <h3 className="mb-2 text-xl font-bold text-navy-900">{page.enquiryCardHeading}</h3>
                 <p className="mb-6 text-gray-600">
                   Free site visit and a written, itemised quote — no obligation.
@@ -253,7 +255,7 @@ const NewLandingPageTemplate = ({
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
-                    <Link href="/contact">Request a Callback</Link>
+                    <a href="#site-visit">Book a Site Visit</a>
                   </Button>
                 </div>
               </div>
@@ -380,8 +382,29 @@ const NewLandingPageTemplate = ({
           </div>
         </section>
 
+        {/* Site visit form -------------------------------------------------- */}
+        <section id="site-visit" className="bg-white py-16">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-4 text-3xl font-bold text-navy-900 md:text-4xl">
+              Book a free site visit
+              {page.location !== "Bangalore" ? ` in ${page.location}` : ""}
+            </h2>
+            <SectionBar className="mb-6" />
+            <p className="mb-8 text-lg text-gray-700">
+              Leave your name and number and we&apos;ll call to fix a time. The visit and the
+              itemised quote are free, with no obligation.
+            </p>
+            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
+              <SiteVisitForm
+                service={page.service}
+                area={page.location !== "Bangalore" ? page.location : undefined}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Closing CTA ------------------------------------------------------ */}
-        <section className="bg-gradient-to-r from-navy-900 to-navy-800 py-16 text-white">
+        <section data-cta="closing" className="bg-gradient-to-r from-navy-900 to-navy-800 py-16 text-white">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">{page.closingHeading}</h2>
             <p className="mb-8 text-lg text-gray-300">
@@ -412,6 +435,7 @@ const NewLandingPageTemplate = ({
         </section>
 
         <Footer />
+        <MobileContactBar enquiryMessage={page.enquiryMessage} />
       </main>
     </>
   )

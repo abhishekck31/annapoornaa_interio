@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import FormspreeThankYou from "./FormspreeThankYou";
+import { trackEvent } from "@/lib/analytics";
 
 
 // Make sure this endpoint matches your Formspree dashboard. If you have issues, check https://formspree.io/dashboard for errors or setup steps.
@@ -28,6 +29,7 @@ export default function FormspreeForm() {
         headers: { 'Accept': 'application/json' },
       });
       if (response.ok) {
+        trackEvent("contact_form_submit", { form_name: "contact_page" });
         setSubmitted(true);
         form.reset();
       } else {

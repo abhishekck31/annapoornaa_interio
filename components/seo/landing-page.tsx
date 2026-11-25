@@ -13,6 +13,8 @@ import {
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import JsonLd from "@/components/seo/json-ld"
+import MobileContactBar from "@/components/seo/mobile-contact-bar"
+import SiteVisitForm from "@/components/seo/site-visit-form"
 import { Button } from "@/components/ui/button"
 import {
   Accordion,
@@ -103,7 +105,7 @@ const LandingPageTemplate = ({ page }: { page: LandingPage }) => {
               </h1>
               <p className="mb-8 text-lg text-gray-200 md:text-xl">{page.heroSubtitle}</p>
 
-              <div className="flex flex-col gap-4 sm:flex-row">
+              <div data-cta="hero" className="flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="bg-gold-600 text-navy-900 hover:bg-gold-700">
                   <Link href="/contact">
                     Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" />
@@ -146,7 +148,7 @@ const LandingPageTemplate = ({ page }: { page: LandingPage }) => {
 
             {/* Sticky enquiry card */}
             <aside className="lg:col-span-1">
-              <div className="sticky top-28 rounded-xl border border-gray-200 bg-slate-50 p-6 shadow-md">
+              <div data-cta="enquiry_card" className="sticky top-28 rounded-xl border border-gray-200 bg-slate-50 p-6 shadow-md">
                 <h3 className="mb-2 text-xl font-bold text-navy-900">
                   Talk to us about your {page.location} project
                 </h3>
@@ -165,7 +167,7 @@ const LandingPageTemplate = ({ page }: { page: LandingPage }) => {
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="w-full">
-                    <Link href="/contact">Request a Callback</Link>
+                    <a href="#site-visit">Book a Site Visit</a>
                   </Button>
                 </div>
               </div>
@@ -305,8 +307,25 @@ const LandingPageTemplate = ({ page }: { page: LandingPage }) => {
           </div>
         </section>
 
+        {/* Site visit form -------------------------------------------------- */}
+        <section id="site-visit" className="bg-white py-16">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <h2 className="mb-4 text-3xl font-bold text-navy-900 md:text-4xl">
+              Book a free site visit in {page.location}
+            </h2>
+            <div className="mb-6 h-1.5 w-20 rounded-full bg-gradient-to-r from-navy-900 to-gold-500" />
+            <p className="mb-8 text-lg text-gray-700">
+              Leave your name and number and we&apos;ll call to fix a time. The visit and the
+              itemised quote are free, with no obligation.
+            </p>
+            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm md:p-8">
+              <SiteVisitForm service={page.service} area={page.location} />
+            </div>
+          </div>
+        </section>
+
         {/* Closing CTA ------------------------------------------------------ */}
-        <section className="bg-gradient-to-r from-navy-900 to-navy-800 py-16 text-white">
+        <section data-cta="closing" className="bg-gradient-to-r from-navy-900 to-navy-800 py-16 text-white">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Ready to start your {page.location} project?
@@ -339,6 +358,7 @@ const LandingPageTemplate = ({ page }: { page: LandingPage }) => {
         </section>
 
         <Footer />
+        <MobileContactBar enquiryMessage={enquiry} />
       </main>
     </>
   )

@@ -23,7 +23,7 @@ import type { DetailSection, NewLandingPage } from "../new-pages/types"
 /** Same shape as the October pages, but the slug is not tied to that registry. */
 export type AreaPage = Omit<NewLandingPage, "slug"> & { slug: string }
 
-export type ServiceKey = "interior" | "kitchen" | "construction" | "renovation"
+export type ServiceKey = "interior" | "kitchen" | "construction" | "renovation" | "office"
 
 export interface Link {
   label: string
@@ -90,6 +90,46 @@ export const images = {
   footing: {
     image: "/Construction/WhatsApp Image 2025-04-26 at 23.32.10_123996c2.jpg",
     imageAlt: "Column footing with reinforcement cage and formwork on an ACIPL house construction site",
+  },
+  steelFrame: {
+    image: "/Construction/WhatsApp Image 2025-04-26 at 23.32.12_18ec1c63.jpg",
+    imageAlt: "Steel columns and roof frame going up on an ACIPL construction site in Bangalore",
+  },
+  excavation: {
+    image: "/Construction/WhatsApp Image 2025-04-26 at 23.32.11_15dfc4fc.jpg",
+    imageAlt: "Foundation excavation and footing work on an ACIPL house construction site",
+  },
+  industrialShed: {
+    image: "/UP-Const1.jpg",
+    imageAlt: "Industrial shed with steel cladding and roller-shutter openings, built by ACIPL",
+  },
+  industrialRender: {
+    image: "/Construction/aronuni.jpg",
+    imageAlt: "3D rendering of a two-storey industrial building with a steel staircase, designed by ACIPL",
+  },
+  villaWhite: {
+    image: "/Construction/construction5.jpg",
+    imageAlt: "Two-storey white villa with a tiled pergola and landscaped front garden, built by ACIPL",
+  },
+  villaGarden: {
+    image: "/const2/WhatsApp Image 2025-04-28 at 18.55.22_9e1f57ed.jpg",
+    imageAlt: "Two-storey villa with sloped roofs and a garden, built by ACIPL near Bangalore",
+  },
+  officeOpen: {
+    image: "/Asmara-project/Asmara1.jpg",
+    imageAlt: "Open-plan office with workstations, exposed ceiling and track lighting, by ACIPL for Asmara Apparels",
+  },
+  officeLounge: {
+    image: "/Blackbx-project/Blackbox1.jpg",
+    imageAlt: "Office reception and lounge with a feature wall and pendant lights, interiors by ACIPL",
+  },
+  officeWorkspace: {
+    image: "/images/surbana/surbana1.jpg",
+    imageAlt: "Corporate office workspace fitted out by ACIPL for Surbana Jurong in Yelahanka",
+  },
+  officeCabin: {
+    image: "/emudranew/WhatsApp Image 2025-04-26 at 20.03.07_783475f8.jpg",
+    imageAlt: "Office interior with workstations and glass-partitioned cabins, by ACIPL for eMudhra",
   },
   washroom: {
     image: "/centuryclub/WhatsApp Image 2025-04-26 at 19.14.41_34eae5d8.jpg",
@@ -394,7 +434,79 @@ const renovation: Profile = {
   trust: (place) => `Why ${place} homeowners renovate with ACIPL`,
 }
 
-export const profiles: Record<ServiceKey, Profile> = { interior, kitchen, construction, renovation }
+const office: Profile = {
+  service: "Office Interior Design",
+  label: "Office Interior Designers",
+  pillar: { label: "Office Fit-Out Contractors in Bangalore", href: "/office-fit-out-contractors-in-bangalore" },
+  details: (place) => [
+    {
+      heading: `What an office fit-out in ${place} usually covers`,
+      table: {
+        columns: ["Area", "Typical work", "Often added"],
+        rows: [
+          ["Workspace", "Workstations, storage, task lighting, floor and power boxes", "Hot desks, phone booths, acoustic panels"],
+          ["Cabins and meeting rooms", "Glass or drywall partitions, doors, conference tables, AV provisions", "Writable walls, video-conference setup, blinds"],
+          ["Reception and lounge", "Reception desk, waiting area, brand or logo wall", "Feature ceiling, planters, display units"],
+          ["Pantry and breakout", "Pantry counter, storage, water and drain points, seating", "Breakout lounge, games area"],
+          ["Services", "Electrical, data cabling, lighting, false ceiling, AC coordination", "Access control, CCTV, fire-alarm and sprinkler tie-ins"],
+        ],
+      },
+      note: "Scope is fixed after the site survey and layout sign-off. The table shows what most offices choose, not a fixed package.",
+    },
+  ],
+  highlightsHeading: "What you get when you work with us",
+  highlights: [
+    { title: "Layout planned around your headcount", body: "Seating, cabins, meeting rooms and storage planned for how your team works today and how it may grow." },
+    { title: "Design and build under one contract", body: "Civil, partitions, ceilings, electrical, data cabling, furniture and painting run by one project manager." },
+    { title: "Building rules handled", body: "We work with your landlord or facility team on approvals, permitted working hours, fire norms and handover conditions." },
+    { title: "An itemised BOQ", body: "Every item listed with its specification and quantity, so finance can compare quotes line by line." },
+  ],
+  process: [
+    { step: "Site survey and brief", body: "We measure the floor, check services and fire points, and understand your team, culture and budget." },
+    { step: "Layout, 3D and BOQ", body: "Space plan, 3D views of key areas, material samples and an itemised bill of quantities." },
+    { step: "Approvals and execution", body: "Building approvals, then civil, services, partitions, ceilings and furniture to an agreed schedule." },
+    { step: "Snagging and handover", body: "A joint snag walk, fixes, cleaning and handover with as-built drawings." },
+  ],
+  faqPool: (place) => [
+    {
+      question: `How much does an office interior in ${place} cost?`,
+      answer:
+        "It depends on the floor area, how many cabins and meeting rooms you need, the furniture and finishes, and how much of the services (AC, data, fire) need changing. We survey the space for free and give you an itemised bill of quantities, so every line can be checked and trimmed.",
+    },
+    {
+      question: "Can you work after office hours or on weekends?",
+      answer:
+        "Yes. In occupied buildings we plan noisy and dusty work for the hours the building allows, usually evenings and weekends, and keep the rest of your floor usable.",
+    },
+    {
+      question: "Do you handle approvals with the building management?",
+      answer:
+        "Yes. We prepare the drawings and method statements most building managers ask for, follow their fit-out rules, and coordinate fire, AC and electrical tie-ins with their teams.",
+    },
+    {
+      question: "Do you supply the furniture as well?",
+      answer:
+        "Yes. Workstations, storage, conference tables and loose furniture can be part of the same order, either made to your design or sourced from manufacturers, all listed in the BOQ.",
+    },
+    {
+      question: "Can you design to our brand guidelines?",
+      answer:
+        "Yes. We use your brand colours, logo and materials in the reception, meeting rooms and graphics, and show it all in 3D before anything is built.",
+    },
+    {
+      question: "Do you also build or renovate commercial buildings?",
+      answer:
+        "Yes. ACIPL is a design-and-build firm, so we can take on civil work, building renovation and new commercial construction as well as interiors.",
+    },
+  ],
+  intro2: (place) =>
+    `ACIPL is a Bangalore design-and-build firm with its office in Yelahanka New Town. Our office interior projects include workspaces for Asmara Apparels, Surbana Jurong, eMudhra and Golden Harness. For offices in ${place} we handle layout, 3D design, civil work, partitions, ceilings, electrical, data cabling and furniture under one contract and one project manager.`,
+  enquiry: (place) => `Hi, I'd like a quote for an office interior fit-out in ${place} from ACIPL.`,
+  closing: (place) => `Planning a new office in ${place}?`,
+  trust: (place) => `Why companies in ${place} choose ACIPL for their office`,
+}
+
+export const profiles: Record<ServiceKey, Profile> = { interior, kitchen, construction, renovation, office }
 
 // ---------------------------------------------------------------------------
 // Locality pages
@@ -423,6 +535,7 @@ const slugPrefix: Record<ServiceKey, string> = {
   kitchen: "modular-kitchen-in",
   construction: "house-construction-in",
   renovation: "home-renovation-in",
+  office: "office-interior-designers-in",
 }
 
 export function buildLocal(input: LocalInput, index: number): AreaPage {

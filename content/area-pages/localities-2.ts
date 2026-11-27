@@ -1352,7 +1352,7 @@ export const localInputs2: LocalInput[] = [
     ],
     related: [
       { label: "House Construction in Sarjapur", href: "/house-construction-in-sarjapur" },
-      { label: "Interior Designers in KR Puram", href: "/interior-designers-in-kr-puram" },
+      { label: "Interior Designers in Hoskote", href: "/interior-designers-in-hoskote" },
       { label: "House Construction in Bagalur", href: "/house-construction-in-bagalur" },
       { label: "Duplex House Construction in Bangalore", href: "/duplex-house-construction-in-bangalore" },
     ],

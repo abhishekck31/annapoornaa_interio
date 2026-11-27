@@ -38,6 +38,12 @@ MANUAL = {
     "Sarjapur": (12.8600, 77.7860),
     "Sarjapur Road": (12.9100, 77.6850),
     "Vijayanagar": (12.9719, 77.5370),
+    "MG Road": (12.9750, 77.6060),
+    "Kumaraswamy Layout": (12.9080, 77.5620),
+    "Chandapura": (12.8000, 77.7000),
+    "Attibele": (12.7790, 77.7710),
+    "Nelamangala": (13.0970, 77.3930),
+    "Doddaballapur": (13.2930, 77.5380),
 }
 
 # Hand-built location pages under app/ (not in any registry).

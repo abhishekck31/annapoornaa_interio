@@ -12,15 +12,18 @@ import { localInputs } from "./localities"
 import { localInputs2 } from "./localities-2"
 import { localInputs3 } from "./localities-3"
 import { localInputs4 } from "./localities-4"
+import { localInputs5 } from "./localities-5"
+import { localInputs6 } from "./localities-6"
 import { pillarInputs } from "./pillars"
 import { pillarInputs2 } from "./pillars-2"
 import { pillarInputs3 } from "./pillars-3"
+import { pillarInputs4 } from "./pillars-4"
 
 export type { AreaPage } from "./build"
 
 export const areaPages: AreaPage[] = [
-  ...[...pillarInputs, ...pillarInputs2, ...pillarInputs3].map(buildPillar),
-  ...[...localInputs, ...localInputs2, ...localInputs3, ...localInputs4].map((input, i) => buildLocal(input, i)),
+  ...[...pillarInputs, ...pillarInputs2, ...pillarInputs3, ...pillarInputs4].map(buildPillar),
+  ...[...localInputs, ...localInputs2, ...localInputs3, ...localInputs4, ...localInputs5, ...localInputs6].map((input, i) => buildLocal(input, i)),
 ]
 
 export const areaPageBySlug = new Map(areaPages.map((page) => [page.slug, page]))

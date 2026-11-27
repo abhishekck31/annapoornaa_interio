@@ -156,6 +156,8 @@ interface Profile {
   closing: (place: string) => string
   trust: (place: string) => string
   pillar?: Link
+  /** Ending of the intro heading, e.g. "planned around your team". */
+  introTag?: string
 }
 
 const interior: Profile = {
@@ -504,6 +506,7 @@ const office: Profile = {
   enquiry: (place) => `Hi, I'd like a quote for an office interior fit-out in ${place} from ACIPL.`,
   closing: (place) => `Planning a new office in ${place}?`,
   trust: (place) => `Why companies in ${place} choose ACIPL for their office`,
+  introTag: "planned around your team",
 }
 
 export const profiles: Record<ServiceKey, Profile> = { interior, kitchen, construction, renovation, office }
@@ -561,7 +564,7 @@ export function buildLocal(input: LocalInput, index: number): AreaPage {
     heroBadge: input.badge,
     heroSubtitle: input.subtitle,
     ...images[input.image],
-    introHeading: `${p.label} in ${place} — ${p.service === "Interior Design" ? "design to handover" : "planned around your home"}`,
+    introHeading: `${p.label} in ${place} — ${p.introTag ?? (p.service === "Interior Design" ? "design to handover" : "planned around your home")}`,
     intro: [input.intro, p.intro2(place)],
     localContext: input.context,
     details: p.details(place),
